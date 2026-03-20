@@ -1,21 +1,23 @@
-import { dimensionOptions, type DimensionKey } from "@/data/mock-cube";
+import type { DimensionKey, DimensionOption } from "@/data/mock-cube";
 
 import { FilterChip } from "./filter-chip";
 
 type DimensionFiltersSectionProps = {
+  dimensions: DimensionOption[];
   filters: Record<DimensionKey, string | "All">;
   availableValues: Record<DimensionKey, string[]>;
   onFilterChange: (dimension: DimensionKey, value: string | "All") => void;
 };
 
 export function DimensionFiltersSection({
+  dimensions,
   filters,
   availableValues,
   onFilterChange,
 }: DimensionFiltersSectionProps) {
   return (
     <>
-      {dimensionOptions.map((dimension) => (
+      {dimensions.map((dimension) => (
         <section key={dimension.key} className="space-y-3">
           <div>
             <p className="text-sm font-medium">{dimension.label}</p>

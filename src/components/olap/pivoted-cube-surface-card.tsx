@@ -1,9 +1,10 @@
 import { CubeScene } from "@/components/olap/cube-scene";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { getDimensionLabel, type DimensionKey, type Measure, type PivotCell } from "@/data/mock-cube";
+import { getDimensionLabel, type DatasetSchema, type DimensionKey, type Measure, type PivotCell } from "@/data/mock-cube";
 
 type PivotedCubeSurfaceCardProps = {
+  schema: DatasetSchema;
   xDimension: DimensionKey;
   yDimension: DimensionKey;
   zDimension: DimensionKey;
@@ -29,6 +30,7 @@ type PivotedCubeSurfaceCardProps = {
 };
 
 export function PivotedCubeSurfaceCard({
+  schema,
   xDimension,
   yDimension,
   zDimension,
@@ -63,13 +65,13 @@ export function PivotedCubeSurfaceCard({
         </div>
         <div className="flex flex-wrap gap-2">
           <Badge variant="outline" className="border-slate-200 text-slate-700">
-            X: {getDimensionLabel(xDimension)}
+            X: {getDimensionLabel(schema, xDimension)}
           </Badge>
           <Badge variant="outline" className="border-slate-200 text-slate-700">
-            Y: {getDimensionLabel(yDimension)}
+            Y: {getDimensionLabel(schema, yDimension)}
           </Badge>
           <Badge variant="outline" className="border-slate-200 text-slate-700">
-            Z: {getDimensionLabel(zDimension)}
+            Z: {getDimensionLabel(schema, zDimension)}
           </Badge>
           {appliedSlices.length === 0 ? (
             <Badge variant="outline" className="border-slate-200 text-slate-700">
@@ -86,6 +88,7 @@ export function PivotedCubeSurfaceCard({
       </CardHeader>
       <CardContent className="space-y-4">
         <CubeScene
+          schema={schema}
           cells={cells}
           measure={measure}
           xDimension={xDimension}

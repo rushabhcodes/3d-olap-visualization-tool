@@ -1,11 +1,12 @@
 import { ArrowLeftRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import type { DimensionKey } from "@/data/mock-cube";
+import type { DimensionKey, DimensionOption } from "@/data/mock-cube";
 
 import { AxisSelect } from "./axis-select";
 
 type PivotAxesSectionProps = {
+  dimensions: DimensionOption[];
   xDimension: DimensionKey;
   yDimension: DimensionKey;
   zDimension: DimensionKey;
@@ -14,6 +15,7 @@ type PivotAxesSectionProps = {
 };
 
 export function PivotAxesSection({
+  dimensions,
   xDimension,
   yDimension,
   zDimension,
@@ -33,9 +35,9 @@ export function PivotAxesSection({
         </Button>
       </div>
       <div className="grid gap-3">
-        <AxisSelect label="X Axis" value={xDimension} onChange={(value) => onAxisChange("x", value)} />
-        <AxisSelect label="Y Axis" value={yDimension} onChange={(value) => onAxisChange("y", value)} />
-        <AxisSelect label="Z Axis" value={zDimension} onChange={(value) => onAxisChange("z", value)} />
+        <AxisSelect dimensions={dimensions} label="X Axis" value={xDimension} onChange={(value) => onAxisChange("x", value)} />
+        <AxisSelect dimensions={dimensions} label="Y Axis" value={yDimension} onChange={(value) => onAxisChange("y", value)} />
+        <AxisSelect dimensions={dimensions} label="Z Axis" value={zDimension} onChange={(value) => onAxisChange("z", value)} />
       </div>
     </section>
   );

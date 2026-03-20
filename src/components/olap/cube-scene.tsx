@@ -7,10 +7,12 @@ import * as THREE from "three";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
+  type DatasetSchema,
   formatMeasureValue,
   getDimensionLabel,
+  getDimensionValue,
+  getMeasureLabel,
   getMeasureValue,
-  measureOptions,
   type CubeFact,
   type DimensionKey,
   type Measure,
@@ -18,6 +20,7 @@ import {
 } from "@/data/mock-cube";
 
 type CubeSceneProps = {
+  schema: DatasetSchema;
   cells: PivotCell[];
   measure: Measure;
   xDimension: DimensionKey;
@@ -62,6 +65,7 @@ type DetailVoxel = {
   z: number;
   size: number;
   color: string;
+  colorLabel: string;
   fact: CubeFact;
 };
 
@@ -79,7 +83,7 @@ function getCategoryColor(label: string) {
   return `hsl(${hue} 82% 61%)`;
 }
 
-function getScenarioColor(label: string) {
+function getDetailColor(label: string) {
   switch (label) {
     case "Actual":
       return "#0891b2";
@@ -99,12 +103,16 @@ function getAggregateColor(normalizedValue: number, active: boolean, hovered: bo
   return `hsl(192 ${Math.round(saturation)}% ${Math.round(lightness)}%)`;
 }
 
-function collectScenarioLabels(cells: PivotCell[]) {
+function collectLegendLabels(cells: PivotCell[], dimension: DimensionKey | null) {
+  if (!dimension) {
+    return [];
+  }
+
   const labels = new Set<string>();
 
   for (const cell of cells) {
     for (const fact of cell.facts) {
-      labels.add(fact.scenario);
+      labels.add(getDimensionValue(fact, dimension));
     }
   }
 
@@ -198,7 +206,7 @@ function getNextVoxelIndex(
   return wrapCandidates?.voxel.factIndex ?? originVoxel.factIndex;
 }
 
-function buildDetailVoxels(cell: SceneCell | null): DetailVoxel[] {
+function buildDetailVoxels(cell: SceneCell | null, colorDimension: DimensionKey | null): DetailVoxel[] {
   if (!cell || cell.facts.length === 0) {
     return [];
   }
@@ -229,7 +237,7 @@ function buildDetailVoxels(cell: SceneCell | null): DetailVoxel[] {
     const y = -cell.height / 2 + 0.26 + yBand * (layer + 0.5);
 
     voxels.push({
-      id: `${cell.id}-${fact.month}-${fact.scenario}-${index}`,
+      id: `${cell.id}-${index}`,
       factIndex: index,
       column,
       row,
@@ -238,7 +246,8 @@ function buildDetailVoxels(cell: SceneCell | null): DetailVoxel[] {
       y,
       z,
       size,
-      color: getScenarioColor(fact.scenario),
+      color: getDetailColor(colorDimension ? getDimensionValue(fact, colorDimension) : `Fact ${index + 1}`),
+      colorLabel: colorDimension ? getDimensionValue(fact, colorDimension) : `Fact ${index + 1}`,
       fact,
     });
   }
@@ -532,6 +541,7 @@ function CubeCells({
 }
 
 export function CubeScene({
+  schema,
   cells,
   measure,
   xDimension,
@@ -579,14 +589,17 @@ export function CubeScene({
 
   const activeCell = sceneCells.find((cell) => cell.id === activeCellId) ?? null;
   const drilledCell = sceneCells.find((cell) => cell.id === drilledCellId) ?? null;
-  const drilledVoxels = buildDetailVoxels(drilledCell);
+  const detailColorDimension = schema.dimensions.find((dimension) => ![xDimension, yDimension, zDimension].includes(dimension.key))?.key
+    ?? schema.detailColorDimension
+    ?? null;
+  const drilledVoxels = buildDetailVoxels(drilledCell, detailColorDimension);
   const selectedVoxel = drilledVoxels.find((voxel) => voxel.factIndex === selectedFactIndex) ?? null;
   const hoveredVoxel =
     selectedFactIndex === null
       ? drilledVoxels.find((voxel) => voxel.factIndex === hoveredFactIndex) ?? null
       : null;
   const detailVoxel = selectedVoxel ?? hoveredVoxel;
-  const scenarioLabels = collectScenarioLabels(cells);
+  const detailColorLabels = collectLegendLabels(cells, detailColorDimension);
   const maxHeight = Math.max(...sceneCells.map((cell) => cell.height), 2.2);
   const sceneHeight = Math.max(2.8, (yValues.length - 1) * yLayerSpacing + maxHeight);
   const sceneWidth = Math.max(7.2, xValues.length * 2 + 1.8);
@@ -694,16 +707,16 @@ export function CubeScene({
         <div className="pointer-events-auto space-y-2 rounded-2xl border border-white/70 bg-white/85 px-4 py-3 shadow-sm backdrop-blur">
           <div className="flex flex-wrap items-center gap-2 text-xs text-slate-600">
             <Badge variant="outline" className="border-slate-200 text-slate-700">
-              X: {getDimensionLabel(xDimension)}
+              X: {getDimensionLabel(schema, xDimension)}
             </Badge>
             <Badge variant="outline" className="border-slate-200 text-slate-700">
-              Y: {getDimensionLabel(yDimension)}
+              Y: {getDimensionLabel(schema, yDimension)}
             </Badge>
             <Badge variant="outline" className="border-slate-200 text-slate-700">
-              Z: {getDimensionLabel(zDimension)}
+              Z: {getDimensionLabel(schema, zDimension)}
             </Badge>
             <Badge variant="outline" className="border-slate-200 text-slate-700">
-              {measure} intensity
+              {getMeasureLabel(schema, measure)} intensity
             </Badge>
           </div>
           <div className="flex flex-wrap items-center gap-3 text-[11px] text-slate-600">
@@ -713,17 +726,17 @@ export function CubeScene({
               <span>low</span>
               <span>high</span>
             </div>
-            {scenarioLabels.length > 0 ? (
+            {detailColorLabels.length > 0 && detailColorDimension ? (
               <div className="flex flex-wrap items-center gap-2">
-                <span className="font-medium text-slate-900">Scenario</span>
-                {scenarioLabels.map((label) => (
+                <span className="font-medium text-slate-900">{getDimensionLabel(schema, detailColorDimension)}</span>
+                {detailColorLabels.map((label) => (
                   <span
                     key={label}
                     className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-2 py-1 text-[10px] text-slate-700"
                   >
                     <span
                       className="h-2.5 w-2.5 rounded-full"
-                      style={{ backgroundColor: getScenarioColor(label) }}
+                      style={{ backgroundColor: getDetailColor(label) }}
                     />
                     {label}
                   </span>
@@ -740,15 +753,15 @@ export function CubeScene({
               <>
                 <ChevronRight className="h-3.5 w-3.5 text-slate-400" />
                 <Badge variant="outline" className="border-cyan-200 bg-cyan-50 text-cyan-900">
-                  {getDimensionLabel(xDimension)}: {drilledCell.xValue}
+                  {getDimensionLabel(schema, xDimension)}: {drilledCell.xValue}
                 </Badge>
                 <ChevronRight className="h-3.5 w-3.5 text-slate-400" />
                 <Badge variant="outline" className="border-cyan-200 bg-cyan-50 text-cyan-900">
-                  {getDimensionLabel(yDimension)}: {drilledCell.yValue}
+                  {getDimensionLabel(schema, yDimension)}: {drilledCell.yValue}
                 </Badge>
                 <ChevronRight className="h-3.5 w-3.5 text-slate-400" />
                 <Badge variant="outline" className="border-cyan-200 bg-cyan-50 text-cyan-900">
-                  {getDimensionLabel(zDimension)}: {drilledCell.zValue}
+                  {getDimensionLabel(schema, zDimension)}: {drilledCell.zValue}
                 </Badge>
                 {selectedFactIndex !== null ? (
                   <>
@@ -796,28 +809,36 @@ export function CubeScene({
           <div className="flex items-start justify-between gap-3">
             <div>
               <p className="font-semibold text-slate-900">
-                {detailVoxel.fact.month} • {detailVoxel.fact.scenario}
+                {schema.dimensions
+                  .slice(0, 2)
+                  .map((dimension) => getDimensionValue(detailVoxel.fact, dimension.key))
+                  .join(" • ")}
               </p>
-              <p className="mt-1 text-slate-600">
-                {detailVoxel.fact.region} / {detailVoxel.fact.productLine}
-              </p>
+              {schema.dimensions.slice(2).length > 0 ? (
+                <p className="mt-1 text-slate-600">
+                  {schema.dimensions
+                    .slice(2)
+                    .map((dimension) => `${dimension.label}: ${getDimensionValue(detailVoxel.fact, dimension.key)}`)
+                    .join(" / ")}
+                </p>
+              ) : null}
             </div>
             <span className="rounded-full bg-cyan-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-cyan-800">
               {selectedVoxel ? "Pinned" : "Preview"}
             </span>
           </div>
           <div className="mt-3 grid gap-2">
-            {measureOptions.map((measureOption) => (
+            {schema.measures.map((measureOption) => (
               <div key={measureOption.key} className="rounded-xl bg-slate-100 px-3 py-2">
                 <p className="uppercase tracking-[0.12em] text-slate-500">{measureOption.label}</p>
                 <p className="mt-1 font-semibold text-slate-900">
-                  {formatMeasureValue(detailVoxel.fact[measureOption.factKey], measureOption.key)}
+                  {formatMeasureValue(getMeasureValue(detailVoxel.fact, measureOption.key), measureOption.key, schema)}
                 </p>
               </div>
             ))}
           </div>
           <p className="mt-3 text-[10px] text-cyan-700">
-            {measure} contributes {formatMeasureValue(getMeasureValue(detailVoxel.fact, measure), measure)}.
+            {getMeasureLabel(schema, measure)} contributes {formatMeasureValue(getMeasureValue(detailVoxel.fact, measure), measure, schema)}.
           </p>
           <p className="mt-1 text-[10px] text-slate-500">Use arrow keys to move across neighboring voxels.</p>
         </div>

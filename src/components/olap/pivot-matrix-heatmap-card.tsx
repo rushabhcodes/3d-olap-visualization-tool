@@ -2,9 +2,10 @@ import { Layers3 } from "lucide-react";
 
 import { PivotHeatmap } from "@/components/olap/pivot-heatmap";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import type { DimensionKey, Measure, PivotCell } from "@/data/mock-cube";
+import type { DatasetSchema, DimensionKey, Measure, PivotCell } from "@/data/mock-cube";
 
 type PivotMatrixHeatmapCardProps = {
+  schema: DatasetSchema;
   cells: PivotCell[];
   xDimension: DimensionKey;
   yDimension: DimensionKey;
@@ -21,6 +22,7 @@ type PivotMatrixHeatmapCardProps = {
 };
 
 export function PivotMatrixHeatmapCard({
+  schema,
   cells,
   xDimension,
   yDimension,
@@ -48,6 +50,7 @@ export function PivotMatrixHeatmapCard({
       </CardHeader>
       <CardContent>
         <PivotHeatmap
+          schema={schema}
           cells={cells}
           xDimension={xDimension}
           yDimension={yDimension}

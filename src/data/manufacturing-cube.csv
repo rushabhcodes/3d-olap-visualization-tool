@@ -1,0 +1,1729 @@
+Month,Plant,Product Family,Shift,Production Line,Output,Scrap,Downtime
+Jan,Austin Plant,Industrial Sensors,Day,Line A,6424,195,80
+Jan,Austin Plant,Industrial Sensors,Day,Line B,6274,208,83
+Jan,Austin Plant,Industrial Sensors,Day,Line C,6122,218,90
+Jan,Austin Plant,Industrial Sensors,Swing,Line A,6170,207,87
+Jan,Austin Plant,Industrial Sensors,Swing,Line B,6026,220,91
+Jan,Austin Plant,Industrial Sensors,Swing,Line C,5880,231,98
+Jan,Austin Plant,Industrial Sensors,Night,Line A,5973,220,96
+Jan,Austin Plant,Industrial Sensors,Night,Line B,5834,233,100
+Jan,Austin Plant,Industrial Sensors,Night,Line C,5692,245,108
+Jan,Austin Plant,Robotics,Day,Line A,2953,285,103
+Jan,Austin Plant,Robotics,Day,Line B,2884,303,108
+Jan,Austin Plant,Robotics,Day,Line C,2814,318,116
+Jan,Austin Plant,Robotics,Swing,Line A,2836,303,114
+Jan,Austin Plant,Robotics,Swing,Line B,2770,322,118
+Jan,Austin Plant,Robotics,Swing,Line C,2702,338,128
+Jan,Austin Plant,Robotics,Night,Line A,2745,320,125
+Jan,Austin Plant,Robotics,Night,Line B,2681,341,130
+Jan,Austin Plant,Robotics,Night,Line C,2615,358,140
+Jan,Austin Plant,Power Systems,Day,Line A,4186,254,92
+Jan,Austin Plant,Power Systems,Day,Line B,4088,271,96
+Jan,Austin Plant,Power Systems,Day,Line C,3988,284,104
+Jan,Austin Plant,Power Systems,Swing,Line A,4019,270,101
+Jan,Austin Plant,Power Systems,Swing,Line B,3925,287,106
+Jan,Austin Plant,Power Systems,Swing,Line C,3829,302,114
+Jan,Austin Plant,Power Systems,Night,Line A,3890,286,112
+Jan,Austin Plant,Power Systems,Night,Line B,3798,304,116
+Jan,Austin Plant,Power Systems,Night,Line C,3705,319,125
+Jan,Austin Plant,EV Batteries,Day,Line A,4477,313,98
+Jan,Austin Plant,EV Batteries,Day,Line B,4372,332,102
+Jan,Austin Plant,EV Batteries,Day,Line C,4264,349,110
+Jan,Austin Plant,EV Batteries,Swing,Line A,4298,332,107
+Jan,Austin Plant,EV Batteries,Swing,Line B,4197,353,112
+Jan,Austin Plant,EV Batteries,Swing,Line C,4094,370,120
+Jan,Austin Plant,EV Batteries,Night,Line A,4160,352,118
+Jan,Austin Plant,EV Batteries,Night,Line B,4061,374,123
+Jan,Austin Plant,EV Batteries,Night,Line C,3961,392,132
+Jan,Berlin Plant,Industrial Sensors,Day,Line A,5945,172,87
+Jan,Berlin Plant,Industrial Sensors,Day,Line B,5806,182,91
+Jan,Berlin Plant,Industrial Sensors,Day,Line C,5665,192,98
+Jan,Berlin Plant,Industrial Sensors,Swing,Line A,5709,182,96
+Jan,Berlin Plant,Industrial Sensors,Swing,Line B,5575,194,100
+Jan,Berlin Plant,Industrial Sensors,Swing,Line C,5439,203,108
+Jan,Berlin Plant,Industrial Sensors,Night,Line A,5526,193,105
+Jan,Berlin Plant,Industrial Sensors,Night,Line B,5396,205,110
+Jan,Berlin Plant,Industrial Sensors,Night,Line C,5264,215,118
+Jan,Berlin Plant,Robotics,Day,Line A,2732,250,113
+Jan,Berlin Plant,Robotics,Day,Line B,2668,266,118
+Jan,Berlin Plant,Robotics,Day,Line C,2603,279,127
+Jan,Berlin Plant,Robotics,Swing,Line A,2623,266,124
+Jan,Berlin Plant,Robotics,Swing,Line B,2561,283,129
+Jan,Berlin Plant,Robotics,Swing,Line C,2499,297,140
+Jan,Berlin Plant,Robotics,Night,Line A,2539,282,137
+Jan,Berlin Plant,Robotics,Night,Line B,2479,300,142
+Jan,Berlin Plant,Robotics,Night,Line C,2418,314,154
+Jan,Berlin Plant,Power Systems,Day,Line A,3871,224,101
+Jan,Berlin Plant,Power Systems,Day,Line B,3780,238,105
+Jan,Berlin Plant,Power Systems,Day,Line C,3687,250,114
+Jan,Berlin Plant,Power Systems,Swing,Line A,3716,238,111
+Jan,Berlin Plant,Power Systems,Swing,Line B,3628,253,116
+Jan,Berlin Plant,Power Systems,Swing,Line C,3539,265,125
+Jan,Berlin Plant,Power Systems,Night,Line A,3596,252,122
+Jan,Berlin Plant,Power Systems,Night,Line B,3511,268,127
+Jan,Berlin Plant,Power Systems,Night,Line C,3425,281,137
+Jan,Berlin Plant,EV Batteries,Day,Line A,4139,275,107
+Jan,Berlin Plant,EV Batteries,Day,Line B,4041,292,111
+Jan,Berlin Plant,EV Batteries,Day,Line C,3941,307,120
+Jan,Berlin Plant,EV Batteries,Swing,Line A,3973,292,117
+Jan,Berlin Plant,EV Batteries,Swing,Line B,3878,310,122
+Jan,Berlin Plant,EV Batteries,Swing,Line C,3783,326,132
+Jan,Berlin Plant,EV Batteries,Night,Line A,3844,309,129
+Jan,Berlin Plant,EV Batteries,Night,Line B,3752,329,134
+Jan,Berlin Plant,EV Batteries,Night,Line C,3660,345,145
+Jan,Shenzhen Plant,Industrial Sensors,Day,Line A,7897,229,75
+Jan,Shenzhen Plant,Industrial Sensors,Day,Line B,7711,243,78
+Jan,Shenzhen Plant,Industrial Sensors,Day,Line C,7522,255,84
+Jan,Shenzhen Plant,Industrial Sensors,Swing,Line A,7582,243,82
+Jan,Shenzhen Plant,Industrial Sensors,Swing,Line B,7403,258,85
+Jan,Shenzhen Plant,Industrial Sensors,Swing,Line C,7221,271,92
+Jan,Shenzhen Plant,Industrial Sensors,Night,Line A,7338,257,90
+Jan,Shenzhen Plant,Industrial Sensors,Night,Line B,7164,274,94
+Jan,Shenzhen Plant,Industrial Sensors,Night,Line C,6988,287,101
+Jan,Shenzhen Plant,Robotics,Day,Line A,3628,334,97
+Jan,Shenzhen Plant,Robotics,Day,Line B,3542,355,101
+Jan,Shenzhen Plant,Robotics,Day,Line C,3455,373,109
+Jan,Shenzhen Plant,Robotics,Swing,Line A,3482,355,106
+Jan,Shenzhen Plant,Robotics,Swing,Line B,3400,377,111
+Jan,Shenzhen Plant,Robotics,Swing,Line C,3316,396,119
+Jan,Shenzhen Plant,Robotics,Night,Line A,3370,376,117
+Jan,Shenzhen Plant,Robotics,Night,Line B,3290,399,122
+Jan,Shenzhen Plant,Robotics,Night,Line C,3209,419,131
+Jan,Shenzhen Plant,Power Systems,Day,Line A,5138,298,86
+Jan,Shenzhen Plant,Power Systems,Day,Line B,5016,317,90
+Jan,Shenzhen Plant,Power Systems,Day,Line C,4892,333,97
+Jan,Shenzhen Plant,Power Systems,Swing,Line A,4932,317,95
+Jan,Shenzhen Plant,Power Systems,Swing,Line B,4814,337,99
+Jan,Shenzhen Plant,Power Systems,Swing,Line C,4695,354,107
+Jan,Shenzhen Plant,Power Systems,Night,Line A,4771,336,104
+Jan,Shenzhen Plant,Power Systems,Night,Line B,4658,357,109
+Jan,Shenzhen Plant,Power Systems,Night,Line C,4542,375,117
+Jan,Shenzhen Plant,EV Batteries,Day,Line A,5491,366,91
+Jan,Shenzhen Plant,EV Batteries,Day,Line B,5360,390,95
+Jan,Shenzhen Plant,EV Batteries,Day,Line C,5228,409,103
+Jan,Shenzhen Plant,EV Batteries,Swing,Line A,5270,389,100
+Jan,Shenzhen Plant,EV Batteries,Swing,Line B,5144,414,104
+Jan,Shenzhen Plant,EV Batteries,Swing,Line C,5017,434,113
+Jan,Shenzhen Plant,EV Batteries,Night,Line A,5098,412,110
+Jan,Shenzhen Plant,EV Batteries,Night,Line B,4976,438,115
+Jan,Shenzhen Plant,EV Batteries,Night,Line C,4853,460,124
+Jan,Monterrey Plant,Industrial Sensors,Day,Line A,4370,141,96
+Jan,Monterrey Plant,Industrial Sensors,Day,Line B,4266,150,100
+Jan,Monterrey Plant,Industrial Sensors,Day,Line C,4162,158,108
+Jan,Monterrey Plant,Industrial Sensors,Swing,Line A,4195,150,105
+Jan,Monterrey Plant,Industrial Sensors,Swing,Line B,4095,160,110
+Jan,Monterrey Plant,Industrial Sensors,Swing,Line C,3994,168,118
+Jan,Monterrey Plant,Industrial Sensors,Night,Line A,4059,159,116
+Jan,Monterrey Plant,Industrial Sensors,Night,Line B,3962,169,120
+Jan,Monterrey Plant,Industrial Sensors,Night,Line C,3865,177,130
+Jan,Monterrey Plant,Robotics,Day,Line A,2007,206,124
+Jan,Monterrey Plant,Robotics,Day,Line B,1959,219,129
+Jan,Monterrey Plant,Robotics,Day,Line C,1911,230,140
+Jan,Monterrey Plant,Robotics,Swing,Line A,1926,219,136
+Jan,Monterrey Plant,Robotics,Swing,Line B,1880,233,142
+Jan,Monterrey Plant,Robotics,Swing,Line C,1834,245,154
+Jan,Monterrey Plant,Robotics,Night,Line A,1863,232,150
+Jan,Monterrey Plant,Robotics,Night,Line B,1819,247,156
+Jan,Monterrey Plant,Robotics,Night,Line C,1774,259,169
+Jan,Monterrey Plant,Power Systems,Day,Line A,2841,184,111
+Jan,Monterrey Plant,Power Systems,Day,Line B,2773,196,116
+Jan,Monterrey Plant,Power Systems,Day,Line C,2705,206,125
+Jan,Monterrey Plant,Power Systems,Swing,Line A,2727,196,122
+Jan,Monterrey Plant,Power Systems,Swing,Line B,2661,208,127
+Jan,Monterrey Plant,Power Systems,Swing,Line C,2595,218,137
+Jan,Monterrey Plant,Power Systems,Night,Line A,2637,207,134
+Jan,Monterrey Plant,Power Systems,Night,Line B,2574,220,140
+Jan,Monterrey Plant,Power Systems,Night,Line C,2510,231,151
+Jan,Monterrey Plant,EV Batteries,Day,Line A,3035,226,117
+Jan,Monterrey Plant,EV Batteries,Day,Line B,2963,241,122
+Jan,Monterrey Plant,EV Batteries,Day,Line C,2889,253,132
+Jan,Monterrey Plant,EV Batteries,Swing,Line A,2913,240,129
+Jan,Monterrey Plant,EV Batteries,Swing,Line B,2843,256,134
+Jan,Monterrey Plant,EV Batteries,Swing,Line C,2772,268,145
+Jan,Monterrey Plant,EV Batteries,Night,Line A,2817,255,141
+Jan,Monterrey Plant,EV Batteries,Night,Line B,2749,271,147
+Jan,Monterrey Plant,EV Batteries,Night,Line C,2681,284,159
+Feb,Austin Plant,Industrial Sensors,Day,Line A,6654,206,81
+Feb,Austin Plant,Industrial Sensors,Day,Line B,6498,219,84
+Feb,Austin Plant,Industrial Sensors,Day,Line C,6340,230,91
+Feb,Austin Plant,Industrial Sensors,Swing,Line A,6390,219,89
+Feb,Austin Plant,Industrial Sensors,Swing,Line B,6240,233,93
+Feb,Austin Plant,Industrial Sensors,Swing,Line C,6088,245,100
+Feb,Austin Plant,Industrial Sensors,Night,Line A,6186,232,98
+Feb,Austin Plant,Industrial Sensors,Night,Line B,6040,247,102
+Feb,Austin Plant,Industrial Sensors,Night,Line C,5893,259,110
+Feb,Austin Plant,Robotics,Day,Line A,3058,301,105
+Feb,Austin Plant,Robotics,Day,Line B,2986,320,110
+Feb,Austin Plant,Robotics,Day,Line C,2914,336,118
+Feb,Austin Plant,Robotics,Swing,Line A,2937,320,115
+Feb,Austin Plant,Robotics,Swing,Line B,2867,340,120
+Feb,Austin Plant,Robotics,Swing,Line C,2797,357,130
+Feb,Austin Plant,Robotics,Night,Line A,2842,339,127
+Feb,Austin Plant,Robotics,Night,Line B,2775,360,132
+Feb,Austin Plant,Robotics,Night,Line C,2707,378,143
+Feb,Austin Plant,Power Systems,Day,Line A,4334,269,94
+Feb,Austin Plant,Power Systems,Day,Line B,4232,286,98
+Feb,Austin Plant,Power Systems,Day,Line C,4128,300,106
+Feb,Austin Plant,Power Systems,Swing,Line A,4161,286,103
+Feb,Austin Plant,Power Systems,Swing,Line B,4063,304,107
+Feb,Austin Plant,Power Systems,Swing,Line C,3963,319,116
+Feb,Austin Plant,Power Systems,Night,Line A,4027,303,113
+Feb,Austin Plant,Power Systems,Night,Line B,3931,322,118
+Feb,Austin Plant,Power Systems,Night,Line C,3835,338,128
+Feb,Austin Plant,EV Batteries,Day,Line A,4634,330,99
+Feb,Austin Plant,EV Batteries,Day,Line B,4525,351,103
+Feb,Austin Plant,EV Batteries,Day,Line C,4413,368,112
+Feb,Austin Plant,EV Batteries,Swing,Line A,4449,351,109
+Feb,Austin Plant,EV Batteries,Swing,Line B,4343,373,113
+Feb,Austin Plant,EV Batteries,Swing,Line C,4236,391,122
+Feb,Austin Plant,EV Batteries,Night,Line A,4305,371,120
+Feb,Austin Plant,EV Batteries,Night,Line B,4202,395,125
+Feb,Austin Plant,EV Batteries,Night,Line C,4099,414,135
+Feb,Berlin Plant,Industrial Sensors,Day,Line A,6156,181,89
+Feb,Berlin Plant,Industrial Sensors,Day,Line B,6011,193,92
+Feb,Berlin Plant,Industrial Sensors,Day,Line C,5865,202,100
+Feb,Berlin Plant,Industrial Sensors,Swing,Line A,5911,193,97
+Feb,Berlin Plant,Industrial Sensors,Swing,Line B,5772,205,101
+Feb,Berlin Plant,Industrial Sensors,Swing,Line C,5630,215,110
+Feb,Berlin Plant,Industrial Sensors,Night,Line A,5721,204,107
+Feb,Berlin Plant,Industrial Sensors,Night,Line B,5586,217,111
+Feb,Berlin Plant,Industrial Sensors,Night,Line C,5449,228,120
+Feb,Berlin Plant,Robotics,Day,Line A,2828,265,115
+Feb,Berlin Plant,Robotics,Day,Line B,2762,281,120
+Feb,Berlin Plant,Robotics,Day,Line C,2694,295,129
+Feb,Berlin Plant,Robotics,Swing,Line A,2715,281,126
+Feb,Berlin Plant,Robotics,Swing,Line B,2651,299,132
+Feb,Berlin Plant,Robotics,Swing,Line C,2586,314,142
+Feb,Berlin Plant,Robotics,Night,Line A,2628,298,139
+Feb,Berlin Plant,Robotics,Night,Line B,2565,317,145
+Feb,Berlin Plant,Robotics,Night,Line C,2502,332,156
+Feb,Berlin Plant,Power Systems,Day,Line A,4007,236,103
+Feb,Berlin Plant,Power Systems,Day,Line B,3912,251,107
+Feb,Berlin Plant,Power Systems,Day,Line C,3815,264,116
+Feb,Berlin Plant,Power Systems,Swing,Line A,3846,251,113
+Feb,Berlin Plant,Power Systems,Swing,Line B,3755,267,118
+Feb,Berlin Plant,Power Systems,Swing,Line C,3662,280,127
+Feb,Berlin Plant,Power Systems,Night,Line A,3721,266,124
+Feb,Berlin Plant,Power Systems,Night,Line B,3633,283,129
+Feb,Berlin Plant,Power Systems,Night,Line C,3543,297,140
+Feb,Berlin Plant,EV Batteries,Day,Line A,4283,290,108
+Feb,Berlin Plant,EV Batteries,Day,Line B,4181,309,113
+Feb,Berlin Plant,EV Batteries,Day,Line C,4078,324,122
+Feb,Berlin Plant,EV Batteries,Swing,Line A,4111,308,119
+Feb,Berlin Plant,EV Batteries,Swing,Line B,4013,328,124
+Feb,Berlin Plant,EV Batteries,Swing,Line C,3913,344,134
+Feb,Berlin Plant,EV Batteries,Night,Line A,3977,327,131
+Feb,Berlin Plant,EV Batteries,Night,Line B,3882,347,136
+Feb,Berlin Plant,EV Batteries,Night,Line C,3786,364,147
+Feb,Shenzhen Plant,Industrial Sensors,Day,Line A,8175,242,76
+Feb,Shenzhen Plant,Industrial Sensors,Day,Line B,7981,257,79
+Feb,Shenzhen Plant,Industrial Sensors,Day,Line C,7785,270,85
+Feb,Shenzhen Plant,Industrial Sensors,Swing,Line A,7848,257,83
+Feb,Shenzhen Plant,Industrial Sensors,Swing,Line B,7662,273,87
+Feb,Shenzhen Plant,Industrial Sensors,Swing,Line C,7473,287,94
+Feb,Shenzhen Plant,Industrial Sensors,Night,Line A,7594,272,91
+Feb,Shenzhen Plant,Industrial Sensors,Night,Line B,7414,289,95
+Feb,Shenzhen Plant,Industrial Sensors,Night,Line C,7231,304,103
+Feb,Shenzhen Plant,Robotics,Day,Line A,3754,353,98
+Feb,Shenzhen Plant,Robotics,Day,Line B,3665,375,102
+Feb,Shenzhen Plant,Robotics,Day,Line C,3575,394,111
+Feb,Shenzhen Plant,Robotics,Swing,Line A,3604,375,108
+Feb,Shenzhen Plant,Robotics,Swing,Line B,3518,399,112
+Feb,Shenzhen Plant,Robotics,Swing,Line C,3431,418,121
+Feb,Shenzhen Plant,Robotics,Night,Line A,3487,397,119
+Feb,Shenzhen Plant,Robotics,Night,Line B,3404,422,124
+Feb,Shenzhen Plant,Robotics,Night,Line C,3319,443,133
+Feb,Shenzhen Plant,Power Systems,Day,Line A,5316,315,88
+Feb,Shenzhen Plant,Power Systems,Day,Line B,5190,335,92
+Feb,Shenzhen Plant,Power Systems,Day,Line C,5061,352,99
+Feb,Shenzhen Plant,Power Systems,Swing,Line A,5102,335,96
+Feb,Shenzhen Plant,Power Systems,Swing,Line B,4981,356,100
+Feb,Shenzhen Plant,Power Systems,Swing,Line C,4857,374,109
+Feb,Shenzhen Plant,Power Systems,Night,Line A,4936,355,106
+Feb,Shenzhen Plant,Power Systems,Night,Line B,4818,377,110
+Feb,Shenzhen Plant,Power Systems,Night,Line C,4698,396,119
+Feb,Shenzhen Plant,EV Batteries,Day,Line A,5681,387,93
+Feb,Shenzhen Plant,EV Batteries,Day,Line B,5545,412,97
+Feb,Shenzhen Plant,EV Batteries,Day,Line C,5407,432,104
+Feb,Shenzhen Plant,EV Batteries,Swing,Line A,5451,411,102
+Feb,Shenzhen Plant,EV Batteries,Swing,Line B,5321,437,106
+Feb,Shenzhen Plant,EV Batteries,Swing,Line C,5188,459,114
+Feb,Shenzhen Plant,EV Batteries,Night,Line A,5273,435,112
+Feb,Shenzhen Plant,EV Batteries,Night,Line B,5146,463,116
+Feb,Shenzhen Plant,EV Batteries,Night,Line C,5018,486,126
+Feb,Monterrey Plant,Industrial Sensors,Day,Line A,4522,149,97
+Feb,Monterrey Plant,Industrial Sensors,Day,Line B,4415,159,101
+Feb,Monterrey Plant,Industrial Sensors,Day,Line C,4306,167,110
+Feb,Monterrey Plant,Industrial Sensors,Swing,Line A,4341,159,107
+Feb,Monterrey Plant,Industrial Sensors,Swing,Line B,4237,169,111
+Feb,Monterrey Plant,Industrial Sensors,Swing,Line C,4133,177,120
+Feb,Monterrey Plant,Industrial Sensors,Night,Line A,4199,168,117
+Feb,Monterrey Plant,Industrial Sensors,Night,Line B,4099,179,122
+Feb,Monterrey Plant,Industrial Sensors,Night,Line C,3998,188,132
+Feb,Monterrey Plant,Robotics,Day,Line A,2076,218,126
+Feb,Monterrey Plant,Robotics,Day,Line B,2027,232,132
+Feb,Monterrey Plant,Robotics,Day,Line C,1976,243,142
+Feb,Monterrey Plant,Robotics,Swing,Line A,1992,232,139
+Feb,Monterrey Plant,Robotics,Swing,Line B,1945,246,144
+Feb,Monterrey Plant,Robotics,Swing,Line C,1897,258,156
+Feb,Monterrey Plant,Robotics,Night,Line A,1927,245,152
+Feb,Monterrey Plant,Robotics,Night,Line B,1881,261,159
+Feb,Monterrey Plant,Robotics,Night,Line C,1835,274,172
+Feb,Monterrey Plant,Power Systems,Day,Line A,2939,195,113
+Feb,Monterrey Plant,Power Systems,Day,Line B,2869,207,118
+Feb,Monterrey Plant,Power Systems,Day,Line C,2797,217,127
+Feb,Monterrey Plant,Power Systems,Swing,Line A,2820,207,124
+Feb,Monterrey Plant,Power Systems,Swing,Line B,2753,220,129
+Feb,Monterrey Plant,Power Systems,Swing,Line C,2684,231,139
+Feb,Monterrey Plant,Power Systems,Night,Line A,2728,219,136
+Feb,Monterrey Plant,Power Systems,Night,Line B,2662,233,142
+Feb,Monterrey Plant,Power Systems,Night,Line C,2596,244,153
+Feb,Monterrey Plant,EV Batteries,Day,Line A,3139,239,119
+Feb,Monterrey Plant,EV Batteries,Day,Line B,3064,254,124
+Feb,Monterrey Plant,EV Batteries,Day,Line C,2988,267,134
+Feb,Monterrey Plant,EV Batteries,Swing,Line A,3012,254,131
+Feb,Monterrey Plant,EV Batteries,Swing,Line B,2939,270,136
+Feb,Monterrey Plant,EV Batteries,Swing,Line C,2866,283,147
+Feb,Monterrey Plant,EV Batteries,Night,Line A,2913,269,144
+Feb,Monterrey Plant,EV Batteries,Night,Line B,2843,286,150
+Feb,Monterrey Plant,EV Batteries,Night,Line C,2772,300,162
+Mar,Austin Plant,Industrial Sensors,Day,Line A,7029,220,82
+Mar,Austin Plant,Industrial Sensors,Day,Line B,6865,234,86
+Mar,Austin Plant,Industrial Sensors,Day,Line C,6697,245,93
+Mar,Austin Plant,Industrial Sensors,Swing,Line A,6750,234,90
+Mar,Austin Plant,Industrial Sensors,Swing,Line B,6591,248,94
+Mar,Austin Plant,Industrial Sensors,Swing,Line C,6430,261,102
+Mar,Austin Plant,Industrial Sensors,Night,Line A,6534,247,99
+Mar,Austin Plant,Industrial Sensors,Night,Line B,6380,263,104
+Mar,Austin Plant,Industrial Sensors,Night,Line C,6224,276,112
+Mar,Austin Plant,Robotics,Day,Line A,3230,321,107
+Mar,Austin Plant,Robotics,Day,Line B,3154,341,111
+Mar,Austin Plant,Robotics,Day,Line C,3077,358,120
+Mar,Austin Plant,Robotics,Swing,Line A,3101,341,117
+Mar,Austin Plant,Robotics,Swing,Line B,3028,362,122
+Mar,Austin Plant,Robotics,Swing,Line C,2954,380,132
+Mar,Austin Plant,Robotics,Night,Line A,3001,361,129
+Mar,Austin Plant,Robotics,Night,Line B,2930,384,134
+Mar,Austin Plant,Robotics,Night,Line C,2858,403,145
+Mar,Austin Plant,Power Systems,Day,Line A,4577,286,96
+Mar,Austin Plant,Power Systems,Day,Line B,4468,305,100
+Mar,Austin Plant,Power Systems,Day,Line C,4359,320,108
+Mar,Austin Plant,Power Systems,Swing,Line A,4393,304,105
+Mar,Austin Plant,Power Systems,Swing,Line B,4289,324,109
+Mar,Austin Plant,Power Systems,Swing,Line C,4184,340,118
+Mar,Austin Plant,Power Systems,Night,Line A,4251,322,115
+Mar,Austin Plant,Power Systems,Night,Line B,4150,343,120
+Mar,Austin Plant,Power Systems,Night,Line C,4048,360,130
+Mar,Austin Plant,EV Batteries,Day,Line A,4893,352,101
+Mar,Austin Plant,EV Batteries,Day,Line B,4777,374,105
+Mar,Austin Plant,EV Batteries,Day,Line C,4659,392,113
+Mar,Austin Plant,EV Batteries,Swing,Line A,4696,374,111
+Mar,Austin Plant,EV Batteries,Swing,Line B,4585,397,115
+Mar,Austin Plant,EV Batteries,Swing,Line C,4471,417,125
+Mar,Austin Plant,EV Batteries,Night,Line A,4544,396,122
+Mar,Austin Plant,EV Batteries,Night,Line B,4435,421,127
+Mar,Austin Plant,EV Batteries,Night,Line C,4326,441,137
+Mar,Berlin Plant,Industrial Sensors,Day,Line A,6502,193,90
+Mar,Berlin Plant,Industrial Sensors,Day,Line B,6349,206,94
+Mar,Berlin Plant,Industrial Sensors,Day,Line C,6193,216,101
+Mar,Berlin Plant,Industrial Sensors,Swing,Line A,6242,205,99
+Mar,Berlin Plant,Industrial Sensors,Swing,Line B,6095,218,103
+Mar,Berlin Plant,Industrial Sensors,Swing,Line C,5945,229,111
+Mar,Berlin Plant,Industrial Sensors,Night,Line A,6041,217,109
+Mar,Berlin Plant,Industrial Sensors,Night,Line B,5898,231,113
+Mar,Berlin Plant,Industrial Sensors,Night,Line C,5753,243,122
+Mar,Berlin Plant,Robotics,Day,Line A,2987,282,117
+Mar,Berlin Plant,Robotics,Day,Line B,2916,300,122
+Mar,Berlin Plant,Robotics,Day,Line C,2844,315,132
+Mar,Berlin Plant,Robotics,Swing,Line A,2867,300,128
+Mar,Berlin Plant,Robotics,Swing,Line B,2799,319,134
+Mar,Berlin Plant,Robotics,Swing,Line C,2730,334,144
+Mar,Berlin Plant,Robotics,Night,Line A,2774,317,141
+Mar,Berlin Plant,Robotics,Night,Line B,2708,337,147
+Mar,Berlin Plant,Robotics,Night,Line C,2641,354,159
+Mar,Berlin Plant,Power Systems,Day,Line A,4230,252,105
+Mar,Berlin Plant,Power Systems,Day,Line B,4129,268,109
+Mar,Berlin Plant,Power Systems,Day,Line C,4027,281,118
+Mar,Berlin Plant,Power Systems,Swing,Line A,4060,268,115
+Mar,Berlin Plant,Power Systems,Swing,Line B,3963,285,120
+Mar,Berlin Plant,Power Systems,Swing,Line C,3865,299,129
+Mar,Berlin Plant,Power Systems,Night,Line A,3928,283,126
+Mar,Berlin Plant,Power Systems,Night,Line B,3834,301,131
+Mar,Berlin Plant,Power Systems,Night,Line C,3739,316,142
+Mar,Berlin Plant,EV Batteries,Day,Line A,4520,309,110
+Mar,Berlin Plant,EV Batteries,Day,Line B,4413,329,115
+Mar,Berlin Plant,EV Batteries,Day,Line C,4303,345,124
+Mar,Berlin Plant,EV Batteries,Swing,Line A,4338,329,121
+Mar,Berlin Plant,EV Batteries,Swing,Line B,4234,349,126
+Mar,Berlin Plant,EV Batteries,Swing,Line C,4129,367,136
+Mar,Berlin Plant,EV Batteries,Night,Line A,4196,348,133
+Mar,Berlin Plant,EV Batteries,Night,Line B,4096,370,139
+Mar,Berlin Plant,EV Batteries,Night,Line C,3994,388,150
+Mar,Shenzhen Plant,Industrial Sensors,Day,Line A,8631,258,77
+Mar,Shenzhen Plant,Industrial Sensors,Day,Line B,8427,274,80
+Mar,Shenzhen Plant,Industrial Sensors,Day,Line C,8219,288,87
+Mar,Shenzhen Plant,Industrial Sensors,Swing,Line A,8285,274,85
+Mar,Shenzhen Plant,Industrial Sensors,Swing,Line B,8088,291,88
+Mar,Shenzhen Plant,Industrial Sensors,Swing,Line C,7889,306,95
+Mar,Shenzhen Plant,Industrial Sensors,Night,Line A,8016,290,93
+Mar,Shenzhen Plant,Industrial Sensors,Night,Line B,7825,308,97
+Mar,Shenzhen Plant,Industrial Sensors,Night,Line C,7632,324,105
+Mar,Shenzhen Plant,Robotics,Day,Line A,3963,376,100
+Mar,Shenzhen Plant,Robotics,Day,Line B,3869,400,104
+Mar,Shenzhen Plant,Robotics,Day,Line C,3773,420,112
+Mar,Shenzhen Plant,Robotics,Swing,Line A,3804,400,110
+Mar,Shenzhen Plant,Robotics,Swing,Line B,3713,425,114
+Mar,Shenzhen Plant,Robotics,Swing,Line C,3621,446,123
+Mar,Shenzhen Plant,Robotics,Night,Line A,3680,423,121
+Mar,Shenzhen Plant,Robotics,Night,Line B,3592,450,126
+Mar,Shenzhen Plant,Robotics,Night,Line C,3503,472,136
+Mar,Shenzhen Plant,Power Systems,Day,Line A,5611,336,89
+Mar,Shenzhen Plant,Power Systems,Day,Line B,5477,357,93
+Mar,Shenzhen Plant,Power Systems,Day,Line C,5341,375,100
+Mar,Shenzhen Plant,Power Systems,Swing,Line A,5384,357,98
+Mar,Shenzhen Plant,Power Systems,Swing,Line B,5256,379,102
+Mar,Shenzhen Plant,Power Systems,Swing,Line C,5125,398,110
+Mar,Shenzhen Plant,Power Systems,Night,Line A,5208,378,108
+Mar,Shenzhen Plant,Power Systems,Night,Line B,5083,402,112
+Mar,Shenzhen Plant,Power Systems,Night,Line C,4957,422,121
+Mar,Shenzhen Plant,EV Batteries,Day,Line A,5994,412,94
+Mar,Shenzhen Plant,EV Batteries,Day,Line B,5850,438,98
+Mar,Shenzhen Plant,EV Batteries,Day,Line C,5705,460,106
+Mar,Shenzhen Plant,EV Batteries,Swing,Line A,5751,438,103
+Mar,Shenzhen Plant,EV Batteries,Swing,Line B,5613,466,108
+Mar,Shenzhen Plant,EV Batteries,Swing,Line C,5473,489,116
+Mar,Shenzhen Plant,EV Batteries,Night,Line A,5563,464,114
+Mar,Shenzhen Plant,EV Batteries,Night,Line B,5429,493,118
+Mar,Shenzhen Plant,EV Batteries,Night,Line C,5293,518,128
+Mar,Monterrey Plant,Industrial Sensors,Day,Line A,4773,159,99
+Mar,Monterrey Plant,Industrial Sensors,Day,Line B,4660,169,103
+Mar,Monterrey Plant,Industrial Sensors,Day,Line C,4544,178,111
+Mar,Monterrey Plant,Industrial Sensors,Swing,Line A,4581,169,109
+Mar,Monterrey Plant,Industrial Sensors,Swing,Line B,4472,180,113
+Mar,Monterrey Plant,Industrial Sensors,Swing,Line C,4361,189,122
+Mar,Monterrey Plant,Industrial Sensors,Night,Line A,4432,179,119
+Mar,Monterrey Plant,Industrial Sensors,Night,Line B,4326,190,124
+Mar,Monterrey Plant,Industrial Sensors,Night,Line C,4218,200,134
+Mar,Monterrey Plant,Robotics,Day,Line A,2191,232,128
+Mar,Monterrey Plant,Robotics,Day,Line B,2139,247,134
+Mar,Monterrey Plant,Robotics,Day,Line C,2086,259,144
+Mar,Monterrey Plant,Robotics,Swing,Line A,2102,247,141
+Mar,Monterrey Plant,Robotics,Swing,Line B,2052,262,147
+Mar,Monterrey Plant,Robotics,Swing,Line C,2001,275,159
+Mar,Monterrey Plant,Robotics,Night,Line A,2034,261,155
+Mar,Monterrey Plant,Robotics,Night,Line B,1985,278,161
+Mar,Monterrey Plant,Robotics,Night,Line C,1935,292,174
+Mar,Monterrey Plant,Power Systems,Day,Line A,3101,207,115
+Mar,Monterrey Plant,Power Systems,Day,Line B,3027,221,120
+Mar,Monterrey Plant,Power Systems,Day,Line C,2951,231,129
+Mar,Monterrey Plant,Power Systems,Swing,Line A,2975,220,126
+Mar,Monterrey Plant,Power Systems,Swing,Line B,2904,234,131
+Mar,Monterrey Plant,Power Systems,Swing,Line C,2831,246,142
+Mar,Monterrey Plant,Power Systems,Night,Line A,2877,233,138
+Mar,Monterrey Plant,Power Systems,Night,Line B,2808,248,144
+Mar,Monterrey Plant,Power Systems,Night,Line C,2738,260,156
+Mar,Monterrey Plant,EV Batteries,Day,Line A,3312,255,121
+Mar,Monterrey Plant,EV Batteries,Day,Line B,3232,271,126
+Mar,Monterrey Plant,EV Batteries,Day,Line C,3151,284,136
+Mar,Monterrey Plant,EV Batteries,Swing,Line A,3177,271,133
+Mar,Monterrey Plant,EV Batteries,Swing,Line B,3100,288,138
+Mar,Monterrey Plant,EV Batteries,Swing,Line C,3023,302,149
+Mar,Monterrey Plant,EV Batteries,Night,Line A,3072,287,146
+Mar,Monterrey Plant,EV Batteries,Night,Line B,2998,305,152
+Mar,Monterrey Plant,EV Batteries,Night,Line C,2923,320,164
+Apr,Austin Plant,Industrial Sensors,Day,Line A,7341,223,84
+Apr,Austin Plant,Industrial Sensors,Day,Line B,7168,237,87
+Apr,Austin Plant,Industrial Sensors,Day,Line C,6993,249,94
+Apr,Austin Plant,Industrial Sensors,Swing,Line A,7049,237,92
+Apr,Austin Plant,Industrial Sensors,Swing,Line B,6882,252,96
+Apr,Austin Plant,Industrial Sensors,Swing,Line C,6714,265,103
+Apr,Austin Plant,Industrial Sensors,Night,Line A,6822,251,101
+Apr,Austin Plant,Industrial Sensors,Night,Line B,6660,267,105
+Apr,Austin Plant,Industrial Sensors,Night,Line C,6497,280,114
+Apr,Austin Plant,Robotics,Day,Line A,3373,326,109
+Apr,Austin Plant,Robotics,Day,Line B,3293,347,113
+Apr,Austin Plant,Robotics,Day,Line C,3212,364,122
+Apr,Austin Plant,Robotics,Swing,Line A,3238,346,119
+Apr,Austin Plant,Robotics,Swing,Line B,3161,368,124
+Apr,Austin Plant,Robotics,Swing,Line C,3083,386,134
+Apr,Austin Plant,Robotics,Night,Line A,3133,367,131
+Apr,Austin Plant,Robotics,Night,Line B,3059,390,137
+Apr,Austin Plant,Robotics,Night,Line C,2983,409,148
+Apr,Austin Plant,Power Systems,Day,Line A,4777,291,97
+Apr,Austin Plant,Power Systems,Day,Line B,4664,310,101
+Apr,Austin Plant,Power Systems,Day,Line C,4549,325,109
+Apr,Austin Plant,Power Systems,Swing,Line A,4586,309,107
+Apr,Austin Plant,Power Systems,Swing,Line B,4477,329,111
+Apr,Austin Plant,Power Systems,Swing,Line C,4366,345,120
+Apr,Austin Plant,Power Systems,Night,Line A,4437,328,117
+Apr,Austin Plant,Power Systems,Night,Line B,4331,348,122
+Apr,Austin Plant,Power Systems,Night,Line C,4224,366,132
+Apr,Austin Plant,EV Batteries,Day,Line A,5106,358,102
+Apr,Austin Plant,EV Batteries,Day,Line B,4985,380,107
+Apr,Austin Plant,EV Batteries,Day,Line C,4861,399,115
+Apr,Austin Plant,EV Batteries,Swing,Line A,4901,380,113
+Apr,Austin Plant,EV Batteries,Swing,Line B,4784,404,117
+Apr,Austin Plant,EV Batteries,Swing,Line C,4665,424,127
+Apr,Austin Plant,EV Batteries,Night,Line A,4741,402,124
+Apr,Austin Plant,EV Batteries,Night,Line B,4628,428,129
+Apr,Austin Plant,EV Batteries,Night,Line C,4513,449,139
+Apr,Berlin Plant,Industrial Sensors,Day,Line A,6788,196,92
+Apr,Berlin Plant,Industrial Sensors,Day,Line B,6627,209,95
+Apr,Berlin Plant,Industrial Sensors,Day,Line C,6465,219,103
+Apr,Berlin Plant,Industrial Sensors,Swing,Line A,6516,209,101
+Apr,Berlin Plant,Industrial Sensors,Swing,Line B,6362,222,105
+Apr,Berlin Plant,Industrial Sensors,Swing,Line C,6205,233,113
+Apr,Berlin Plant,Industrial Sensors,Night,Line A,6305,221,111
+Apr,Berlin Plant,Industrial Sensors,Night,Line B,6156,235,115
+Apr,Berlin Plant,Industrial Sensors,Night,Line C,6004,247,124
+Apr,Berlin Plant,Robotics,Day,Line A,3117,287,119
+Apr,Berlin Plant,Robotics,Day,Line B,3043,305,124
+Apr,Berlin Plant,Robotics,Day,Line C,2968,320,134
+Apr,Berlin Plant,Robotics,Swing,Line A,2992,305,131
+Apr,Berlin Plant,Robotics,Swing,Line B,2921,324,136
+Apr,Berlin Plant,Robotics,Swing,Line C,2849,340,147
+Apr,Berlin Plant,Robotics,Night,Line A,2895,322,143
+Apr,Berlin Plant,Robotics,Night,Line B,2826,343,149
+Apr,Berlin Plant,Robotics,Night,Line C,2756,360,161
+Apr,Berlin Plant,Power Systems,Day,Line A,4414,256,106
+Apr,Berlin Plant,Power Systems,Day,Line B,4309,272,111
+Apr,Berlin Plant,Power Systems,Day,Line C,4202,286,120
+Apr,Berlin Plant,Power Systems,Swing,Line A,4236,272,117
+Apr,Berlin Plant,Power Systems,Swing,Line B,4135,289,121
+Apr,Berlin Plant,Power Systems,Swing,Line C,4033,304,131
+Apr,Berlin Plant,Power Systems,Night,Line A,4098,288,128
+Apr,Berlin Plant,Power Systems,Night,Line B,4000,306,134
+Apr,Berlin Plant,Power Systems,Night,Line C,3901,321,144
+Apr,Berlin Plant,EV Batteries,Day,Line A,4716,314,112
+Apr,Berlin Plant,EV Batteries,Day,Line B,4603,334,117
+Apr,Berlin Plant,EV Batteries,Day,Line C,4489,351,126
+Apr,Berlin Plant,EV Batteries,Swing,Line A,4526,334,123
+Apr,Berlin Plant,EV Batteries,Swing,Line B,4417,355,128
+Apr,Berlin Plant,EV Batteries,Swing,Line C,4307,373,138
+Apr,Berlin Plant,EV Batteries,Night,Line A,4377,354,135
+Apr,Berlin Plant,EV Batteries,Night,Line B,4272,376,141
+Apr,Berlin Plant,EV Batteries,Night,Line C,4166,395,152
+Apr,Shenzhen Plant,Industrial Sensors,Day,Line A,9008,262,78
+Apr,Shenzhen Plant,Industrial Sensors,Day,Line B,8794,278,82
+Apr,Shenzhen Plant,Industrial Sensors,Day,Line C,8577,292,88
+Apr,Shenzhen Plant,Industrial Sensors,Swing,Line A,8646,278,86
+Apr,Shenzhen Plant,Industrial Sensors,Swing,Line B,8440,296,89
+Apr,Shenzhen Plant,Industrial Sensors,Swing,Line C,8231,310,97
+Apr,Shenzhen Plant,Industrial Sensors,Night,Line A,8365,295,94
+Apr,Shenzhen Plant,Industrial Sensors,Night,Line B,8165,313,98
+Apr,Shenzhen Plant,Industrial Sensors,Night,Line C,7963,329,106
+Apr,Shenzhen Plant,Robotics,Day,Line A,4136,382,102
+Apr,Shenzhen Plant,Robotics,Day,Line B,4037,406,106
+Apr,Shenzhen Plant,Robotics,Day,Line C,3937,426,114
+Apr,Shenzhen Plant,Robotics,Swing,Line A,3969,406,111
+Apr,Shenzhen Plant,Robotics,Swing,Line B,3874,432,116
+Apr,Shenzhen Plant,Robotics,Swing,Line C,3778,453,125
+Apr,Shenzhen Plant,Robotics,Night,Line A,3839,430,123
+Apr,Shenzhen Plant,Robotics,Night,Line B,3747,457,128
+Apr,Shenzhen Plant,Robotics,Night,Line C,3654,480,138
+Apr,Shenzhen Plant,Power Systems,Day,Line A,5854,341,91
+Apr,Shenzhen Plant,Power Systems,Day,Line B,5714,363,95
+Apr,Shenzhen Plant,Power Systems,Day,Line C,5571,381,102
+Apr,Shenzhen Plant,Power Systems,Swing,Line A,5617,363,100
+Apr,Shenzhen Plant,Power Systems,Swing,Line B,5482,386,104
+Apr,Shenzhen Plant,Power Systems,Swing,Line C,5346,405,112
+Apr,Shenzhen Plant,Power Systems,Night,Line A,5433,384,109
+Apr,Shenzhen Plant,Power Systems,Night,Line B,5302,408,114
+Apr,Shenzhen Plant,Power Systems,Night,Line C,5170,429,123
+Apr,Shenzhen Plant,EV Batteries,Day,Line A,6252,419,96
+Apr,Shenzhen Plant,EV Batteries,Day,Line B,6102,446,100
+Apr,Shenzhen Plant,EV Batteries,Day,Line C,5950,468,108
+Apr,Shenzhen Plant,EV Batteries,Swing,Line A,5999,446,105
+Apr,Shenzhen Plant,EV Batteries,Swing,Line B,5854,474,109
+Apr,Shenzhen Plant,EV Batteries,Swing,Line C,5708,497,118
+Apr,Shenzhen Plant,EV Batteries,Night,Line A,5801,472,115
+Apr,Shenzhen Plant,EV Batteries,Night,Line B,5661,502,120
+Apr,Shenzhen Plant,EV Batteries,Night,Line C,5520,526,130
+Apr,Monterrey Plant,Industrial Sensors,Day,Line A,4981,162,101
+Apr,Monterrey Plant,Industrial Sensors,Day,Line B,4862,172,105
+Apr,Monterrey Plant,Industrial Sensors,Day,Line C,4741,180,113
+Apr,Monterrey Plant,Industrial Sensors,Swing,Line A,4780,172,110
+Apr,Monterrey Plant,Industrial Sensors,Swing,Line B,4665,183,115
+Apr,Monterrey Plant,Industrial Sensors,Swing,Line C,4549,192,124
+Apr,Monterrey Plant,Industrial Sensors,Night,Line A,4623,182,121
+Apr,Monterrey Plant,Industrial Sensors,Night,Line B,4512,193,126
+Apr,Monterrey Plant,Industrial Sensors,Night,Line C,4400,203,136
+Apr,Monterrey Plant,Robotics,Day,Line A,2286,236,130
+Apr,Monterrey Plant,Robotics,Day,Line B,2231,251,136
+Apr,Monterrey Plant,Robotics,Day,Line C,2175,263,147
+Apr,Monterrey Plant,Robotics,Swing,Line A,2193,251,143
+Apr,Monterrey Plant,Robotics,Swing,Line B,2140,267,149
+Apr,Monterrey Plant,Robotics,Swing,Line C,2087,280,161
+Apr,Monterrey Plant,Robotics,Night,Line A,2121,266,157
+Apr,Monterrey Plant,Robotics,Night,Line B,2070,282,164
+Apr,Monterrey Plant,Robotics,Night,Line C,2018,296,177
+Apr,Monterrey Plant,Power Systems,Day,Line A,3234,211,117
+Apr,Monterrey Plant,Power Systems,Day,Line B,3156,224,121
+Apr,Monterrey Plant,Power Systems,Day,Line C,3078,235,131
+Apr,Monterrey Plant,Power Systems,Swing,Line A,3103,224,128
+Apr,Monterrey Plant,Power Systems,Swing,Line B,3028,238,133
+Apr,Monterrey Plant,Power Systems,Swing,Line C,2952,250,144
+Apr,Monterrey Plant,Power Systems,Night,Line A,3001,237,141
+Apr,Monterrey Plant,Power Systems,Night,Line B,2928,252,146
+Apr,Monterrey Plant,Power Systems,Night,Line C,2855,265,158
+Apr,Monterrey Plant,EV Batteries,Day,Line A,3453,259,123
+Apr,Monterrey Plant,EV Batteries,Day,Line B,3370,275,128
+Apr,Monterrey Plant,EV Batteries,Day,Line C,3286,289,138
+Apr,Monterrey Plant,EV Batteries,Swing,Line A,3313,275,135
+Apr,Monterrey Plant,EV Batteries,Swing,Line B,3233,293,141
+Apr,Monterrey Plant,EV Batteries,Swing,Line C,3151,307,152
+Apr,Monterrey Plant,EV Batteries,Night,Line A,3203,291,148
+Apr,Monterrey Plant,EV Batteries,Night,Line B,3126,310,155
+Apr,Monterrey Plant,EV Batteries,Night,Line C,3047,325,167
+May,Austin Plant,Industrial Sensors,Day,Line A,7252,235,85
+May,Austin Plant,Industrial Sensors,Day,Line B,7083,250,89
+May,Austin Plant,Industrial Sensors,Day,Line C,6912,262,96
+May,Austin Plant,Industrial Sensors,Swing,Line A,6966,250,93
+May,Austin Plant,Industrial Sensors,Swing,Line B,6803,265,97
+May,Austin Plant,Industrial Sensors,Swing,Line C,6638,278,105
+May,Austin Plant,Industrial Sensors,Night,Line A,6744,264,103
+May,Austin Plant,Industrial Sensors,Night,Line B,6586,281,107
+May,Austin Plant,Industrial Sensors,Night,Line C,6426,295,116
+May,Austin Plant,Robotics,Day,Line A,3334,343,110
+May,Austin Plant,Robotics,Day,Line B,3256,364,115
+May,Austin Plant,Robotics,Day,Line C,3177,382,124
+May,Austin Plant,Robotics,Swing,Line A,3202,364,121
+May,Austin Plant,Robotics,Swing,Line B,3127,387,126
+May,Austin Plant,Robotics,Swing,Line C,3051,406,136
+May,Austin Plant,Robotics,Night,Line A,3100,385,133
+May,Austin Plant,Robotics,Night,Line B,3027,410,139
+May,Austin Plant,Robotics,Night,Line C,2953,430,150
+May,Austin Plant,Power Systems,Day,Line A,4726,306,99
+May,Austin Plant,Power Systems,Day,Line B,4615,325,103
+May,Austin Plant,Power Systems,Day,Line C,4502,342,111
+May,Austin Plant,Power Systems,Swing,Line A,4538,325,108
+May,Austin Plant,Power Systems,Swing,Line B,4431,346,113
+May,Austin Plant,Power Systems,Swing,Line C,4323,363,122
+May,Austin Plant,Power Systems,Night,Line A,4392,344,119
+May,Austin Plant,Power Systems,Night,Line B,4289,366,124
+May,Austin Plant,Power Systems,Night,Line C,4184,384,134
+May,Austin Plant,EV Batteries,Day,Line A,5055,376,104
+May,Austin Plant,EV Batteries,Day,Line B,4936,400,108
+May,Austin Plant,EV Batteries,Day,Line C,4815,419,117
+May,Austin Plant,EV Batteries,Swing,Line A,4853,399,114
+May,Austin Plant,EV Batteries,Swing,Line B,4738,425,119
+May,Austin Plant,EV Batteries,Swing,Line C,4622,446,129
+May,Austin Plant,EV Batteries,Night,Line A,4696,423,126
+May,Austin Plant,EV Batteries,Night,Line B,4585,450,131
+May,Austin Plant,EV Batteries,Night,Line C,4472,472,141
+May,Berlin Plant,Industrial Sensors,Day,Line A,6712,206,93
+May,Berlin Plant,Industrial Sensors,Day,Line B,6555,220,97
+May,Berlin Plant,Industrial Sensors,Day,Line C,6395,230,105
+May,Berlin Plant,Industrial Sensors,Swing,Line A,6446,219,102
+May,Berlin Plant,Industrial Sensors,Swing,Line B,6294,233,106
+May,Berlin Plant,Industrial Sensors,Swing,Line C,6141,245,115
+May,Berlin Plant,Industrial Sensors,Night,Line A,6239,232,112
+May,Berlin Plant,Industrial Sensors,Night,Line B,6092,247,117
+May,Berlin Plant,Industrial Sensors,Night,Line C,5944,259,126
+May,Berlin Plant,Robotics,Day,Line A,3085,301,121
+May,Berlin Plant,Robotics,Day,Line B,3012,320,126
+May,Berlin Plant,Robotics,Day,Line C,2938,336,136
+May,Berlin Plant,Robotics,Swing,Line A,2962,320,133
+May,Berlin Plant,Robotics,Swing,Line B,2892,340,138
+May,Berlin Plant,Robotics,Swing,Line C,2821,357,149
+May,Berlin Plant,Robotics,Night,Line A,2866,339,146
+May,Berlin Plant,Robotics,Night,Line B,2799,360,152
+May,Berlin Plant,Robotics,Night,Line C,2730,378,164
+May,Berlin Plant,Power Systems,Day,Line A,4371,269,108
+May,Berlin Plant,Power Systems,Day,Line B,4267,286,112
+May,Berlin Plant,Power Systems,Day,Line C,4163,300,121
+May,Berlin Plant,Power Systems,Swing,Line A,4196,286,118
+May,Berlin Plant,Power Systems,Swing,Line B,4097,304,123
+May,Berlin Plant,Power Systems,Swing,Line C,3996,319,133
+May,Berlin Plant,Power Systems,Night,Line A,4060,303,130
+May,Berlin Plant,Power Systems,Night,Line B,3964,322,136
+May,Berlin Plant,Power Systems,Night,Line C,3866,338,146
+May,Berlin Plant,EV Batteries,Day,Line A,4673,330,114
+May,Berlin Plant,EV Batteries,Day,Line B,4562,351,119
+May,Berlin Plant,EV Batteries,Day,Line C,4450,369,128
+May,Berlin Plant,EV Batteries,Swing,Line A,4485,351,125
+May,Berlin Plant,EV Batteries,Swing,Line B,4379,373,130
+May,Berlin Plant,EV Batteries,Swing,Line C,4271,392,141
+May,Berlin Plant,EV Batteries,Night,Line A,4340,372,137
+May,Berlin Plant,EV Batteries,Night,Line B,4236,395,143
+May,Berlin Plant,EV Batteries,Night,Line C,4132,415,155
+May,Shenzhen Plant,Industrial Sensors,Day,Line A,8916,275,79
+May,Shenzhen Plant,Industrial Sensors,Day,Line B,8706,293,83
+May,Shenzhen Plant,Industrial Sensors,Day,Line C,8493,307,89
+May,Shenzhen Plant,Industrial Sensors,Swing,Line A,8560,293,87
+May,Shenzhen Plant,Industrial Sensors,Swing,Line B,8358,311,91
+May,Shenzhen Plant,Industrial Sensors,Swing,Line C,8153,326,98
+May,Shenzhen Plant,Industrial Sensors,Night,Line A,8284,310,96
+May,Shenzhen Plant,Industrial Sensors,Night,Line B,8088,329,100
+May,Shenzhen Plant,Industrial Sensors,Night,Line C,7890,346,108
+May,Shenzhen Plant,Robotics,Day,Line A,4096,402,103
+May,Shenzhen Plant,Robotics,Day,Line B,3999,427,107
+May,Shenzhen Plant,Robotics,Day,Line C,3901,448,116
+May,Shenzhen Plant,Robotics,Swing,Line A,3932,427,113
+May,Shenzhen Plant,Robotics,Swing,Line B,3839,454,118
+May,Shenzhen Plant,Robotics,Swing,Line C,3744,476,127
+May,Shenzhen Plant,Robotics,Night,Line A,3804,452,124
+May,Shenzhen Plant,Robotics,Night,Line B,3714,480,130
+May,Shenzhen Plant,Robotics,Night,Line C,3623,504,140
+May,Shenzhen Plant,Power Systems,Day,Line A,5801,359,92
+May,Shenzhen Plant,Power Systems,Day,Line B,5663,382,96
+May,Shenzhen Plant,Power Systems,Day,Line C,5524,400,104
+May,Shenzhen Plant,Power Systems,Swing,Line A,5568,381,101
+May,Shenzhen Plant,Power Systems,Swing,Line B,5436,405,105
+May,Shenzhen Plant,Power Systems,Swing,Line C,5301,425,114
+May,Shenzhen Plant,Power Systems,Night,Line A,5387,404,111
+May,Shenzhen Plant,Power Systems,Night,Line B,5259,429,116
+May,Shenzhen Plant,Power Systems,Night,Line C,5129,450,125
+May,Shenzhen Plant,EV Batteries,Day,Line A,6200,441,97
+May,Shenzhen Plant,EV Batteries,Day,Line B,6052,468,101
+May,Shenzhen Plant,EV Batteries,Day,Line C,5902,492,109
+May,Shenzhen Plant,EV Batteries,Swing,Line A,5950,468,107
+May,Shenzhen Plant,EV Batteries,Swing,Line B,5808,498,111
+May,Shenzhen Plant,EV Batteries,Swing,Line C,5664,522,120
+May,Shenzhen Plant,EV Batteries,Night,Line A,5756,496,117
+May,Shenzhen Plant,EV Batteries,Night,Line B,5618,527,122
+May,Shenzhen Plant,EV Batteries,Night,Line C,5479,553,132
+May,Monterrey Plant,Industrial Sensors,Day,Line A,4934,170,102
+May,Monterrey Plant,Industrial Sensors,Day,Line B,4817,181,106
+May,Monterrey Plant,Industrial Sensors,Day,Line C,4699,190,115
+May,Monterrey Plant,Industrial Sensors,Swing,Line A,4736,181,112
+May,Monterrey Plant,Industrial Sensors,Swing,Line B,4624,192,117
+May,Monterrey Plant,Industrial Sensors,Swing,Line C,4510,202,126
+May,Monterrey Plant,Industrial Sensors,Night,Line A,4583,191,123
+May,Monterrey Plant,Industrial Sensors,Night,Line B,4474,203,128
+May,Monterrey Plant,Industrial Sensors,Night,Line C,4363,213,139
+May,Monterrey Plant,Robotics,Day,Line A,2266,248,133
+May,Monterrey Plant,Robotics,Day,Line B,2212,264,138
+May,Monterrey Plant,Robotics,Day,Line C,2157,277,149
+May,Monterrey Plant,Robotics,Swing,Line A,2175,264,145
+May,Monterrey Plant,Robotics,Swing,Line B,2123,280,152
+May,Monterrey Plant,Robotics,Swing,Line C,2070,294,164
+May,Monterrey Plant,Robotics,Night,Line A,2104,279,160
+May,Monterrey Plant,Robotics,Night,Line B,2054,297,167
+May,Monterrey Plant,Robotics,Night,Line C,2003,311,180
+May,Monterrey Plant,Power Systems,Day,Line A,3208,222,118
+May,Monterrey Plant,Power Systems,Day,Line B,3131,236,123
+May,Monterrey Plant,Power Systems,Day,Line C,3054,247,133
+May,Monterrey Plant,Power Systems,Swing,Line A,3078,236,130
+May,Monterrey Plant,Power Systems,Swing,Line B,3005,250,135
+May,Monterrey Plant,Power Systems,Swing,Line C,2930,263,146
+May,Monterrey Plant,Power Systems,Night,Line A,2978,249,143
+May,Monterrey Plant,Power Systems,Night,Line B,2906,265,149
+May,Monterrey Plant,Power Systems,Night,Line C,2834,278,161
+May,Monterrey Plant,EV Batteries,Day,Line A,3427,272,125
+May,Monterrey Plant,EV Batteries,Day,Line B,3345,289,130
+May,Monterrey Plant,EV Batteries,Day,Line C,3262,304,141
+May,Monterrey Plant,EV Batteries,Swing,Line A,3288,289,137
+May,Monterrey Plant,EV Batteries,Swing,Line B,3210,307,143
+May,Monterrey Plant,EV Batteries,Swing,Line C,3130,323,154
+May,Monterrey Plant,EV Batteries,Night,Line A,3181,306,151
+May,Monterrey Plant,EV Batteries,Night,Line B,3104,326,157
+May,Monterrey Plant,EV Batteries,Night,Line C,3027,342,170
+Jun,Austin Plant,Industrial Sensors,Day,Line A,7564,247,80
+Jun,Austin Plant,Industrial Sensors,Day,Line B,7387,262,83
+Jun,Austin Plant,Industrial Sensors,Day,Line C,7208,275,90
+Jun,Austin Plant,Industrial Sensors,Swing,Line A,7264,262,87
+Jun,Austin Plant,Industrial Sensors,Swing,Line B,7094,278,91
+Jun,Austin Plant,Industrial Sensors,Swing,Line C,6921,292,98
+Jun,Austin Plant,Industrial Sensors,Night,Line A,7032,277,96
+Jun,Austin Plant,Industrial Sensors,Night,Line B,6867,295,100
+Jun,Austin Plant,Industrial Sensors,Night,Line C,6700,309,108
+Jun,Austin Plant,Robotics,Day,Line A,3477,360,103
+Jun,Austin Plant,Robotics,Day,Line B,3395,382,108
+Jun,Austin Plant,Robotics,Day,Line C,3312,401,116
+Jun,Austin Plant,Robotics,Swing,Line A,3338,382,114
+Jun,Austin Plant,Robotics,Swing,Line B,3260,406,118
+Jun,Austin Plant,Robotics,Swing,Line C,3180,426,128
+Jun,Austin Plant,Robotics,Night,Line A,3231,405,125
+Jun,Austin Plant,Robotics,Night,Line B,3155,430,130
+Jun,Austin Plant,Robotics,Night,Line C,3078,451,140
+Jun,Austin Plant,Power Systems,Day,Line A,4927,321,92
+Jun,Austin Plant,Power Systems,Day,Line B,4811,341,96
+Jun,Austin Plant,Power Systems,Day,Line C,4693,358,104
+Jun,Austin Plant,Power Systems,Swing,Line A,4730,341,101
+Jun,Austin Plant,Power Systems,Swing,Line B,4619,363,106
+Jun,Austin Plant,Power Systems,Swing,Line C,4505,381,114
+Jun,Austin Plant,Power Systems,Night,Line A,4578,361,112
+Jun,Austin Plant,Power Systems,Night,Line B,4469,384,116
+Jun,Austin Plant,Power Systems,Night,Line C,4360,403,125
+Jun,Austin Plant,EV Batteries,Day,Line A,5268,394,98
+Jun,Austin Plant,EV Batteries,Day,Line B,5144,419,102
+Jun,Austin Plant,EV Batteries,Day,Line C,5017,440,110
+Jun,Austin Plant,EV Batteries,Swing,Line A,5057,419,107
+Jun,Austin Plant,EV Batteries,Swing,Line B,4937,445,112
+Jun,Austin Plant,EV Batteries,Swing,Line C,4816,467,120
+Jun,Austin Plant,EV Batteries,Night,Line A,4894,444,118
+Jun,Austin Plant,EV Batteries,Night,Line B,4777,472,123
+Jun,Austin Plant,EV Batteries,Night,Line C,4659,495,132
+Jun,Berlin Plant,Industrial Sensors,Day,Line A,6999,217,87
+Jun,Berlin Plant,Industrial Sensors,Day,Line B,6834,230,91
+Jun,Berlin Plant,Industrial Sensors,Day,Line C,6667,242,98
+Jun,Berlin Plant,Industrial Sensors,Swing,Line A,6720,230,96
+Jun,Berlin Plant,Industrial Sensors,Swing,Line B,6562,245,100
+Jun,Berlin Plant,Industrial Sensors,Swing,Line C,6401,257,108
+Jun,Berlin Plant,Industrial Sensors,Night,Line A,6504,244,105
+Jun,Berlin Plant,Industrial Sensors,Night,Line B,6350,259,110
+Jun,Berlin Plant,Industrial Sensors,Night,Line C,6195,272,118
+Jun,Berlin Plant,Robotics,Day,Line A,3215,316,113
+Jun,Berlin Plant,Robotics,Day,Line B,3140,336,118
+Jun,Berlin Plant,Robotics,Day,Line C,3063,353,127
+Jun,Berlin Plant,Robotics,Swing,Line A,3087,336,124
+Jun,Berlin Plant,Robotics,Swing,Line B,3014,357,129
+Jun,Berlin Plant,Robotics,Swing,Line C,2940,375,140
+Jun,Berlin Plant,Robotics,Night,Line A,2987,356,137
+Jun,Berlin Plant,Robotics,Night,Line B,2916,378,142
+Jun,Berlin Plant,Robotics,Night,Line C,2845,397,154
+Jun,Berlin Plant,Power Systems,Day,Line A,4555,282,101
+Jun,Berlin Plant,Power Systems,Day,Line B,4447,300,105
+Jun,Berlin Plant,Power Systems,Day,Line C,4338,315,114
+Jun,Berlin Plant,Power Systems,Swing,Line A,4372,300,111
+Jun,Berlin Plant,Power Systems,Swing,Line B,4269,319,116
+Jun,Berlin Plant,Power Systems,Swing,Line C,4163,335,125
+Jun,Berlin Plant,Power Systems,Night,Line A,4231,318,122
+Jun,Berlin Plant,Power Systems,Night,Line B,4130,338,127
+Jun,Berlin Plant,Power Systems,Night,Line C,4028,355,137
+Jun,Berlin Plant,EV Batteries,Day,Line A,4869,347,107
+Jun,Berlin Plant,EV Batteries,Day,Line B,4753,369,111
+Jun,Berlin Plant,EV Batteries,Day,Line C,4636,387,120
+Jun,Berlin Plant,EV Batteries,Swing,Line A,4673,368,117
+Jun,Berlin Plant,EV Batteries,Swing,Line B,4562,392,122
+Jun,Berlin Plant,EV Batteries,Swing,Line C,4449,411,132
+Jun,Berlin Plant,EV Batteries,Night,Line A,4521,390,129
+Jun,Berlin Plant,EV Batteries,Night,Line B,4413,415,134
+Jun,Berlin Plant,EV Batteries,Night,Line C,4304,435,145
+Jun,Shenzhen Plant,Industrial Sensors,Day,Line A,9293,289,75
+Jun,Shenzhen Plant,Industrial Sensors,Day,Line B,9074,307,78
+Jun,Shenzhen Plant,Industrial Sensors,Day,Line C,8851,322,84
+Jun,Shenzhen Plant,Industrial Sensors,Swing,Line A,8921,307,82
+Jun,Shenzhen Plant,Industrial Sensors,Swing,Line B,8710,326,85
+Jun,Shenzhen Plant,Industrial Sensors,Swing,Line C,8496,343,92
+Jun,Shenzhen Plant,Industrial Sensors,Night,Line A,8633,325,90
+Jun,Shenzhen Plant,Industrial Sensors,Night,Line B,8428,346,94
+Jun,Shenzhen Plant,Industrial Sensors,Night,Line C,8220,363,101
+Jun,Shenzhen Plant,Robotics,Day,Line A,4268,422,97
+Jun,Shenzhen Plant,Robotics,Day,Line B,4167,448,101
+Jun,Shenzhen Plant,Robotics,Day,Line C,4064,470,109
+Jun,Shenzhen Plant,Robotics,Swing,Line A,4097,448,106
+Jun,Shenzhen Plant,Robotics,Swing,Line B,3999,476,111
+Jun,Shenzhen Plant,Robotics,Swing,Line C,3901,500,119
+Jun,Shenzhen Plant,Robotics,Night,Line A,3964,474,117
+Jun,Shenzhen Plant,Robotics,Night,Line B,3869,504,122
+Jun,Shenzhen Plant,Robotics,Night,Line C,3774,529,131
+Jun,Shenzhen Plant,Power Systems,Day,Line A,6044,377,86
+Jun,Shenzhen Plant,Power Systems,Day,Line B,5900,400,90
+Jun,Shenzhen Plant,Power Systems,Day,Line C,5754,420,97
+Jun,Shenzhen Plant,Power Systems,Swing,Line A,5801,400,95
+Jun,Shenzhen Plant,Power Systems,Swing,Line B,5662,425,99
+Jun,Shenzhen Plant,Power Systems,Swing,Line C,5522,446,107
+Jun,Shenzhen Plant,Power Systems,Night,Line A,5611,424,104
+Jun,Shenzhen Plant,Power Systems,Night,Line B,5477,450,109
+Jun,Shenzhen Plant,Power Systems,Night,Line C,5341,473,117
+Jun,Shenzhen Plant,EV Batteries,Day,Line A,6458,462,91
+Jun,Shenzhen Plant,EV Batteries,Day,Line B,6304,491,95
+Jun,Shenzhen Plant,EV Batteries,Day,Line C,6147,516,103
+Jun,Shenzhen Plant,EV Batteries,Swing,Line A,6197,491,100
+Jun,Shenzhen Plant,EV Batteries,Swing,Line B,6049,522,104
+Jun,Shenzhen Plant,EV Batteries,Swing,Line C,5898,548,113
+Jun,Shenzhen Plant,EV Batteries,Night,Line A,5994,520,110
+Jun,Shenzhen Plant,EV Batteries,Night,Line B,5851,553,115
+Jun,Shenzhen Plant,EV Batteries,Night,Line C,5705,580,124
+Jun,Monterrey Plant,Industrial Sensors,Day,Line A,5141,179,96
+Jun,Monterrey Plant,Industrial Sensors,Day,Line B,5019,190,100
+Jun,Monterrey Plant,Industrial Sensors,Day,Line C,4895,199,108
+Jun,Monterrey Plant,Industrial Sensors,Swing,Line A,4935,190,105
+Jun,Monterrey Plant,Industrial Sensors,Swing,Line B,4817,202,110
+Jun,Monterrey Plant,Industrial Sensors,Swing,Line C,4698,212,118
+Jun,Monterrey Plant,Industrial Sensors,Night,Line A,4774,201,116
+Jun,Monterrey Plant,Industrial Sensors,Night,Line B,4660,214,120
+Jun,Monterrey Plant,Industrial Sensors,Night,Line C,4545,224,130
+Jun,Monterrey Plant,Robotics,Day,Line A,2360,260,124
+Jun,Monterrey Plant,Robotics,Day,Line B,2304,277,129
+Jun,Monterrey Plant,Robotics,Day,Line C,2247,291,140
+Jun,Monterrey Plant,Robotics,Swing,Line A,2265,277,136
+Jun,Monterrey Plant,Robotics,Swing,Line B,2211,294,142
+Jun,Monterrey Plant,Robotics,Swing,Line C,2156,309,154
+Jun,Monterrey Plant,Robotics,Night,Line A,2191,293,150
+Jun,Monterrey Plant,Robotics,Night,Line B,2139,311,156
+Jun,Monterrey Plant,Robotics,Night,Line C,2086,327,169
+Jun,Monterrey Plant,Power Systems,Day,Line A,3341,233,111
+Jun,Monterrey Plant,Power Systems,Day,Line B,3261,247,116
+Jun,Monterrey Plant,Power Systems,Day,Line C,3180,260,125
+Jun,Monterrey Plant,Power Systems,Swing,Line A,3206,247,122
+Jun,Monterrey Plant,Power Systems,Swing,Line B,3129,263,127
+Jun,Monterrey Plant,Power Systems,Swing,Line C,3051,276,137
+Jun,Monterrey Plant,Power Systems,Night,Line A,3101,262,134
+Jun,Monterrey Plant,Power Systems,Night,Line B,3026,278,140
+Jun,Monterrey Plant,Power Systems,Night,Line C,2951,292,151
+Jun,Monterrey Plant,EV Batteries,Day,Line A,3569,286,117
+Jun,Monterrey Plant,EV Batteries,Day,Line B,3483,304,122
+Jun,Monterrey Plant,EV Batteries,Day,Line C,3396,319,132
+Jun,Monterrey Plant,EV Batteries,Swing,Line A,3424,303,129
+Jun,Monterrey Plant,EV Batteries,Swing,Line B,3342,323,134
+Jun,Monterrey Plant,EV Batteries,Swing,Line C,3258,339,145
+Jun,Monterrey Plant,EV Batteries,Night,Line A,3311,321,141
+Jun,Monterrey Plant,EV Batteries,Night,Line B,3232,342,147
+Jun,Monterrey Plant,EV Batteries,Night,Line C,3151,358,159
+Jul,Austin Plant,Industrial Sensors,Day,Line A,7882,249,81
+Jul,Austin Plant,Industrial Sensors,Day,Line B,7697,265,84
+Jul,Austin Plant,Industrial Sensors,Day,Line C,7509,278,91
+Jul,Austin Plant,Industrial Sensors,Swing,Line A,7568,265,89
+Jul,Austin Plant,Industrial Sensors,Swing,Line B,7390,282,93
+Jul,Austin Plant,Industrial Sensors,Swing,Line C,7210,296,100
+Jul,Austin Plant,Industrial Sensors,Night,Line A,7326,281,98
+Jul,Austin Plant,Industrial Sensors,Night,Line B,7153,298,102
+Jul,Austin Plant,Industrial Sensors,Night,Line C,6978,313,110
+Jul,Austin Plant,Robotics,Day,Line A,3622,364,105
+Jul,Austin Plant,Robotics,Day,Line B,3536,387,110
+Jul,Austin Plant,Robotics,Day,Line C,3450,406,118
+Jul,Austin Plant,Robotics,Swing,Line A,3477,387,115
+Jul,Austin Plant,Robotics,Swing,Line B,3395,411,120
+Jul,Austin Plant,Robotics,Swing,Line C,3312,431,130
+Jul,Austin Plant,Robotics,Night,Line A,3365,409,127
+Jul,Austin Plant,Robotics,Night,Line B,3286,435,132
+Jul,Austin Plant,Robotics,Night,Line C,3205,457,143
+Jul,Austin Plant,Power Systems,Day,Line A,5131,325,94
+Jul,Austin Plant,Power Systems,Day,Line B,5010,346,98
+Jul,Austin Plant,Power Systems,Day,Line C,4887,363,106
+Jul,Austin Plant,Power Systems,Swing,Line A,4926,345,103
+Jul,Austin Plant,Power Systems,Swing,Line B,4809,367,107
+Jul,Austin Plant,Power Systems,Swing,Line C,4691,386,116
+Jul,Austin Plant,Power Systems,Night,Line A,4767,366,113
+Jul,Austin Plant,Power Systems,Night,Line B,4653,389,118
+Jul,Austin Plant,Power Systems,Night,Line C,4539,408,128
+Jul,Austin Plant,EV Batteries,Day,Line A,5486,399,99
+Jul,Austin Plant,EV Batteries,Day,Line B,5356,425,103
+Jul,Austin Plant,EV Batteries,Day,Line C,5224,446,112
+Jul,Austin Plant,EV Batteries,Swing,Line A,5265,424,109
+Jul,Austin Plant,EV Batteries,Swing,Line B,5140,451,113
+Jul,Austin Plant,EV Batteries,Swing,Line C,5013,473,122
+Jul,Austin Plant,EV Batteries,Night,Line A,5094,449,120
+Jul,Austin Plant,EV Batteries,Night,Line B,4973,478,125
+Jul,Austin Plant,EV Batteries,Night,Line C,4850,501,135
+Jul,Berlin Plant,Industrial Sensors,Day,Line A,7290,219,89
+Jul,Berlin Plant,Industrial Sensors,Day,Line B,7118,233,92
+Jul,Berlin Plant,Industrial Sensors,Day,Line C,6944,245,100
+Jul,Berlin Plant,Industrial Sensors,Swing,Line A,6999,233,97
+Jul,Berlin Plant,Industrial Sensors,Swing,Line B,6833,248,101
+Jul,Berlin Plant,Industrial Sensors,Swing,Line C,6666,260,110
+Jul,Berlin Plant,Industrial Sensors,Night,Line A,6773,247,107
+Jul,Berlin Plant,Industrial Sensors,Night,Line B,6613,262,111
+Jul,Berlin Plant,Industrial Sensors,Night,Line C,6450,275,120
+Jul,Berlin Plant,Robotics,Day,Line A,3349,320,115
+Jul,Berlin Plant,Robotics,Day,Line B,3269,340,120
+Jul,Berlin Plant,Robotics,Day,Line C,3189,357,129
+Jul,Berlin Plant,Robotics,Swing,Line A,3214,340,126
+Jul,Berlin Plant,Robotics,Swing,Line B,3138,361,132
+Jul,Berlin Plant,Robotics,Swing,Line C,3061,379,142
+Jul,Berlin Plant,Robotics,Night,Line A,3110,360,139
+Jul,Berlin Plant,Robotics,Night,Line B,3036,383,145
+Jul,Berlin Plant,Robotics,Night,Line C,2961,402,156
+Jul,Berlin Plant,Power Systems,Day,Line A,4743,286,103
+Jul,Berlin Plant,Power Systems,Day,Line B,4630,304,107
+Jul,Berlin Plant,Power Systems,Day,Line C,4516,319,116
+Jul,Berlin Plant,Power Systems,Swing,Line A,4552,304,113
+Jul,Berlin Plant,Power Systems,Swing,Line B,4444,323,118
+Jul,Berlin Plant,Power Systems,Swing,Line C,4334,339,127
+Jul,Berlin Plant,Power Systems,Night,Line A,4404,322,124
+Jul,Berlin Plant,Power Systems,Night,Line B,4299,342,129
+Jul,Berlin Plant,Power Systems,Night,Line C,4192,359,140
+Jul,Berlin Plant,EV Batteries,Day,Line A,5068,351,108
+Jul,Berlin Plant,EV Batteries,Day,Line B,4947,373,113
+Jul,Berlin Plant,EV Batteries,Day,Line C,4825,392,122
+Jul,Berlin Plant,EV Batteries,Swing,Line A,4864,373,119
+Jul,Berlin Plant,EV Batteries,Swing,Line B,4748,397,124
+Jul,Berlin Plant,EV Batteries,Swing,Line C,4630,416,134
+Jul,Berlin Plant,EV Batteries,Night,Line A,4705,395,131
+Jul,Berlin Plant,EV Batteries,Night,Line B,4592,420,136
+Jul,Berlin Plant,EV Batteries,Night,Line C,4478,441,147
+Jul,Shenzhen Plant,Industrial Sensors,Day,Line A,9677,292,76
+Jul,Shenzhen Plant,Industrial Sensors,Day,Line B,9448,311,79
+Jul,Shenzhen Plant,Industrial Sensors,Day,Line C,9215,326,85
+Jul,Shenzhen Plant,Industrial Sensors,Swing,Line A,9289,311,83
+Jul,Shenzhen Plant,Industrial Sensors,Swing,Line B,9068,330,87
+Jul,Shenzhen Plant,Industrial Sensors,Swing,Line C,8845,347,94
+Jul,Shenzhen Plant,Industrial Sensors,Night,Line A,8988,329,91
+Jul,Shenzhen Plant,Industrial Sensors,Night,Line B,8774,350,95
+Jul,Shenzhen Plant,Industrial Sensors,Night,Line C,8557,367,103
+Jul,Shenzhen Plant,Robotics,Day,Line A,4444,427,98
+Jul,Shenzhen Plant,Robotics,Day,Line B,4338,454,102
+Jul,Shenzhen Plant,Robotics,Day,Line C,4231,476,111
+Jul,Shenzhen Plant,Robotics,Swing,Line A,4265,453,108
+Jul,Shenzhen Plant,Robotics,Swing,Line B,4163,482,112
+Jul,Shenzhen Plant,Robotics,Swing,Line C,4060,506,121
+Jul,Shenzhen Plant,Robotics,Night,Line A,4126,480,119
+Jul,Shenzhen Plant,Robotics,Night,Line B,4027,510,124
+Jul,Shenzhen Plant,Robotics,Night,Line C,3927,536,133
+Jul,Shenzhen Plant,Power Systems,Day,Line A,6291,381,88
+Jul,Shenzhen Plant,Power Systems,Day,Line B,6141,405,92
+Jul,Shenzhen Plant,Power Systems,Day,Line C,5989,425,99
+Jul,Shenzhen Plant,Power Systems,Swing,Line A,6037,405,96
+Jul,Shenzhen Plant,Power Systems,Swing,Line B,5893,431,100
+Jul,Shenzhen Plant,Power Systems,Swing,Line C,5746,452,109
+Jul,Shenzhen Plant,Power Systems,Night,Line A,5840,429,106
+Jul,Shenzhen Plant,Power Systems,Night,Line B,5700,456,110
+Jul,Shenzhen Plant,Power Systems,Night,Line C,5558,479,119
+Jul,Shenzhen Plant,EV Batteries,Day,Line A,6721,468,93
+Jul,Shenzhen Plant,EV Batteries,Day,Line B,6560,498,97
+Jul,Shenzhen Plant,EV Batteries,Day,Line C,6396,522,104
+Jul,Shenzhen Plant,EV Batteries,Swing,Line A,6449,497,102
+Jul,Shenzhen Plant,EV Batteries,Swing,Line B,6294,529,106
+Jul,Shenzhen Plant,EV Batteries,Swing,Line C,6137,555,114
+Jul,Shenzhen Plant,EV Batteries,Night,Line A,6237,527,112
+Jul,Shenzhen Plant,EV Batteries,Night,Line B,6087,560,116
+Jul,Shenzhen Plant,EV Batteries,Night,Line C,5935,588,126
+Jul,Monterrey Plant,Industrial Sensors,Day,Line A,5352,181,97
+Jul,Monterrey Plant,Industrial Sensors,Day,Line B,5225,192,101
+Jul,Monterrey Plant,Industrial Sensors,Day,Line C,5095,202,110
+Jul,Monterrey Plant,Industrial Sensors,Swing,Line A,5136,192,107
+Jul,Monterrey Plant,Industrial Sensors,Swing,Line B,5014,204,111
+Jul,Monterrey Plant,Industrial Sensors,Swing,Line C,4890,214,120
+Jul,Monterrey Plant,Industrial Sensors,Night,Line A,4969,203,117
+Jul,Monterrey Plant,Industrial Sensors,Night,Line B,4850,216,122
+Jul,Monterrey Plant,Industrial Sensors,Night,Line C,4730,227,132
+Jul,Monterrey Plant,Robotics,Day,Line A,2457,264,126
+Jul,Monterrey Plant,Robotics,Day,Line B,2398,280,132
+Jul,Monterrey Plant,Robotics,Day,Line C,2338,294,142
+Jul,Monterrey Plant,Robotics,Swing,Line A,2357,280,139
+Jul,Monterrey Plant,Robotics,Swing,Line B,2301,298,144
+Jul,Monterrey Plant,Robotics,Swing,Line C,2244,312,156
+Jul,Monterrey Plant,Robotics,Night,Line A,2280,296,152
+Jul,Monterrey Plant,Robotics,Night,Line B,2225,315,159
+Jul,Monterrey Plant,Robotics,Night,Line C,2170,331,172
+Jul,Monterrey Plant,Power Systems,Day,Line A,3477,235,113
+Jul,Monterrey Plant,Power Systems,Day,Line B,3393,250,118
+Jul,Monterrey Plant,Power Systems,Day,Line C,3309,263,127
+Jul,Monterrey Plant,Power Systems,Swing,Line A,3336,250,124
+Jul,Monterrey Plant,Power Systems,Swing,Line B,3256,266,129
+Jul,Monterrey Plant,Power Systems,Swing,Line C,3174,279,139
+Jul,Monterrey Plant,Power Systems,Night,Line A,3226,265,136
+Jul,Monterrey Plant,Power Systems,Night,Line B,3149,282,142
+Jul,Monterrey Plant,Power Systems,Night,Line C,3070,296,153
+Jul,Monterrey Plant,EV Batteries,Day,Line A,3713,289,119
+Jul,Monterrey Plant,EV Batteries,Day,Line B,3624,307,124
+Jul,Monterrey Plant,EV Batteries,Day,Line C,3533,323,134
+Jul,Monterrey Plant,EV Batteries,Swing,Line A,3562,307,131
+Jul,Monterrey Plant,EV Batteries,Swing,Line B,3476,327,136
+Jul,Monterrey Plant,EV Batteries,Swing,Line C,3389,343,147
+Jul,Monterrey Plant,EV Batteries,Night,Line A,3445,325,144
+Jul,Monterrey Plant,EV Batteries,Night,Line B,3361,346,150
+Jul,Monterrey Plant,EV Batteries,Night,Line C,3277,363,162
+Aug,Austin Plant,Industrial Sensors,Day,Line A,7701,239,82
+Aug,Austin Plant,Industrial Sensors,Day,Line B,7520,254,86
+Aug,Austin Plant,Industrial Sensors,Day,Line C,7336,267,93
+Aug,Austin Plant,Industrial Sensors,Swing,Line A,7394,254,90
+Aug,Austin Plant,Industrial Sensors,Swing,Line B,7220,270,94
+Aug,Austin Plant,Industrial Sensors,Swing,Line C,7043,284,102
+Aug,Austin Plant,Industrial Sensors,Night,Line A,7156,269,99
+Aug,Austin Plant,Industrial Sensors,Night,Line B,6987,286,104
+Aug,Austin Plant,Industrial Sensors,Night,Line C,6816,300,112
+Aug,Austin Plant,Robotics,Day,Line A,3538,349,107
+Aug,Austin Plant,Robotics,Day,Line B,3454,371,111
+Aug,Austin Plant,Robotics,Day,Line C,3370,389,120
+Aug,Austin Plant,Robotics,Swing,Line A,3396,371,117
+Aug,Austin Plant,Robotics,Swing,Line B,3316,394,122
+Aug,Austin Plant,Robotics,Swing,Line C,3235,414,132
+Aug,Austin Plant,Robotics,Night,Line A,3287,393,129
+Aug,Austin Plant,Robotics,Night,Line B,3209,417,134
+Aug,Austin Plant,Robotics,Night,Line C,3130,438,145
+Aug,Austin Plant,Power Systems,Day,Line A,5012,312,96
+Aug,Austin Plant,Power Systems,Day,Line B,4893,332,100
+Aug,Austin Plant,Power Systems,Day,Line C,4772,348,108
+Aug,Austin Plant,Power Systems,Swing,Line A,4810,331,105
+Aug,Austin Plant,Power Systems,Swing,Line B,4696,352,109
+Aug,Austin Plant,Power Systems,Swing,Line C,4580,370,118
+Aug,Austin Plant,Power Systems,Night,Line A,4654,351,115
+Aug,Austin Plant,Power Systems,Night,Line B,4543,373,120
+Aug,Austin Plant,Power Systems,Night,Line C,4431,391,130
+Aug,Austin Plant,EV Batteries,Day,Line A,5357,383,101
+Aug,Austin Plant,EV Batteries,Day,Line B,5229,407,105
+Aug,Austin Plant,EV Batteries,Day,Line C,5100,427,113
+Aug,Austin Plant,EV Batteries,Swing,Line A,5141,407,111
+Aug,Austin Plant,EV Batteries,Swing,Line B,5018,432,115
+Aug,Austin Plant,EV Batteries,Swing,Line C,4894,454,125
+Aug,Austin Plant,EV Batteries,Night,Line A,4973,431,122
+Aug,Austin Plant,EV Batteries,Night,Line B,4854,458,127
+Aug,Austin Plant,EV Batteries,Night,Line C,4734,481,137
+Aug,Berlin Plant,Industrial Sensors,Day,Line A,7121,210,90
+Aug,Berlin Plant,Industrial Sensors,Day,Line B,6952,224,94
+Aug,Berlin Plant,Industrial Sensors,Day,Line C,6782,235,101
+Aug,Berlin Plant,Industrial Sensors,Swing,Line A,6836,224,99
+Aug,Berlin Plant,Industrial Sensors,Swing,Line B,6674,238,103
+Aug,Berlin Plant,Industrial Sensors,Swing,Line C,6509,249,111
+Aug,Berlin Plant,Industrial Sensors,Night,Line A,6614,237,109
+Aug,Berlin Plant,Industrial Sensors,Night,Line B,6457,252,113
+Aug,Berlin Plant,Industrial Sensors,Night,Line C,6298,264,122
+Aug,Berlin Plant,Robotics,Day,Line A,3270,307,117
+Aug,Berlin Plant,Robotics,Day,Line B,3192,326,122
+Aug,Berlin Plant,Robotics,Day,Line C,3114,342,132
+Aug,Berlin Plant,Robotics,Swing,Line A,3139,326,128
+Aug,Berlin Plant,Robotics,Swing,Line B,3064,347,134
+Aug,Berlin Plant,Robotics,Swing,Line C,2988,364,144
+Aug,Berlin Plant,Robotics,Night,Line A,3037,345,141
+Aug,Berlin Plant,Robotics,Night,Line B,2964,367,147
+Aug,Berlin Plant,Robotics,Night,Line C,2891,385,159
+Aug,Berlin Plant,Power Systems,Day,Line A,4631,274,105
+Aug,Berlin Plant,Power Systems,Day,Line B,4520,291,109
+Aug,Berlin Plant,Power Systems,Day,Line C,4408,306,118
+Aug,Berlin Plant,Power Systems,Swing,Line A,4444,291,115
+Aug,Berlin Plant,Power Systems,Swing,Line B,4338,310,120
+Aug,Berlin Plant,Power Systems,Swing,Line C,4230,325,129
+Aug,Berlin Plant,Power Systems,Night,Line A,4299,308,126
+Aug,Berlin Plant,Power Systems,Night,Line B,4196,328,131
+Aug,Berlin Plant,Power Systems,Night,Line C,4092,344,142
+Aug,Berlin Plant,EV Batteries,Day,Line A,4947,337,110
+Aug,Berlin Plant,EV Batteries,Day,Line B,4829,358,115
+Aug,Berlin Plant,EV Batteries,Day,Line C,4709,376,124
+Aug,Berlin Plant,EV Batteries,Swing,Line A,4747,358,121
+Aug,Berlin Plant,EV Batteries,Swing,Line B,4634,380,126
+Aug,Berlin Plant,EV Batteries,Swing,Line C,4518,399,136
+Aug,Berlin Plant,EV Batteries,Night,Line A,4592,379,133
+Aug,Berlin Plant,EV Batteries,Night,Line B,4482,403,139
+Aug,Berlin Plant,EV Batteries,Night,Line C,4370,423,150
+Aug,Shenzhen Plant,Industrial Sensors,Day,Line A,9450,280,77
+Aug,Shenzhen Plant,Industrial Sensors,Day,Line B,9225,298,80
+Aug,Shenzhen Plant,Industrial Sensors,Day,Line C,8998,313,87
+Aug,Shenzhen Plant,Industrial Sensors,Swing,Line A,9070,298,85
+Aug,Shenzhen Plant,Industrial Sensors,Swing,Line B,8854,317,88
+Aug,Shenzhen Plant,Industrial Sensors,Swing,Line C,8635,333,95
+Aug,Shenzhen Plant,Industrial Sensors,Night,Line A,8775,316,93
+Aug,Shenzhen Plant,Industrial Sensors,Night,Line B,8565,335,97
+Aug,Shenzhen Plant,Industrial Sensors,Night,Line C,8353,352,105
+Aug,Shenzhen Plant,Robotics,Day,Line A,4338,409,100
+Aug,Shenzhen Plant,Robotics,Day,Line B,4235,435,104
+Aug,Shenzhen Plant,Robotics,Day,Line C,4130,457,112
+Aug,Shenzhen Plant,Robotics,Swing,Line A,4163,435,110
+Aug,Shenzhen Plant,Robotics,Swing,Line B,4064,462,114
+Aug,Shenzhen Plant,Robotics,Swing,Line C,3963,485,123
+Aug,Shenzhen Plant,Robotics,Night,Line A,4027,460,121
+Aug,Shenzhen Plant,Robotics,Night,Line B,3931,489,126
+Aug,Shenzhen Plant,Robotics,Night,Line C,3833,514,136
+Aug,Shenzhen Plant,Power Systems,Day,Line A,6141,366,89
+Aug,Shenzhen Plant,Power Systems,Day,Line B,5994,389,93
+Aug,Shenzhen Plant,Power Systems,Day,Line C,5845,408,100
+Aug,Shenzhen Plant,Power Systems,Swing,Line A,5892,388,98
+Aug,Shenzhen Plant,Power Systems,Swing,Line B,5751,413,102
+Aug,Shenzhen Plant,Power Systems,Swing,Line C,5608,433,110
+Aug,Shenzhen Plant,Power Systems,Night,Line A,5699,411,108
+Aug,Shenzhen Plant,Power Systems,Night,Line B,5562,437,112
+Aug,Shenzhen Plant,Power Systems,Night,Line C,5423,459,121
+Aug,Shenzhen Plant,EV Batteries,Day,Line A,6559,449,94
+Aug,Shenzhen Plant,EV Batteries,Day,Line B,6401,477,98
+Aug,Shenzhen Plant,EV Batteries,Day,Line C,6242,501,106
+Aug,Shenzhen Plant,EV Batteries,Swing,Line A,6293,477,103
+Aug,Shenzhen Plant,EV Batteries,Swing,Line B,6141,507,108
+Aug,Shenzhen Plant,EV Batteries,Swing,Line C,5988,532,116
+Aug,Shenzhen Plant,EV Batteries,Night,Line A,6085,505,114
+Aug,Shenzhen Plant,EV Batteries,Night,Line B,5939,537,118
+Aug,Shenzhen Plant,EV Batteries,Night,Line C,5790,563,128
+Aug,Monterrey Plant,Industrial Sensors,Day,Line A,5225,173,99
+Aug,Monterrey Plant,Industrial Sensors,Day,Line B,5100,184,103
+Aug,Monterrey Plant,Industrial Sensors,Day,Line C,4974,193,111
+Aug,Monterrey Plant,Industrial Sensors,Swing,Line A,5014,184,109
+Aug,Monterrey Plant,Industrial Sensors,Swing,Line B,4894,196,113
+Aug,Monterrey Plant,Industrial Sensors,Swing,Line C,4772,205,122
+Aug,Monterrey Plant,Industrial Sensors,Night,Line A,4850,195,119
+Aug,Monterrey Plant,Industrial Sensors,Night,Line B,4734,207,124
+Aug,Monterrey Plant,Industrial Sensors,Night,Line C,4616,217,134
+Aug,Monterrey Plant,Robotics,Day,Line A,2398,253,128
+Aug,Monterrey Plant,Robotics,Day,Line B,2340,269,134
+Aug,Monterrey Plant,Robotics,Day,Line C,2282,282,144
+Aug,Monterrey Plant,Robotics,Swing,Line A,2301,269,141
+Aug,Monterrey Plant,Robotics,Swing,Line B,2245,285,147
+Aug,Monterrey Plant,Robotics,Swing,Line C,2189,300,159
+Aug,Monterrey Plant,Robotics,Night,Line A,2225,284,155
+Aug,Monterrey Plant,Robotics,Night,Line B,2172,302,161
+Aug,Monterrey Plant,Robotics,Night,Line C,2117,317,174
+Aug,Monterrey Plant,Power Systems,Day,Line A,3393,226,115
+Aug,Monterrey Plant,Power Systems,Day,Line B,3311,240,120
+Aug,Monterrey Plant,Power Systems,Day,Line C,3229,252,129
+Aug,Monterrey Plant,Power Systems,Swing,Line A,3255,240,126
+Aug,Monterrey Plant,Power Systems,Swing,Line B,3177,255,131
+Aug,Monterrey Plant,Power Systems,Swing,Line C,3097,268,142
+Aug,Monterrey Plant,Power Systems,Night,Line A,3148,254,138
+Aug,Monterrey Plant,Power Systems,Night,Line B,3072,270,144
+Aug,Monterrey Plant,Power Systems,Night,Line C,2995,283,156
+Aug,Monterrey Plant,EV Batteries,Day,Line A,3623,277,121
+Aug,Monterrey Plant,EV Batteries,Day,Line B,3535,295,126
+Aug,Monterrey Plant,EV Batteries,Day,Line C,3447,309,136
+Aug,Monterrey Plant,EV Batteries,Swing,Line A,3475,295,133
+Aug,Monterrey Plant,EV Batteries,Swing,Line B,3391,313,138
+Aug,Monterrey Plant,EV Batteries,Swing,Line C,3306,329,149
+Aug,Monterrey Plant,EV Batteries,Night,Line A,3360,312,146
+Aug,Monterrey Plant,EV Batteries,Night,Line B,3279,332,152
+Aug,Monterrey Plant,EV Batteries,Night,Line C,3196,348,164
+Sep,Austin Plant,Industrial Sensors,Day,Line A,7114,231,84
+Sep,Austin Plant,Industrial Sensors,Day,Line B,6949,246,87
+Sep,Austin Plant,Industrial Sensors,Day,Line C,6780,258,94
+Sep,Austin Plant,Industrial Sensors,Swing,Line A,6833,245,92
+Sep,Austin Plant,Industrial Sensors,Swing,Line B,6674,261,96
+Sep,Austin Plant,Industrial Sensors,Swing,Line C,6512,274,103
+Sep,Austin Plant,Industrial Sensors,Night,Line A,6616,260,101
+Sep,Austin Plant,Industrial Sensors,Night,Line B,6461,276,105
+Sep,Austin Plant,Industrial Sensors,Night,Line C,6304,290,114
+Sep,Austin Plant,Robotics,Day,Line A,3271,337,109
+Sep,Austin Plant,Robotics,Day,Line B,3194,358,113
+Sep,Austin Plant,Robotics,Day,Line C,3117,376,122
+Sep,Austin Plant,Robotics,Swing,Line A,3141,358,119
+Sep,Austin Plant,Robotics,Swing,Line B,3067,381,124
+Sep,Austin Plant,Robotics,Swing,Line C,2993,399,134
+Sep,Austin Plant,Robotics,Night,Line A,3041,379,131
+Sep,Austin Plant,Robotics,Night,Line B,2969,403,137
+Sep,Austin Plant,Robotics,Night,Line C,2897,423,148
+Sep,Austin Plant,Power Systems,Day,Line A,4636,301,97
+Sep,Austin Plant,Power Systems,Day,Line B,4527,320,101
+Sep,Austin Plant,Power Systems,Day,Line C,4417,336,109
+Sep,Austin Plant,Power Systems,Swing,Line A,4452,320,107
+Sep,Austin Plant,Power Systems,Swing,Line B,4347,340,111
+Sep,Austin Plant,Power Systems,Swing,Line C,4241,357,120
+Sep,Austin Plant,Power Systems,Night,Line A,4309,339,117
+Sep,Austin Plant,Power Systems,Night,Line B,4207,360,122
+Sep,Austin Plant,Power Systems,Night,Line C,4104,378,132
+Sep,Austin Plant,EV Batteries,Day,Line A,4959,369,102
+Sep,Austin Plant,EV Batteries,Day,Line B,4842,393,107
+Sep,Austin Plant,EV Batteries,Day,Line C,4723,412,115
+Sep,Austin Plant,EV Batteries,Swing,Line A,4761,393,113
+Sep,Austin Plant,EV Batteries,Swing,Line B,4648,417,117
+Sep,Austin Plant,EV Batteries,Swing,Line C,4534,438,127
+Sep,Austin Plant,EV Batteries,Night,Line A,4607,416,124
+Sep,Austin Plant,EV Batteries,Night,Line B,4498,442,129
+Sep,Austin Plant,EV Batteries,Night,Line C,4387,464,139
+Sep,Berlin Plant,Industrial Sensors,Day,Line A,6585,203,92
+Sep,Berlin Plant,Industrial Sensors,Day,Line B,6430,216,95
+Sep,Berlin Plant,Industrial Sensors,Day,Line C,6274,227,103
+Sep,Berlin Plant,Industrial Sensors,Swing,Line A,6323,216,101
+Sep,Berlin Plant,Industrial Sensors,Swing,Line B,6175,229,105
+Sep,Berlin Plant,Industrial Sensors,Swing,Line C,6024,241,113
+Sep,Berlin Plant,Industrial Sensors,Night,Line A,6120,228,111
+Sep,Berlin Plant,Industrial Sensors,Night,Line B,5976,243,115
+Sep,Berlin Plant,Industrial Sensors,Night,Line C,5830,255,124
+Sep,Berlin Plant,Robotics,Day,Line A,3026,296,119
+Sep,Berlin Plant,Robotics,Day,Line B,2955,315,124
+Sep,Berlin Plant,Robotics,Day,Line C,2882,331,134
+Sep,Berlin Plant,Robotics,Swing,Line A,2905,315,131
+Sep,Berlin Plant,Robotics,Swing,Line B,2837,335,136
+Sep,Berlin Plant,Robotics,Swing,Line C,2767,351,147
+Sep,Berlin Plant,Robotics,Night,Line A,2812,333,143
+Sep,Berlin Plant,Robotics,Night,Line B,2745,354,149
+Sep,Berlin Plant,Robotics,Night,Line C,2678,372,161
+Sep,Berlin Plant,Power Systems,Day,Line A,4288,265,106
+Sep,Berlin Plant,Power Systems,Day,Line B,4186,281,111
+Sep,Berlin Plant,Power Systems,Day,Line C,4083,295,120
+Sep,Berlin Plant,Power Systems,Swing,Line A,4116,281,117
+Sep,Berlin Plant,Power Systems,Swing,Line B,4019,299,121
+Sep,Berlin Plant,Power Systems,Swing,Line C,3920,314,131
+Sep,Berlin Plant,Power Systems,Night,Line A,3983,298,128
+Sep,Berlin Plant,Power Systems,Night,Line B,3889,316,134
+Sep,Berlin Plant,Power Systems,Night,Line C,3793,332,144
+Sep,Berlin Plant,EV Batteries,Day,Line A,4584,325,112
+Sep,Berlin Plant,EV Batteries,Day,Line B,4475,345,117
+Sep,Berlin Plant,EV Batteries,Day,Line C,4365,362,126
+Sep,Berlin Plant,EV Batteries,Swing,Line A,4400,345,123
+Sep,Berlin Plant,EV Batteries,Swing,Line B,4295,367,128
+Sep,Berlin Plant,EV Batteries,Swing,Line C,4189,385,138
+Sep,Berlin Plant,EV Batteries,Night,Line A,4257,365,135
+Sep,Berlin Plant,EV Batteries,Night,Line B,4156,389,141
+Sep,Berlin Plant,EV Batteries,Night,Line C,4053,408,152
+Sep,Shenzhen Plant,Industrial Sensors,Day,Line A,8746,271,78
+Sep,Shenzhen Plant,Industrial Sensors,Day,Line B,8540,288,82
+Sep,Shenzhen Plant,Industrial Sensors,Day,Line C,8331,302,88
+Sep,Shenzhen Plant,Industrial Sensors,Swing,Line A,8397,288,86
+Sep,Shenzhen Plant,Industrial Sensors,Swing,Line B,8199,306,89
+Sep,Shenzhen Plant,Industrial Sensors,Swing,Line C,7998,321,97
+Sep,Shenzhen Plant,Industrial Sensors,Night,Line A,8127,305,94
+Sep,Shenzhen Plant,Industrial Sensors,Night,Line B,7934,324,98
+Sep,Shenzhen Plant,Industrial Sensors,Night,Line C,7739,340,106
+Sep,Shenzhen Plant,Robotics,Day,Line A,4018,395,102
+Sep,Shenzhen Plant,Robotics,Day,Line B,3923,420,106
+Sep,Shenzhen Plant,Robotics,Day,Line C,3826,441,114
+Sep,Shenzhen Plant,Robotics,Swing,Line A,3857,420,111
+Sep,Shenzhen Plant,Robotics,Swing,Line B,3765,446,116
+Sep,Shenzhen Plant,Robotics,Swing,Line C,3673,468,125
+Sep,Shenzhen Plant,Robotics,Night,Line A,3732,444,123
+Sep,Shenzhen Plant,Robotics,Night,Line B,3643,472,128
+Sep,Shenzhen Plant,Robotics,Night,Line C,3554,496,138
+Sep,Shenzhen Plant,Power Systems,Day,Line A,5691,353,91
+Sep,Shenzhen Plant,Power Systems,Day,Line B,5555,375,95
+Sep,Shenzhen Plant,Power Systems,Day,Line C,5418,394,102
+Sep,Shenzhen Plant,Power Systems,Swing,Line A,5462,375,100
+Sep,Shenzhen Plant,Power Systems,Swing,Line B,5332,399,104
+Sep,Shenzhen Plant,Power Systems,Swing,Line C,5200,418,112
+Sep,Shenzhen Plant,Power Systems,Night,Line A,5285,397,109
+Sep,Shenzhen Plant,Power Systems,Night,Line B,5159,422,114
+Sep,Shenzhen Plant,Power Systems,Night,Line C,5031,443,123
+Sep,Shenzhen Plant,EV Batteries,Day,Line A,6082,433,96
+Sep,Shenzhen Plant,EV Batteries,Day,Line B,5937,461,100
+Sep,Shenzhen Plant,EV Batteries,Day,Line C,5790,483,108
+Sep,Shenzhen Plant,EV Batteries,Swing,Line A,5837,460,105
+Sep,Shenzhen Plant,EV Batteries,Swing,Line B,5697,489,109
+Sep,Shenzhen Plant,EV Batteries,Swing,Line C,5556,514,118
+Sep,Shenzhen Plant,EV Batteries,Night,Line A,5646,487,115
+Sep,Shenzhen Plant,EV Batteries,Night,Line B,5511,518,120
+Sep,Shenzhen Plant,EV Batteries,Night,Line C,5374,544,130
+Sep,Monterrey Plant,Industrial Sensors,Day,Line A,4840,167,101
+Sep,Monterrey Plant,Industrial Sensors,Day,Line B,4725,178,105
+Sep,Monterrey Plant,Industrial Sensors,Day,Line C,4609,187,113
+Sep,Monterrey Plant,Industrial Sensors,Swing,Line A,4646,178,110
+Sep,Monterrey Plant,Industrial Sensors,Swing,Line B,4536,189,115
+Sep,Monterrey Plant,Industrial Sensors,Swing,Line C,4424,198,124
+Sep,Monterrey Plant,Industrial Sensors,Night,Line A,4495,188,121
+Sep,Monterrey Plant,Industrial Sensors,Night,Line B,4388,200,126
+Sep,Monterrey Plant,Industrial Sensors,Night,Line C,4280,210,136
+Sep,Monterrey Plant,Robotics,Day,Line A,2222,244,130
+Sep,Monterrey Plant,Robotics,Day,Line B,2170,259,136
+Sep,Monterrey Plant,Robotics,Day,Line C,2116,272,147
+Sep,Monterrey Plant,Robotics,Swing,Line A,2133,259,143
+Sep,Monterrey Plant,Robotics,Swing,Line B,2082,276,149
+Sep,Monterrey Plant,Robotics,Swing,Line C,2031,289,161
+Sep,Monterrey Plant,Robotics,Night,Line A,2064,274,157
+Sep,Monterrey Plant,Robotics,Night,Line B,2014,292,164
+Sep,Monterrey Plant,Robotics,Night,Line C,1965,306,177
+Sep,Monterrey Plant,Power Systems,Day,Line A,3147,218,117
+Sep,Monterrey Plant,Power Systems,Day,Line B,3072,232,121
+Sep,Monterrey Plant,Power Systems,Day,Line C,2995,243,131
+Sep,Monterrey Plant,Power Systems,Swing,Line A,3020,232,128
+Sep,Monterrey Plant,Power Systems,Swing,Line B,2948,246,133
+Sep,Monterrey Plant,Power Systems,Swing,Line C,2874,258,144
+Sep,Monterrey Plant,Power Systems,Night,Line A,2921,245,141
+Sep,Monterrey Plant,Power Systems,Night,Line B,2851,261,146
+Sep,Monterrey Plant,Power Systems,Night,Line C,2780,274,158
+Sep,Monterrey Plant,EV Batteries,Day,Line A,3362,268,123
+Sep,Monterrey Plant,EV Batteries,Day,Line B,3281,284,128
+Sep,Monterrey Plant,EV Batteries,Day,Line C,3200,299,138
+Sep,Monterrey Plant,EV Batteries,Swing,Line A,3226,284,135
+Sep,Monterrey Plant,EV Batteries,Swing,Line B,3148,302,141
+Sep,Monterrey Plant,EV Batteries,Swing,Line C,3070,317,152
+Sep,Monterrey Plant,EV Batteries,Night,Line A,3120,301,148
+Sep,Monterrey Plant,EV Batteries,Night,Line B,3045,320,155
+Sep,Monterrey Plant,EV Batteries,Night,Line C,2969,336,167
+Oct,Austin Plant,Industrial Sensors,Day,Line A,7634,239,85
+Oct,Austin Plant,Industrial Sensors,Day,Line B,7456,254,89
+Oct,Austin Plant,Industrial Sensors,Day,Line C,7275,266,96
+Oct,Austin Plant,Industrial Sensors,Swing,Line A,7332,253,93
+Oct,Austin Plant,Industrial Sensors,Swing,Line B,7160,269,97
+Oct,Austin Plant,Industrial Sensors,Swing,Line C,6986,283,105
+Oct,Austin Plant,Industrial Sensors,Night,Line A,7097,268,103
+Oct,Austin Plant,Industrial Sensors,Night,Line B,6931,285,107
+Oct,Austin Plant,Industrial Sensors,Night,Line C,6762,299,116
+Oct,Austin Plant,Robotics,Day,Line A,3509,348,110
+Oct,Austin Plant,Robotics,Day,Line B,3426,370,115
+Oct,Austin Plant,Robotics,Day,Line C,3343,388,124
+Oct,Austin Plant,Robotics,Swing,Line A,3369,370,121
+Oct,Austin Plant,Robotics,Swing,Line B,3290,393,126
+Oct,Austin Plant,Robotics,Swing,Line C,3210,413,136
+Oct,Austin Plant,Robotics,Night,Line A,3261,392,133
+Oct,Austin Plant,Robotics,Night,Line B,3184,416,139
+Oct,Austin Plant,Robotics,Night,Line C,3106,437,150
+Oct,Austin Plant,Power Systems,Day,Line A,4973,311,99
+Oct,Austin Plant,Power Systems,Day,Line B,4855,331,103
+Oct,Austin Plant,Power Systems,Day,Line C,4736,347,111
+Oct,Austin Plant,Power Systems,Swing,Line A,4774,330,108
+Oct,Austin Plant,Power Systems,Swing,Line B,4661,351,113
+Oct,Austin Plant,Power Systems,Swing,Line C,4547,369,122
+Oct,Austin Plant,Power Systems,Night,Line A,4620,350,119
+Oct,Austin Plant,Power Systems,Night,Line B,4511,372,124
+Oct,Austin Plant,Power Systems,Night,Line C,4400,390,134
+Oct,Austin Plant,EV Batteries,Day,Line A,5317,382,104
+Oct,Austin Plant,EV Batteries,Day,Line B,5191,406,108
+Oct,Austin Plant,EV Batteries,Day,Line C,5064,426,117
+Oct,Austin Plant,EV Batteries,Swing,Line A,5104,406,114
+Oct,Austin Plant,EV Batteries,Swing,Line B,4983,431,119
+Oct,Austin Plant,EV Batteries,Swing,Line C,4860,453,129
+Oct,Austin Plant,EV Batteries,Night,Line A,4939,430,126
+Oct,Austin Plant,EV Batteries,Night,Line B,4822,457,131
+Oct,Austin Plant,EV Batteries,Night,Line C,4703,479,141
+Oct,Berlin Plant,Industrial Sensors,Day,Line A,7063,210,93
+Oct,Berlin Plant,Industrial Sensors,Day,Line B,6897,223,97
+Oct,Berlin Plant,Industrial Sensors,Day,Line C,6729,234,105
+Oct,Berlin Plant,Industrial Sensors,Swing,Line A,6782,223,102
+Oct,Berlin Plant,Industrial Sensors,Swing,Line B,6622,237,106
+Oct,Berlin Plant,Industrial Sensors,Swing,Line C,6460,249,115
+Oct,Berlin Plant,Industrial Sensors,Night,Line A,6564,236,112
+Oct,Berlin Plant,Industrial Sensors,Night,Line B,6409,251,117
+Oct,Berlin Plant,Industrial Sensors,Night,Line C,6252,263,126
+Oct,Berlin Plant,Robotics,Day,Line A,3245,306,121
+Oct,Berlin Plant,Robotics,Day,Line B,3169,325,126
+Oct,Berlin Plant,Robotics,Day,Line C,3091,342,136
+Oct,Berlin Plant,Robotics,Swing,Line A,3116,325,133
+Oct,Berlin Plant,Robotics,Swing,Line B,3042,346,138
+Oct,Berlin Plant,Robotics,Swing,Line C,2967,363,149
+Oct,Berlin Plant,Robotics,Night,Line A,3015,344,146
+Oct,Berlin Plant,Robotics,Night,Line B,2943,366,152
+Oct,Berlin Plant,Robotics,Night,Line C,2871,384,164
+Oct,Berlin Plant,Power Systems,Day,Line A,4597,273,108
+Oct,Berlin Plant,Power Systems,Day,Line B,4488,291,112
+Oct,Berlin Plant,Power Systems,Day,Line C,4378,305,121
+Oct,Berlin Plant,Power Systems,Swing,Line A,4413,291,118
+Oct,Berlin Plant,Power Systems,Swing,Line B,4308,309,123
+Oct,Berlin Plant,Power Systems,Swing,Line C,4202,324,133
+Oct,Berlin Plant,Power Systems,Night,Line A,4270,308,130
+Oct,Berlin Plant,Power Systems,Night,Line B,4168,327,136
+Oct,Berlin Plant,Power Systems,Night,Line C,4065,343,146
+Oct,Berlin Plant,EV Batteries,Day,Line A,4914,336,114
+Oct,Berlin Plant,EV Batteries,Day,Line B,4797,357,119
+Oct,Berlin Plant,EV Batteries,Day,Line C,4679,375,128
+Oct,Berlin Plant,EV Batteries,Swing,Line A,4716,357,125
+Oct,Berlin Plant,EV Batteries,Swing,Line B,4604,379,130
+Oct,Berlin Plant,EV Batteries,Swing,Line C,4490,398,141
+Oct,Berlin Plant,EV Batteries,Night,Line A,4563,378,137
+Oct,Berlin Plant,EV Batteries,Night,Line B,4454,402,143
+Oct,Berlin Plant,EV Batteries,Night,Line C,4343,422,155
+Oct,Shenzhen Plant,Industrial Sensors,Day,Line A,9379,280,79
+Oct,Shenzhen Plant,Industrial Sensors,Day,Line B,9158,297,83
+Oct,Shenzhen Plant,Industrial Sensors,Day,Line C,8933,312,89
+Oct,Shenzhen Plant,Industrial Sensors,Swing,Line A,9004,297,87
+Oct,Shenzhen Plant,Industrial Sensors,Swing,Line B,8791,316,91
+Oct,Shenzhen Plant,Industrial Sensors,Swing,Line C,8575,332,98
+Oct,Shenzhen Plant,Industrial Sensors,Night,Line A,8713,315,96
+Oct,Shenzhen Plant,Industrial Sensors,Night,Line B,8506,335,100
+Oct,Shenzhen Plant,Industrial Sensors,Night,Line C,8297,351,108
+Oct,Shenzhen Plant,Robotics,Day,Line A,4308,408,103
+Oct,Shenzhen Plant,Robotics,Day,Line B,4205,434,107
+Oct,Shenzhen Plant,Robotics,Day,Line C,4102,455,116
+Oct,Shenzhen Plant,Robotics,Swing,Line A,4135,434,113
+Oct,Shenzhen Plant,Robotics,Swing,Line B,4036,461,118
+Oct,Shenzhen Plant,Robotics,Swing,Line C,3937,484,127
+Oct,Shenzhen Plant,Robotics,Night,Line A,4000,459,124
+Oct,Shenzhen Plant,Robotics,Night,Line B,3905,488,130
+Oct,Shenzhen Plant,Robotics,Night,Line C,3809,512,140
+Oct,Shenzhen Plant,Power Systems,Day,Line A,6100,365,92
+Oct,Shenzhen Plant,Power Systems,Day,Line B,5955,388,96
+Oct,Shenzhen Plant,Power Systems,Day,Line C,5807,407,104
+Oct,Shenzhen Plant,Power Systems,Swing,Line A,5854,387,101
+Oct,Shenzhen Plant,Power Systems,Swing,Line B,5715,412,105
+Oct,Shenzhen Plant,Power Systems,Swing,Line C,5573,432,114
+Oct,Shenzhen Plant,Power Systems,Night,Line A,5663,410,111
+Oct,Shenzhen Plant,Power Systems,Night,Line B,5528,436,116
+Oct,Shenzhen Plant,Power Systems,Night,Line C,5391,458,125
+Oct,Shenzhen Plant,EV Batteries,Day,Line A,6518,448,97
+Oct,Shenzhen Plant,EV Batteries,Day,Line B,6362,476,101
+Oct,Shenzhen Plant,EV Batteries,Day,Line C,6204,500,109
+Oct,Shenzhen Plant,EV Batteries,Swing,Line A,6255,476,107
+Oct,Shenzhen Plant,EV Batteries,Swing,Line B,6105,506,111
+Oct,Shenzhen Plant,EV Batteries,Swing,Line C,5953,531,120
+Oct,Shenzhen Plant,EV Batteries,Night,Line A,6050,504,117
+Oct,Shenzhen Plant,EV Batteries,Night,Line B,5905,536,122
+Oct,Shenzhen Plant,EV Batteries,Night,Line C,5758,562,132
+Oct,Monterrey Plant,Industrial Sensors,Day,Line A,5189,173,102
+Oct,Monterrey Plant,Industrial Sensors,Day,Line B,5065,184,106
+Oct,Monterrey Plant,Industrial Sensors,Day,Line C,4940,193,115
+Oct,Monterrey Plant,Industrial Sensors,Swing,Line A,4980,184,112
+Oct,Monterrey Plant,Industrial Sensors,Swing,Line B,4862,195,117
+Oct,Monterrey Plant,Industrial Sensors,Swing,Line C,4742,205,126
+Oct,Monterrey Plant,Industrial Sensors,Night,Line A,4818,194,123
+Oct,Monterrey Plant,Industrial Sensors,Night,Line B,4703,207,128
+Oct,Monterrey Plant,Industrial Sensors,Night,Line C,4587,217,139
+Oct,Monterrey Plant,Robotics,Day,Line A,2382,252,133
+Oct,Monterrey Plant,Robotics,Day,Line B,2325,268,138
+Oct,Monterrey Plant,Robotics,Day,Line C,2268,281,149
+Oct,Monterrey Plant,Robotics,Swing,Line A,2286,268,145
+Oct,Monterrey Plant,Robotics,Swing,Line B,2231,285,152
+Oct,Monterrey Plant,Robotics,Swing,Line C,2176,299,164
+Oct,Monterrey Plant,Robotics,Night,Line A,2211,284,160
+Oct,Monterrey Plant,Robotics,Night,Line B,2159,301,167
+Oct,Monterrey Plant,Robotics,Night,Line C,2105,316,180
+Oct,Monterrey Plant,Power Systems,Day,Line A,3372,225,118
+Oct,Monterrey Plant,Power Systems,Day,Line B,3291,239,123
+Oct,Monterrey Plant,Power Systems,Day,Line C,3210,251,133
+Oct,Monterrey Plant,Power Systems,Swing,Line A,3236,239,130
+Oct,Monterrey Plant,Power Systems,Swing,Line B,3158,254,135
+Oct,Monterrey Plant,Power Systems,Swing,Line C,3080,267,146
+Oct,Monterrey Plant,Power Systems,Night,Line A,3130,253,143
+Oct,Monterrey Plant,Power Systems,Night,Line B,3055,269,149
+Oct,Monterrey Plant,Power Systems,Night,Line C,2978,283,161
+Oct,Monterrey Plant,EV Batteries,Day,Line A,3602,277,125
+Oct,Monterrey Plant,EV Batteries,Day,Line B,3515,294,130
+Oct,Monterrey Plant,EV Batteries,Day,Line C,3428,309,141
+Oct,Monterrey Plant,EV Batteries,Swing,Line A,3456,294,137
+Oct,Monterrey Plant,EV Batteries,Swing,Line B,3373,312,143
+Oct,Monterrey Plant,EV Batteries,Swing,Line C,3288,328,154
+Oct,Monterrey Plant,EV Batteries,Night,Line A,3342,311,151
+Oct,Monterrey Plant,EV Batteries,Night,Line B,3262,331,157
+Oct,Monterrey Plant,EV Batteries,Night,Line C,3180,347,170
+Nov,Austin Plant,Industrial Sensors,Day,Line A,8095,259,80
+Nov,Austin Plant,Industrial Sensors,Day,Line B,7905,275,83
+Nov,Austin Plant,Industrial Sensors,Day,Line C,7712,289,90
+Nov,Austin Plant,Industrial Sensors,Swing,Line A,7773,275,87
+Nov,Austin Plant,Industrial Sensors,Swing,Line B,7590,293,91
+Nov,Austin Plant,Industrial Sensors,Swing,Line C,7405,307,98
+Nov,Austin Plant,Industrial Sensors,Night,Line A,7524,291,96
+Nov,Austin Plant,Industrial Sensors,Night,Line B,7346,310,100
+Nov,Austin Plant,Industrial Sensors,Night,Line C,7167,325,108
+Nov,Austin Plant,Robotics,Day,Line A,3720,378,103
+Nov,Austin Plant,Robotics,Day,Line B,3632,402,108
+Nov,Austin Plant,Robotics,Day,Line C,3543,422,116
+Nov,Austin Plant,Robotics,Swing,Line A,3571,401,114
+Nov,Austin Plant,Robotics,Swing,Line B,3487,427,118
+Nov,Austin Plant,Robotics,Swing,Line C,3401,448,128
+Nov,Austin Plant,Robotics,Night,Line A,3456,425,125
+Nov,Austin Plant,Robotics,Night,Line B,3374,452,130
+Nov,Austin Plant,Robotics,Night,Line C,3292,474,140
+Nov,Austin Plant,Power Systems,Day,Line A,5270,338,92
+Nov,Austin Plant,Power Systems,Day,Line B,5145,359,96
+Nov,Austin Plant,Power Systems,Day,Line C,5019,377,104
+Nov,Austin Plant,Power Systems,Swing,Line A,5059,359,101
+Nov,Austin Plant,Power Systems,Swing,Line B,4939,381,106
+Nov,Austin Plant,Power Systems,Swing,Line C,4818,400,114
+Nov,Austin Plant,Power Systems,Night,Line A,4895,380,112
+Nov,Austin Plant,Power Systems,Night,Line B,4779,404,116
+Nov,Austin Plant,Power Systems,Night,Line C,4661,424,125
+Nov,Austin Plant,EV Batteries,Day,Line A,5634,414,98
+Nov,Austin Plant,EV Batteries,Day,Line B,5500,441,102
+Nov,Austin Plant,EV Batteries,Day,Line C,5365,462,110
+Nov,Austin Plant,EV Batteries,Swing,Line A,5408,440,107
+Nov,Austin Plant,EV Batteries,Swing,Line B,5279,468,112
+Nov,Austin Plant,EV Batteries,Swing,Line C,5149,491,120
+Nov,Austin Plant,EV Batteries,Night,Line A,5232,466,118
+Nov,Austin Plant,EV Batteries,Night,Line B,5107,496,123
+Nov,Austin Plant,EV Batteries,Night,Line C,4981,520,132
+Nov,Berlin Plant,Industrial Sensors,Day,Line A,7487,228,87
+Nov,Berlin Plant,Industrial Sensors,Day,Line B,7310,242,91
+Nov,Berlin Plant,Industrial Sensors,Day,Line C,7131,254,98
+Nov,Berlin Plant,Industrial Sensors,Swing,Line A,7188,242,96
+Nov,Berlin Plant,Industrial Sensors,Swing,Line B,7018,257,100
+Nov,Berlin Plant,Industrial Sensors,Swing,Line C,6846,270,108
+Nov,Berlin Plant,Industrial Sensors,Night,Line A,6956,256,105
+Nov,Berlin Plant,Industrial Sensors,Night,Line B,6791,272,110
+Nov,Berlin Plant,Industrial Sensors,Night,Line C,6624,286,118
+Nov,Berlin Plant,Robotics,Day,Line A,3439,332,113
+Nov,Berlin Plant,Robotics,Day,Line B,3358,353,118
+Nov,Berlin Plant,Robotics,Day,Line C,3275,371,127
+Nov,Berlin Plant,Robotics,Swing,Line A,3301,353,124
+Nov,Berlin Plant,Robotics,Swing,Line B,3223,375,129
+Nov,Berlin Plant,Robotics,Swing,Line C,3144,394,140
+Nov,Berlin Plant,Robotics,Night,Line A,3194,374,137
+Nov,Berlin Plant,Robotics,Night,Line B,3118,397,142
+Nov,Berlin Plant,Robotics,Night,Line C,3041,417,154
+Nov,Berlin Plant,Power Systems,Day,Line A,4871,297,101
+Nov,Berlin Plant,Power Systems,Day,Line B,4755,316,105
+Nov,Berlin Plant,Power Systems,Day,Line C,4638,331,114
+Nov,Berlin Plant,Power Systems,Swing,Line A,4675,315,111
+Nov,Berlin Plant,Power Systems,Swing,Line B,4564,335,116
+Nov,Berlin Plant,Power Systems,Swing,Line C,4451,352,125
+Nov,Berlin Plant,Power Systems,Night,Line A,4523,334,122
+Nov,Berlin Plant,Power Systems,Night,Line B,4415,355,127
+Nov,Berlin Plant,Power Systems,Night,Line C,4306,373,137
+Nov,Berlin Plant,EV Batteries,Day,Line A,5205,364,107
+Nov,Berlin Plant,EV Batteries,Day,Line B,5081,387,111
+Nov,Berlin Plant,EV Batteries,Day,Line C,4955,407,120
+Nov,Berlin Plant,EV Batteries,Swing,Line A,4995,387,117
+Nov,Berlin Plant,EV Batteries,Swing,Line B,4876,412,122
+Nov,Berlin Plant,EV Batteries,Swing,Line C,4755,432,132
+Nov,Berlin Plant,EV Batteries,Night,Line A,4832,410,129
+Nov,Berlin Plant,EV Batteries,Night,Line B,4716,436,134
+Nov,Berlin Plant,EV Batteries,Night,Line C,4599,457,145
+Nov,Shenzhen Plant,Industrial Sensors,Day,Line A,9939,304,75
+Nov,Shenzhen Plant,Industrial Sensors,Day,Line B,9703,323,78
+Nov,Shenzhen Plant,Industrial Sensors,Day,Line C,9464,339,84
+Nov,Shenzhen Plant,Industrial Sensors,Swing,Line A,9540,323,82
+Nov,Shenzhen Plant,Industrial Sensors,Swing,Line B,9314,343,85
+Nov,Shenzhen Plant,Industrial Sensors,Swing,Line C,9084,360,92
+Nov,Shenzhen Plant,Industrial Sensors,Night,Line A,9231,342,90
+Nov,Shenzhen Plant,Industrial Sensors,Night,Line B,9011,363,94
+Nov,Shenzhen Plant,Industrial Sensors,Night,Line C,8788,381,101
+Nov,Shenzhen Plant,Robotics,Day,Line A,4564,443,97
+Nov,Shenzhen Plant,Robotics,Day,Line B,4455,471,101
+Nov,Shenzhen Plant,Robotics,Day,Line C,4345,494,109
+Nov,Shenzhen Plant,Robotics,Swing,Line A,4380,471,106
+Nov,Shenzhen Plant,Robotics,Swing,Line B,4276,500,111
+Nov,Shenzhen Plant,Robotics,Swing,Line C,4170,525,119
+Nov,Shenzhen Plant,Robotics,Night,Line A,4237,498,117
+Nov,Shenzhen Plant,Robotics,Night,Line B,4136,530,122
+Nov,Shenzhen Plant,Robotics,Night,Line C,4034,556,131
+Nov,Shenzhen Plant,Power Systems,Day,Line A,6461,396,86
+Nov,Shenzhen Plant,Power Systems,Day,Line B,6307,421,90
+Nov,Shenzhen Plant,Power Systems,Day,Line C,6150,442,97
+Nov,Shenzhen Plant,Power Systems,Swing,Line A,6200,420,95
+Nov,Shenzhen Plant,Power Systems,Swing,Line B,6052,447,99
+Nov,Shenzhen Plant,Power Systems,Swing,Line C,5902,469,107
+Nov,Shenzhen Plant,Power Systems,Night,Line A,5997,445,104
+Nov,Shenzhen Plant,Power Systems,Night,Line B,5854,473,109
+Nov,Shenzhen Plant,Power Systems,Night,Line C,5708,497,117
+Nov,Shenzhen Plant,EV Batteries,Day,Line A,6902,486,91
+Nov,Shenzhen Plant,EV Batteries,Day,Line B,6737,517,95
+Nov,Shenzhen Plant,EV Batteries,Day,Line C,6569,542,103
+Nov,Shenzhen Plant,EV Batteries,Swing,Line A,6623,516,100
+Nov,Shenzhen Plant,EV Batteries,Swing,Line B,6464,549,104
+Nov,Shenzhen Plant,EV Batteries,Swing,Line C,6303,576,113
+Nov,Shenzhen Plant,EV Batteries,Night,Line A,6405,547,110
+Nov,Shenzhen Plant,EV Batteries,Night,Line B,6251,581,115
+Nov,Shenzhen Plant,EV Batteries,Night,Line C,6095,610,124
+Nov,Monterrey Plant,Industrial Sensors,Day,Line A,5497,188,96
+Nov,Monterrey Plant,Industrial Sensors,Day,Line B,5366,199,100
+Nov,Monterrey Plant,Industrial Sensors,Day,Line C,5233,209,108
+Nov,Monterrey Plant,Industrial Sensors,Swing,Line A,5275,199,105
+Nov,Monterrey Plant,Industrial Sensors,Swing,Line B,5149,212,110
+Nov,Monterrey Plant,Industrial Sensors,Swing,Line C,5022,222,118
+Nov,Monterrey Plant,Industrial Sensors,Night,Line A,5103,211,116
+Nov,Monterrey Plant,Industrial Sensors,Night,Line B,4981,224,120
+Nov,Monterrey Plant,Industrial Sensors,Night,Line C,4858,235,130
+Nov,Monterrey Plant,Robotics,Day,Line A,2523,274,124
+Nov,Monterrey Plant,Robotics,Day,Line B,2463,291,129
+Nov,Monterrey Plant,Robotics,Day,Line C,2402,305,140
+Nov,Monterrey Plant,Robotics,Swing,Line A,2421,291,136
+Nov,Monterrey Plant,Robotics,Swing,Line B,2363,309,142
+Nov,Monterrey Plant,Robotics,Swing,Line C,2304,324,154
+Nov,Monterrey Plant,Robotics,Night,Line A,2342,308,150
+Nov,Monterrey Plant,Robotics,Night,Line B,2286,327,156
+Nov,Monterrey Plant,Robotics,Night,Line C,2229,343,169
+Nov,Monterrey Plant,Power Systems,Day,Line A,3571,244,111
+Nov,Monterrey Plant,Power Systems,Day,Line B,3485,260,116
+Nov,Monterrey Plant,Power Systems,Day,Line C,3398,273,125
+Nov,Monterrey Plant,Power Systems,Swing,Line A,3426,260,122
+Nov,Monterrey Plant,Power Systems,Swing,Line B,3344,276,127
+Nov,Monterrey Plant,Power Systems,Swing,Line C,3260,290,137
+Nov,Monterrey Plant,Power Systems,Night,Line A,3313,275,134
+Nov,Monterrey Plant,Power Systems,Night,Line B,3234,292,140
+Nov,Monterrey Plant,Power Systems,Night,Line C,3153,307,151
+Nov,Monterrey Plant,EV Batteries,Day,Line A,3813,300,117
+Nov,Monterrey Plant,EV Batteries,Day,Line B,3722,319,122
+Nov,Monterrey Plant,EV Batteries,Day,Line C,3629,335,132
+Nov,Monterrey Plant,EV Batteries,Swing,Line A,3658,319,129
+Nov,Monterrey Plant,EV Batteries,Swing,Line B,3570,339,134
+Nov,Monterrey Plant,EV Batteries,Swing,Line C,3481,356,145
+Nov,Monterrey Plant,EV Batteries,Night,Line A,3538,338,141
+Nov,Monterrey Plant,EV Batteries,Night,Line B,3452,359,147
+Nov,Monterrey Plant,EV Batteries,Night,Line C,3366,377,159
+Dec,Austin Plant,Industrial Sensors,Day,Line A,8565,275,81
+Dec,Austin Plant,Industrial Sensors,Day,Line B,8363,293,84
+Dec,Austin Plant,Industrial Sensors,Day,Line C,8159,307,91
+Dec,Austin Plant,Industrial Sensors,Swing,Line A,8223,293,89
+Dec,Austin Plant,Industrial Sensors,Swing,Line B,8029,311,93
+Dec,Austin Plant,Industrial Sensors,Swing,Line C,7833,326,100
+Dec,Austin Plant,Industrial Sensors,Night,Line A,7959,310,98
+Dec,Austin Plant,Industrial Sensors,Night,Line B,7771,329,102
+Dec,Austin Plant,Industrial Sensors,Night,Line C,7580,346,110
+Dec,Austin Plant,Robotics,Day,Line A,3935,402,105
+Dec,Austin Plant,Robotics,Day,Line B,3842,427,110
+Dec,Austin Plant,Robotics,Day,Line C,3747,448,118
+Dec,Austin Plant,Robotics,Swing,Line A,3777,427,115
+Dec,Austin Plant,Robotics,Swing,Line B,3688,454,120
+Dec,Austin Plant,Robotics,Swing,Line C,3597,476,130
+Dec,Austin Plant,Robotics,Night,Line A,3655,452,127
+Dec,Austin Plant,Robotics,Night,Line B,3569,480,132
+Dec,Austin Plant,Robotics,Night,Line C,3481,504,143
+Dec,Austin Plant,Power Systems,Day,Line A,5574,359,94
+Dec,Austin Plant,Power Systems,Day,Line B,5441,381,98
+Dec,Austin Plant,Power Systems,Day,Line C,5307,400,106
+Dec,Austin Plant,Power Systems,Swing,Line A,5350,381,103
+Dec,Austin Plant,Power Systems,Swing,Line B,5223,405,107
+Dec,Austin Plant,Power Systems,Swing,Line C,5094,425,116
+Dec,Austin Plant,Power Systems,Night,Line A,5176,404,113
+Dec,Austin Plant,Power Systems,Night,Line B,5053,429,118
+Dec,Austin Plant,Power Systems,Night,Line C,4928,450,128
+Dec,Austin Plant,EV Batteries,Day,Line A,5957,440,99
+Dec,Austin Plant,EV Batteries,Day,Line B,5815,468,103
+Dec,Austin Plant,EV Batteries,Day,Line C,5672,492,112
+Dec,Austin Plant,EV Batteries,Swing,Line A,5717,468,109
+Dec,Austin Plant,EV Batteries,Swing,Line B,5581,498,113
+Dec,Austin Plant,EV Batteries,Swing,Line C,5443,522,122
+Dec,Austin Plant,EV Batteries,Night,Line A,5531,496,120
+Dec,Austin Plant,EV Batteries,Night,Line B,5399,527,125
+Dec,Austin Plant,EV Batteries,Night,Line C,5265,553,135
+Dec,Berlin Plant,Industrial Sensors,Day,Line A,7919,242,89
+Dec,Berlin Plant,Industrial Sensors,Day,Line B,7732,257,92
+Dec,Berlin Plant,Industrial Sensors,Day,Line C,7542,270,100
+Dec,Berlin Plant,Industrial Sensors,Swing,Line A,7602,257,97
+Dec,Berlin Plant,Industrial Sensors,Swing,Line B,7422,274,101
+Dec,Berlin Plant,Industrial Sensors,Swing,Line C,7239,287,110
+Dec,Berlin Plant,Industrial Sensors,Night,Line A,7356,272,107
+Dec,Berlin Plant,Industrial Sensors,Night,Line B,7182,290,111
+Dec,Berlin Plant,Industrial Sensors,Night,Line C,7004,304,120
+Dec,Berlin Plant,Robotics,Day,Line A,3637,353,115
+Dec,Berlin Plant,Robotics,Day,Line B,3551,376,120
+Dec,Berlin Plant,Robotics,Day,Line C,3463,394,129
+Dec,Berlin Plant,Robotics,Swing,Line A,3491,375,126
+Dec,Berlin Plant,Robotics,Swing,Line B,3408,399,132
+Dec,Berlin Plant,Robotics,Swing,Line C,3324,419,142
+Dec,Berlin Plant,Robotics,Night,Line A,3377,397,139
+Dec,Berlin Plant,Robotics,Night,Line B,3297,422,145
+Dec,Berlin Plant,Robotics,Night,Line C,3215,443,156
+Dec,Berlin Plant,Power Systems,Day,Line A,5150,316,103
+Dec,Berlin Plant,Power Systems,Day,Line B,5027,335,107
+Dec,Berlin Plant,Power Systems,Day,Line C,4903,352,116
+Dec,Berlin Plant,Power Systems,Swing,Line A,4942,335,113
+Dec,Berlin Plant,Power Systems,Swing,Line B,4824,356,118
+Dec,Berlin Plant,Power Systems,Swing,Line C,4705,374,127
+Dec,Berlin Plant,Power Systems,Night,Line A,4781,355,124
+Dec,Berlin Plant,Power Systems,Night,Line B,4667,377,129
+Dec,Berlin Plant,Power Systems,Night,Line C,4551,396,140
+Dec,Berlin Plant,EV Batteries,Day,Line A,5502,387,108
+Dec,Berlin Plant,EV Batteries,Day,Line B,5371,412,113
+Dec,Berlin Plant,EV Batteries,Day,Line C,5237,432,122
+Dec,Berlin Plant,EV Batteries,Swing,Line A,5280,412,119
+Dec,Berlin Plant,EV Batteries,Swing,Line B,5153,438,124
+Dec,Berlin Plant,EV Batteries,Swing,Line C,5025,459,134
+Dec,Berlin Plant,EV Batteries,Night,Line A,5107,436,131
+Dec,Berlin Plant,EV Batteries,Night,Line B,4984,463,136
+Dec,Berlin Plant,EV Batteries,Night,Line C,4860,486,147
+Dec,Shenzhen Plant,Industrial Sensors,Day,Line A,10510,323,76
+Dec,Shenzhen Plant,Industrial Sensors,Day,Line B,10260,343,79
+Dec,Shenzhen Plant,Industrial Sensors,Day,Line C,10007,360,85
+Dec,Shenzhen Plant,Industrial Sensors,Swing,Line A,10087,343,83
+Dec,Shenzhen Plant,Industrial Sensors,Swing,Line B,9847,365,87
+Dec,Shenzhen Plant,Industrial Sensors,Swing,Line C,9603,383,94
+Dec,Shenzhen Plant,Industrial Sensors,Night,Line A,9759,363,91
+Dec,Shenzhen Plant,Industrial Sensors,Night,Line B,9526,386,95
+Dec,Shenzhen Plant,Industrial Sensors,Night,Line C,9290,405,103
+Dec,Shenzhen Plant,Robotics,Day,Line A,4825,471,98
+Dec,Shenzhen Plant,Robotics,Day,Line B,4710,501,102
+Dec,Shenzhen Plant,Robotics,Day,Line C,4593,525,111
+Dec,Shenzhen Plant,Robotics,Swing,Line A,4630,500,108
+Dec,Shenzhen Plant,Robotics,Swing,Line B,4519,532,112
+Dec,Shenzhen Plant,Robotics,Swing,Line C,4407,558,121
+Dec,Shenzhen Plant,Robotics,Night,Line A,4479,530,119
+Dec,Shenzhen Plant,Robotics,Night,Line B,4372,563,124
+Dec,Shenzhen Plant,Robotics,Night,Line C,4263,591,133
+Dec,Shenzhen Plant,Power Systems,Day,Line A,6829,421,88
+Dec,Shenzhen Plant,Power Systems,Day,Line B,6666,447,92
+Dec,Shenzhen Plant,Power Systems,Day,Line C,6500,469,99
+Dec,Shenzhen Plant,Power Systems,Swing,Line A,6553,447,96
+Dec,Shenzhen Plant,Power Systems,Swing,Line B,6396,475,100
+Dec,Shenzhen Plant,Power Systems,Swing,Line C,6237,499,109
+Dec,Shenzhen Plant,Power Systems,Night,Line A,6338,473,106
+Dec,Shenzhen Plant,Power Systems,Night,Line B,6186,503,110
+Dec,Shenzhen Plant,Power Systems,Night,Line C,6031,528,119
+Dec,Shenzhen Plant,EV Batteries,Day,Line A,7294,516,93
+Dec,Shenzhen Plant,EV Batteries,Day,Line B,7119,549,97
+Dec,Shenzhen Plant,EV Batteries,Day,Line C,6942,576,104
+Dec,Shenzhen Plant,EV Batteries,Swing,Line A,6998,549,102
+Dec,Shenzhen Plant,EV Batteries,Swing,Line B,6830,583,106
+Dec,Shenzhen Plant,EV Batteries,Swing,Line C,6659,612,114
+Dec,Shenzhen Plant,EV Batteries,Night,Line A,6768,581,112
+Dec,Shenzhen Plant,EV Batteries,Night,Line B,6605,618,116
+Dec,Shenzhen Plant,EV Batteries,Night,Line C,6440,648,126
+Dec,Monterrey Plant,Industrial Sensors,Day,Line A,5811,199,97
+Dec,Monterrey Plant,Industrial Sensors,Day,Line B,5672,212,101
+Dec,Monterrey Plant,Industrial Sensors,Day,Line C,5531,223,110
+Dec,Monterrey Plant,Industrial Sensors,Swing,Line A,5576,212,107
+Dec,Monterrey Plant,Industrial Sensors,Swing,Line B,5443,225,111
+Dec,Monterrey Plant,Industrial Sensors,Swing,Line C,5307,236,120
+Dec,Monterrey Plant,Industrial Sensors,Night,Line A,5394,224,117
+Dec,Monterrey Plant,Industrial Sensors,Night,Line B,5264,239,122
+Dec,Monterrey Plant,Industrial Sensors,Night,Line C,5133,250,132
+Dec,Monterrey Plant,Robotics,Day,Line A,2667,291,126
+Dec,Monterrey Plant,Robotics,Day,Line B,2603,309,132
+Dec,Monterrey Plant,Robotics,Day,Line C,2538,325,142
+Dec,Monterrey Plant,Robotics,Swing,Line A,2559,309,139
+Dec,Monterrey Plant,Robotics,Swing,Line B,2497,329,144
+Dec,Monterrey Plant,Robotics,Swing,Line C,2435,345,156
+Dec,Monterrey Plant,Robotics,Night,Line A,2475,327,152
+Dec,Monterrey Plant,Robotics,Night,Line B,2415,348,159
+Dec,Monterrey Plant,Robotics,Night,Line C,2355,365,172
+Dec,Monterrey Plant,Power Systems,Day,Line A,3773,260,113
+Dec,Monterrey Plant,Power Systems,Day,Line B,3683,276,118
+Dec,Monterrey Plant,Power Systems,Day,Line C,3591,290,127
+Dec,Monterrey Plant,Power Systems,Swing,Line A,3620,276,124
+Dec,Monterrey Plant,Power Systems,Swing,Line B,3533,294,129
+Dec,Monterrey Plant,Power Systems,Swing,Line C,3444,308,139
+Dec,Monterrey Plant,Power Systems,Night,Line A,3501,292,136
+Dec,Monterrey Plant,Power Systems,Night,Line B,3416,311,142
+Dec,Monterrey Plant,Power Systems,Night,Line C,3331,326,153
+Dec,Monterrey Plant,EV Batteries,Day,Line A,4029,319,119
+Dec,Monterrey Plant,EV Batteries,Day,Line B,3932,339,124
+Dec,Monterrey Plant,EV Batteries,Day,Line C,3833,356,134
+Dec,Monterrey Plant,EV Batteries,Swing,Line A,3865,339,131
+Dec,Monterrey Plant,EV Batteries,Swing,Line B,3771,360,136
+Dec,Monterrey Plant,EV Batteries,Swing,Line C,3677,378,147
+Dec,Monterrey Plant,EV Batteries,Night,Line A,3737,359,144
+Dec,Monterrey Plant,EV Batteries,Night,Line B,3646,382,150
+Dec,Monterrey Plant,EV Batteries,Night,Line C,3555,400,162

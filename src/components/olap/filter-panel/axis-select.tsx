@@ -1,12 +1,14 @@
-import { dimensionOptions, type DimensionKey } from "@/data/mock-cube";
+import type { DimensionKey, DimensionOption } from "@/data/mock-cube";
 
 type AxisSelectProps = {
+  dimensions: DimensionOption[];
   label: string;
   value: DimensionKey;
   onChange: (value: DimensionKey) => void;
 };
 
 export function AxisSelect({
+  dimensions,
   label,
   value,
   onChange,
@@ -19,7 +21,7 @@ export function AxisSelect({
         value={value}
         onChange={(event) => onChange(event.target.value as DimensionKey)}
       >
-        {dimensionOptions.map((dimension) => (
+        {dimensions.map((dimension) => (
           <option key={dimension.key} value={dimension.key}>
             {dimension.label}
           </option>

@@ -1,8 +1,10 @@
 import { Fragment } from "react";
 
 import {
+  type DatasetSchema,
   formatMeasureValue,
   getDimensionLabel,
+  getMeasureLabel,
   type DimensionKey,
   type Measure,
   type PivotCell,
@@ -10,6 +12,7 @@ import {
 import { cn } from "@/lib/utils";
 
 type PivotHeatmapProps = {
+  schema: DatasetSchema;
   cells: PivotCell[];
   xDimension: DimensionKey;
   yDimension: DimensionKey;
@@ -26,6 +29,7 @@ type PivotHeatmapProps = {
 };
 
 export function PivotHeatmap({
+  schema,
   cells,
   xDimension,
   yDimension,
@@ -46,18 +50,18 @@ export function PivotHeatmap({
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap gap-2 text-xs text-slate-500">
-        <span>X axis: {getDimensionLabel(xDimension)}</span>
-        <span>Y axis: {getDimensionLabel(yDimension)}</span>
-        <span>Z axis: {getDimensionLabel(zDimension)}</span>
-        <span>Intensity: {measure}</span>
+        <span>X axis: {getDimensionLabel(schema, xDimension)}</span>
+        <span>Y axis: {getDimensionLabel(schema, yDimension)}</span>
+        <span>Z axis: {getDimensionLabel(schema, zDimension)}</span>
+        <span>Intensity: {getMeasureLabel(schema, measure)}</span>
       </div>
       <div className="space-y-5">
         {yValues.map((yValue) => (
-          <div key={yValue} className="space-y-3">
-            <div className="flex items-center gap-2 text-sm text-slate-700">
-              <span className="font-medium">{getDimensionLabel(yDimension)}:</span>
-              <span>{yValue}</span>
-            </div>
+            <div key={yValue} className="space-y-3">
+              <div className="flex items-center gap-2 text-sm text-slate-700">
+                <span className="font-medium">{getDimensionLabel(schema, yDimension)}:</span>
+                <span>{yValue}</span>
+              </div>
             <div className="overflow-x-auto">
               <div
                 className="grid min-w-max gap-2"
@@ -66,7 +70,7 @@ export function PivotHeatmap({
                 }}
               >
                 <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
-                  {getDimensionLabel(zDimension)}
+                  {getDimensionLabel(schema, zDimension)}
                 </div>
                 {xValues.map((xValue) => (
                   <div
@@ -126,7 +130,7 @@ export function PivotHeatmap({
                           </span>
                           <div className="space-y-1">
                             <p className="text-sm font-semibold text-slate-900">
-                              {cell ? formatMeasureValue(cell.value, measure) : "-"}
+                              {cell ? formatMeasureValue(cell.value, measure, schema) : "-"}
                             </p>
                             <p className="text-xs text-slate-600">{cell ? `${cell.count} contributing row(s)` : ""}</p>
                           </div>

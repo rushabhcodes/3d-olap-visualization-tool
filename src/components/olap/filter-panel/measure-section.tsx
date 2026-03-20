@@ -1,13 +1,15 @@
-import { measures, type Measure } from "@/data/mock-cube";
+import type { Measure, MeasureOption } from "@/data/mock-cube";
 
 import { FilterChip } from "./filter-chip";
 
 type MeasureSectionProps = {
+  measures: MeasureOption[];
   selectedMeasure: Measure;
   onMeasureChange: (value: Measure) => void;
 };
 
 export function MeasureSection({
+  measures,
   selectedMeasure,
   onMeasureChange,
 }: MeasureSectionProps) {
@@ -20,10 +22,10 @@ export function MeasureSection({
       <div className="flex flex-wrap gap-2">
         {measures.map((measure) => (
           <FilterChip
-            key={measure}
-            active={selectedMeasure === measure}
-            label={measure}
-            onClick={() => onMeasureChange(measure)}
+            key={measure.key}
+            active={selectedMeasure === measure.key}
+            label={measure.label}
+            onClick={() => onMeasureChange(measure.key)}
           />
         ))}
       </div>

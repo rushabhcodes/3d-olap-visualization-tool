@@ -1,0 +1,1729 @@
+Month,Region,Service Line,Payer,Facility Type,Visits,Cost,Readmissions
+Jan,North America,Telehealth,Commercial,Hospital,17359,454,551
+Jan,North America,Telehealth,Commercial,Clinic,14983,372,375
+Jan,North America,Telehealth,Commercial,Outpatient Center,16187,400,409
+Jan,North America,Telehealth,Medicare,Hospital,16364,467,633
+Jan,North America,Telehealth,Medicare,Clinic,14123,383,431
+Jan,North America,Telehealth,Medicare,Outpatient Center,15257,412,469
+Jan,North America,Telehealth,Medicaid,Hospital,17032,422,651
+Jan,North America,Telehealth,Medicaid,Clinic,14699,346,443
+Jan,North America,Telehealth,Medicaid,Outpatient Center,15878,372,482
+Jan,North America,Imaging,Commercial,Hospital,10196,650,472
+Jan,North America,Imaging,Commercial,Clinic,8800,533,321
+Jan,North America,Imaging,Commercial,Outpatient Center,9506,573,350
+Jan,North America,Imaging,Medicare,Hospital,9610,669,542
+Jan,North America,Imaging,Medicare,Clinic,8293,549,369
+Jan,North America,Imaging,Medicare,Outpatient Center,8958,590,402
+Jan,North America,Imaging,Medicaid,Hospital,10001,604,557
+Jan,North America,Imaging,Medicaid,Clinic,8630,495,379
+Jan,North America,Imaging,Medicaid,Outpatient Center,9321,533,413
+Jan,North America,Cardiology,Commercial,Hospital,9657,697,921
+Jan,North America,Cardiology,Commercial,Clinic,8334,572,627
+Jan,North America,Cardiology,Commercial,Outpatient Center,9001,615,683
+Jan,North America,Cardiology,Medicare,Hospital,9101,718,1059
+Jan,North America,Cardiology,Medicare,Clinic,7853,589,721
+Jan,North America,Cardiology,Medicare,Outpatient Center,8482,633,785
+Jan,North America,Cardiology,Medicaid,Hospital,9469,648,1088
+Jan,North America,Cardiology,Medicaid,Clinic,8170,531,741
+Jan,North America,Cardiology,Medicaid,Outpatient Center,8824,571,807
+Jan,North America,Emergency Care,Commercial,Hospital,19045,584,993
+Jan,North America,Emergency Care,Commercial,Clinic,16433,479,677
+Jan,North America,Emergency Care,Commercial,Outpatient Center,17748,515,736
+Jan,North America,Emergency Care,Medicare,Hospital,17945,601,1141
+Jan,North America,Emergency Care,Medicare,Clinic,15483,493,777
+Jan,North America,Emergency Care,Medicare,Outpatient Center,16721,530,846
+Jan,North America,Emergency Care,Medicaid,Hospital,18669,542,1173
+Jan,North America,Emergency Care,Medicaid,Clinic,16107,445,799
+Jan,North America,Emergency Care,Medicaid,Outpatient Center,17394,478,870
+Jan,Europe,Telehealth,Commercial,Hospital,15834,418,459
+Jan,Europe,Telehealth,Commercial,Clinic,13665,343,313
+Jan,Europe,Telehealth,Commercial,Outpatient Center,14762,369,340
+Jan,Europe,Telehealth,Medicare,Hospital,14924,430,528
+Jan,Europe,Telehealth,Medicare,Clinic,12879,353,359
+Jan,Europe,Telehealth,Medicare,Outpatient Center,13911,380,391
+Jan,Europe,Telehealth,Medicaid,Hospital,15530,388,542
+Jan,Europe,Telehealth,Medicaid,Clinic,13401,319,369
+Jan,Europe,Telehealth,Medicaid,Outpatient Center,14474,343,402
+Jan,Europe,Imaging,Commercial,Hospital,9298,598,393
+Jan,Europe,Imaging,Commercial,Clinic,8024,491,268
+Jan,Europe,Imaging,Commercial,Outpatient Center,8666,528,291
+Jan,Europe,Imaging,Medicare,Hospital,8762,616,452
+Jan,Europe,Imaging,Medicare,Clinic,7561,505,308
+Jan,Europe,Imaging,Medicare,Outpatient Center,8166,543,335
+Jan,Europe,Imaging,Medicaid,Hospital,9117,556,464
+Jan,Europe,Imaging,Medicaid,Clinic,7866,456,316
+Jan,Europe,Imaging,Medicaid,Outpatient Center,8495,490,344
+Jan,Europe,Cardiology,Commercial,Hospital,8804,642,768
+Jan,Europe,Cardiology,Commercial,Clinic,7596,526,523
+Jan,Europe,Cardiology,Commercial,Outpatient Center,8204,566,569
+Jan,Europe,Cardiology,Medicare,Hospital,8295,660,882
+Jan,Europe,Cardiology,Medicare,Clinic,7157,542,601
+Jan,Europe,Cardiology,Medicare,Outpatient Center,7729,582,654
+Jan,Europe,Cardiology,Medicaid,Hospital,8629,596,907
+Jan,Europe,Cardiology,Medicaid,Clinic,7445,489,617
+Jan,Europe,Cardiology,Medicaid,Outpatient Center,8040,526,672
+Jan,Europe,Emergency Care,Commercial,Hospital,17357,537,828
+Jan,Europe,Emergency Care,Commercial,Clinic,14975,440,564
+Jan,Europe,Emergency Care,Commercial,Outpatient Center,16172,473,614
+Jan,Europe,Emergency Care,Medicare,Hospital,16352,553,951
+Jan,Europe,Emergency Care,Medicare,Clinic,14107,453,648
+Jan,Europe,Emergency Care,Medicare,Outpatient Center,15233,487,705
+Jan,Europe,Emergency Care,Medicaid,Hospital,17009,499,978
+Jan,Europe,Emergency Care,Medicaid,Clinic,14673,409,666
+Jan,Europe,Emergency Care,Medicaid,Outpatient Center,15844,440,725
+Jan,APAC,Telehealth,Commercial,Hospital,20198,389,509
+Jan,APAC,Telehealth,Commercial,Clinic,17429,319,346
+Jan,APAC,Telehealth,Commercial,Outpatient Center,18826,344,377
+Jan,APAC,Telehealth,Medicare,Hospital,19033,401,585
+Jan,APAC,Telehealth,Medicare,Clinic,16423,329,398
+Jan,APAC,Telehealth,Medicare,Outpatient Center,17738,354,433
+Jan,APAC,Telehealth,Medicaid,Hospital,19803,362,601
+Jan,APAC,Telehealth,Medicaid,Clinic,17086,297,409
+Jan,APAC,Telehealth,Medicaid,Outpatient Center,18453,319,445
+Jan,APAC,Imaging,Commercial,Hospital,11857,557,435
+Jan,APAC,Imaging,Commercial,Clinic,10231,457,296
+Jan,APAC,Imaging,Commercial,Outpatient Center,11049,491,323
+Jan,APAC,Imaging,Medicare,Hospital,11172,573,500
+Jan,APAC,Imaging,Medicare,Clinic,9639,470,341
+Jan,APAC,Imaging,Medicare,Outpatient Center,10409,506,371
+Jan,APAC,Imaging,Medicaid,Hospital,11622,518,514
+Jan,APAC,Imaging,Medicaid,Clinic,10026,425,350
+Jan,APAC,Imaging,Medicaid,Outpatient Center,10827,456,381
+Jan,APAC,Cardiology,Commercial,Hospital,11224,598,850
+Jan,APAC,Cardiology,Commercial,Clinic,9683,490,579
+Jan,APAC,Cardiology,Commercial,Outpatient Center,10457,527,630
+Jan,APAC,Cardiology,Medicare,Hospital,10573,615,977
+Jan,APAC,Cardiology,Medicare,Clinic,9122,504,665
+Jan,APAC,Cardiology,Medicare,Outpatient Center,9850,542,724
+Jan,APAC,Cardiology,Medicaid,Hospital,10998,555,1004
+Jan,APAC,Cardiology,Medicaid,Clinic,9487,455,684
+Jan,APAC,Cardiology,Medicaid,Outpatient Center,10244,489,745
+Jan,APAC,Emergency Care,Commercial,Hospital,22123,500,917
+Jan,APAC,Emergency Care,Commercial,Clinic,19085,410,625
+Jan,APAC,Emergency Care,Commercial,Outpatient Center,20607,441,680
+Jan,APAC,Emergency Care,Medicare,Hospital,20838,515,1054
+Jan,APAC,Emergency Care,Medicare,Clinic,17975,422,718
+Jan,APAC,Emergency Care,Medicare,Outpatient Center,19408,454,781
+Jan,APAC,Emergency Care,Medicaid,Hospital,21672,464,1083
+Jan,APAC,Emergency Care,Medicaid,Clinic,18693,381,737
+Jan,APAC,Emergency Care,Medicaid,Outpatient Center,20183,409,803
+Jan,Latin America,Telehealth,Commercial,Hospital,12725,286,339
+Jan,Latin America,Telehealth,Commercial,Clinic,10980,234,231
+Jan,Latin America,Telehealth,Commercial,Outpatient Center,11858,252,251
+Jan,Latin America,Telehealth,Medicare,Hospital,11989,294,390
+Jan,Latin America,Telehealth,Medicare,Clinic,10344,241,265
+Jan,Latin America,Telehealth,Medicare,Outpatient Center,11171,259,289
+Jan,Latin America,Telehealth,Medicaid,Hospital,12472,266,400
+Jan,Latin America,Telehealth,Medicaid,Clinic,10760,218,273
+Jan,Latin America,Telehealth,Medicaid,Outpatient Center,11619,234,297
+Jan,Latin America,Imaging,Commercial,Hospital,7468,409,290
+Jan,Latin America,Imaging,Commercial,Clinic,6443,335,198
+Jan,Latin America,Imaging,Commercial,Outpatient Center,6958,361,215
+Jan,Latin America,Imaging,Medicare,Hospital,7035,421,333
+Jan,Latin America,Imaging,Medicare,Clinic,6069,345,227
+Jan,Latin America,Imaging,Medicare,Outpatient Center,6554,371,247
+Jan,Latin America,Imaging,Medicaid,Hospital,7318,380,343
+Jan,Latin America,Imaging,Medicaid,Clinic,6312,311,233
+Jan,Latin America,Imaging,Medicaid,Outpatient Center,6816,335,254
+Jan,Latin America,Cardiology,Commercial,Hospital,7067,438,567
+Jan,Latin America,Cardiology,Commercial,Clinic,6097,360,386
+Jan,Latin America,Cardiology,Commercial,Outpatient Center,6583,387,420
+Jan,Latin America,Cardiology,Medicare,Hospital,6657,451,651
+Jan,Latin America,Cardiology,Medicare,Clinic,5742,370,444
+Jan,Latin America,Cardiology,Medicare,Outpatient Center,6200,398,483
+Jan,Latin America,Cardiology,Medicaid,Hospital,6923,407,669
+Jan,Latin America,Cardiology,Medicaid,Clinic,5972,334,456
+Jan,Latin America,Cardiology,Medicaid,Outpatient Center,6447,359,496
+Jan,Latin America,Emergency Care,Commercial,Hospital,13927,367,611
+Jan,Latin America,Emergency Care,Commercial,Clinic,12013,301,416
+Jan,Latin America,Emergency Care,Commercial,Outpatient Center,12970,323,453
+Jan,Latin America,Emergency Care,Medicare,Hospital,13116,377,702
+Jan,Latin America,Emergency Care,Medicare,Clinic,11313,309,478
+Jan,Latin America,Emergency Care,Medicare,Outpatient Center,12214,333,521
+Jan,Latin America,Emergency Care,Medicaid,Hospital,13639,340,722
+Jan,Latin America,Emergency Care,Medicaid,Clinic,11763,279,492
+Jan,Latin America,Emergency Care,Medicaid,Outpatient Center,12699,300,535
+Feb,North America,Telehealth,Commercial,Hospital,17945,480,579
+Feb,North America,Telehealth,Commercial,Clinic,15488,393,394
+Feb,North America,Telehealth,Commercial,Outpatient Center,16731,423,429
+Feb,North America,Telehealth,Medicare,Hospital,16914,494,665
+Feb,North America,Telehealth,Medicare,Clinic,14597,405,453
+Feb,North America,Telehealth,Medicare,Outpatient Center,15768,436,493
+Feb,North America,Telehealth,Medicaid,Hospital,17603,446,684
+Feb,North America,Telehealth,Medicaid,Clinic,15190,366,466
+Feb,North America,Telehealth,Medicaid,Outpatient Center,16408,393,507
+Feb,North America,Imaging,Commercial,Hospital,10538,686,495
+Feb,North America,Imaging,Commercial,Clinic,9094,563,337
+Feb,North America,Imaging,Commercial,Outpatient Center,9824,606,367
+Feb,North America,Imaging,Medicare,Hospital,9932,707,569
+Feb,North America,Imaging,Medicare,Clinic,8570,580,388
+Feb,North America,Imaging,Medicare,Outpatient Center,9257,623,422
+Feb,North America,Imaging,Medicaid,Hospital,10334,638,585
+Feb,North America,Imaging,Medicaid,Clinic,8917,523,398
+Feb,North America,Imaging,Medicaid,Outpatient Center,9631,563,434
+Feb,North America,Cardiology,Commercial,Hospital,9979,736,968
+Feb,North America,Cardiology,Commercial,Clinic,8611,604,659
+Feb,North America,Cardiology,Commercial,Outpatient Center,9301,650,718
+Feb,North America,Cardiology,Medicare,Hospital,9403,758,1112
+Feb,North America,Cardiology,Medicare,Clinic,8113,622,757
+Feb,North America,Cardiology,Medicare,Outpatient Center,8763,669,824
+Feb,North America,Cardiology,Medicaid,Hospital,9783,684,1143
+Feb,North America,Cardiology,Medicaid,Clinic,8441,561,778
+Feb,North America,Cardiology,Medicaid,Outpatient Center,9115,603,847
+Feb,North America,Emergency Care,Commercial,Hospital,19677,616,1044
+Feb,North America,Emergency Care,Commercial,Clinic,16978,506,711
+Feb,North America,Emergency Care,Commercial,Outpatient Center,18335,544,774
+Feb,North America,Emergency Care,Medicare,Hospital,18539,634,1199
+Feb,North America,Emergency Care,Medicare,Clinic,15994,520,817
+Feb,North America,Emergency Care,Medicare,Outpatient Center,17272,559,889
+Feb,North America,Emergency Care,Medicaid,Hospital,19285,573,1232
+Feb,North America,Emergency Care,Medicaid,Clinic,16637,470,839
+Feb,North America,Emergency Care,Medicaid,Outpatient Center,17965,505,914
+Feb,Europe,Telehealth,Commercial,Hospital,16365,442,483
+Feb,Europe,Telehealth,Commercial,Clinic,14123,362,329
+Feb,Europe,Telehealth,Commercial,Outpatient Center,15255,390,358
+Feb,Europe,Telehealth,Medicare,Hospital,15422,455,554
+Feb,Europe,Telehealth,Medicare,Clinic,13308,373,378
+Feb,Europe,Telehealth,Medicare,Outpatient Center,14374,401,411
+Feb,Europe,Telehealth,Medicaid,Hospital,16047,410,570
+Feb,Europe,Telehealth,Medicaid,Clinic,13846,337,388
+Feb,Europe,Telehealth,Medicaid,Outpatient Center,14954,362,422
+Feb,Europe,Imaging,Commercial,Hospital,9608,632,413
+Feb,Europe,Imaging,Commercial,Clinic,8290,518,281
+Feb,Europe,Imaging,Commercial,Outpatient Center,8954,557,306
+Feb,Europe,Imaging,Medicare,Hospital,9053,650,474
+Feb,Europe,Imaging,Medicare,Clinic,7811,533,323
+Feb,Europe,Imaging,Medicare,Outpatient Center,8436,574,352
+Feb,Europe,Imaging,Medicaid,Hospital,9419,587,488
+Feb,Europe,Imaging,Medicaid,Clinic,8126,482,332
+Feb,Europe,Imaging,Medicaid,Outpatient Center,8775,518,361
+Feb,Europe,Cardiology,Commercial,Hospital,9096,678,807
+Feb,Europe,Cardiology,Commercial,Clinic,7848,556,549
+Feb,Europe,Cardiology,Commercial,Outpatient Center,8475,598,598
+Feb,Europe,Cardiology,Medicare,Hospital,8569,698,927
+Feb,Europe,Cardiology,Medicare,Clinic,7393,572,631
+Feb,Europe,Cardiology,Medicare,Outpatient Center,7983,615,687
+Feb,Europe,Cardiology,Medicaid,Hospital,8914,630,952
+Feb,Europe,Cardiology,Medicaid,Clinic,7690,516,649
+Feb,Europe,Cardiology,Medicaid,Outpatient Center,8303,555,706
+Feb,Europe,Emergency Care,Commercial,Hospital,17930,567,870
+Feb,Europe,Emergency Care,Commercial,Clinic,15468,465,592
+Feb,Europe,Emergency Care,Commercial,Outpatient Center,16703,500,645
+Feb,Europe,Emergency Care,Medicare,Hospital,16890,584,999
+Feb,Europe,Emergency Care,Medicare,Clinic,14570,479,680
+Feb,Europe,Emergency Care,Medicare,Outpatient Center,15732,515,741
+Feb,Europe,Emergency Care,Medicaid,Hospital,17567,527,1027
+Feb,Europe,Emergency Care,Medicaid,Clinic,15153,432,699
+Feb,Europe,Emergency Care,Medicaid,Outpatient Center,16361,464,761
+Feb,APAC,Telehealth,Commercial,Hospital,20871,411,535
+Feb,APAC,Telehealth,Commercial,Clinic,18009,337,364
+Feb,APAC,Telehealth,Commercial,Outpatient Center,19450,363,396
+Feb,APAC,Telehealth,Medicare,Hospital,19665,423,614
+Feb,APAC,Telehealth,Medicare,Clinic,16967,347,418
+Feb,APAC,Telehealth,Medicare,Outpatient Center,18324,373,455
+Feb,APAC,Telehealth,Medicaid,Hospital,20458,382,631
+Feb,APAC,Telehealth,Medicaid,Clinic,17650,314,430
+Feb,APAC,Telehealth,Medicaid,Outpatient Center,19061,337,468
+Feb,APAC,Imaging,Commercial,Hospital,12250,589,457
+Feb,APAC,Imaging,Commercial,Clinic,10569,483,311
+Feb,APAC,Imaging,Commercial,Outpatient Center,11414,519,339
+Feb,APAC,Imaging,Medicare,Hospital,11541,606,525
+Feb,APAC,Imaging,Medicare,Clinic,9956,497,358
+Feb,APAC,Imaging,Medicare,Outpatient Center,10751,534,390
+Feb,APAC,Imaging,Medicaid,Hospital,12004,547,540
+Feb,APAC,Imaging,Medicaid,Clinic,10356,448,368
+Feb,APAC,Imaging,Medicaid,Outpatient Center,11182,482,400
+Feb,APAC,Cardiology,Commercial,Hospital,11594,631,893
+Feb,APAC,Cardiology,Commercial,Clinic,10002,518,608
+Feb,APAC,Cardiology,Commercial,Outpatient Center,10800,556,662
+Feb,APAC,Cardiology,Medicare,Hospital,10921,649,1027
+Feb,APAC,Cardiology,Medicare,Clinic,9421,533,699
+Feb,APAC,Cardiology,Medicare,Outpatient Center,10172,573,761
+Feb,APAC,Cardiology,Medicaid,Hospital,11358,586,1055
+Feb,APAC,Cardiology,Medicaid,Clinic,9797,481,719
+Feb,APAC,Cardiology,Medicaid,Outpatient Center,10578,517,782
+Feb,APAC,Emergency Care,Commercial,Hospital,22848,528,963
+Feb,APAC,Emergency Care,Commercial,Clinic,19709,433,656
+Feb,APAC,Emergency Care,Commercial,Outpatient Center,21280,465,714
+Feb,APAC,Emergency Care,Medicare,Hospital,21519,543,1107
+Feb,APAC,Emergency Care,Medicare,Clinic,18562,445,754
+Feb,APAC,Emergency Care,Medicare,Outpatient Center,20040,479,821
+Feb,APAC,Emergency Care,Medicaid,Hospital,22378,490,1138
+Feb,APAC,Emergency Care,Medicaid,Clinic,19301,402,775
+Feb,APAC,Emergency Care,Medicaid,Outpatient Center,20838,432,843
+Feb,Latin America,Telehealth,Commercial,Hospital,13147,302,356
+Feb,Latin America,Telehealth,Commercial,Clinic,11342,248,243
+Feb,Latin America,Telehealth,Commercial,Outpatient Center,12249,266,264
+Feb,Latin America,Telehealth,Medicare,Hospital,12385,311,409
+Feb,Latin America,Telehealth,Medicare,Clinic,10685,255,279
+Feb,Latin America,Telehealth,Medicare,Outpatient Center,11538,274,304
+Feb,Latin America,Telehealth,Medicaid,Hospital,12882,280,421
+Feb,Latin America,Telehealth,Medicaid,Clinic,11113,230,287
+Feb,Latin America,Telehealth,Medicaid,Outpatient Center,12000,247,312
+Feb,Latin America,Imaging,Commercial,Hospital,7714,432,305
+Feb,Latin America,Imaging,Commercial,Clinic,6655,354,208
+Feb,Latin America,Imaging,Commercial,Outpatient Center,7186,381,226
+Feb,Latin America,Imaging,Medicare,Hospital,7266,444,350
+Feb,Latin America,Imaging,Medicare,Clinic,6268,364,239
+Feb,Latin America,Imaging,Medicare,Outpatient Center,6768,392,260
+Feb,Latin America,Imaging,Medicaid,Hospital,7557,401,360
+Feb,Latin America,Imaging,Medicaid,Clinic,6519,329,245
+Feb,Latin America,Imaging,Medicaid,Outpatient Center,7038,353,267
+Feb,Latin America,Cardiology,Commercial,Hospital,7299,463,596
+Feb,Latin America,Cardiology,Commercial,Clinic,6296,380,406
+Feb,Latin America,Cardiology,Commercial,Outpatient Center,6798,408,442
+Feb,Latin America,Cardiology,Medicare,Hospital,6874,476,684
+Feb,Latin America,Cardiology,Medicare,Clinic,5929,391,466
+Feb,Latin America,Cardiology,Medicare,Outpatient Center,6402,420,507
+Feb,Latin America,Cardiology,Medicaid,Hospital,7149,430,703
+Feb,Latin America,Cardiology,Medicaid,Clinic,6166,352,479
+Feb,Latin America,Cardiology,Medicaid,Outpatient Center,6656,379,521
+Feb,Latin America,Emergency Care,Commercial,Hospital,14381,387,642
+Feb,Latin America,Emergency Care,Commercial,Clinic,12404,318,437
+Feb,Latin America,Emergency Care,Commercial,Outpatient Center,13391,341,476
+Feb,Latin America,Emergency Care,Medicare,Hospital,13542,398,738
+Feb,Latin America,Emergency Care,Medicare,Clinic,11680,327,503
+Feb,Latin America,Emergency Care,Medicare,Outpatient Center,12609,351,547
+Feb,Latin America,Emergency Care,Medicaid,Hospital,14081,359,758
+Feb,Latin America,Emergency Care,Medicaid,Clinic,12144,295,516
+Feb,Latin America,Emergency Care,Medicaid,Outpatient Center,13109,317,562
+Mar,North America,Telehealth,Commercial,Hospital,18922,511,614
+Mar,North America,Telehealth,Commercial,Clinic,16330,419,418
+Mar,North America,Telehealth,Commercial,Outpatient Center,17640,451,455
+Mar,North America,Telehealth,Medicare,Hospital,17833,526,705
+Mar,North America,Telehealth,Medicare,Clinic,15389,432,480
+Mar,North America,Telehealth,Medicare,Outpatient Center,16622,464,523
+Mar,North America,Telehealth,Medicaid,Hospital,18557,475,724
+Mar,North America,Telehealth,Medicaid,Clinic,16013,390,493
+Mar,North America,Telehealth,Medicaid,Outpatient Center,17295,419,537
+Mar,North America,Imaging,Commercial,Hospital,11110,731,525
+Mar,North America,Imaging,Commercial,Clinic,9587,600,357
+Mar,North America,Imaging,Commercial,Outpatient Center,10355,645,389
+Mar,North America,Imaging,Medicare,Hospital,10469,753,603
+Mar,North America,Imaging,Medicare,Clinic,9034,618,411
+Mar,North America,Imaging,Medicare,Outpatient Center,9756,664,447
+Mar,North America,Imaging,Medicaid,Hospital,10893,680,620
+Mar,North America,Imaging,Medicaid,Clinic,9398,557,422
+Mar,North America,Imaging,Medicaid,Outpatient Center,10150,599,460
+Mar,North America,Cardiology,Commercial,Hospital,10519,785,1025
+Mar,North America,Cardiology,Commercial,Clinic,9076,643,698
+Mar,North America,Cardiology,Commercial,Outpatient Center,9802,692,760
+Mar,North America,Cardiology,Medicare,Hospital,9911,807,1178
+Mar,North America,Cardiology,Medicare,Clinic,8551,662,802
+Mar,North America,Cardiology,Medicare,Outpatient Center,9234,712,873
+Mar,North America,Cardiology,Medicaid,Hospital,10310,729,1211
+Mar,North America,Cardiology,Medicaid,Clinic,8895,598,825
+Mar,North America,Cardiology,Medicaid,Outpatient Center,9605,643,898
+Mar,North America,Emergency Care,Commercial,Hospital,20738,657,1105
+Mar,North America,Emergency Care,Commercial,Clinic,17891,538,753
+Mar,North America,Emergency Care,Commercial,Outpatient Center,19320,579,820
+Mar,North America,Emergency Care,Medicare,Hospital,19536,676,1270
+Mar,North America,Emergency Care,Medicare,Clinic,16853,554,865
+Mar,North America,Emergency Care,Medicare,Outpatient Center,18198,596,942
+Mar,North America,Emergency Care,Medicaid,Hospital,20320,610,1305
+Mar,North America,Emergency Care,Medicaid,Clinic,17529,500,889
+Mar,North America,Emergency Care,Medicaid,Outpatient Center,18927,538,968
+Mar,Europe,Telehealth,Commercial,Hospital,17253,470,511
+Mar,Europe,Telehealth,Commercial,Clinic,14887,386,348
+Mar,Europe,Telehealth,Commercial,Outpatient Center,16079,415,379
+Mar,Europe,Telehealth,Medicare,Hospital,16257,484,587
+Mar,Europe,Telehealth,Medicare,Clinic,14027,397,400
+Mar,Europe,Telehealth,Medicare,Outpatient Center,15149,427,435
+Mar,Europe,Telehealth,Medicaid,Hospital,16914,437,604
+Mar,Europe,Telehealth,Medicaid,Clinic,14593,359,411
+Mar,Europe,Telehealth,Medicaid,Outpatient Center,15760,386,448
+Mar,Europe,Imaging,Commercial,Hospital,10127,673,437
+Mar,Europe,Imaging,Commercial,Clinic,8738,552,298
+Mar,Europe,Imaging,Commercial,Outpatient Center,9437,594,324
+Mar,Europe,Imaging,Medicare,Hospital,9541,693,503
+Mar,Europe,Imaging,Medicare,Clinic,8232,568,342
+Mar,Europe,Imaging,Medicare,Outpatient Center,8890,611,373
+Mar,Europe,Imaging,Medicaid,Hospital,9925,625,517
+Mar,Europe,Imaging,Medicaid,Clinic,8563,513,352
+Mar,Europe,Imaging,Medicaid,Outpatient Center,9246,551,383
+Mar,Europe,Cardiology,Commercial,Hospital,9586,722,854
+Mar,Europe,Cardiology,Commercial,Clinic,8270,592,582
+Mar,Europe,Cardiology,Commercial,Outpatient Center,8930,636,633
+Mar,Europe,Cardiology,Medicare,Hospital,9030,743,982
+Mar,Europe,Cardiology,Medicare,Clinic,7790,609,669
+Mar,Europe,Cardiology,Medicare,Outpatient Center,8411,655,728
+Mar,Europe,Cardiology,Medicaid,Hospital,9392,670,1009
+Mar,Europe,Cardiology,Medicaid,Clinic,8102,550,687
+Mar,Europe,Cardiology,Medicaid,Outpatient Center,8748,591,748
+Mar,Europe,Emergency Care,Commercial,Hospital,18893,604,921
+Mar,Europe,Emergency Care,Commercial,Clinic,16298,495,627
+Mar,Europe,Emergency Care,Commercial,Outpatient Center,17598,532,683
+Mar,Europe,Emergency Care,Medicare,Hospital,17795,621,1058
+Mar,Europe,Emergency Care,Medicare,Clinic,15350,510,721
+Mar,Europe,Emergency Care,Medicare,Outpatient Center,16573,548,785
+Mar,Europe,Emergency Care,Medicaid,Hospital,18506,561,1088
+Mar,Europe,Emergency Care,Medicaid,Clinic,15962,460,741
+Mar,Europe,Emergency Care,Medicaid,Outpatient Center,17234,494,807
+Mar,APAC,Telehealth,Commercial,Hospital,21998,438,566
+Mar,APAC,Telehealth,Commercial,Clinic,18980,359,386
+Mar,APAC,Telehealth,Commercial,Outpatient Center,20497,386,420
+Mar,APAC,Telehealth,Medicare,Hospital,20725,451,651
+Mar,APAC,Telehealth,Medicare,Clinic,17880,370,443
+Mar,APAC,Telehealth,Medicare,Outpatient Center,19309,398,482
+Mar,APAC,Telehealth,Medicaid,Hospital,21559,407,669
+Mar,APAC,Telehealth,Medicaid,Clinic,18599,334,455
+Mar,APAC,Telehealth,Medicaid,Outpatient Center,20083,359,496
+Mar,APAC,Imaging,Commercial,Hospital,12909,627,485
+Mar,APAC,Imaging,Commercial,Clinic,11137,514,330
+Mar,APAC,Imaging,Commercial,Outpatient Center,12026,553,359
+Mar,APAC,Imaging,Medicare,Hospital,12161,645,557
+Mar,APAC,Imaging,Medicare,Clinic,10490,529,379
+Mar,APAC,Imaging,Medicare,Outpatient Center,11327,569,413
+Mar,APAC,Imaging,Medicaid,Hospital,12648,582,572
+Mar,APAC,Imaging,Medicaid,Clinic,10910,477,390
+Mar,APAC,Imaging,Medicaid,Outpatient Center,11780,513,424
+Mar,APAC,Cardiology,Commercial,Hospital,12216,672,946
+Mar,APAC,Cardiology,Commercial,Clinic,10538,551,645
+Mar,APAC,Cardiology,Commercial,Outpatient Center,11378,592,702
+Mar,APAC,Cardiology,Medicare,Hospital,11506,692,1087
+Mar,APAC,Cardiology,Medicare,Clinic,9925,567,741
+Mar,APAC,Cardiology,Medicare,Outpatient Center,10715,610,806
+Mar,APAC,Cardiology,Medicaid,Hospital,11965,624,1118
+Mar,APAC,Cardiology,Medicaid,Clinic,10320,512,761
+Mar,APAC,Cardiology,Medicaid,Outpatient Center,11142,550,829
+Mar,APAC,Emergency Care,Commercial,Hospital,24070,562,1020
+Mar,APAC,Emergency Care,Commercial,Clinic,20762,461,695
+Mar,APAC,Emergency Care,Commercial,Outpatient Center,22415,495,757
+Mar,APAC,Emergency Care,Medicare,Hospital,22668,578,1172
+Mar,APAC,Emergency Care,Medicare,Clinic,19551,474,798
+Mar,APAC,Emergency Care,Medicare,Outpatient Center,21107,510,869
+Mar,APAC,Emergency Care,Medicaid,Hospital,23571,522,1205
+Mar,APAC,Emergency Care,Medicaid,Clinic,20329,428,821
+Mar,APAC,Emergency Care,Medicaid,Outpatient Center,21945,460,893
+Mar,Latin America,Telehealth,Commercial,Hospital,13854,322,378
+Mar,Latin America,Telehealth,Commercial,Clinic,11952,264,257
+Mar,Latin America,Telehealth,Commercial,Outpatient Center,12906,284,280
+Mar,Latin America,Telehealth,Medicare,Hospital,13050,331,434
+Mar,Latin America,Telehealth,Medicare,Clinic,11258,271,295
+Mar,Latin America,Telehealth,Medicare,Outpatient Center,12155,292,322
+Mar,Latin America,Telehealth,Medicaid,Hospital,13573,299,446
+Mar,Latin America,Telehealth,Medicaid,Clinic,11708,245,304
+Mar,Latin America,Telehealth,Medicaid,Outpatient Center,12641,263,331
+Mar,Latin America,Imaging,Commercial,Hospital,8128,460,323
+Mar,Latin America,Imaging,Commercial,Clinic,7011,377,220
+Mar,Latin America,Imaging,Commercial,Outpatient Center,7570,405,239
+Mar,Latin America,Imaging,Medicare,Hospital,7655,473,371
+Mar,Latin America,Imaging,Medicare,Clinic,6603,388,253
+Mar,Latin America,Imaging,Medicare,Outpatient Center,7129,417,275
+Mar,Latin America,Imaging,Medicaid,Hospital,7961,427,381
+Mar,Latin America,Imaging,Medicaid,Clinic,6866,350,260
+Mar,Latin America,Imaging,Medicaid,Outpatient Center,7413,376,283
+Mar,Latin America,Cardiology,Commercial,Hospital,7689,493,631
+Mar,Latin America,Cardiology,Commercial,Clinic,6632,404,430
+Mar,Latin America,Cardiology,Commercial,Outpatient Center,7160,434,468
+Mar,Latin America,Cardiology,Medicare,Hospital,7241,507,725
+Mar,Latin America,Cardiology,Medicare,Clinic,6245,416,494
+Mar,Latin America,Cardiology,Medicare,Outpatient Center,6742,447,537
+Mar,Latin America,Cardiology,Medicaid,Hospital,7529,458,745
+Mar,Latin America,Cardiology,Medicaid,Clinic,6494,375,507
+Mar,Latin America,Cardiology,Medicaid,Outpatient Center,7010,403,552
+Mar,Latin America,Emergency Care,Commercial,Hospital,15147,412,680
+Mar,Latin America,Emergency Care,Commercial,Clinic,13064,338,463
+Mar,Latin America,Emergency Care,Commercial,Outpatient Center,14103,363,504
+Mar,Latin America,Emergency Care,Medicare,Hospital,14263,424,782
+Mar,Latin America,Emergency Care,Medicare,Clinic,12300,348,532
+Mar,Latin America,Emergency Care,Medicare,Outpatient Center,13278,374,579
+Mar,Latin America,Emergency Care,Medicaid,Hospital,14829,383,803
+Mar,Latin America,Emergency Care,Medicaid,Clinic,12788,314,547
+Mar,Latin America,Emergency Care,Medicaid,Outpatient Center,13803,337,596
+Apr,North America,Telehealth,Commercial,Hospital,19724,538,642
+Apr,North America,Telehealth,Commercial,Clinic,17021,441,437
+Apr,North America,Telehealth,Commercial,Outpatient Center,18384,475,476
+Apr,North America,Telehealth,Medicare,Hospital,18587,554,738
+Apr,North America,Telehealth,Medicare,Clinic,16038,454,502
+Apr,North America,Telehealth,Medicare,Outpatient Center,17322,488,547
+Apr,North America,Telehealth,Medicaid,Hospital,19339,500,758
+Apr,North America,Telehealth,Medicaid,Clinic,16686,410,516
+Apr,North America,Telehealth,Medicaid,Outpatient Center,18021,441,562
+Apr,North America,Imaging,Commercial,Hospital,11579,770,549
+Apr,North America,Imaging,Commercial,Clinic,9991,631,374
+Apr,North America,Imaging,Commercial,Outpatient Center,10790,679,407
+Apr,North America,Imaging,Medicare,Hospital,10910,792,631
+Apr,North America,Imaging,Medicare,Clinic,9413,650,430
+Apr,North America,Imaging,Medicare,Outpatient Center,10166,699,468
+Apr,North America,Imaging,Medicaid,Hospital,11350,715,649
+Apr,North America,Imaging,Medicaid,Clinic,9792,586,442
+Apr,North America,Imaging,Medicaid,Outpatient Center,10574,631,481
+Apr,North America,Cardiology,Commercial,Hospital,10961,825,1073
+Apr,North America,Cardiology,Commercial,Clinic,9457,677,731
+Apr,North America,Cardiology,Commercial,Outpatient Center,10212,728,795
+Apr,North America,Cardiology,Medicare,Hospital,10326,850,1233
+Apr,North America,Cardiology,Medicare,Clinic,8908,697,840
+Apr,North America,Cardiology,Medicare,Outpatient Center,9620,749,914
+Apr,North America,Cardiology,Medicaid,Hospital,10741,767,1267
+Apr,North America,Cardiology,Medicaid,Clinic,9266,629,863
+Apr,North America,Cardiology,Medicaid,Outpatient Center,10005,676,939
+Apr,North America,Emergency Care,Commercial,Hospital,21605,691,1157
+Apr,North America,Emergency Care,Commercial,Clinic,18639,566,788
+Apr,North America,Emergency Care,Commercial,Outpatient Center,20126,609,858
+Apr,North America,Emergency Care,Medicare,Hospital,20351,711,1329
+Apr,North America,Emergency Care,Medicare,Clinic,17555,583,905
+Apr,North America,Emergency Care,Medicare,Outpatient Center,18955,627,985
+Apr,North America,Emergency Care,Medicaid,Hospital,21166,641,1366
+Apr,North America,Emergency Care,Medicaid,Clinic,18257,526,930
+Apr,North America,Emergency Care,Medicaid,Outpatient Center,19712,565,1013
+Apr,Europe,Telehealth,Commercial,Hospital,17980,495,535
+Apr,Europe,Telehealth,Commercial,Clinic,15514,406,364
+Apr,Europe,Telehealth,Commercial,Outpatient Center,16755,437,397
+Apr,Europe,Telehealth,Medicare,Hospital,16941,510,615
+Apr,Europe,Telehealth,Medicare,Clinic,14616,418,419
+Apr,Europe,Telehealth,Medicare,Outpatient Center,15784,449,456
+Apr,Europe,Telehealth,Medicaid,Hospital,17623,460,632
+Apr,Europe,Telehealth,Medicaid,Clinic,15204,377,430
+Apr,Europe,Telehealth,Medicaid,Outpatient Center,16418,406,468
+Apr,Europe,Imaging,Commercial,Hospital,10552,708,458
+Apr,Europe,Imaging,Commercial,Clinic,9104,581,312
+Apr,Europe,Imaging,Commercial,Outpatient Center,9831,624,339
+Apr,Europe,Imaging,Medicare,Hospital,9941,729,526
+Apr,Europe,Imaging,Medicare,Clinic,8576,598,358
+Apr,Europe,Imaging,Medicare,Outpatient Center,9260,643,390
+Apr,Europe,Imaging,Medicaid,Hospital,10340,658,541
+Apr,Europe,Imaging,Medicaid,Clinic,8920,539,368
+Apr,Europe,Imaging,Medicaid,Outpatient Center,9631,580,401
+Apr,Europe,Cardiology,Commercial,Hospital,9986,759,894
+Apr,Europe,Cardiology,Commercial,Clinic,8615,623,609
+Apr,Europe,Cardiology,Commercial,Outpatient Center,9302,669,663
+Apr,Europe,Cardiology,Medicare,Hospital,9406,781,1027
+Apr,Europe,Cardiology,Medicare,Clinic,8114,641,700
+Apr,Europe,Cardiology,Medicare,Outpatient Center,8761,689,762
+Apr,Europe,Cardiology,Medicaid,Hospital,9783,705,1056
+Apr,Europe,Cardiology,Medicaid,Clinic,8438,578,719
+Apr,Europe,Cardiology,Medicaid,Outpatient Center,9110,621,783
+Apr,Europe,Emergency Care,Commercial,Hospital,19679,635,964
+Apr,Europe,Emergency Care,Commercial,Clinic,16975,521,657
+Apr,Europe,Emergency Care,Commercial,Outpatient Center,18328,560,715
+Apr,Europe,Emergency Care,Medicare,Hospital,18534,654,1108
+Apr,Europe,Emergency Care,Medicare,Clinic,15986,536,754
+Apr,Europe,Emergency Care,Medicare,Outpatient Center,17259,576,821
+Apr,Europe,Emergency Care,Medicaid,Hospital,19273,590,1138
+Apr,Europe,Emergency Care,Medicaid,Clinic,16623,484,775
+Apr,Europe,Emergency Care,Medicaid,Outpatient Center,17945,520,844
+Apr,APAC,Telehealth,Commercial,Hospital,22921,461,593
+Apr,APAC,Telehealth,Commercial,Clinic,19775,378,404
+Apr,APAC,Telehealth,Commercial,Outpatient Center,21354,407,439
+Apr,APAC,Telehealth,Medicare,Hospital,21592,475,681
+Apr,APAC,Telehealth,Medicare,Clinic,18627,389,464
+Apr,APAC,Telehealth,Medicare,Outpatient Center,20114,418,505
+Apr,APAC,Telehealth,Medicaid,Hospital,22459,428,700
+Apr,APAC,Telehealth,Medicaid,Clinic,19373,351,477
+Apr,APAC,Telehealth,Medicaid,Outpatient Center,20918,378,519
+Apr,APAC,Imaging,Commercial,Hospital,13449,659,507
+Apr,APAC,Imaging,Commercial,Clinic,11601,541,345
+Apr,APAC,Imaging,Commercial,Outpatient Center,12527,581,376
+Apr,APAC,Imaging,Medicare,Hospital,12667,679,583
+Apr,APAC,Imaging,Medicare,Clinic,10927,556,397
+Apr,APAC,Imaging,Medicare,Outpatient Center,11798,598,432
+Apr,APAC,Imaging,Medicaid,Hospital,13174,612,599
+Apr,APAC,Imaging,Medicaid,Clinic,11363,502,408
+Apr,APAC,Imaging,Medicaid,Outpatient Center,12268,540,444
+Apr,APAC,Cardiology,Commercial,Hospital,12724,707,990
+Apr,APAC,Cardiology,Commercial,Clinic,10975,580,675
+Apr,APAC,Cardiology,Commercial,Outpatient Center,11850,623,734
+Apr,APAC,Cardiology,Medicare,Hospital,11983,727,1138
+Apr,APAC,Cardiology,Medicare,Clinic,10336,596,775
+Apr,APAC,Cardiology,Medicare,Outpatient Center,11158,641,844
+Apr,APAC,Cardiology,Medicaid,Hospital,12461,656,1170
+Apr,APAC,Cardiology,Medicaid,Clinic,10747,538,797
+Apr,APAC,Cardiology,Medicaid,Outpatient Center,11602,578,867
+Apr,APAC,Emergency Care,Commercial,Hospital,25068,591,1068
+Apr,APAC,Emergency Care,Commercial,Clinic,21621,485,727
+Apr,APAC,Emergency Care,Commercial,Outpatient Center,23341,521,792
+Apr,APAC,Emergency Care,Medicare,Hospital,23605,608,1227
+Apr,APAC,Emergency Care,Medicare,Clinic,20358,499,836
+Apr,APAC,Emergency Care,Medicare,Outpatient Center,21977,536,910
+Apr,APAC,Emergency Care,Medicaid,Hospital,24543,549,1261
+Apr,APAC,Emergency Care,Medicaid,Clinic,21166,450,859
+Apr,APAC,Emergency Care,Medicaid,Outpatient Center,22847,483,935
+Apr,Latin America,Telehealth,Commercial,Hospital,14432,338,395
+Apr,Latin America,Telehealth,Commercial,Clinic,12450,277,269
+Apr,Latin America,Telehealth,Commercial,Outpatient Center,13443,298,293
+Apr,Latin America,Telehealth,Medicare,Hospital,13593,348,454
+Apr,Latin America,Telehealth,Medicare,Clinic,11725,285,309
+Apr,Latin America,Telehealth,Medicare,Outpatient Center,12660,307,337
+Apr,Latin America,Telehealth,Medicaid,Hospital,14137,314,467
+Apr,Latin America,Telehealth,Medicaid,Clinic,12193,258,318
+Apr,Latin America,Telehealth,Medicaid,Outpatient Center,13164,277,346
+Apr,Latin America,Imaging,Commercial,Hospital,8466,484,338
+Apr,Latin America,Imaging,Commercial,Clinic,7302,397,230
+Apr,Latin America,Imaging,Commercial,Outpatient Center,7884,426,251
+Apr,Latin America,Imaging,Medicare,Hospital,7973,498,388
+Apr,Latin America,Imaging,Medicare,Clinic,6876,408,265
+Apr,Latin America,Imaging,Medicare,Outpatient Center,7424,439,288
+Apr,Latin America,Imaging,Medicaid,Hospital,8290,449,399
+Apr,Latin America,Imaging,Medicaid,Clinic,7150,368,272
+Apr,Latin America,Imaging,Medicaid,Outpatient Center,7719,396,296
+Apr,Latin America,Cardiology,Commercial,Hospital,8008,518,660
+Apr,Latin America,Cardiology,Commercial,Clinic,6906,425,450
+Apr,Latin America,Cardiology,Commercial,Outpatient Center,7456,457,490
+Apr,Latin America,Cardiology,Medicare,Hospital,7540,533,759
+Apr,Latin America,Cardiology,Medicare,Clinic,6503,437,517
+Apr,Latin America,Cardiology,Medicare,Outpatient Center,7020,470,562
+Apr,Latin America,Cardiology,Medicaid,Hospital,7840,481,780
+Apr,Latin America,Cardiology,Medicaid,Clinic,6761,394,531
+Apr,Latin America,Cardiology,Medicaid,Outpatient Center,7298,424,578
+Apr,Latin America,Emergency Care,Commercial,Hospital,15772,433,712
+Apr,Latin America,Emergency Care,Commercial,Clinic,13602,355,485
+Apr,Latin America,Emergency Care,Commercial,Outpatient Center,14683,382,528
+Apr,Latin America,Emergency Care,Medicare,Hospital,14850,446,818
+Apr,Latin America,Emergency Care,Medicare,Clinic,12806,365,557
+Apr,Latin America,Emergency Care,Medicare,Outpatient Center,13823,393,606
+Apr,Latin America,Emergency Care,Medicaid,Hospital,15437,402,841
+Apr,Latin America,Emergency Care,Medicaid,Clinic,13312,330,572
+Apr,Latin America,Emergency Care,Medicaid,Outpatient Center,14368,354,623
+May,North America,Telehealth,Commercial,Hospital,19599,539,671
+May,North America,Telehealth,Commercial,Clinic,16917,443,457
+May,North America,Telehealth,Commercial,Outpatient Center,18276,476,497
+May,North America,Telehealth,Medicare,Hospital,18475,555,771
+May,North America,Telehealth,Medicare,Clinic,15946,456,525
+May,North America,Telehealth,Medicare,Outpatient Center,17226,490,572
+May,North America,Telehealth,Medicaid,Hospital,19229,502,792
+May,North America,Telehealth,Medicaid,Clinic,16595,412,540
+May,North America,Telehealth,Medicaid,Outpatient Center,17927,443,587
+May,North America,Imaging,Commercial,Hospital,11512,772,574
+May,North America,Imaging,Commercial,Clinic,9935,634,391
+May,North America,Imaging,Commercial,Outpatient Center,10733,681,426
+May,North America,Imaging,Medicare,Hospital,10850,795,659
+May,North America,Imaging,Medicare,Clinic,9364,652,449
+May,North America,Imaging,Medicare,Outpatient Center,10114,701,489
+May,North America,Imaging,Medicaid,Hospital,11291,718,678
+May,North America,Imaging,Medicaid,Clinic,9744,589,462
+May,North America,Imaging,Medicaid,Outpatient Center,10524,633,503
+May,North America,Cardiology,Commercial,Hospital,10903,829,1121
+May,North America,Cardiology,Commercial,Clinic,9409,680,764
+May,North America,Cardiology,Commercial,Outpatient Center,10163,731,831
+May,North America,Cardiology,Medicare,Hospital,10275,853,1288
+May,North America,Cardiology,Medicare,Clinic,8866,700,877
+May,North America,Cardiology,Medicare,Outpatient Center,9576,752,955
+May,North America,Cardiology,Medicaid,Hospital,10691,770,1324
+May,North America,Cardiology,Medicaid,Clinic,9225,632,902
+May,North America,Cardiology,Medicaid,Outpatient Center,9963,679,981
+May,North America,Emergency Care,Commercial,Hospital,21502,694,1209
+May,North America,Emergency Care,Commercial,Clinic,18554,569,823
+May,North America,Emergency Care,Commercial,Outpatient Center,20039,612,896
+May,North America,Emergency Care,Medicare,Hospital,20260,714,1389
+May,North America,Emergency Care,Medicare,Clinic,17481,586,946
+May,North America,Emergency Care,Medicare,Outpatient Center,18879,630,1029
+May,North America,Emergency Care,Medicaid,Hospital,21078,645,1427
+May,North America,Emergency Care,Medicaid,Clinic,18185,529,972
+May,North America,Emergency Care,Medicaid,Outpatient Center,19638,568,1058
+May,Europe,Telehealth,Commercial,Hospital,17877,497,559
+May,Europe,Telehealth,Commercial,Clinic,15429,408,381
+May,Europe,Telehealth,Commercial,Outpatient Center,16667,438,415
+May,Europe,Telehealth,Medicare,Hospital,16849,511,642
+May,Europe,Telehealth,Medicare,Clinic,14540,420,438
+May,Europe,Telehealth,Medicare,Outpatient Center,15706,451,476
+May,Europe,Telehealth,Medicaid,Hospital,17534,462,660
+May,Europe,Telehealth,Medicaid,Clinic,15130,379,450
+May,Europe,Telehealth,Medicaid,Outpatient Center,16342,407,489
+May,Europe,Imaging,Commercial,Hospital,10498,711,478
+May,Europe,Imaging,Commercial,Clinic,9059,583,326
+May,Europe,Imaging,Commercial,Outpatient Center,9785,627,355
+May,Europe,Imaging,Medicare,Hospital,9892,732,550
+May,Europe,Imaging,Medicare,Clinic,8536,600,374
+May,Europe,Imaging,Medicare,Outpatient Center,9219,646,407
+May,Europe,Imaging,Medicaid,Hospital,10293,661,565
+May,Europe,Imaging,Medicaid,Clinic,8881,542,385
+May,Europe,Imaging,Medicaid,Outpatient Center,9591,583,419
+May,Europe,Cardiology,Commercial,Hospital,9940,763,934
+May,Europe,Cardiology,Commercial,Clinic,8576,626,636
+May,Europe,Cardiology,Commercial,Outpatient Center,9263,673,693
+May,Europe,Cardiology,Medicare,Hospital,9365,785,1073
+May,Europe,Cardiology,Medicare,Clinic,8080,644,731
+May,Europe,Cardiology,Medicare,Outpatient Center,8726,692,796
+May,Europe,Cardiology,Medicaid,Hospital,9743,709,1103
+May,Europe,Cardiology,Medicaid,Clinic,8406,581,751
+May,Europe,Cardiology,Medicaid,Outpatient Center,9077,625,818
+May,Europe,Emergency Care,Commercial,Hospital,19597,638,1007
+May,Europe,Emergency Care,Commercial,Clinic,16908,524,686
+May,Europe,Emergency Care,Commercial,Outpatient Center,18259,563,747
+May,Europe,Emergency Care,Medicare,Hospital,18462,657,1157
+May,Europe,Emergency Care,Medicare,Clinic,15927,539,788
+May,Europe,Emergency Care,Medicare,Outpatient Center,17199,579,858
+May,Europe,Emergency Care,Medicaid,Hospital,19204,593,1189
+May,Europe,Emergency Care,Medicaid,Clinic,16566,486,810
+May,Europe,Emergency Care,Medicaid,Outpatient Center,17888,523,882
+May,APAC,Telehealth,Commercial,Hospital,22804,463,619
+May,APAC,Telehealth,Commercial,Clinic,19678,380,422
+May,APAC,Telehealth,Commercial,Outpatient Center,21255,408,459
+May,APAC,Telehealth,Medicare,Hospital,21489,477,712
+May,APAC,Telehealth,Medicare,Clinic,18542,391,485
+May,APAC,Telehealth,Medicare,Outpatient Center,20026,420,528
+May,APAC,Telehealth,Medicaid,Hospital,22358,430,731
+May,APAC,Telehealth,Medicaid,Clinic,19291,353,498
+May,APAC,Telehealth,Medicaid,Outpatient Center,20834,379,542
+May,APAC,Imaging,Commercial,Hospital,13387,662,530
+May,APAC,Imaging,Commercial,Clinic,11551,543,361
+May,APAC,Imaging,Commercial,Outpatient Center,12475,584,393
+May,APAC,Imaging,Medicare,Hospital,12613,682,609
+May,APAC,Imaging,Medicare,Clinic,10882,559,415
+May,APAC,Imaging,Medicare,Outpatient Center,11752,601,451
+May,APAC,Imaging,Medicaid,Hospital,13121,615,626
+May,APAC,Imaging,Medicaid,Clinic,11320,505,426
+May,APAC,Imaging,Medicaid,Outpatient Center,12224,543,464
+May,APAC,Cardiology,Commercial,Hospital,12672,710,1035
+May,APAC,Cardiology,Commercial,Clinic,10933,583,705
+May,APAC,Cardiology,Commercial,Outpatient Center,11806,626,767
+May,APAC,Cardiology,Medicare,Hospital,11938,731,1189
+May,APAC,Cardiology,Medicare,Clinic,10299,600,810
+May,APAC,Cardiology,Medicare,Outpatient Center,11121,645,881
+May,APAC,Cardiology,Medicaid,Hospital,12417,660,1222
+May,APAC,Cardiology,Medicaid,Clinic,10712,541,832
+May,APAC,Cardiology,Medicaid,Outpatient Center,11566,582,906
+May,APAC,Emergency Care,Commercial,Hospital,24977,594,1116
+May,APAC,Emergency Care,Commercial,Clinic,21547,488,760
+May,APAC,Emergency Care,Commercial,Outpatient Center,23266,524,827
+May,APAC,Emergency Care,Medicare,Hospital,23527,612,1282
+May,APAC,Emergency Care,Medicare,Clinic,20295,502,873
+May,APAC,Emergency Care,Medicare,Outpatient Center,21913,539,950
+May,APAC,Emergency Care,Medicaid,Hospital,24468,552,1317
+May,APAC,Emergency Care,Medicaid,Clinic,21106,453,897
+May,APAC,Emergency Care,Medicaid,Outpatient Center,22787,487,977
+May,Latin America,Telehealth,Commercial,Hospital,14367,340,413
+May,Latin America,Telehealth,Commercial,Clinic,12397,279,281
+May,Latin America,Telehealth,Commercial,Outpatient Center,13388,300,306
+May,Latin America,Telehealth,Medicare,Hospital,13536,350,474
+May,Latin America,Telehealth,Medicare,Clinic,11679,287,323
+May,Latin America,Telehealth,Medicare,Outpatient Center,12612,308,352
+May,Latin America,Telehealth,Medicaid,Hospital,14082,316,488
+May,Latin America,Telehealth,Medicaid,Clinic,12148,259,332
+May,Latin America,Telehealth,Medicaid,Outpatient Center,13118,278,361
+May,Latin America,Imaging,Commercial,Hospital,8432,486,353
+May,Latin America,Imaging,Commercial,Clinic,7275,399,241
+May,Latin America,Imaging,Commercial,Outpatient Center,7856,429,262
+May,Latin America,Imaging,Medicare,Hospital,7943,500,406
+May,Latin America,Imaging,Medicare,Clinic,6852,410,276
+May,Latin America,Imaging,Medicare,Outpatient Center,7399,441,301
+May,Latin America,Imaging,Medicaid,Hospital,8262,452,417
+May,Latin America,Imaging,Medicaid,Clinic,7127,370,284
+May,Latin America,Imaging,Medicaid,Outpatient Center,7695,398,309
+May,Latin America,Cardiology,Commercial,Hospital,7979,521,690
+May,Latin America,Cardiology,Commercial,Clinic,6883,427,470
+May,Latin America,Cardiology,Commercial,Outpatient Center,7433,460,511
+May,Latin America,Cardiology,Medicare,Hospital,7516,536,793
+May,Latin America,Cardiology,Medicare,Clinic,6483,440,540
+May,Latin America,Cardiology,Medicare,Outpatient Center,7000,473,588
+May,Latin America,Cardiology,Medicaid,Hospital,7816,484,815
+May,Latin America,Cardiology,Medicaid,Clinic,6742,397,555
+May,Latin America,Cardiology,Medicaid,Outpatient Center,7279,427,604
+May,Latin America,Emergency Care,Commercial,Hospital,15724,436,744
+May,Latin America,Emergency Care,Commercial,Clinic,13563,358,507
+May,Latin America,Emergency Care,Commercial,Outpatient Center,14644,384,551
+May,Latin America,Emergency Care,Medicare,Hospital,14809,449,855
+May,Latin America,Emergency Care,Medicare,Clinic,12773,368,582
+May,Latin America,Emergency Care,Medicare,Outpatient Center,13790,395,634
+May,Latin America,Emergency Care,Medicaid,Hospital,15399,405,878
+May,Latin America,Emergency Care,Medicaid,Clinic,13281,332,598
+May,Latin America,Emergency Care,Medicaid,Outpatient Center,14338,357,651
+Jun,North America,Telehealth,Commercial,Hospital,20401,566,680
+Jun,North America,Telehealth,Commercial,Clinic,17607,465,463
+Jun,North America,Telehealth,Commercial,Outpatient Center,19021,500,504
+Jun,North America,Telehealth,Medicare,Hospital,19229,583,781
+Jun,North America,Telehealth,Medicare,Clinic,16595,478,532
+Jun,North America,Telehealth,Medicare,Outpatient Center,17926,514,579
+Jun,North America,Telehealth,Medicaid,Hospital,20011,526,803
+Jun,North America,Telehealth,Medicaid,Clinic,17269,432,547
+Jun,North America,Telehealth,Medicaid,Outpatient Center,18653,464,595
+Jun,North America,Imaging,Commercial,Hospital,11981,811,582
+Jun,North America,Imaging,Commercial,Clinic,10339,665,396
+Jun,North America,Imaging,Commercial,Outpatient Center,11168,715,431
+Jun,North America,Imaging,Medicare,Hospital,11291,834,668
+Jun,North America,Imaging,Medicare,Clinic,9743,685,455
+Jun,North America,Imaging,Medicare,Outpatient Center,10523,736,495
+Jun,North America,Imaging,Medicaid,Hospital,11748,753,687
+Jun,North America,Imaging,Medicaid,Clinic,10137,618,468
+Jun,North America,Imaging,Medicaid,Outpatient Center,10949,664,509
+Jun,North America,Cardiology,Commercial,Hospital,11345,870,1136
+Jun,North America,Cardiology,Commercial,Clinic,9789,713,774
+Jun,North America,Cardiology,Commercial,Outpatient Center,10573,767,842
+Jun,North America,Cardiology,Medicare,Hospital,10690,895,1306
+Jun,North America,Cardiology,Medicare,Clinic,9224,734,889
+Jun,North America,Cardiology,Medicare,Outpatient Center,9962,789,968
+Jun,North America,Cardiology,Medicaid,Hospital,11122,808,1342
+Jun,North America,Cardiology,Medicaid,Clinic,9596,663,914
+Jun,North America,Cardiology,Medicaid,Outpatient Center,10363,713,995
+Jun,North America,Emergency Care,Commercial,Hospital,22370,728,1225
+Jun,North America,Emergency Care,Commercial,Clinic,19301,597,834
+Jun,North America,Emergency Care,Commercial,Outpatient Center,20844,642,908
+Jun,North America,Emergency Care,Medicare,Hospital,21076,749,1408
+Jun,North America,Emergency Care,Medicare,Clinic,18183,614,959
+Jun,North America,Emergency Care,Medicare,Outpatient Center,19636,661,1044
+Jun,North America,Emergency Care,Medicaid,Hospital,21924,676,1447
+Jun,North America,Emergency Care,Medicaid,Clinic,18914,555,985
+Jun,North America,Emergency Care,Medicaid,Outpatient Center,20423,596,1073
+Jun,Europe,Telehealth,Commercial,Hospital,18605,521,566
+Jun,Europe,Telehealth,Commercial,Clinic,16055,428,386
+Jun,Europe,Telehealth,Commercial,Outpatient Center,17342,460,420
+Jun,Europe,Telehealth,Medicare,Hospital,17533,537,651
+Jun,Europe,Telehealth,Medicare,Clinic,15129,440,443
+Jun,Europe,Telehealth,Medicare,Outpatient Center,16341,473,482
+Jun,Europe,Telehealth,Medicaid,Hospital,18243,485,669
+Jun,Europe,Telehealth,Medicaid,Clinic,15741,398,456
+Jun,Europe,Telehealth,Medicaid,Outpatient Center,17001,427,496
+Jun,Europe,Imaging,Commercial,Hospital,10923,746,485
+Jun,Europe,Imaging,Commercial,Clinic,9425,612,330
+Jun,Europe,Imaging,Commercial,Outpatient Center,10179,658,359
+Jun,Europe,Imaging,Medicare,Hospital,10292,768,557
+Jun,Europe,Imaging,Medicare,Clinic,8880,630,379
+Jun,Europe,Imaging,Medicare,Outpatient Center,9590,677,413
+Jun,Europe,Imaging,Medicaid,Hospital,10707,693,572
+Jun,Europe,Imaging,Medicaid,Clinic,9238,569,390
+Jun,Europe,Imaging,Medicaid,Outpatient Center,9976,611,424
+Jun,Europe,Cardiology,Commercial,Hospital,10340,800,947
+Jun,Europe,Cardiology,Commercial,Clinic,8922,656,645
+Jun,Europe,Cardiology,Commercial,Outpatient Center,9635,706,702
+Jun,Europe,Cardiology,Medicare,Hospital,9742,824,1088
+Jun,Europe,Cardiology,Medicare,Clinic,8405,676,741
+Jun,Europe,Cardiology,Medicare,Outpatient Center,9076,726,807
+Jun,Europe,Cardiology,Medicaid,Hospital,10134,743,1118
+Jun,Europe,Cardiology,Medicaid,Clinic,8742,610,761
+Jun,Europe,Cardiology,Medicaid,Outpatient Center,9440,655,829
+Jun,Europe,Emergency Care,Commercial,Hospital,20384,670,1021
+Jun,Europe,Emergency Care,Commercial,Clinic,17585,549,695
+Jun,Europe,Emergency Care,Commercial,Outpatient Center,18989,590,757
+Jun,Europe,Emergency Care,Medicare,Hospital,19201,689,1173
+Jun,Europe,Emergency Care,Medicare,Clinic,16564,565,799
+Jun,Europe,Emergency Care,Medicare,Outpatient Center,17885,608,870
+Jun,Europe,Emergency Care,Medicaid,Hospital,19970,622,1206
+Jun,Europe,Emergency Care,Medicaid,Clinic,17227,510,821
+Jun,Europe,Emergency Care,Medicaid,Outpatient Center,18600,548,894
+Jun,APAC,Telehealth,Commercial,Hospital,23727,486,627
+Jun,APAC,Telehealth,Commercial,Clinic,20473,399,427
+Jun,APAC,Telehealth,Commercial,Outpatient Center,22111,428,465
+Jun,APAC,Telehealth,Medicare,Hospital,22356,500,721
+Jun,APAC,Telehealth,Medicare,Clinic,19289,410,491
+Jun,APAC,Telehealth,Medicare,Outpatient Center,20831,441,534
+Jun,APAC,Telehealth,Medicaid,Hospital,23258,451,741
+Jun,APAC,Telehealth,Medicaid,Clinic,20066,370,505
+Jun,APAC,Telehealth,Medicaid,Outpatient Center,21669,398,549
+Jun,APAC,Imaging,Commercial,Hospital,13926,695,537
+Jun,APAC,Imaging,Commercial,Clinic,12015,570,366
+Jun,APAC,Imaging,Commercial,Outpatient Center,12975,613,398
+Jun,APAC,Imaging,Medicare,Hospital,13120,715,617
+Jun,APAC,Imaging,Medicare,Clinic,11319,587,420
+Jun,APAC,Imaging,Medicare,Outpatient Center,12223,631,457
+Jun,APAC,Imaging,Medicaid,Hospital,13647,646,634
+Jun,APAC,Imaging,Medicaid,Clinic,11773,529,432
+Jun,APAC,Imaging,Medicaid,Outpatient Center,12712,569,470
+Jun,APAC,Cardiology,Commercial,Hospital,13180,745,1049
+Jun,APAC,Cardiology,Commercial,Clinic,11370,611,714
+Jun,APAC,Cardiology,Commercial,Outpatient Center,12278,657,778
+Jun,APAC,Cardiology,Medicare,Hospital,12415,767,1205
+Jun,APAC,Cardiology,Medicare,Clinic,10710,629,821
+Jun,APAC,Cardiology,Medicare,Outpatient Center,11564,676,893
+Jun,APAC,Cardiology,Medicaid,Hospital,12912,692,1239
+Jun,APAC,Cardiology,Medicaid,Clinic,11138,567,844
+Jun,APAC,Cardiology,Medicaid,Outpatient Center,12026,610,918
+Jun,APAC,Emergency Care,Commercial,Hospital,25975,624,1131
+Jun,APAC,Emergency Care,Commercial,Clinic,22406,511,770
+Jun,APAC,Emergency Care,Commercial,Outpatient Center,24192,550,838
+Jun,APAC,Emergency Care,Medicare,Hospital,24464,642,1299
+Jun,APAC,Emergency Care,Medicare,Clinic,21102,526,885
+Jun,APAC,Emergency Care,Medicare,Outpatient Center,22782,565,963
+Jun,APAC,Emergency Care,Medicaid,Hospital,25440,579,1336
+Jun,APAC,Emergency Care,Medicaid,Clinic,21943,475,910
+Jun,APAC,Emergency Care,Medicaid,Outpatient Center,23689,510,990
+Jun,Latin America,Telehealth,Commercial,Hospital,14946,357,418
+Jun,Latin America,Telehealth,Commercial,Clinic,12895,292,285
+Jun,Latin America,Telehealth,Commercial,Outpatient Center,13925,314,310
+Jun,Latin America,Telehealth,Medicare,Hospital,14080,367,481
+Jun,Latin America,Telehealth,Medicare,Clinic,12147,301,327
+Jun,Latin America,Telehealth,Medicare,Outpatient Center,13116,324,356
+Jun,Latin America,Telehealth,Medicaid,Hospital,14645,331,494
+Jun,Latin America,Telehealth,Medicaid,Clinic,12634,272,336
+Jun,Latin America,Telehealth,Medicaid,Outpatient Center,13642,292,366
+Jun,Latin America,Imaging,Commercial,Hospital,8770,510,358
+Jun,Latin America,Imaging,Commercial,Clinic,7565,418,244
+Jun,Latin America,Imaging,Commercial,Outpatient Center,8169,450,265
+Jun,Latin America,Imaging,Medicare,Hospital,8261,525,411
+Jun,Latin America,Imaging,Medicare,Clinic,7126,430,280
+Jun,Latin America,Imaging,Medicare,Outpatient Center,7694,463,305
+Jun,Latin America,Imaging,Medicaid,Hospital,8591,474,423
+Jun,Latin America,Imaging,Medicaid,Clinic,7411,388,288
+Jun,Latin America,Imaging,Medicaid,Outpatient Center,8001,417,313
+Jun,Latin America,Cardiology,Commercial,Hospital,8298,547,699
+Jun,Latin America,Cardiology,Commercial,Clinic,7158,448,476
+Jun,Latin America,Cardiology,Commercial,Outpatient Center,7728,482,518
+Jun,Latin America,Cardiology,Medicare,Hospital,7815,563,803
+Jun,Latin America,Cardiology,Medicare,Clinic,6741,461,547
+Jun,Latin America,Cardiology,Medicare,Outpatient Center,7278,496,596
+Jun,Latin America,Cardiology,Medicaid,Hospital,8127,508,826
+Jun,Latin America,Cardiology,Medicaid,Clinic,7009,416,562
+Jun,Latin America,Cardiology,Medicaid,Outpatient Center,7567,447,612
+Jun,Latin America,Emergency Care,Commercial,Hospital,16349,457,754
+Jun,Latin America,Emergency Care,Commercial,Clinic,14101,375,513
+Jun,Latin America,Emergency Care,Commercial,Outpatient Center,15224,403,559
+Jun,Latin America,Emergency Care,Medicare,Hospital,15396,470,866
+Jun,Latin America,Emergency Care,Medicare,Clinic,13278,386,590
+Jun,Latin America,Emergency Care,Medicare,Outpatient Center,14334,415,642
+Jun,Latin America,Emergency Care,Medicaid,Hospital,16008,424,890
+Jun,Latin America,Emergency Care,Medicaid,Clinic,13805,348,606
+Jun,Latin America,Emergency Care,Medicaid,Outpatient Center,14903,374,660
+Jul,North America,Telehealth,Commercial,Hospital,21216,594,708
+Jul,North America,Telehealth,Commercial,Clinic,18309,487,482
+Jul,North America,Telehealth,Commercial,Outpatient Center,19778,524,525
+Jul,North America,Telehealth,Medicare,Hospital,19995,611,814
+Jul,North America,Telehealth,Medicare,Clinic,17255,501,554
+Jul,North America,Telehealth,Medicare,Outpatient Center,18637,539,603
+Jul,North America,Telehealth,Medicaid,Hospital,20806,552,837
+Jul,North America,Telehealth,Medicaid,Clinic,17954,453,570
+Jul,North America,Telehealth,Medicaid,Outpatient Center,19391,487,620
+Jul,North America,Imaging,Commercial,Hospital,12457,850,606
+Jul,North America,Imaging,Commercial,Clinic,10749,697,413
+Jul,North America,Imaging,Commercial,Outpatient Center,11610,749,449
+Jul,North America,Imaging,Medicare,Hospital,11738,875,696
+Jul,North America,Imaging,Medicare,Clinic,10129,717,474
+Jul,North America,Imaging,Medicare,Outpatient Center,10939,771,516
+Jul,North America,Imaging,Medicaid,Hospital,12213,789,716
+Jul,North America,Imaging,Medicaid,Clinic,10537,648,487
+Jul,North America,Imaging,Medicaid,Outpatient Center,11380,696,531
+Jul,North America,Cardiology,Commercial,Hospital,11794,911,1184
+Jul,North America,Cardiology,Commercial,Clinic,10176,747,806
+Jul,North America,Cardiology,Commercial,Outpatient Center,10990,804,878
+Jul,North America,Cardiology,Medicare,Hospital,11112,938,1361
+Jul,North America,Cardiology,Medicare,Clinic,9587,769,927
+Jul,North America,Cardiology,Medicare,Outpatient Center,10353,827,1009
+Jul,North America,Cardiology,Medicaid,Hospital,11560,847,1398
+Jul,North America,Cardiology,Medicaid,Clinic,9973,694,952
+Jul,North America,Cardiology,Medicaid,Outpatient Center,10769,746,1037
+Jul,North America,Emergency Care,Commercial,Hospital,23252,763,1277
+Jul,North America,Emergency Care,Commercial,Clinic,20060,626,870
+Jul,North America,Emergency Care,Commercial,Outpatient Center,21662,672,947
+Jul,North America,Emergency Care,Medicare,Hospital,21904,785,1467
+Jul,North America,Emergency Care,Medicare,Clinic,18896,644,999
+Jul,North America,Emergency Care,Medicare,Outpatient Center,20404,692,1088
+Jul,North America,Emergency Care,Medicaid,Hospital,22783,708,1508
+Jul,North America,Emergency Care,Medicaid,Clinic,19653,581,1027
+Jul,North America,Emergency Care,Medicaid,Outpatient Center,21221,624,1118
+Jul,Europe,Telehealth,Commercial,Hospital,19344,546,590
+Jul,Europe,Telehealth,Commercial,Clinic,16692,448,402
+Jul,Europe,Telehealth,Commercial,Outpatient Center,18028,482,438
+Jul,Europe,Telehealth,Medicare,Hospital,18228,563,678
+Jul,Europe,Telehealth,Medicare,Clinic,15727,461,462
+Jul,Europe,Telehealth,Medicare,Outpatient Center,16986,496,503
+Jul,Europe,Telehealth,Medicaid,Hospital,18964,508,697
+Jul,Europe,Telehealth,Medicaid,Clinic,16362,417,475
+Jul,Europe,Telehealth,Medicaid,Outpatient Center,17670,448,517
+Jul,Europe,Imaging,Commercial,Hospital,11355,782,505
+Jul,Europe,Imaging,Commercial,Clinic,9797,641,344
+Jul,Europe,Imaging,Commercial,Outpatient Center,10580,690,375
+Jul,Europe,Imaging,Medicare,Hospital,10698,805,580
+Jul,Europe,Imaging,Medicare,Clinic,9230,660,395
+Jul,Europe,Imaging,Medicare,Outpatient Center,9967,710,430
+Jul,Europe,Imaging,Medicaid,Hospital,11129,726,597
+Jul,Europe,Imaging,Medicaid,Clinic,9601,596,406
+Jul,Europe,Imaging,Medicaid,Outpatient Center,10367,640,442
+Jul,Europe,Cardiology,Commercial,Hospital,10748,838,987
+Jul,Europe,Cardiology,Commercial,Clinic,9272,688,672
+Jul,Europe,Cardiology,Commercial,Outpatient Center,10013,739,732
+Jul,Europe,Cardiology,Medicare,Hospital,10124,863,1134
+Jul,Europe,Cardiology,Medicare,Clinic,8734,708,772
+Jul,Europe,Cardiology,Medicare,Outpatient Center,9431,761,841
+Jul,Europe,Cardiology,Medicaid,Hospital,10530,779,1165
+Jul,Europe,Cardiology,Medicaid,Clinic,9084,639,794
+Jul,Europe,Cardiology,Medicaid,Outpatient Center,9808,686,864
+Jul,Europe,Emergency Care,Commercial,Hospital,21183,702,1064
+Jul,Europe,Emergency Care,Commercial,Clinic,18273,575,725
+Jul,Europe,Emergency Care,Commercial,Outpatient Center,19731,618,789
+Jul,Europe,Emergency Care,Medicare,Hospital,19952,722,1222
+Jul,Europe,Emergency Care,Medicare,Clinic,17210,592,833
+Jul,Europe,Emergency Care,Medicare,Outpatient Center,18582,636,906
+Jul,Europe,Emergency Care,Medicaid,Hospital,20749,651,1256
+Jul,Europe,Emergency Care,Medicaid,Clinic,17897,534,856
+Jul,Europe,Emergency Care,Medicaid,Outpatient Center,19322,574,931
+Jul,APAC,Telehealth,Commercial,Hospital,24665,509,654
+Jul,APAC,Telehealth,Commercial,Clinic,21281,418,445
+Jul,APAC,Telehealth,Commercial,Outpatient Center,22982,449,485
+Jul,APAC,Telehealth,Medicare,Hospital,23237,524,751
+Jul,APAC,Telehealth,Medicare,Clinic,20048,430,512
+Jul,APAC,Telehealth,Medicare,Outpatient Center,21649,462,557
+Jul,APAC,Telehealth,Medicaid,Hospital,24172,473,772
+Jul,APAC,Telehealth,Medicaid,Clinic,20853,388,526
+Jul,APAC,Telehealth,Medicaid,Outpatient Center,22517,417,573
+Jul,APAC,Imaging,Commercial,Hospital,14474,728,560
+Jul,APAC,Imaging,Commercial,Clinic,12487,597,381
+Jul,APAC,Imaging,Commercial,Outpatient Center,13484,642,415
+Jul,APAC,Imaging,Medicare,Hospital,13635,749,643
+Jul,APAC,Imaging,Medicare,Clinic,11762,614,438
+Jul,APAC,Imaging,Medicare,Outpatient Center,12700,661,477
+Jul,APAC,Imaging,Medicaid,Hospital,14181,676,661
+Jul,APAC,Imaging,Medicaid,Clinic,12233,555,450
+Jul,APAC,Imaging,Medicaid,Outpatient Center,13208,596,490
+Jul,APAC,Cardiology,Commercial,Hospital,13697,781,1093
+Jul,APAC,Cardiology,Commercial,Clinic,11815,640,744
+Jul,APAC,Cardiology,Commercial,Outpatient Center,12757,688,810
+Jul,APAC,Cardiology,Medicare,Hospital,12900,803,1256
+Jul,APAC,Cardiology,Medicare,Clinic,11128,659,855
+Jul,APAC,Cardiology,Medicare,Outpatient Center,12014,708,931
+Jul,APAC,Cardiology,Medicaid,Hospital,13416,725,1291
+Jul,APAC,Cardiology,Medicaid,Clinic,11571,594,879
+Jul,APAC,Cardiology,Medicaid,Outpatient Center,12493,639,957
+Jul,APAC,Emergency Care,Commercial,Hospital,26988,653,1179
+Jul,APAC,Emergency Care,Commercial,Clinic,23279,535,803
+Jul,APAC,Emergency Care,Commercial,Outpatient Center,25132,576,874
+Jul,APAC,Emergency Care,Medicare,Hospital,25416,672,1354
+Jul,APAC,Emergency Care,Medicare,Clinic,21921,551,922
+Jul,APAC,Emergency Care,Medicare,Outpatient Center,23666,592,1004
+Jul,APAC,Emergency Care,Medicaid,Hospital,26428,606,1392
+Jul,APAC,Emergency Care,Medicaid,Clinic,22793,497,948
+Jul,APAC,Emergency Care,Medicaid,Outpatient Center,24605,534,1032
+Jul,Latin America,Telehealth,Commercial,Hospital,15533,374,436
+Jul,Latin America,Telehealth,Commercial,Clinic,13400,306,297
+Jul,Latin America,Telehealth,Commercial,Outpatient Center,14470,329,323
+Jul,Latin America,Telehealth,Medicare,Hospital,14632,384,501
+Jul,Latin America,Telehealth,Medicare,Clinic,12622,315,341
+Jul,Latin America,Telehealth,Medicare,Outpatient Center,13629,339,371
+Jul,Latin America,Telehealth,Medicaid,Hospital,15218,347,515
+Jul,Latin America,Telehealth,Medicaid,Clinic,13127,284,351
+Jul,Latin America,Telehealth,Medicaid,Outpatient Center,14173,306,382
+Jul,Latin America,Imaging,Commercial,Hospital,9113,534,373
+Jul,Latin America,Imaging,Commercial,Clinic,7861,438,254
+Jul,Latin America,Imaging,Commercial,Outpatient Center,8488,471,277
+Jul,Latin America,Imaging,Medicare,Hospital,8583,550,429
+Jul,Latin America,Imaging,Medicare,Clinic,7403,451,292
+Jul,Latin America,Imaging,Medicare,Outpatient Center,7993,484,318
+Jul,Latin America,Imaging,Medicaid,Hospital,8926,496,440
+Jul,Latin America,Imaging,Medicaid,Clinic,7699,407,300
+Jul,Latin America,Imaging,Medicaid,Outpatient Center,8311,437,327
+Jul,Latin America,Cardiology,Commercial,Hospital,8621,573,729
+Jul,Latin America,Cardiology,Commercial,Clinic,7436,469,496
+Jul,Latin America,Cardiology,Commercial,Outpatient Center,8028,505,540
+Jul,Latin America,Cardiology,Medicare,Hospital,8119,589,837
+Jul,Latin America,Cardiology,Medicare,Clinic,7002,483,570
+Jul,Latin America,Cardiology,Medicare,Outpatient Center,7560,519,621
+Jul,Latin America,Cardiology,Medicaid,Hospital,8442,531,860
+Jul,Latin America,Cardiology,Medicaid,Clinic,7281,436,586
+Jul,Latin America,Cardiology,Medicaid,Outpatient Center,7859,468,638
+Jul,Latin America,Emergency Care,Commercial,Hospital,16984,479,786
+Jul,Latin America,Emergency Care,Commercial,Clinic,14648,393,535
+Jul,Latin America,Emergency Care,Commercial,Outpatient Center,15812,422,582
+Jul,Latin America,Emergency Care,Medicare,Hospital,15992,493,903
+Jul,Latin America,Emergency Care,Medicare,Clinic,13791,404,615
+Jul,Latin America,Emergency Care,Medicare,Outpatient Center,14887,434,669
+Jul,Latin America,Emergency Care,Medicaid,Hospital,16626,444,928
+Jul,Latin America,Emergency Care,Medicaid,Clinic,14338,364,632
+Jul,Latin America,Emergency Care,Medicaid,Outpatient Center,15476,391,688
+Aug,North America,Telehealth,Commercial,Hospital,20691,569,675
+Aug,North America,Telehealth,Commercial,Clinic,17855,467,460
+Aug,North America,Telehealth,Commercial,Outpatient Center,19286,502,501
+Aug,North America,Telehealth,Medicare,Hospital,19498,586,776
+Aug,North America,Telehealth,Medicare,Clinic,16824,481,529
+Aug,North America,Telehealth,Medicare,Outpatient Center,18171,517,575
+Aug,North America,Telehealth,Medicaid,Hospital,20287,529,798
+Aug,North America,Telehealth,Medicaid,Clinic,17504,434,543
+Aug,North America,Telehealth,Medicaid,Outpatient Center,18904,467,591
+Aug,North America,Imaging,Commercial,Hospital,12147,815,578
+Aug,North America,Imaging,Commercial,Clinic,10481,668,394
+Aug,North America,Imaging,Commercial,Outpatient Center,11319,718,428
+Aug,North America,Imaging,Medicare,Hospital,11445,838,664
+Aug,North America,Imaging,Medicare,Clinic,9874,688,452
+Aug,North America,Imaging,Medicare,Outpatient Center,10664,739,492
+Aug,North America,Imaging,Medicaid,Hospital,11906,757,682
+Aug,North America,Imaging,Medicaid,Clinic,10272,621,465
+Aug,North America,Imaging,Medicaid,Outpatient Center,11092,667,506
+Aug,North America,Cardiology,Commercial,Hospital,11498,874,1129
+Aug,North America,Cardiology,Commercial,Clinic,9920,716,769
+Aug,North America,Cardiology,Commercial,Outpatient Center,10713,770,837
+Aug,North America,Cardiology,Medicare,Hospital,10832,899,1297
+Aug,North America,Cardiology,Medicare,Clinic,9345,737,883
+Aug,North America,Cardiology,Medicare,Outpatient Center,10091,793,962
+Aug,North America,Cardiology,Medicaid,Hospital,11267,811,1333
+Aug,North America,Cardiology,Medicaid,Clinic,9720,665,908
+Aug,North America,Cardiology,Medicaid,Outpatient Center,10495,715,988
+Aug,North America,Emergency Care,Commercial,Hospital,22665,731,1217
+Aug,North America,Emergency Care,Commercial,Clinic,19552,599,829
+Aug,North America,Emergency Care,Commercial,Outpatient Center,21112,644,902
+Aug,North America,Emergency Care,Medicare,Hospital,21349,752,1398
+Aug,North America,Emergency Care,Medicare,Clinic,18416,617,952
+Aug,North America,Emergency Care,Medicare,Outpatient Center,19884,663,1037
+Aug,North America,Emergency Care,Medicaid,Hospital,22203,679,1437
+Aug,North America,Emergency Care,Medicaid,Clinic,19152,557,979
+Aug,North America,Emergency Care,Medicaid,Outpatient Center,20678,598,1066
+Aug,Europe,Telehealth,Commercial,Hospital,18862,524,563
+Aug,Europe,Telehealth,Commercial,Clinic,16274,430,383
+Aug,Europe,Telehealth,Commercial,Outpatient Center,17576,462,417
+Aug,Europe,Telehealth,Medicare,Hospital,17771,539,647
+Aug,Europe,Telehealth,Medicare,Clinic,15332,442,440
+Aug,Europe,Telehealth,Medicare,Outpatient Center,16558,476,479
+Aug,Europe,Telehealth,Medicaid,Hospital,18487,487,665
+Aug,Europe,Telehealth,Medicaid,Clinic,15949,399,453
+Aug,Europe,Telehealth,Medicaid,Outpatient Center,17223,429,493
+Aug,Europe,Imaging,Commercial,Hospital,11070,749,482
+Aug,Europe,Imaging,Commercial,Clinic,9550,615,328
+Aug,Europe,Imaging,Commercial,Outpatient Center,10313,661,357
+Aug,Europe,Imaging,Medicare,Hospital,10428,771,553
+Aug,Europe,Imaging,Medicare,Clinic,8996,633,377
+Aug,Europe,Imaging,Medicare,Outpatient Center,9714,680,410
+Aug,Europe,Imaging,Medicaid,Hospital,10847,696,569
+Aug,Europe,Imaging,Medicaid,Clinic,9357,571,387
+Aug,Europe,Imaging,Medicaid,Outpatient Center,10103,614,422
+Aug,Europe,Cardiology,Commercial,Hospital,10476,804,941
+Aug,Europe,Cardiology,Commercial,Clinic,9037,659,641
+Aug,Europe,Cardiology,Commercial,Outpatient Center,9758,708,697
+Aug,Europe,Cardiology,Medicare,Hospital,9867,827,1081
+Aug,Europe,Cardiology,Medicare,Clinic,8512,678,736
+Aug,Europe,Cardiology,Medicare,Outpatient Center,9190,729,801
+Aug,Europe,Cardiology,Medicaid,Hospital,10262,746,1111
+Aug,Europe,Cardiology,Medicaid,Clinic,8852,612,757
+Aug,Europe,Cardiology,Medicaid,Outpatient Center,9557,658,824
+Aug,Europe,Emergency Care,Commercial,Hospital,20644,672,1014
+Aug,Europe,Emergency Care,Commercial,Clinic,17807,551,691
+Aug,Europe,Emergency Care,Commercial,Outpatient Center,19226,593,752
+Aug,Europe,Emergency Care,Medicare,Hospital,19442,692,1165
+Aug,Europe,Emergency Care,Medicare,Clinic,16770,567,794
+Aug,Europe,Emergency Care,Medicare,Outpatient Center,18105,610,864
+Aug,Europe,Emergency Care,Medicaid,Hospital,20218,624,1198
+Aug,Europe,Emergency Care,Medicaid,Clinic,17437,512,816
+Aug,Europe,Emergency Care,Medicaid,Outpatient Center,18825,550,888
+Aug,APAC,Telehealth,Commercial,Hospital,24045,488,624
+Aug,APAC,Telehealth,Commercial,Clinic,20744,400,425
+Aug,APAC,Telehealth,Commercial,Outpatient Center,22401,430,462
+Aug,APAC,Telehealth,Medicare,Hospital,22651,502,716
+Aug,APAC,Telehealth,Medicare,Clinic,19540,412,488
+Aug,APAC,Telehealth,Medicare,Outpatient Center,21100,443,531
+Aug,APAC,Telehealth,Medicaid,Hospital,23559,453,736
+Aug,APAC,Telehealth,Medicaid,Clinic,20323,372,501
+Aug,APAC,Telehealth,Medicaid,Outpatient Center,21944,400,546
+Aug,APAC,Imaging,Commercial,Hospital,14108,698,533
+Aug,APAC,Imaging,Commercial,Clinic,12170,572,363
+Aug,APAC,Imaging,Commercial,Outpatient Center,13141,615,396
+Aug,APAC,Imaging,Medicare,Hospital,13288,718,613
+Aug,APAC,Imaging,Medicare,Clinic,11462,589,417
+Aug,APAC,Imaging,Medicare,Outpatient Center,12376,633,454
+Aug,APAC,Imaging,Medicaid,Hospital,13820,648,630
+Aug,APAC,Imaging,Medicaid,Clinic,11920,531,429
+Aug,APAC,Imaging,Medicaid,Outpatient Center,12869,571,467
+Aug,APAC,Cardiology,Commercial,Hospital,13348,748,1042
+Aug,APAC,Cardiology,Commercial,Clinic,11513,613,710
+Aug,APAC,Cardiology,Commercial,Outpatient Center,12431,659,773
+Aug,APAC,Cardiology,Medicare,Hospital,12571,770,1197
+Aug,APAC,Cardiology,Medicare,Clinic,10842,631,815
+Aug,APAC,Cardiology,Medicare,Outpatient Center,11705,678,888
+Aug,APAC,Cardiology,Medicaid,Hospital,13072,694,1231
+Aug,APAC,Cardiology,Medicaid,Clinic,11274,569,838
+Aug,APAC,Cardiology,Medicaid,Outpatient Center,12171,612,912
+Aug,APAC,Emergency Care,Commercial,Hospital,26297,626,1124
+Aug,APAC,Emergency Care,Commercial,Clinic,22681,513,765
+Aug,APAC,Emergency Care,Commercial,Outpatient Center,24485,551,833
+Aug,APAC,Emergency Care,Medicare,Hospital,24762,644,1291
+Aug,APAC,Emergency Care,Medicare,Clinic,21356,528,879
+Aug,APAC,Emergency Care,Medicare,Outpatient Center,23054,567,957
+Aug,APAC,Emergency Care,Medicaid,Hospital,25746,581,1327
+Aug,APAC,Emergency Care,Medicaid,Clinic,22203,476,904
+Aug,APAC,Emergency Care,Medicaid,Outpatient Center,23967,512,984
+Aug,Latin America,Telehealth,Commercial,Hospital,15140,358,416
+Aug,Latin America,Telehealth,Commercial,Clinic,13060,294,283
+Aug,Latin America,Telehealth,Commercial,Outpatient Center,14102,316,308
+Aug,Latin America,Telehealth,Medicare,Hospital,14260,368,478
+Aug,Latin America,Telehealth,Medicare,Clinic,12300,302,325
+Aug,Latin America,Telehealth,Medicare,Outpatient Center,13280,325,354
+Aug,Latin America,Telehealth,Medicaid,Hospital,14830,332,491
+Aug,Latin America,Telehealth,Medicaid,Clinic,12791,273,334
+Aug,Latin America,Telehealth,Medicaid,Outpatient Center,13809,293,364
+Aug,Latin America,Imaging,Commercial,Hospital,8881,512,356
+Aug,Latin America,Imaging,Commercial,Clinic,7660,420,242
+Aug,Latin America,Imaging,Commercial,Outpatient Center,8270,451,264
+Aug,Latin America,Imaging,Medicare,Hospital,8364,527,409
+Aug,Latin America,Imaging,Medicare,Clinic,7214,432,278
+Aug,Latin America,Imaging,Medicare,Outpatient Center,7788,464,303
+Aug,Latin America,Imaging,Medicaid,Hospital,8697,475,420
+Aug,Latin America,Imaging,Medicaid,Clinic,7500,390,286
+Aug,Latin America,Imaging,Medicaid,Outpatient Center,8097,419,311
+Aug,Latin America,Cardiology,Commercial,Hospital,8400,549,695
+Aug,Latin America,Cardiology,Commercial,Clinic,7245,450,473
+Aug,Latin America,Cardiology,Commercial,Outpatient Center,7821,483,515
+Aug,Latin America,Cardiology,Medicare,Hospital,7910,564,798
+Aug,Latin America,Cardiology,Medicare,Clinic,6822,463,544
+Aug,Latin America,Cardiology,Medicare,Outpatient Center,7364,497,592
+Aug,Latin America,Cardiology,Medicaid,Hospital,8224,509,820
+Aug,Latin America,Cardiology,Medicaid,Clinic,7092,417,559
+Aug,Latin America,Cardiology,Medicaid,Outpatient Center,7655,448,608
+Aug,Latin America,Emergency Care,Commercial,Hospital,16546,459,749
+Aug,Latin America,Emergency Care,Commercial,Clinic,14269,376,510
+Aug,Latin America,Emergency Care,Commercial,Outpatient Center,15403,404,555
+Aug,Latin America,Emergency Care,Medicare,Hospital,15578,472,861
+Aug,Latin America,Emergency Care,Medicare,Clinic,13434,387,586
+Aug,Latin America,Emergency Care,Medicare,Outpatient Center,14500,416,638
+Aug,Latin America,Emergency Care,Medicaid,Hospital,16194,426,884
+Aug,Latin America,Emergency Care,Medicaid,Clinic,13964,349,602
+Aug,Latin America,Emergency Care,Medicaid,Outpatient Center,15072,375,656
+Sep,North America,Telehealth,Commercial,Hospital,19225,524,648
+Sep,North America,Telehealth,Commercial,Clinic,16594,430,442
+Sep,North America,Telehealth,Commercial,Outpatient Center,17928,463,481
+Sep,North America,Telehealth,Medicare,Hospital,18123,540,745
+Sep,North America,Telehealth,Medicare,Clinic,15642,443,507
+Sep,North America,Telehealth,Medicare,Outpatient Center,16898,476,552
+Sep,North America,Telehealth,Medicaid,Hospital,18863,488,766
+Sep,North America,Telehealth,Medicaid,Clinic,16279,400,521
+Sep,North America,Telehealth,Medicaid,Outpatient Center,17585,430,568
+Sep,North America,Imaging,Commercial,Hospital,11293,751,555
+Sep,North America,Imaging,Commercial,Clinic,9746,616,378
+Sep,North America,Imaging,Commercial,Outpatient Center,10528,662,411
+Sep,North America,Imaging,Medicare,Hospital,10643,773,637
+Sep,North America,Imaging,Medicare,Clinic,9185,634,434
+Sep,North America,Imaging,Medicare,Outpatient Center,9922,682,472
+Sep,North America,Imaging,Medicaid,Hospital,11076,698,655
+Sep,North America,Imaging,Medicaid,Clinic,9558,572,446
+Sep,North America,Imaging,Medicaid,Outpatient Center,10324,616,486
+Sep,North America,Cardiology,Commercial,Hospital,10695,805,1083
+Sep,North America,Cardiology,Commercial,Clinic,9230,661,738
+Sep,North America,Cardiology,Commercial,Outpatient Center,9969,711,803
+Sep,North America,Cardiology,Medicare,Hospital,10079,829,1245
+Sep,North America,Cardiology,Medicare,Clinic,8697,680,848
+Sep,North America,Cardiology,Medicare,Outpatient Center,9394,731,923
+Sep,North America,Cardiology,Medicaid,Hospital,10487,749,1279
+Sep,North America,Cardiology,Medicaid,Clinic,9049,614,871
+Sep,North America,Cardiology,Medicaid,Outpatient Center,9773,660,948
+Sep,North America,Emergency Care,Commercial,Hospital,21093,674,1168
+Sep,North America,Emergency Care,Commercial,Clinic,18200,553,795
+Sep,North America,Emergency Care,Commercial,Outpatient Center,19657,595,866
+Sep,North America,Emergency Care,Medicare,Hospital,19874,694,1342
+Sep,North America,Emergency Care,Medicare,Clinic,17148,569,914
+Sep,North America,Emergency Care,Medicare,Outpatient Center,18519,612,995
+Sep,North America,Emergency Care,Medicaid,Hospital,20676,627,1379
+Sep,North America,Emergency Care,Medicaid,Clinic,17839,514,939
+Sep,North America,Emergency Care,Medicaid,Outpatient Center,19264,552,1023
+Sep,Europe,Telehealth,Commercial,Hospital,17537,483,540
+Sep,Europe,Telehealth,Commercial,Clinic,15135,396,368
+Sep,Europe,Telehealth,Commercial,Outpatient Center,16349,426,401
+Sep,Europe,Telehealth,Medicare,Hospital,16528,497,621
+Sep,Europe,Telehealth,Medicare,Clinic,14264,408,423
+Sep,Europe,Telehealth,Medicare,Outpatient Center,15407,439,460
+Sep,Europe,Telehealth,Medicaid,Hospital,17200,449,638
+Sep,Europe,Telehealth,Medicaid,Clinic,14842,368,434
+Sep,Europe,Telehealth,Medicaid,Outpatient Center,16031,396,473
+Sep,Europe,Imaging,Commercial,Hospital,10298,691,462
+Sep,Europe,Imaging,Commercial,Clinic,8886,567,315
+Sep,Europe,Imaging,Commercial,Outpatient Center,9598,610,343
+Sep,Europe,Imaging,Medicare,Hospital,9704,711,531
+Sep,Europe,Imaging,Medicare,Clinic,8373,584,362
+Sep,Europe,Imaging,Medicare,Outpatient Center,9044,627,394
+Sep,Europe,Imaging,Medicaid,Hospital,10097,642,546
+Sep,Europe,Imaging,Medicaid,Clinic,8712,527,372
+Sep,Europe,Imaging,Medicaid,Outpatient Center,9409,566,405
+Sep,Europe,Cardiology,Commercial,Hospital,9750,741,903
+Sep,Europe,Cardiology,Commercial,Clinic,8413,608,615
+Sep,Europe,Cardiology,Commercial,Outpatient Center,9086,654,669
+Sep,Europe,Cardiology,Medicare,Hospital,9187,763,1037
+Sep,Europe,Cardiology,Medicare,Clinic,7926,626,706
+Sep,Europe,Cardiology,Medicare,Outpatient Center,8560,673,769
+Sep,Europe,Cardiology,Medicaid,Hospital,9557,689,1066
+Sep,Europe,Cardiology,Medicaid,Clinic,8246,565,726
+Sep,Europe,Cardiology,Medicaid,Outpatient Center,8904,607,790
+Sep,Europe,Emergency Care,Commercial,Hospital,19224,621,973
+Sep,Europe,Emergency Care,Commercial,Clinic,16586,509,663
+Sep,Europe,Emergency Care,Commercial,Outpatient Center,17911,547,722
+Sep,Europe,Emergency Care,Medicare,Hospital,18110,639,1118
+Sep,Europe,Emergency Care,Medicare,Clinic,15624,524,762
+Sep,Europe,Emergency Care,Medicare,Outpatient Center,16871,563,829
+Sep,Europe,Emergency Care,Medicaid,Hospital,18838,576,1149
+Sep,Europe,Emergency Care,Medicaid,Clinic,16251,473,783
+Sep,Europe,Emergency Care,Medicaid,Outpatient Center,17547,508,852
+Sep,APAC,Telehealth,Commercial,Hospital,22370,450,598
+Sep,APAC,Telehealth,Commercial,Clinic,19304,369,408
+Sep,APAC,Telehealth,Commercial,Outpatient Center,20850,397,444
+Sep,APAC,Telehealth,Medicare,Hospital,21080,463,688
+Sep,APAC,Telehealth,Medicare,Clinic,18189,380,468
+Sep,APAC,Telehealth,Medicare,Outpatient Center,19645,409,510
+Sep,APAC,Telehealth,Medicaid,Hospital,21932,418,707
+Sep,APAC,Telehealth,Medicaid,Clinic,18924,343,481
+Sep,APAC,Telehealth,Medicaid,Outpatient Center,20437,369,524
+Sep,APAC,Imaging,Commercial,Hospital,13132,644,512
+Sep,APAC,Imaging,Commercial,Clinic,11331,528,349
+Sep,APAC,Imaging,Commercial,Outpatient Center,12237,568,380
+Sep,APAC,Imaging,Medicare,Hospital,12373,663,588
+Sep,APAC,Imaging,Medicare,Clinic,10675,544,401
+Sep,APAC,Imaging,Medicare,Outpatient Center,11528,584,436
+Sep,APAC,Imaging,Medicaid,Hospital,12871,598,605
+Sep,APAC,Imaging,Medicaid,Clinic,11105,491,412
+Sep,APAC,Imaging,Medicaid,Outpatient Center,11991,527,448
+Sep,APAC,Cardiology,Commercial,Hospital,12431,691,1000
+Sep,APAC,Cardiology,Commercial,Clinic,10725,566,681
+Sep,APAC,Cardiology,Commercial,Outpatient Center,11581,609,741
+Sep,APAC,Cardiology,Medicare,Hospital,11710,711,1149
+Sep,APAC,Cardiology,Medicare,Clinic,10102,583,783
+Sep,APAC,Cardiology,Medicare,Outpatient Center,10909,627,852
+Sep,APAC,Cardiology,Medicaid,Hospital,12181,641,1181
+Sep,APAC,Cardiology,Medicaid,Clinic,10508,526,804
+Sep,APAC,Cardiology,Medicaid,Outpatient Center,11346,565,876
+Sep,APAC,Emergency Care,Commercial,Hospital,24502,578,1078
+Sep,APAC,Emergency Care,Commercial,Clinic,21137,474,734
+Sep,APAC,Emergency Care,Commercial,Outpatient Center,22823,509,799
+Sep,APAC,Emergency Care,Medicare,Hospital,23079,595,1239
+Sep,APAC,Emergency Care,Medicare,Clinic,19908,488,844
+Sep,APAC,Emergency Care,Medicare,Outpatient Center,21495,524,918
+Sep,APAC,Emergency Care,Medicaid,Hospital,24002,537,1273
+Sep,APAC,Emergency Care,Medicaid,Clinic,20704,440,867
+Sep,APAC,Emergency Care,Medicaid,Outpatient Center,22353,473,944
+Sep,Latin America,Telehealth,Commercial,Hospital,14094,330,399
+Sep,Latin America,Telehealth,Commercial,Clinic,12160,271,272
+Sep,Latin America,Telehealth,Commercial,Outpatient Center,13133,291,296
+Sep,Latin America,Telehealth,Medicare,Hospital,13279,340,458
+Sep,Latin America,Telehealth,Medicare,Clinic,11456,279,312
+Sep,Latin America,Telehealth,Medicare,Outpatient Center,12372,300,340
+Sep,Latin America,Telehealth,Medicaid,Hospital,13813,307,471
+Sep,Latin America,Telehealth,Medicaid,Clinic,11917,252,321
+Sep,Latin America,Telehealth,Medicaid,Outpatient Center,12869,271,349
+Sep,Latin America,Imaging,Commercial,Hospital,8271,473,341
+Sep,Latin America,Imaging,Commercial,Clinic,7136,388,232
+Sep,Latin America,Imaging,Commercial,Outpatient Center,7706,417,253
+Sep,Latin America,Imaging,Medicare,Hospital,7792,486,392
+Sep,Latin America,Imaging,Medicare,Clinic,6722,399,267
+Sep,Latin America,Imaging,Medicare,Outpatient Center,7258,429,291
+Sep,Latin America,Imaging,Medicaid,Hospital,8105,439,403
+Sep,Latin America,Imaging,Medicaid,Clinic,6991,360,275
+Sep,Latin America,Imaging,Medicaid,Outpatient Center,7549,387,299
+Sep,Latin America,Cardiology,Commercial,Hospital,7827,507,667
+Sep,Latin America,Cardiology,Commercial,Clinic,6752,415,454
+Sep,Latin America,Cardiology,Commercial,Outpatient Center,7291,447,494
+Sep,Latin America,Cardiology,Medicare,Hospital,7373,521,766
+Sep,Latin America,Cardiology,Medicare,Clinic,6360,428,522
+Sep,Latin America,Cardiology,Medicare,Outpatient Center,6867,460,568
+Sep,Latin America,Cardiology,Medicaid,Hospital,7668,470,787
+Sep,Latin America,Cardiology,Medicaid,Clinic,6614,386,536
+Sep,Latin America,Cardiology,Medicaid,Outpatient Center,7140,415,584
+Sep,Latin America,Emergency Care,Commercial,Hospital,15424,424,719
+Sep,Latin America,Emergency Care,Commercial,Clinic,13305,348,490
+Sep,Latin America,Emergency Care,Commercial,Outpatient Center,14365,374,533
+Sep,Latin America,Emergency Care,Medicare,Hospital,14526,436,826
+Sep,Latin America,Emergency Care,Medicare,Clinic,12529,358,562
+Sep,Latin America,Emergency Care,Medicare,Outpatient Center,13527,384,612
+Sep,Latin America,Emergency Care,Medicaid,Hospital,15105,393,849
+Sep,Latin America,Emergency Care,Medicaid,Clinic,13028,323,578
+Sep,Latin America,Emergency Care,Medicaid,Outpatient Center,14064,347,629
+Oct,North America,Telehealth,Commercial,Hospital,20590,561,690
+Oct,North America,Telehealth,Commercial,Clinic,17770,460,470
+Oct,North America,Telehealth,Commercial,Outpatient Center,19197,495,511
+Oct,North America,Telehealth,Medicare,Hospital,19407,578,793
+Oct,North America,Telehealth,Medicare,Clinic,16748,474,540
+Oct,North America,Telehealth,Medicare,Outpatient Center,18092,510,588
+Oct,North America,Telehealth,Medicaid,Hospital,20197,522,815
+Oct,North America,Telehealth,Medicaid,Clinic,17429,428,555
+Oct,North America,Telehealth,Medicaid,Outpatient Center,18826,460,604
+Oct,North America,Imaging,Commercial,Hospital,12092,803,590
+Oct,North America,Imaging,Commercial,Clinic,10435,659,402
+Oct,North America,Imaging,Commercial,Outpatient Center,11271,709,437
+Oct,North America,Imaging,Medicare,Hospital,11395,827,678
+Oct,North America,Imaging,Medicare,Clinic,9833,678,462
+Oct,North America,Imaging,Medicare,Outpatient Center,10621,729,503
+Oct,North America,Imaging,Medicaid,Hospital,11857,747,697
+Oct,North America,Imaging,Medicaid,Clinic,10231,612,475
+Oct,North America,Imaging,Medicaid,Outpatient Center,11050,658,517
+Oct,North America,Cardiology,Commercial,Hospital,11450,862,1153
+Oct,North America,Cardiology,Commercial,Clinic,9880,707,785
+Oct,North America,Cardiology,Commercial,Outpatient Center,10671,760,854
+Oct,North America,Cardiology,Medicare,Hospital,10789,887,1324
+Oct,North America,Cardiology,Medicare,Clinic,9309,728,902
+Oct,North America,Cardiology,Medicare,Outpatient Center,10054,782,982
+Oct,North America,Cardiology,Medicaid,Hospital,11225,801,1361
+Oct,North America,Cardiology,Medicaid,Clinic,9685,657,927
+Oct,North America,Cardiology,Medicaid,Outpatient Center,10459,706,1009
+Oct,North America,Emergency Care,Commercial,Hospital,22577,721,1242
+Oct,North America,Emergency Care,Commercial,Clinic,19480,592,846
+Oct,North America,Emergency Care,Commercial,Outpatient Center,21037,636,921
+Oct,North America,Emergency Care,Medicare,Hospital,21271,742,1428
+Oct,North America,Emergency Care,Medicare,Clinic,18351,609,972
+Oct,North America,Emergency Care,Medicare,Outpatient Center,19817,655,1058
+Oct,North America,Emergency Care,Medicaid,Hospital,22127,670,1467
+Oct,North America,Emergency Care,Medicaid,Clinic,19089,550,999
+Oct,North America,Emergency Care,Medicaid,Outpatient Center,20612,591,1088
+Oct,Europe,Telehealth,Commercial,Hospital,18777,517,575
+Oct,Europe,Telehealth,Commercial,Clinic,16204,424,391
+Oct,Europe,Telehealth,Commercial,Outpatient Center,17503,456,426
+Oct,Europe,Telehealth,Medicare,Hospital,17695,532,660
+Oct,Europe,Telehealth,Medicare,Clinic,15269,436,450
+Oct,Europe,Telehealth,Medicare,Outpatient Center,16492,469,490
+Oct,Europe,Telehealth,Medicaid,Hospital,18412,480,679
+Oct,Europe,Telehealth,Medicaid,Clinic,15887,394,462
+Oct,Europe,Telehealth,Medicaid,Outpatient Center,17158,424,503
+Oct,Europe,Imaging,Commercial,Hospital,11024,739,492
+Oct,Europe,Imaging,Commercial,Clinic,9512,607,335
+Oct,Europe,Imaging,Commercial,Outpatient Center,10274,652,365
+Oct,Europe,Imaging,Medicare,Hospital,10387,761,565
+Oct,Europe,Imaging,Medicare,Clinic,8962,624,385
+Oct,Europe,Imaging,Medicare,Outpatient Center,9679,671,419
+Oct,Europe,Imaging,Medicaid,Hospital,10806,687,581
+Oct,Europe,Imaging,Medicaid,Clinic,9323,563,395
+Oct,Europe,Imaging,Medicaid,Outpatient Center,10069,606,431
+Oct,Europe,Cardiology,Commercial,Hospital,10436,793,960
+Oct,Europe,Cardiology,Commercial,Clinic,9004,650,654
+Oct,Europe,Cardiology,Commercial,Outpatient Center,9724,699,712
+Oct,Europe,Cardiology,Medicare,Hospital,9832,816,1103
+Oct,Europe,Cardiology,Medicare,Clinic,8482,669,752
+Oct,Europe,Cardiology,Medicare,Outpatient Center,9160,720,818
+Oct,Europe,Cardiology,Medicaid,Hospital,10227,737,1134
+Oct,Europe,Cardiology,Medicaid,Clinic,8823,604,772
+Oct,Europe,Cardiology,Medicaid,Outpatient Center,9527,650,841
+Oct,Europe,Emergency Care,Commercial,Hospital,20572,664,1035
+Oct,Europe,Emergency Care,Commercial,Clinic,17748,544,705
+Oct,Europe,Emergency Care,Commercial,Outpatient Center,19165,585,768
+Oct,Europe,Emergency Care,Medicare,Hospital,19379,683,1190
+Oct,Europe,Emergency Care,Medicare,Clinic,16717,560,810
+Oct,Europe,Emergency Care,Medicare,Outpatient Center,18051,602,882
+Oct,Europe,Emergency Care,Medicaid,Hospital,20155,616,1223
+Oct,Europe,Emergency Care,Medicaid,Clinic,17386,505,833
+Oct,Europe,Emergency Care,Medicaid,Outpatient Center,18772,543,906
+Oct,APAC,Telehealth,Commercial,Hospital,23947,481,637
+Oct,APAC,Telehealth,Commercial,Clinic,20663,395,434
+Oct,APAC,Telehealth,Commercial,Outpatient Center,22316,425,472
+Oct,APAC,Telehealth,Medicare,Hospital,22563,496,732
+Oct,APAC,Telehealth,Medicare,Clinic,19468,406,498
+Oct,APAC,Telehealth,Medicare,Outpatient Center,21024,437,542
+Oct,APAC,Telehealth,Medicaid,Hospital,23473,447,752
+Oct,APAC,Telehealth,Medicaid,Clinic,20252,367,512
+Oct,APAC,Telehealth,Medicaid,Outpatient Center,21870,394,557
+Oct,APAC,Imaging,Commercial,Hospital,14055,689,545
+Oct,APAC,Imaging,Commercial,Clinic,12126,565,371
+Oct,APAC,Imaging,Commercial,Outpatient Center,13096,607,404
+Oct,APAC,Imaging,Medicare,Hospital,13241,709,626
+Oct,APAC,Imaging,Medicare,Clinic,11423,581,426
+Oct,APAC,Imaging,Medicare,Outpatient Center,12336,625,464
+Oct,APAC,Imaging,Medicaid,Hospital,13773,640,643
+Oct,APAC,Imaging,Medicaid,Clinic,11882,525,438
+Oct,APAC,Imaging,Medicaid,Outpatient Center,12830,564,477
+Oct,APAC,Cardiology,Commercial,Hospital,13302,739,1064
+Oct,APAC,Cardiology,Commercial,Clinic,11476,606,725
+Oct,APAC,Cardiology,Commercial,Outpatient Center,12392,651,789
+Oct,APAC,Cardiology,Medicare,Hospital,12530,760,1222
+Oct,APAC,Cardiology,Medicare,Clinic,10809,623,832
+Oct,APAC,Cardiology,Medicare,Outpatient Center,11671,670,906
+Oct,APAC,Cardiology,Medicaid,Hospital,13032,686,1256
+Oct,APAC,Cardiology,Medicaid,Clinic,11241,562,856
+Oct,APAC,Cardiology,Medicaid,Outpatient Center,12137,605,931
+Oct,APAC,Emergency Care,Commercial,Hospital,26215,618,1147
+Oct,APAC,Emergency Care,Commercial,Clinic,22614,507,781
+Oct,APAC,Emergency Care,Commercial,Outpatient Center,24416,545,850
+Oct,APAC,Emergency Care,Medicare,Hospital,24691,636,1318
+Oct,APAC,Emergency Care,Medicare,Clinic,21297,521,897
+Oct,APAC,Emergency Care,Medicare,Outpatient Center,22993,560,977
+Oct,APAC,Emergency Care,Medicaid,Hospital,25676,574,1354
+Oct,APAC,Emergency Care,Medicaid,Clinic,22146,470,922
+Oct,APAC,Emergency Care,Medicaid,Outpatient Center,23908,506,1004
+Oct,Latin America,Telehealth,Commercial,Hospital,15084,353,424
+Oct,Latin America,Telehealth,Commercial,Clinic,13014,290,289
+Oct,Latin America,Telehealth,Commercial,Outpatient Center,14054,312,315
+Oct,Latin America,Telehealth,Medicare,Hospital,14210,364,488
+Oct,Latin America,Telehealth,Medicare,Clinic,12259,298,332
+Oct,Latin America,Telehealth,Medicare,Outpatient Center,13238,321,362
+Oct,Latin America,Telehealth,Medicaid,Hospital,14781,328,501
+Oct,Latin America,Telehealth,Medicaid,Clinic,12751,269,341
+Oct,Latin America,Telehealth,Medicaid,Outpatient Center,13768,289,372
+Oct,Latin America,Imaging,Commercial,Hospital,8851,505,363
+Oct,Latin America,Imaging,Commercial,Clinic,7636,414,247
+Oct,Latin America,Imaging,Commercial,Outpatient Center,8245,446,269
+Oct,Latin America,Imaging,Medicare,Hospital,8337,520,417
+Oct,Latin America,Imaging,Medicare,Clinic,7192,426,284
+Oct,Latin America,Imaging,Medicare,Outpatient Center,7765,458,309
+Oct,Latin America,Imaging,Medicaid,Hospital,8671,469,429
+Oct,Latin America,Imaging,Medicaid,Clinic,7479,385,292
+Oct,Latin America,Imaging,Medicaid,Outpatient Center,8075,414,318
+Oct,Latin America,Cardiology,Commercial,Hospital,8375,542,709
+Oct,Latin America,Cardiology,Commercial,Clinic,7224,444,483
+Oct,Latin America,Cardiology,Commercial,Outpatient Center,7800,478,526
+Oct,Latin America,Cardiology,Medicare,Hospital,7887,557,815
+Oct,Latin America,Cardiology,Medicare,Clinic,6803,457,555
+Oct,Latin America,Cardiology,Medicare,Outpatient Center,7345,491,604
+Oct,Latin America,Cardiology,Medicaid,Hospital,8202,503,838
+Oct,Latin America,Cardiology,Medicaid,Clinic,7074,412,570
+Oct,Latin America,Cardiology,Medicaid,Outpatient Center,7637,443,621
+Oct,Latin America,Emergency Care,Commercial,Hospital,16500,453,765
+Oct,Latin America,Emergency Care,Commercial,Clinic,14232,372,521
+Oct,Latin America,Emergency Care,Commercial,Outpatient Center,15365,399,567
+Oct,Latin America,Emergency Care,Medicare,Hospital,15538,466,878
+Oct,Latin America,Emergency Care,Medicare,Clinic,13401,382,598
+Oct,Latin America,Emergency Care,Medicare,Outpatient Center,14467,411,651
+Oct,Latin America,Emergency Care,Medicaid,Hospital,16156,421,903
+Oct,Latin America,Emergency Care,Medicaid,Clinic,13933,345,615
+Oct,Latin America,Emergency Care,Medicaid,Outpatient Center,15041,371,669
+Nov,North America,Telehealth,Commercial,Hospital,21789,609,723
+Nov,North America,Telehealth,Commercial,Clinic,18804,500,492
+Nov,North America,Telehealth,Commercial,Outpatient Center,20312,537,536
+Nov,North America,Telehealth,Medicare,Hospital,20535,627,830
+Nov,North America,Telehealth,Medicare,Clinic,17721,514,565
+Nov,North America,Telehealth,Medicare,Outpatient Center,19141,553,616
+Nov,North America,Telehealth,Medicaid,Hospital,21369,566,853
+Nov,North America,Telehealth,Medicaid,Clinic,18439,464,581
+Nov,North America,Telehealth,Medicaid,Outpatient Center,19915,499,633
+Nov,North America,Imaging,Commercial,Hospital,12794,872,618
+Nov,North America,Imaging,Commercial,Clinic,11040,715,421
+Nov,North America,Imaging,Commercial,Outpatient Center,11924,769,458
+Nov,North America,Imaging,Medicare,Hospital,12056,897,710
+Nov,North America,Imaging,Medicare,Clinic,10402,736,484
+Nov,North America,Imaging,Medicare,Outpatient Center,11235,791,527
+Nov,North America,Imaging,Medicaid,Hospital,12543,810,730
+Nov,North America,Imaging,Medicaid,Clinic,10822,664,497
+Nov,North America,Imaging,Medicaid,Outpatient Center,11687,714,541
+Nov,North America,Cardiology,Commercial,Hospital,12113,935,1208
+Nov,North America,Cardiology,Commercial,Clinic,10451,767,823
+Nov,North America,Cardiology,Commercial,Outpatient Center,11287,825,896
+Nov,North America,Cardiology,Medicare,Hospital,11412,962,1388
+Nov,North America,Cardiology,Medicare,Clinic,9846,789,945
+Nov,North America,Cardiology,Medicare,Outpatient Center,10633,849,1029
+Nov,North America,Cardiology,Medicaid,Hospital,11872,869,1426
+Nov,North America,Cardiology,Medicaid,Clinic,10242,712,971
+Nov,North America,Cardiology,Medicaid,Outpatient Center,11060,766,1057
+Nov,North America,Emergency Care,Commercial,Hospital,23880,783,1302
+Nov,North America,Emergency Care,Commercial,Clinic,20602,642,887
+Nov,North America,Emergency Care,Commercial,Outpatient Center,22248,690,966
+Nov,North America,Emergency Care,Medicare,Hospital,22496,805,1496
+Nov,North America,Emergency Care,Medicare,Clinic,19407,660,1019
+Nov,North America,Emergency Care,Medicare,Outpatient Center,20956,710,1109
+Nov,North America,Emergency Care,Medicaid,Hospital,23399,727,1538
+Nov,North America,Emergency Care,Medicaid,Clinic,20185,596,1047
+Nov,North America,Emergency Care,Medicaid,Outpatient Center,21794,641,1140
+Nov,Europe,Telehealth,Commercial,Hospital,19867,561,602
+Nov,Europe,Telehealth,Commercial,Clinic,17143,460,410
+Nov,Europe,Telehealth,Commercial,Outpatient Center,18516,495,446
+Nov,Europe,Telehealth,Medicare,Hospital,18720,577,692
+Nov,Europe,Telehealth,Medicare,Clinic,16153,473,471
+Nov,Europe,Telehealth,Medicare,Outpatient Center,17445,509,513
+Nov,Europe,Telehealth,Medicaid,Hospital,19476,521,711
+Nov,Europe,Telehealth,Medicaid,Clinic,16804,427,484
+Nov,Europe,Telehealth,Medicaid,Outpatient Center,18147,460,527
+Nov,Europe,Imaging,Commercial,Hospital,11662,802,515
+Nov,Europe,Imaging,Commercial,Clinic,10062,658,351
+Nov,Europe,Imaging,Commercial,Outpatient Center,10866,708,382
+Nov,Europe,Imaging,Medicare,Hospital,10987,826,592
+Nov,Europe,Imaging,Medicare,Clinic,9479,677,403
+Nov,Europe,Imaging,Medicare,Outpatient Center,10236,728,439
+Nov,Europe,Imaging,Medicaid,Hospital,11429,745,608
+Nov,Europe,Imaging,Medicaid,Clinic,9860,611,414
+Nov,Europe,Imaging,Medicaid,Outpatient Center,10647,657,451
+Nov,Europe,Cardiology,Commercial,Hospital,11038,860,1007
+Nov,Europe,Cardiology,Commercial,Clinic,9523,706,686
+Nov,Europe,Cardiology,Commercial,Outpatient Center,10283,759,746
+Nov,Europe,Cardiology,Medicare,Hospital,10398,885,1157
+Nov,Europe,Cardiology,Medicare,Clinic,8970,726,788
+Nov,Europe,Cardiology,Medicare,Outpatient Center,9686,781,857
+Nov,Europe,Cardiology,Medicaid,Hospital,10815,799,1189
+Nov,Europe,Cardiology,Medicaid,Clinic,9329,655,810
+Nov,Europe,Cardiology,Medicaid,Outpatient Center,10073,704,881
+Nov,Europe,Emergency Care,Commercial,Hospital,21755,720,1085
+Nov,Europe,Emergency Care,Commercial,Clinic,18767,590,739
+Nov,Europe,Emergency Care,Commercial,Outpatient Center,20264,635,805
+Nov,Europe,Emergency Care,Medicare,Hospital,20491,741,1247
+Nov,Europe,Emergency Care,Medicare,Clinic,17675,607,849
+Nov,Europe,Emergency Care,Medicare,Outpatient Center,19084,653,925
+Nov,Europe,Emergency Care,Medicaid,Hospital,21310,668,1282
+Nov,Europe,Emergency Care,Medicaid,Clinic,18381,548,873
+Nov,Europe,Emergency Care,Medicaid,Outpatient Center,19845,589,950
+Nov,APAC,Telehealth,Commercial,Hospital,25332,522,667
+Nov,APAC,Telehealth,Commercial,Clinic,21856,428,454
+Nov,APAC,Telehealth,Commercial,Outpatient Center,23603,461,495
+Nov,APAC,Telehealth,Medicare,Hospital,23865,538,766
+Nov,APAC,Telehealth,Medicare,Clinic,20590,441,522
+Nov,APAC,Telehealth,Medicare,Outpatient Center,22234,474,568
+Nov,APAC,Telehealth,Medicaid,Hospital,24825,485,788
+Nov,APAC,Telehealth,Medicaid,Clinic,21417,398,536
+Nov,APAC,Telehealth,Medicaid,Outpatient Center,23126,428,584
+Nov,APAC,Imaging,Commercial,Hospital,14865,747,571
+Nov,APAC,Imaging,Commercial,Clinic,12825,613,389
+Nov,APAC,Imaging,Commercial,Outpatient Center,13848,659,423
+Nov,APAC,Imaging,Medicare,Hospital,14003,769,656
+Nov,APAC,Imaging,Medicare,Clinic,12080,631,447
+Nov,APAC,Imaging,Medicare,Outpatient Center,13044,678,486
+Nov,APAC,Imaging,Medicaid,Hospital,14564,694,674
+Nov,APAC,Imaging,Medicaid,Clinic,12563,569,459
+Nov,APAC,Imaging,Medicaid,Outpatient Center,13565,612,500
+Nov,APAC,Cardiology,Commercial,Hospital,14067,801,1115
+Nov,APAC,Cardiology,Commercial,Clinic,12134,657,759
+Nov,APAC,Cardiology,Commercial,Outpatient Center,13102,706,827
+Nov,APAC,Cardiology,Medicare,Hospital,13249,824,1281
+Nov,APAC,Cardiology,Medicare,Clinic,11428,676,872
+Nov,APAC,Cardiology,Medicare,Outpatient Center,12339,726,950
+Nov,APAC,Cardiology,Medicaid,Hospital,13778,744,1317
+Nov,APAC,Cardiology,Medicaid,Clinic,11884,610,897
+Nov,APAC,Cardiology,Medicaid,Outpatient Center,12830,655,976
+Nov,APAC,Emergency Care,Commercial,Hospital,27718,670,1202
+Nov,APAC,Emergency Care,Commercial,Clinic,23908,549,819
+Nov,APAC,Emergency Care,Commercial,Outpatient Center,25812,591,891
+Nov,APAC,Emergency Care,Medicare,Hospital,26103,689,1381
+Nov,APAC,Emergency Care,Medicare,Clinic,22514,565,941
+Nov,APAC,Emergency Care,Medicare,Outpatient Center,24305,608,1024
+Nov,APAC,Emergency Care,Medicaid,Hospital,27142,622,1420
+Nov,APAC,Emergency Care,Medicaid,Clinic,23409,510,967
+Nov,APAC,Emergency Care,Medicaid,Outpatient Center,25270,548,1053
+Nov,Latin America,Telehealth,Commercial,Hospital,15953,383,445
+Nov,Latin America,Telehealth,Commercial,Clinic,13763,314,303
+Nov,Latin America,Telehealth,Commercial,Outpatient Center,14861,338,330
+Nov,Latin America,Telehealth,Medicare,Hospital,15027,394,511
+Nov,Latin America,Telehealth,Medicare,Clinic,12963,323,348
+Nov,Latin America,Telehealth,Medicare,Outpatient Center,13997,348,379
+Nov,Latin America,Telehealth,Medicaid,Hospital,15629,356,525
+Nov,Latin America,Telehealth,Medicaid,Clinic,13482,292,358
+Nov,Latin America,Telehealth,Medicaid,Outpatient Center,14556,314,389
+Nov,Latin America,Imaging,Commercial,Hospital,9359,548,381
+Nov,Latin America,Imaging,Commercial,Clinic,8074,449,259
+Nov,Latin America,Imaging,Commercial,Outpatient Center,8717,483,282
+Nov,Latin America,Imaging,Medicare,Hospital,8815,564,437
+Nov,Latin America,Imaging,Medicare,Clinic,7604,462,298
+Nov,Latin America,Imaging,Medicare,Outpatient Center,8209,497,324
+Nov,Latin America,Imaging,Medicaid,Hospital,9167,509,449
+Nov,Latin America,Imaging,Medicaid,Clinic,7907,417,306
+Nov,Latin America,Imaging,Medicaid,Outpatient Center,8536,448,333
+Nov,Latin America,Cardiology,Commercial,Hospital,8854,588,743
+Nov,Latin America,Cardiology,Commercial,Clinic,7637,482,506
+Nov,Latin America,Cardiology,Commercial,Outpatient Center,8245,518,551
+Nov,Latin America,Cardiology,Medicare,Hospital,8338,604,854
+Nov,Latin America,Cardiology,Medicare,Clinic,7192,496,582
+Nov,Latin America,Cardiology,Medicare,Outpatient Center,7764,533,633
+Nov,Latin America,Cardiology,Medicaid,Hospital,8670,545,878
+Nov,Latin America,Cardiology,Medicaid,Clinic,7477,447,598
+Nov,Latin America,Cardiology,Medicaid,Outpatient Center,8072,480,651
+Nov,Latin America,Emergency Care,Commercial,Hospital,17443,491,802
+Nov,Latin America,Emergency Care,Commercial,Clinic,15043,403,546
+Nov,Latin America,Emergency Care,Commercial,Outpatient Center,16240,433,594
+Nov,Latin America,Emergency Care,Medicare,Hospital,16424,505,921
+Nov,Latin America,Emergency Care,Medicare,Clinic,14164,414,627
+Nov,Latin America,Emergency Care,Medicare,Outpatient Center,15290,445,683
+Nov,Latin America,Emergency Care,Medicaid,Hospital,17075,456,946
+Nov,Latin America,Emergency Care,Medicaid,Clinic,14725,374,645
+Nov,Latin America,Emergency Care,Medicaid,Outpatient Center,15894,402,702
+Dec,North America,Telehealth,Commercial,Hospital,23012,648,764
+Dec,North America,Telehealth,Commercial,Clinic,19857,531,520
+Dec,North America,Telehealth,Commercial,Outpatient Center,21448,571,566
+Dec,North America,Telehealth,Medicare,Hospital,21685,667,878
+Dec,North America,Telehealth,Medicare,Clinic,18711,547,598
+Dec,North America,Telehealth,Medicare,Outpatient Center,20209,588,651
+Dec,North America,Telehealth,Medicaid,Hospital,22562,602,902
+Dec,North America,Telehealth,Medicaid,Clinic,19467,494,614
+Dec,North America,Telehealth,Medicaid,Outpatient Center,21024,531,669
+Dec,North America,Imaging,Commercial,Hospital,13509,927,654
+Dec,North America,Imaging,Commercial,Clinic,11656,760,445
+Dec,North America,Imaging,Commercial,Outpatient Center,12589,817,485
+Dec,North America,Imaging,Medicare,Hospital,12728,954,751
+Dec,North America,Imaging,Medicare,Clinic,10982,782,511
+Dec,North America,Imaging,Medicare,Outpatient Center,11860,841,557
+Dec,North America,Imaging,Medicaid,Hospital,13241,861,772
+Dec,North America,Imaging,Medicaid,Clinic,11424,706,526
+Dec,North America,Imaging,Medicaid,Outpatient Center,12336,759,572
+Dec,North America,Cardiology,Commercial,Hospital,12788,994,1277
+Dec,North America,Cardiology,Commercial,Clinic,11033,815,870
+Dec,North America,Cardiology,Commercial,Outpatient Center,11914,876,947
+Dec,North America,Cardiology,Medicare,Hospital,12047,1023,1467
+Dec,North America,Cardiology,Medicare,Clinic,10393,839,999
+Dec,North America,Cardiology,Medicare,Outpatient Center,11223,902,1088
+Dec,North America,Cardiology,Medicaid,Hospital,12531,923,1508
+Dec,North America,Cardiology,Medicaid,Clinic,10810,757,1027
+Dec,North America,Cardiology,Medicaid,Outpatient Center,11672,814,1118
+Dec,North America,Emergency Care,Commercial,Hospital,25206,832,1377
+Dec,North America,Emergency Care,Commercial,Clinic,21745,682,938
+Dec,North America,Emergency Care,Commercial,Outpatient Center,23480,733,1021
+Dec,North America,Emergency Care,Medicare,Hospital,23743,856,1582
+Dec,North America,Emergency Care,Medicare,Clinic,20481,702,1077
+Dec,North America,Emergency Care,Medicare,Outpatient Center,22114,754,1173
+Dec,North America,Emergency Care,Medicaid,Hospital,24693,772,1626
+Dec,North America,Emergency Care,Medicaid,Clinic,21300,633,1107
+Dec,North America,Emergency Care,Medicaid,Outpatient Center,22997,681,1205
+Dec,Europe,Telehealth,Commercial,Hospital,20977,596,637
+Dec,Europe,Telehealth,Commercial,Clinic,18099,489,434
+Dec,Europe,Telehealth,Commercial,Outpatient Center,19547,526,472
+Dec,Europe,Telehealth,Medicare,Hospital,19764,613,731
+Dec,Europe,Telehealth,Medicare,Clinic,17052,503,498
+Dec,Europe,Telehealth,Medicare,Outpatient Center,18415,541,542
+Dec,Europe,Telehealth,Medicaid,Hospital,20560,554,752
+Dec,Europe,Telehealth,Medicaid,Clinic,17738,454,512
+Dec,Europe,Telehealth,Medicaid,Outpatient Center,19154,488,557
+Dec,Europe,Imaging,Commercial,Hospital,12311,853,545
+Dec,Europe,Imaging,Commercial,Clinic,10621,699,371
+Dec,Europe,Imaging,Commercial,Outpatient Center,11470,752,404
+Dec,Europe,Imaging,Medicare,Hospital,11598,877,626
+Dec,Europe,Imaging,Medicare,Clinic,10005,720,426
+Dec,Europe,Imaging,Medicare,Outpatient Center,10804,774,464
+Dec,Europe,Imaging,Medicaid,Hospital,12063,792,643
+Dec,Europe,Imaging,Medicaid,Clinic,10406,649,438
+Dec,Europe,Imaging,Medicaid,Outpatient Center,11236,698,477
+Dec,Europe,Cardiology,Commercial,Hospital,11651,914,1064
+Dec,Europe,Cardiology,Commercial,Clinic,10051,750,725
+Dec,Europe,Cardiology,Commercial,Outpatient Center,10853,806,789
+Dec,Europe,Cardiology,Medicare,Hospital,10974,941,1222
+Dec,Europe,Cardiology,Medicare,Clinic,9466,771,833
+Dec,Europe,Cardiology,Medicare,Outpatient Center,10221,829,906
+Dec,Europe,Cardiology,Medicaid,Hospital,11413,849,1256
+Dec,Europe,Cardiology,Medicaid,Clinic,9845,696,856
+Dec,Europe,Cardiology,Medicaid,Outpatient Center,10629,748,932
+Dec,Europe,Emergency Care,Commercial,Hospital,22959,765,1147
+Dec,Europe,Emergency Care,Commercial,Clinic,19804,627,781
+Dec,Europe,Emergency Care,Commercial,Outpatient Center,21382,674,851
+Dec,Europe,Emergency Care,Medicare,Hospital,21623,787,1318
+Dec,Europe,Emergency Care,Medicare,Clinic,18650,645,898
+Dec,Europe,Emergency Care,Medicare,Outpatient Center,20135,693,977
+Dec,Europe,Emergency Care,Medicaid,Hospital,22485,710,1355
+Dec,Europe,Emergency Care,Medicaid,Clinic,19393,582,923
+Dec,Europe,Emergency Care,Medicaid,Outpatient Center,20936,626,1004
+Dec,APAC,Telehealth,Commercial,Hospital,26741,555,705
+Dec,APAC,Telehealth,Commercial,Clinic,23071,455,480
+Dec,APAC,Telehealth,Commercial,Outpatient Center,24913,489,523
+Dec,APAC,Telehealth,Medicare,Hospital,25191,571,810
+Dec,APAC,Telehealth,Medicare,Clinic,21732,469,552
+Dec,APAC,Telehealth,Medicare,Outpatient Center,23466,504,601
+Dec,APAC,Telehealth,Medicaid,Hospital,26202,516,833
+Dec,APAC,Telehealth,Medicaid,Clinic,22602,423,567
+Dec,APAC,Telehealth,Medicaid,Outpatient Center,24405,454,617
+Dec,APAC,Imaging,Commercial,Hospital,15690,794,603
+Dec,APAC,Imaging,Commercial,Clinic,13535,651,411
+Dec,APAC,Imaging,Commercial,Outpatient Center,14615,700,447
+Dec,APAC,Imaging,Medicare,Hospital,14778,817,693
+Dec,APAC,Imaging,Medicare,Clinic,12748,670,472
+Dec,APAC,Imaging,Medicare,Outpatient Center,13764,720,514
+Dec,APAC,Imaging,Medicaid,Hospital,15369,737,712
+Dec,APAC,Imaging,Medicaid,Clinic,13257,604,485
+Dec,APAC,Imaging,Medicaid,Outpatient Center,14313,650,528
+Dec,APAC,Cardiology,Commercial,Hospital,14845,851,1179
+Dec,APAC,Cardiology,Commercial,Clinic,12805,698,803
+Dec,APAC,Cardiology,Commercial,Outpatient Center,13825,750,874
+Dec,APAC,Cardiology,Medicare,Hospital,13980,876,1354
+Dec,APAC,Cardiology,Medicare,Clinic,12058,718,922
+Dec,APAC,Cardiology,Medicare,Outpatient Center,13018,772,1004
+Dec,APAC,Cardiology,Medicaid,Hospital,14537,790,1392
+Dec,APAC,Cardiology,Medicaid,Clinic,12538,648,948
+Dec,APAC,Cardiology,Medicaid,Outpatient Center,13535,696,1032
+Dec,APAC,Emergency Care,Commercial,Hospital,29246,712,1271
+Dec,APAC,Emergency Care,Commercial,Clinic,25224,584,865
+Dec,APAC,Emergency Care,Commercial,Outpatient Center,27231,627,942
+Dec,APAC,Emergency Care,Medicare,Hospital,27540,732,1460
+Dec,APAC,Emergency Care,Medicare,Clinic,23751,600,994
+Dec,APAC,Emergency Care,Medicare,Outpatient Center,25640,645,1082
+Dec,APAC,Emergency Care,Medicaid,Hospital,28633,661,1501
+Dec,APAC,Emergency Care,Medicaid,Clinic,24693,542,1022
+Dec,APAC,Emergency Care,Medicaid,Outpatient Center,26655,582,1113
+Dec,Latin America,Telehealth,Commercial,Hospital,16838,407,470
+Dec,Latin America,Telehealth,Commercial,Clinic,14525,334,320
+Dec,Latin America,Telehealth,Commercial,Outpatient Center,15683,359,349
+Dec,Latin America,Telehealth,Medicare,Hospital,15859,419,540
+Dec,Latin America,Telehealth,Medicare,Clinic,13680,344,368
+Dec,Latin America,Telehealth,Medicare,Outpatient Center,14770,369,400
+Dec,Latin America,Telehealth,Medicaid,Hospital,16493,378,555
+Dec,Latin America,Telehealth,Medicaid,Clinic,14225,310,378
+Dec,Latin America,Telehealth,Medicaid,Outpatient Center,15358,333,412
+Dec,Latin America,Imaging,Commercial,Hospital,9877,582,402
+Dec,Latin America,Imaging,Commercial,Clinic,8519,477,274
+Dec,Latin America,Imaging,Commercial,Outpatient Center,9198,513,298
+Dec,Latin America,Imaging,Medicare,Hospital,9301,599,462
+Dec,Latin America,Imaging,Medicare,Clinic,8023,491,315
+Dec,Latin America,Imaging,Medicare,Outpatient Center,8661,528,343
+Dec,Latin America,Imaging,Medicaid,Hospital,9672,541,475
+Dec,Latin America,Imaging,Medicaid,Clinic,8342,443,323
+Dec,Latin America,Imaging,Medicaid,Outpatient Center,9005,476,352
+Dec,Latin America,Cardiology,Commercial,Hospital,9342,624,786
+Dec,Latin America,Cardiology,Commercial,Clinic,8058,512,535
+Dec,Latin America,Cardiology,Commercial,Outpatient Center,8699,550,583
+Dec,Latin America,Cardiology,Medicare,Hospital,8797,642,903
+Dec,Latin America,Cardiology,Medicare,Clinic,7587,526,615
+Dec,Latin America,Cardiology,Medicare,Outpatient Center,8190,566,669
+Dec,Latin America,Cardiology,Medicaid,Hospital,9146,579,928
+Dec,Latin America,Cardiology,Medicaid,Clinic,7888,475,632
+Dec,Latin America,Cardiology,Medicaid,Outpatient Center,8514,510,688
+Dec,Latin America,Emergency Care,Commercial,Hospital,18401,522,847
+Dec,Latin America,Emergency Care,Commercial,Clinic,15869,428,577
+Dec,Latin America,Emergency Care,Commercial,Outpatient Center,17130,460,628
+Dec,Latin America,Emergency Care,Medicare,Hospital,17325,537,973
+Dec,Latin America,Emergency Care,Medicare,Clinic,14940,440,663
+Dec,Latin America,Emergency Care,Medicare,Outpatient Center,16126,473,722
+Dec,Latin America,Emergency Care,Medicaid,Hospital,18010,484,1000
+Dec,Latin America,Emergency Care,Medicaid,Clinic,15531,397,681
+Dec,Latin America,Emergency Care,Medicaid,Outpatient Center,16763,426,742

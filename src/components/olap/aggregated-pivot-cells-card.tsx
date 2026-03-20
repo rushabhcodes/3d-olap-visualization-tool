@@ -2,9 +2,10 @@ import { TableProperties } from "lucide-react";
 
 import { PivotTable } from "@/components/olap/pivot-table";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import type { DimensionKey, Measure, PivotCell } from "@/data/mock-cube";
+import type { DatasetSchema, DimensionKey, Measure, PivotCell } from "@/data/mock-cube";
 
 type AggregatedPivotCellsCardProps = {
+  schema: DatasetSchema;
   cells: PivotCell[];
   xDimension: DimensionKey;
   yDimension: DimensionKey;
@@ -18,6 +19,7 @@ type AggregatedPivotCellsCardProps = {
 };
 
 export function AggregatedPivotCellsCard({
+  schema,
   cells,
   xDimension,
   yDimension,
@@ -40,6 +42,7 @@ export function AggregatedPivotCellsCard({
       </CardHeader>
       <CardContent>
         <PivotTable
+          schema={schema}
           cells={cells}
           xDimension={xDimension}
           yDimension={yDimension}

@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import type { CubeFactField, DimensionKey, Measure } from "@/data/mock-cube";
+import type { BuiltInDataset, CsvColumnMapping, DatasetSchema, DimensionKey, Measure } from "@/data/mock-cube";
 import { DatasetSection } from "@/components/olap/filter-panel/dataset-section";
 import { DimensionFiltersSection } from "@/components/olap/filter-panel/dimension-filters-section";
 import { MeasureSection } from "@/components/olap/filter-panel/measure-section";
@@ -8,6 +8,9 @@ import { PivotAxesSection } from "@/components/olap/filter-panel/pivot-axes-sect
 import type { PendingUpload } from "@/components/olap/filter-panel/types";
 
 type FilterPanelProps = {
+  builtInDatasets: BuiltInDataset[];
+  selectedBuiltInDatasetId: string | null;
+  schema: DatasetSchema;
   selectedMeasure: Measure;
   xDimension: DimensionKey;
   yDimension: DimensionKey;
@@ -23,13 +26,17 @@ type FilterPanelProps = {
   onSwapAxes: () => void;
   onFilterChange: (dimension: DimensionKey, value: string | "All") => void;
   onUpload: (file: File | null) => void;
-  onMappingChange: (field: CubeFactField, header: string) => void;
+  onMappingChange: (field: string, header: string) => void;
   onApplyUpload: () => void;
   onCancelUpload: () => void;
+  onLoadBuiltInDataset: (datasetId: string) => void;
   onResetDataset: () => void;
 };
 
 export function FilterPanel({
+  builtInDatasets,
+  selectedBuiltInDatasetId,
+  schema,
   selectedMeasure,
   xDimension,
   yDimension,
@@ -48,6 +55,7 @@ export function FilterPanel({
   onMappingChange,
   onApplyUpload,
   onCancelUpload,
+  onLoadBuiltInDataset,
   onResetDataset,
 }: FilterPanelProps) {
   return (
@@ -65,6 +73,9 @@ export function FilterPanel({
       </CardHeader>
       <CardContent className="space-y-6">
         <DatasetSection
+          builtInDatasets={builtInDatasets}
+          selectedBuiltInDatasetId={selectedBuiltInDatasetId}
+          schema={schema}
           datasetLabel={datasetLabel}
           recordCount={recordCount}
           uploadError={uploadError}
@@ -73,12 +84,18 @@ export function FilterPanel({
           onMappingChange={onMappingChange}
           onApplyUpload={onApplyUpload}
           onCancelUpload={onCancelUpload}
+          onLoadBuiltInDataset={onLoadBuiltInDataset}
           onResetDataset={onResetDataset}
         />
 
-        <MeasureSection selectedMeasure={selectedMeasure} onMeasureChange={onMeasureChange} />
+        <MeasureSection
+          measures={schema.measures}
+          selectedMeasure={selectedMeasure}
+          onMeasureChange={onMeasureChange}
+        />
 
         <PivotAxesSection
+          dimensions={schema.dimensions}
           xDimension={xDimension}
           yDimension={yDimension}
           zDimension={zDimension}
@@ -87,6 +104,7 @@ export function FilterPanel({
         />
 
         <DimensionFiltersSection
+          dimensions={schema.dimensions}
           filters={filters}
           availableValues={availableValues}
           onFilterChange={onFilterChange}

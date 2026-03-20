@@ -1,6 +1,8 @@
 import {
+  type DatasetSchema,
   formatMeasureValue,
   getDimensionLabel,
+  getMeasureLabel,
   type DimensionKey,
   type Measure,
   type PivotCell,
@@ -8,6 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 
 type PivotTableProps = {
+  schema: DatasetSchema;
   cells: PivotCell[];
   xDimension: DimensionKey;
   yDimension: DimensionKey;
@@ -21,6 +24,7 @@ type PivotTableProps = {
 };
 
 export function PivotTable({
+  schema,
   cells,
   xDimension,
   yDimension,
@@ -37,10 +41,10 @@ export function PivotTable({
       <table className="min-w-full divide-y divide-slate-200 text-left text-sm">
         <thead className="bg-slate-100 text-slate-600">
           <tr>
-            <th className="px-4 py-3 font-medium">{getDimensionLabel(xDimension)}</th>
-            <th className="px-4 py-3 font-medium">{getDimensionLabel(yDimension)}</th>
-            <th className="px-4 py-3 font-medium">{getDimensionLabel(zDimension)}</th>
-            <th className="px-4 py-3 font-medium">{measure}</th>
+            <th className="px-4 py-3 font-medium">{getDimensionLabel(schema, xDimension)}</th>
+            <th className="px-4 py-3 font-medium">{getDimensionLabel(schema, yDimension)}</th>
+            <th className="px-4 py-3 font-medium">{getDimensionLabel(schema, zDimension)}</th>
+            <th className="px-4 py-3 font-medium">{getMeasureLabel(schema, measure)}</th>
             <th className="px-4 py-3 font-medium">Rows</th>
           </tr>
         </thead>
@@ -60,7 +64,7 @@ export function PivotTable({
               <td className="px-4 py-3 text-slate-900">{cell.xValue}</td>
               <td className="px-4 py-3 text-slate-600">{cell.yValue}</td>
               <td className="px-4 py-3 text-slate-600">{cell.zValue}</td>
-              <td className="px-4 py-3 text-slate-900">{formatMeasureValue(cell.value, measure)}</td>
+              <td className="px-4 py-3 text-slate-900">{formatMeasureValue(cell.value, measure, schema)}</td>
               <td className="px-4 py-3 text-slate-600">{cell.count}</td>
             </tr>
           ))}

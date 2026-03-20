@@ -1,10 +1,11 @@
 import { TableProperties } from "lucide-react";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { formatMeasureValue, measureOptions, type CubeFact, type PivotCell } from "@/data/mock-cube";
+import { formatMeasureValue, type CubeFact, type DatasetSchema, type PivotCell } from "@/data/mock-cube";
 import { cn } from "@/lib/utils";
 
 type DrillDownRowsCardProps = {
+  schema: DatasetSchema;
   activeCell: PivotCell | null;
   drilledCell: PivotCell | null;
   drillFacts: CubeFact[];
@@ -16,6 +17,7 @@ type DrillDownRowsCardProps = {
 };
 
 export function DrillDownRowsCard({
+  schema,
   activeCell,
   drilledCell,
   drillFacts,
@@ -47,11 +49,12 @@ export function DrillDownRowsCard({
           <table className="min-w-full divide-y divide-slate-200 text-left text-sm">
             <thead className="bg-slate-100 text-slate-600">
               <tr>
-                <th className="px-4 py-3 font-medium">Month</th>
-                <th className="px-4 py-3 font-medium">Region</th>
-                <th className="px-4 py-3 font-medium">Product</th>
-                <th className="px-4 py-3 font-medium">Scenario</th>
-                {measureOptions.map((measureOption) => (
+                {schema.dimensions.map((dimension) => (
+                  <th key={dimension.key} className="px-4 py-3 font-medium">
+                    {dimension.label}
+                  </th>
+                ))}
+                {schema.measures.map((measureOption) => (
                   <th key={measureOption.key} className="px-4 py-3 font-medium">
                     {measureOption.label}
                   </th>
@@ -61,7 +64,7 @@ export function DrillDownRowsCard({
             <tbody className="divide-y divide-slate-200 bg-white">
               {drillFacts.map((fact, index) => (
                 <tr
-                  key={`${fact.month}-${fact.region}-${fact.productLine}-${fact.scenario}-${index}`}
+                  key={`fact-row-${index}`}
                   className={cn(
                     interactionEnabled && "cursor-pointer transition hover:bg-sky-50",
                     selectedFactIndex === index && "bg-amber-50",
@@ -83,20 +86,27 @@ export function DrillDownRowsCard({
                     }
                   }}
                 >
-                  <td className="px-4 py-3 text-slate-700">{fact.month}</td>
-                  <td className="px-4 py-3 text-slate-600">{fact.region}</td>
-                  <td className="px-4 py-3 text-slate-600">{fact.productLine}</td>
-                  <td className="px-4 py-3 text-slate-600">{fact.scenario}</td>
-                  {measureOptions.map((measureOption) => (
+                  {schema.dimensions.map((dimension, dimensionIndex) => (
+                    <td
+                      key={dimension.key}
+                      className={dimensionIndex === 0 ? "px-4 py-3 text-slate-700" : "px-4 py-3 text-slate-600"}
+                    >
+                      {String(fact[dimension.key] ?? "")}
+                    </td>
+                  ))}
+                  {schema.measures.map((measureOption) => (
                     <td key={measureOption.key} className="px-4 py-3 text-slate-900">
-                      {formatMeasureValue(fact[measureOption.factKey], measureOption.key)}
+                      {formatMeasureValue(Number(fact[measureOption.key] ?? 0), measureOption.key, schema)}
                     </td>
                   ))}
                 </tr>
               ))}
               {drillFacts.length === 0 ? (
                 <tr>
-                  <td className="px-4 py-8 text-center text-slate-500" colSpan={7}>
+                  <td
+                    className="px-4 py-8 text-center text-slate-500"
+                    colSpan={schema.dimensions.length + schema.measures.length}
+                  >
                     No rows match the current slice.
                   </td>
                 </tr>

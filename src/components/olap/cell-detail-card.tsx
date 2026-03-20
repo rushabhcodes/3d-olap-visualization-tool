@@ -2,15 +2,16 @@ import { Boxes } from "lucide-react";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  dimensionOptions,
+  type DatasetSchema,
   formatMeasureValue,
-  measureOptions,
   type DimensionKey,
+  type Measure,
   type PivotCell,
 } from "@/data/mock-cube";
-import { cn } from "@/lib/utils";
 
 type CellDetailCardProps = {
+  schema: DatasetSchema;
+  selectedMeasure: Measure;
   activeDimensions: string[];
   hoveredCell: PivotCell | null;
   activeCell: PivotCell | null;
@@ -18,6 +19,8 @@ type CellDetailCardProps = {
 };
 
 export function CellDetailCard({
+  schema,
+  selectedMeasure,
   activeDimensions,
   hoveredCell,
   activeCell,
@@ -53,22 +56,16 @@ export function CellDetailCard({
           </div>
           {hoveredCell && hoveredCell.id !== activeCell?.id ? (
             <p className="mt-3 text-xs text-cyan-700">
-              Hover preview: {hoveredCell.xValue} / {hoveredCell.zValue}
+              Hover preview: {hoveredCell.xValue} / {hoveredCell.yValue} / {hoveredCell.zValue}
             </p>
           ) : null}
         </div>
-        <div className="grid grid-cols-2 gap-2">
-          {measureOptions.map((measureOption) => (
-            <div
-              key={measureOption.key}
-              className={cn(
-                "rounded-2xl border border-slate-200 bg-slate-50/90 p-3",
-                measureOption.key === "Units" && "col-span-2",
-              )}
-            >
+        <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${Math.min(schema.measures.length, 2)}, minmax(0, 1fr))` }}>
+          {schema.measures.map((measureOption) => (
+            <div key={measureOption.key} className="rounded-2xl border border-slate-200 bg-slate-50/90 p-3">
               <p className="text-xs uppercase tracking-[0.18em] text-cyan-700">{measureOption.label}</p>
               <p className="mt-1 text-sm font-semibold text-slate-950 sm:text-base">
-                {formatMeasureValue(activeCell?.totals[measureOption.key] ?? 0, measureOption.key)}
+                {formatMeasureValue(activeCell?.totals[measureOption.key] ?? 0, measureOption.key, schema)}
               </p>
             </div>
           ))}
@@ -82,13 +79,19 @@ export function CellDetailCard({
         <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-3">
           <p className="font-medium text-slate-900">Dimension Inventory</p>
           <div className="mt-3 grid gap-2">
-            {dimensionOptions.map((dimension) => (
+            {schema.dimensions.map((dimension) => (
               <div key={dimension.key} className="rounded-xl border border-slate-200 bg-white px-3 py-2">
                 <p className="text-xs uppercase tracking-[0.16em] text-slate-500">{dimension.label}</p>
                 <p className="mt-1 text-sm text-slate-700">{availableValues[dimension.key].length} members</p>
               </div>
             ))}
           </div>
+        </div>
+        <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-3">
+          <p className="font-medium text-slate-900">Primary Metric</p>
+          <p className="mt-2 text-slate-500">
+            The cube height and aggregate intensity currently follow {schema.measures.find((measure) => measure.key === selectedMeasure)?.label ?? selectedMeasure}.
+          </p>
         </div>
       </CardContent>
     </Card>

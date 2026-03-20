@@ -13,15 +13,18 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import {
   buildPivotCells,
-  cubeFieldOptions,
+  builtInDatasets,
   createEmptyFilters,
   type CsvColumnMapping,
-  cubeFacts,
-  dimensionOptions,
+  defaultBuiltInDatasetId,
+  type DatasetSchema,
   type DimensionKey,
   formatMeasureValue,
+  getBuiltInDataset,
+  getCubeFieldOptions,
   getDimensionLabel,
   getDimensionValue,
+  getMeasureLabel,
   getUniqueDimensionValues,
   hasCompleteCsvMapping,
   type Measure,
@@ -40,14 +43,21 @@ type PendingUpload = {
 };
 
 function App() {
-  const [facts, setFacts] = useState<CubeFact[]>(cubeFacts);
-  const [datasetLabel, setDatasetLabel] = useState("Built-in demo cube");
+  const defaultBuiltInDataset = getBuiltInDataset(defaultBuiltInDatasetId);
+  const [schema, setSchema] = useState<DatasetSchema>(defaultBuiltInDataset.schema);
+  const [facts, setFacts] = useState<CubeFact[]>(defaultBuiltInDataset.facts);
+  const [datasetLabel, setDatasetLabel] = useState(defaultBuiltInDataset.label);
+  const [selectedBuiltInDatasetId, setSelectedBuiltInDatasetId] = useState<string | null>(
+    defaultBuiltInDatasetId,
+  );
   const [uploadError, setUploadError] = useState<string | null>(null);
-  const [selectedMeasure, setSelectedMeasure] = useState<Measure>("Revenue");
-  const [xDimension, setXDimension] = useState<DimensionKey>("region");
-  const [yDimension, setYDimension] = useState<DimensionKey>("scenario");
-  const [zDimension, setZDimension] = useState<DimensionKey>("productLine");
-  const [filters, setFilters] = useState<Record<DimensionKey, string | "All">>(createEmptyFilters());
+  const [selectedMeasure, setSelectedMeasure] = useState<Measure>(defaultBuiltInDataset.schema.defaultMeasure);
+  const [xDimension, setXDimension] = useState<DimensionKey>(defaultBuiltInDataset.schema.defaultAxes.x);
+  const [yDimension, setYDimension] = useState<DimensionKey>(defaultBuiltInDataset.schema.defaultAxes.y);
+  const [zDimension, setZDimension] = useState<DimensionKey>(defaultBuiltInDataset.schema.defaultAxes.z);
+  const [filters, setFilters] = useState<Record<DimensionKey, string | "All">>(
+    createEmptyFilters(defaultBuiltInDataset.schema),
+  );
   const [activeCellId, setActiveCellId] = useState<string | null>(null);
   const [hoveredCellId, setHoveredCellId] = useState<string | null>(null);
   const [drilledCellId, setDrilledCellId] = useState<string | null>(null);
@@ -55,16 +65,16 @@ function App() {
   const [selectedFactIndex, setSelectedFactIndex] = useState<number | null>(null);
   const [pendingUpload, setPendingUpload] = useState<PendingUpload | null>(null);
 
-  const availableValues = getUniqueDimensionValues(facts);
+  const availableValues = getUniqueDimensionValues(facts, schema);
   const filteredFacts = facts.filter((fact) =>
-    dimensionOptions.every((dimension) => {
+    schema.dimensions.every((dimension) => {
       const filterValue = filters[dimension.key];
 
       return filterValue === "All" || getDimensionValue(fact, dimension.key) === filterValue;
     }),
   );
 
-  const pivot = buildPivotCells(filteredFacts, xDimension, yDimension, zDimension, selectedMeasure);
+  const pivot = buildPivotCells(filteredFacts, schema, xDimension, yDimension, zDimension, selectedMeasure);
   const activeCell = pivot.cells.find((cell) => cell.id === activeCellId) ?? pivot.cells[0] ?? null;
   const hoveredCell = pivot.cells.find((cell) => cell.id === hoveredCellId) ?? null;
   const drilledCell = pivot.cells.find((cell) => cell.id === drilledCellId) ?? null;
@@ -110,25 +120,24 @@ function App() {
     );
   }, [drilledCell?.id, drilledCell?.facts.length]);
 
-  const totals = filteredFacts.reduce(
-    (summary, fact) => ({
-      Revenue: summary.Revenue + fact.revenue,
-      Margin: summary.Margin + fact.margin,
-      Units: summary.Units + fact.units,
-    }),
-    { Revenue: 0, Margin: 0, Units: 0 },
-  );
+  const totals = filteredFacts.reduce<Record<string, number>>((summary, fact) => {
+    for (const measureOption of schema.measures) {
+      summary[measureOption.key] = (summary[measureOption.key] ?? 0) + Number(fact[measureOption.key] ?? 0);
+    }
+
+    return summary;
+  }, Object.fromEntries(schema.measures.map((measureOption) => [measureOption.key, 0])) as Record<string, number>);
 
   const activeDimensions =
     activeCell === null
       ? []
       : [
-          `${getDimensionLabel(xDimension)}: ${activeCell.xValue}`,
-          `${getDimensionLabel(yDimension)}: ${activeCell.yValue}`,
-          `${getDimensionLabel(zDimension)}: ${activeCell.zValue}`,
+          `${getDimensionLabel(schema, xDimension)}: ${activeCell.xValue}`,
+          `${getDimensionLabel(schema, yDimension)}: ${activeCell.yValue}`,
+          `${getDimensionLabel(schema, zDimension)}: ${activeCell.zValue}`,
         ];
 
-  const appliedSlices = dimensionOptions
+  const appliedSlices = schema.dimensions
     .filter((dimension) => filters[dimension.key] !== "All")
     .map((dimension) => `${dimension.label}: ${filters[dimension.key]}`);
 
@@ -146,13 +155,25 @@ function App() {
     clearFactSelection();
   }
 
-  function resetViewState() {
-    setFilters(createEmptyFilters());
-    setSelectedMeasure("Revenue");
-    setXDimension("region");
-    setYDimension("scenario");
-    setZDimension("productLine");
+  function resetViewState(nextSchema: DatasetSchema = schema) {
+    setFilters(createEmptyFilters(nextSchema));
+    setSelectedMeasure(nextSchema.defaultMeasure);
+    setXDimension(nextSchema.defaultAxes.x);
+    setYDimension(nextSchema.defaultAxes.y);
+    setZDimension(nextSchema.defaultAxes.z);
     resetInteractionState();
+  }
+
+  function handleLoadBuiltInDataset(datasetId: string) {
+    const dataset = getBuiltInDataset(datasetId);
+
+    setSchema(dataset.schema);
+    setFacts(dataset.facts);
+    setDatasetLabel(dataset.label);
+    setSelectedBuiltInDatasetId(dataset.id);
+    setUploadError(null);
+    setPendingUpload(null);
+    resetViewState(dataset.schema);
   }
 
   function handleSelectAggregateCell(id: string) {
@@ -207,7 +228,7 @@ function App() {
         headers,
         rows,
         previewRows: rows.slice(0, 3),
-        mapping: suggestCsvColumnMapping(headers),
+        mapping: suggestCsvColumnMapping(headers, schema),
         parseErrors: parsed.errors.map((error) => {
           const rowLabel = typeof error.row === "number" ? `Row ${error.row + 2}` : "CSV";
 
@@ -221,7 +242,7 @@ function App() {
     }
   }
 
-  function handleMappingChange(field: keyof CubeFact, header: string) {
+  function handleMappingChange(field: string, header: string) {
     setPendingUpload((current) => {
       if (!current) {
         return current;
@@ -233,7 +254,7 @@ function App() {
       };
 
       if (header !== "") {
-        for (const cubeField of cubeFieldOptions.map((option) => option.key)) {
+        for (const cubeField of getCubeFieldOptions(schema).map((option) => option.key)) {
           if (cubeField !== field && nextMapping[cubeField] === header) {
             nextMapping[cubeField] = "";
           }
@@ -248,11 +269,11 @@ function App() {
   }
 
   function handleApplyUpload() {
-    if (!pendingUpload || !hasCompleteCsvMapping(pendingUpload.mapping)) {
+    if (!pendingUpload || !hasCompleteCsvMapping(schema, pendingUpload.mapping)) {
       return;
     }
 
-    const parsed = parseMappedCubeFacts(pendingUpload.rows, pendingUpload.mapping);
+    const parsed = parseMappedCubeFacts(pendingUpload.rows, schema, pendingUpload.mapping);
 
     if (parsed.facts.length === 0) {
       setUploadError(parsed.errors.join(" "));
@@ -261,8 +282,8 @@ function App() {
 
     setFacts(parsed.facts);
     setDatasetLabel(pendingUpload.fileName);
-    setFilters(createEmptyFilters());
-    resetInteractionState();
+    setSelectedBuiltInDatasetId(null);
+    resetViewState(schema);
     setPendingUpload(null);
 
     const warnings = [...pendingUpload.parseErrors, ...parsed.errors];
@@ -280,11 +301,7 @@ function App() {
   }
 
   function handleResetDataset() {
-    setFacts(cubeFacts);
-    setDatasetLabel("Built-in demo cube");
-    setUploadError(null);
-    setPendingUpload(null);
-    resetViewState();
+    handleLoadBuiltInDataset(defaultBuiltInDatasetId);
   }
 
   function handleAxisChange(axis: "x" | "y" | "z", value: DimensionKey) {
@@ -346,19 +363,21 @@ function App() {
               </Button>
               <Button variant="outline" className="border-slate-200 bg-white" onClick={handleResetDataset}>
                 <Boxes className="mr-2 h-4 w-4" />
-                Load Demo Cube
+                Load Default Dataset
               </Button>
             </div>
           </div>
         </header>
 
-        <section className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        <section className="grid gap-3 md:grid-cols-2 xl:grid-cols-[0.9fr_1.35fr_1.35fr_0.8fr]">
           <Card className="bg-white/85">
             <CardContent className="flex items-start justify-between gap-3 p-4">
               <div className="space-y-1">
                 <CardDescription className="text-[11px] uppercase tracking-[0.16em]">Active Measure</CardDescription>
-                <CardTitle className="text-base">{selectedMeasure}</CardTitle>
-                <p className="text-xl font-semibold">{formatMeasureValue(totals[selectedMeasure], selectedMeasure)}</p>
+                <CardTitle className="text-base">{getMeasureLabel(schema, selectedMeasure)}</CardTitle>
+                <p className="text-xl font-semibold">
+                  {formatMeasureValue(Number(totals[selectedMeasure] ?? 0), selectedMeasure, schema)}
+                </p>
               </div>
               <Layers3 className="mt-1 h-5 w-5 shrink-0 text-cyan-700" />
             </CardContent>
@@ -369,7 +388,7 @@ function App() {
               <CardDescription className="text-[11px] uppercase tracking-[0.16em]">Visible Cube Cells</CardDescription>
               <CardTitle className="text-xl">{pivot.cells.length}</CardTitle>
               <p className="text-xs text-muted-foreground">
-                {getDimensionLabel(xDimension)} by {getDimensionLabel(zDimension)}
+                {getDimensionLabel(schema, xDimension)} by {getDimensionLabel(schema, yDimension)} by {getDimensionLabel(schema, zDimension)}
               </p>
             </CardContent>
           </Card>
@@ -388,7 +407,7 @@ function App() {
             <CardContent className="space-y-1 p-4">
               <CardDescription className="text-[11px] uppercase tracking-[0.16em]">Focused Cell</CardDescription>
               <CardTitle className="text-xl">
-                {activeCell ? formatMeasureValue(activeCell.value, selectedMeasure) : "None"}
+                {activeCell ? formatMeasureValue(activeCell.value, selectedMeasure, schema) : "None"}
               </CardTitle>
               <p className="text-xs text-muted-foreground">
                 {activeCell ? `${activeCell.count} contributing row(s)` : "Select a pivot cell to inspect it."}
@@ -397,6 +416,9 @@ function App() {
           </Card>
 
           <FilterPanel
+            builtInDatasets={builtInDatasets}
+            selectedBuiltInDatasetId={selectedBuiltInDatasetId}
+            schema={schema}
             selectedMeasure={selectedMeasure}
             xDimension={xDimension}
             yDimension={yDimension}
@@ -420,11 +442,13 @@ function App() {
             onMappingChange={handleMappingChange}
             onApplyUpload={handleApplyUpload}
             onCancelUpload={handleCancelUpload}
+            onLoadBuiltInDataset={handleLoadBuiltInDataset}
             onResetDataset={handleResetDataset}
           />
 
           <div className="grid min-w-0 gap-6 xl:col-span-2">
             <PivotedCubeSurfaceCard
+              schema={schema}
               xDimension={xDimension}
               yDimension={yDimension}
               zDimension={zDimension}
@@ -449,6 +473,7 @@ function App() {
               onSelectFact={setSelectedFactIndex}
             />
             <PivotMatrixHeatmapCard
+              schema={schema}
               cells={pivot.cells}
               xDimension={xDimension}
               yDimension={yDimension}
@@ -464,6 +489,7 @@ function App() {
               onSelectCell={handleSelectAggregateCell}
             />
             <AggregatedPivotCellsCard
+              schema={schema}
               cells={pivot.cells}
               xDimension={xDimension}
               yDimension={yDimension}
@@ -475,16 +501,8 @@ function App() {
               onLeaveCell={() => setHoveredCellId(null)}
               onSelectCell={handleSelectAggregateCell}
             />
-          </div>
-
-          <div className="min-w-0 gap-6 xl:col-span-1">
-            <CellDetailCard
-              activeDimensions={activeDimensions}
-              hoveredCell={hoveredCell}
-              activeCell={activeCell}
-              availableValues={availableValues}
-            />
             <DrillDownRowsCard
+              schema={schema}
               activeCell={activeCell}
               drilledCell={drilledCell}
               drillFacts={drillFacts}
@@ -493,6 +511,17 @@ function App() {
               onHoverFact={setHoveredFactIndex}
               onLeaveFact={() => setHoveredFactIndex(null)}
               onSelectFact={setSelectedFactIndex}
+            />
+          </div>
+
+          <div className="grid min-w-0 gap-6 xl:col-span-1">
+            <CellDetailCard
+              schema={schema}
+              selectedMeasure={selectedMeasure}
+              activeDimensions={activeDimensions}
+              hoveredCell={hoveredCell}
+              activeCell={activeCell}
+              availableValues={availableValues}
             />
           </div>
         </section>

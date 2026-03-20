@@ -1,0 +1,1729 @@
+Month,Region,Product Line,Scenario,Channel,Revenue,Margin,Units
+Jan,North America,Cloud Suite,Actual,Direct,491,192,2546
+Jan,North America,Cloud Suite,Actual,Partner,466,175,2785
+Jan,North America,Cloud Suite,Actual,Marketplace,484,185,2705
+Jan,North America,Cloud Suite,Plan,Direct,526,211,2623
+Jan,North America,Cloud Suite,Plan,Partner,499,193,2869
+Jan,North America,Cloud Suite,Plan,Marketplace,519,203,2787
+Jan,North America,Cloud Suite,Forecast,Direct,516,210,2572
+Jan,North America,Cloud Suite,Forecast,Partner,490,192,2813
+Jan,North America,Cloud Suite,Forecast,Marketplace,509,202,2732
+Jan,North America,Retail Analytics,Actual,Direct,424,158,2809
+Jan,North America,Retail Analytics,Actual,Partner,402,143,3073
+Jan,North America,Retail Analytics,Actual,Marketplace,418,151,2985
+Jan,North America,Retail Analytics,Plan,Direct,453,173,2893
+Jan,North America,Retail Analytics,Plan,Partner,431,158,3165
+Jan,North America,Retail Analytics,Plan,Marketplace,447,166,3074
+Jan,North America,Retail Analytics,Forecast,Direct,445,172,2837
+Jan,North America,Retail Analytics,Forecast,Partner,423,157,3103
+Jan,North America,Retail Analytics,Forecast,Marketplace,439,166,3015
+Jan,North America,Supply Chain,Actual,Direct,396,143,3079
+Jan,North America,Supply Chain,Actual,Partner,376,130,3367
+Jan,North America,Supply Chain,Actual,Marketplace,390,137,3271
+Jan,North America,Supply Chain,Plan,Direct,423,157,3171
+Jan,North America,Supply Chain,Plan,Partner,402,143,3468
+Jan,North America,Supply Chain,Plan,Marketplace,418,151,3369
+Jan,North America,Supply Chain,Forecast,Direct,415,156,3110
+Jan,North America,Supply Chain,Forecast,Partner,395,143,3401
+Jan,North America,Supply Chain,Forecast,Marketplace,410,150,3304
+Jan,North America,Data Platform,Actual,Direct,559,230,2545
+Jan,North America,Data Platform,Actual,Partner,531,210,2784
+Jan,North America,Data Platform,Actual,Marketplace,551,222,2704
+Jan,North America,Data Platform,Plan,Direct,598,252,2622
+Jan,North America,Data Platform,Plan,Partner,568,231,2867
+Jan,North America,Data Platform,Plan,Marketplace,590,243,2785
+Jan,North America,Data Platform,Forecast,Direct,587,251,2571
+Jan,North America,Data Platform,Forecast,Partner,557,229,2812
+Jan,North America,Data Platform,Forecast,Marketplace,578,241,2731
+Jan,Europe,Cloud Suite,Actual,Direct,419,152,2333
+Jan,Europe,Cloud Suite,Actual,Partner,398,138,2551
+Jan,Europe,Cloud Suite,Actual,Marketplace,414,146,2479
+Jan,Europe,Cloud Suite,Plan,Direct,449,167,2403
+Jan,Europe,Cloud Suite,Plan,Partner,426,152,2628
+Jan,Europe,Cloud Suite,Plan,Marketplace,443,160,2553
+Jan,Europe,Cloud Suite,Forecast,Direct,440,166,2356
+Jan,Europe,Cloud Suite,Forecast,Partner,418,151,2577
+Jan,Europe,Cloud Suite,Forecast,Marketplace,434,159,2503
+Jan,Europe,Retail Analytics,Actual,Direct,362,124,2574
+Jan,Europe,Retail Analytics,Actual,Partner,343,112,2815
+Jan,Europe,Retail Analytics,Actual,Marketplace,357,119,2734
+Jan,Europe,Retail Analytics,Plan,Direct,387,136,2651
+Jan,Europe,Retail Analytics,Plan,Partner,368,124,2899
+Jan,Europe,Retail Analytics,Plan,Marketplace,382,131,2816
+Jan,Europe,Retail Analytics,Forecast,Direct,380,136,2599
+Jan,Europe,Retail Analytics,Forecast,Partner,361,123,2843
+Jan,Europe,Retail Analytics,Forecast,Marketplace,374,130,2762
+Jan,Europe,Supply Chain,Actual,Direct,338,112,2821
+Jan,Europe,Supply Chain,Actual,Partner,321,101,3085
+Jan,Europe,Supply Chain,Actual,Marketplace,333,107,2997
+Jan,Europe,Supply Chain,Plan,Direct,361,123,2905
+Jan,Europe,Supply Chain,Plan,Partner,343,112,3178
+Jan,Europe,Supply Chain,Plan,Marketplace,356,118,3087
+Jan,Europe,Supply Chain,Forecast,Direct,355,123,2849
+Jan,Europe,Supply Chain,Forecast,Partner,337,112,3116
+Jan,Europe,Supply Chain,Forecast,Marketplace,349,118,3027
+Jan,Europe,Data Platform,Actual,Direct,477,182,2332
+Jan,Europe,Data Platform,Actual,Partner,453,166,2550
+Jan,Europe,Data Platform,Actual,Marketplace,470,175,2477
+Jan,Europe,Data Platform,Plan,Direct,510,200,2402
+Jan,Europe,Data Platform,Plan,Partner,484,182,2627
+Jan,Europe,Data Platform,Plan,Marketplace,503,192,2552
+Jan,Europe,Data Platform,Forecast,Direct,500,199,2355
+Jan,Europe,Data Platform,Forecast,Partner,475,181,2576
+Jan,Europe,Data Platform,Forecast,Marketplace,493,191,2502
+Jan,APAC,Cloud Suite,Actual,Direct,398,136,2711
+Jan,APAC,Cloud Suite,Actual,Partner,378,123,2965
+Jan,APAC,Cloud Suite,Actual,Marketplace,392,130,2880
+Jan,APAC,Cloud Suite,Plan,Direct,426,150,2792
+Jan,APAC,Cloud Suite,Plan,Partner,404,136,3054
+Jan,APAC,Cloud Suite,Plan,Marketplace,420,144,2966
+Jan,APAC,Cloud Suite,Forecast,Direct,418,149,2738
+Jan,APAC,Cloud Suite,Forecast,Partner,397,135,2994
+Jan,APAC,Cloud Suite,Forecast,Marketplace,412,143,2909
+Jan,APAC,Retail Analytics,Actual,Direct,343,110,2990
+Jan,APAC,Retail Analytics,Actual,Partner,326,100,3271
+Jan,APAC,Retail Analytics,Actual,Marketplace,338,105,3177
+Jan,APAC,Retail Analytics,Plan,Direct,367,122,3080
+Jan,APAC,Retail Analytics,Plan,Partner,349,110,3369
+Jan,APAC,Retail Analytics,Plan,Marketplace,362,117,3273
+Jan,APAC,Retail Analytics,Forecast,Direct,360,121,3020
+Jan,APAC,Retail Analytics,Forecast,Partner,342,110,3303
+Jan,APAC,Retail Analytics,Forecast,Marketplace,355,116,3209
+Jan,APAC,Supply Chain,Actual,Direct,320,100,3277
+Jan,APAC,Supply Chain,Actual,Partner,304,90,3585
+Jan,APAC,Supply Chain,Actual,Marketplace,316,95,3482
+Jan,APAC,Supply Chain,Plan,Direct,343,110,3376
+Jan,APAC,Supply Chain,Plan,Partner,325,99,3692
+Jan,APAC,Supply Chain,Plan,Marketplace,338,105,3587
+Jan,APAC,Supply Chain,Forecast,Direct,336,110,3310
+Jan,APAC,Supply Chain,Forecast,Partner,319,99,3620
+Jan,APAC,Supply Chain,Forecast,Marketplace,331,105,3517
+Jan,APAC,Data Platform,Actual,Direct,452,164,2709
+Jan,APAC,Data Platform,Actual,Partner,429,148,2963
+Jan,APAC,Data Platform,Actual,Marketplace,446,157,2879
+Jan,APAC,Data Platform,Plan,Direct,484,180,2791
+Jan,APAC,Data Platform,Plan,Partner,459,163,3052
+Jan,APAC,Data Platform,Plan,Marketplace,477,173,2965
+Jan,APAC,Data Platform,Forecast,Direct,474,179,2736
+Jan,APAC,Data Platform,Forecast,Partner,450,162,2993
+Jan,APAC,Data Platform,Forecast,Marketplace,467,171,2907
+Jan,Latin America,Cloud Suite,Actual,Direct,309,90,1774
+Jan,Latin America,Cloud Suite,Actual,Partner,293,81,1941
+Jan,Latin America,Cloud Suite,Actual,Marketplace,304,86,1885
+Jan,Latin America,Cloud Suite,Plan,Direct,330,100,1827
+Jan,Latin America,Cloud Suite,Plan,Partner,314,90,1999
+Jan,Latin America,Cloud Suite,Plan,Marketplace,326,95,1942
+Jan,Latin America,Cloud Suite,Forecast,Direct,324,99,1792
+Jan,Latin America,Cloud Suite,Forecast,Partner,307,89,1960
+Jan,Latin America,Cloud Suite,Forecast,Marketplace,319,95,1904
+Jan,Latin America,Retail Analytics,Actual,Direct,266,72,1957
+Jan,Latin America,Retail Analytics,Actual,Partner,253,65,2141
+Jan,Latin America,Retail Analytics,Actual,Marketplace,262,69,2080
+Jan,Latin America,Retail Analytics,Plan,Direct,285,80,2016
+Jan,Latin America,Retail Analytics,Plan,Partner,270,72,2205
+Jan,Latin America,Retail Analytics,Plan,Marketplace,281,76,2142
+Jan,Latin America,Retail Analytics,Forecast,Direct,279,80,1977
+Jan,Latin America,Retail Analytics,Forecast,Partner,265,72,2162
+Jan,Latin America,Retail Analytics,Forecast,Marketplace,275,76,2101
+Jan,Latin America,Supply Chain,Actual,Direct,248,65,2145
+Jan,Latin America,Supply Chain,Actual,Partner,236,58,2346
+Jan,Latin America,Supply Chain,Actual,Marketplace,245,62,2279
+Jan,Latin America,Supply Chain,Plan,Direct,266,72,2210
+Jan,Latin America,Supply Chain,Plan,Partner,252,65,2417
+Jan,Latin America,Supply Chain,Plan,Marketplace,262,69,2348
+Jan,Latin America,Supply Chain,Forecast,Direct,261,72,2167
+Jan,Latin America,Supply Chain,Forecast,Partner,247,64,2370
+Jan,Latin America,Supply Chain,Forecast,Marketplace,257,69,2302
+Jan,Latin America,Data Platform,Actual,Direct,351,110,1773
+Jan,Latin America,Data Platform,Actual,Partner,333,99,1940
+Jan,Latin America,Data Platform,Actual,Marketplace,345,104,1884
+Jan,Latin America,Data Platform,Plan,Direct,375,121,1827
+Jan,Latin America,Data Platform,Plan,Partner,356,109,1998
+Jan,Latin America,Data Platform,Plan,Marketplace,369,115,1941
+Jan,Latin America,Data Platform,Forecast,Direct,368,120,1791
+Jan,Latin America,Data Platform,Forecast,Partner,349,109,1959
+Jan,Latin America,Data Platform,Forecast,Marketplace,362,115,1903
+Feb,North America,Cloud Suite,Actual,Direct,521,206,2627
+Feb,North America,Cloud Suite,Actual,Partner,494,188,2873
+Feb,North America,Cloud Suite,Actual,Marketplace,513,198,2791
+Feb,North America,Cloud Suite,Plan,Direct,557,226,2706
+Feb,North America,Cloud Suite,Plan,Partner,529,206,2960
+Feb,North America,Cloud Suite,Plan,Marketplace,550,218,2875
+Feb,North America,Cloud Suite,Forecast,Direct,547,225,2653
+Feb,North America,Cloud Suite,Forecast,Partner,519,205,2902
+Feb,North America,Cloud Suite,Forecast,Marketplace,539,216,2819
+Feb,North America,Retail Analytics,Actual,Direct,449,169,2898
+Feb,North America,Retail Analytics,Actual,Partner,426,153,3170
+Feb,North America,Retail Analytics,Actual,Marketplace,443,162,3079
+Feb,North America,Retail Analytics,Plan,Direct,481,186,2985
+Feb,North America,Retail Analytics,Plan,Partner,456,169,3265
+Feb,North America,Retail Analytics,Plan,Marketplace,474,178,3171
+Feb,North America,Retail Analytics,Forecast,Direct,471,184,2927
+Feb,North America,Retail Analytics,Forecast,Partner,448,168,3201
+Feb,North America,Retail Analytics,Forecast,Marketplace,465,177,3110
+Feb,North America,Supply Chain,Actual,Direct,419,153,3176
+Feb,North America,Supply Chain,Actual,Partner,398,139,3473
+Feb,North America,Supply Chain,Actual,Marketplace,413,147,3374
+Feb,North America,Supply Chain,Plan,Direct,449,169,3271
+Feb,North America,Supply Chain,Plan,Partner,426,153,3577
+Feb,North America,Supply Chain,Plan,Marketplace,442,162,3475
+Feb,North America,Supply Chain,Forecast,Direct,440,168,3207
+Feb,North America,Supply Chain,Forecast,Partner,418,153,3508
+Feb,North America,Supply Chain,Forecast,Marketplace,434,161,3408
+Feb,North America,Data Platform,Actual,Direct,592,246,2625
+Feb,North America,Data Platform,Actual,Partner,562,225,2871
+Feb,North America,Data Platform,Actual,Marketplace,584,237,2789
+Feb,North America,Data Platform,Plan,Direct,634,270,2704
+Feb,North America,Data Platform,Plan,Partner,601,246,2957
+Feb,North America,Data Platform,Plan,Marketplace,625,260,2872
+Feb,North America,Data Platform,Forecast,Direct,621,268,2651
+Feb,North America,Data Platform,Forecast,Partner,590,245,2900
+Feb,North America,Data Platform,Forecast,Marketplace,612,258,2817
+Feb,Europe,Cloud Suite,Actual,Direct,444,163,2407
+Feb,Europe,Cloud Suite,Actual,Partner,422,148,2632
+Feb,Europe,Cloud Suite,Actual,Marketplace,438,156,2557
+Feb,Europe,Cloud Suite,Plan,Direct,476,179,2479
+Feb,Europe,Cloud Suite,Plan,Partner,452,163,2711
+Feb,Europe,Cloud Suite,Plan,Marketplace,469,172,2634
+Feb,Europe,Cloud Suite,Forecast,Direct,467,178,2431
+Feb,Europe,Cloud Suite,Forecast,Partner,443,162,2659
+Feb,Europe,Cloud Suite,Forecast,Marketplace,460,171,2583
+Feb,Europe,Retail Analytics,Actual,Direct,383,133,2655
+Feb,Europe,Retail Analytics,Actual,Partner,364,120,2904
+Feb,Europe,Retail Analytics,Actual,Marketplace,378,127,2821
+Feb,Europe,Retail Analytics,Plan,Direct,410,146,2734
+Feb,Europe,Retail Analytics,Plan,Partner,389,132,2991
+Feb,Europe,Retail Analytics,Plan,Marketplace,404,140,2905
+Feb,Europe,Retail Analytics,Forecast,Direct,402,145,2681
+Feb,Europe,Retail Analytics,Forecast,Partner,382,132,2933
+Feb,Europe,Retail Analytics,Forecast,Marketplace,397,139,2849
+Feb,Europe,Supply Chain,Actual,Direct,358,120,2909
+Feb,Europe,Supply Chain,Actual,Partner,340,109,3182
+Feb,Europe,Supply Chain,Actual,Marketplace,353,115,3091
+Feb,Europe,Supply Chain,Plan,Direct,383,133,2996
+Feb,Europe,Supply Chain,Plan,Partner,363,120,3277
+Feb,Europe,Supply Chain,Plan,Marketplace,377,127,3184
+Feb,Europe,Supply Chain,Forecast,Direct,375,132,2938
+Feb,Europe,Supply Chain,Forecast,Partner,356,119,3214
+Feb,Europe,Supply Chain,Forecast,Marketplace,370,126,3122
+Feb,Europe,Data Platform,Actual,Direct,505,195,2405
+Feb,Europe,Data Platform,Actual,Partner,479,177,2630
+Feb,Europe,Data Platform,Actual,Marketplace,498,187,2555
+Feb,Europe,Data Platform,Plan,Direct,540,214,2477
+Feb,Europe,Data Platform,Plan,Partner,513,195,2709
+Feb,Europe,Data Platform,Plan,Marketplace,533,206,2632
+Feb,Europe,Data Platform,Forecast,Direct,530,213,2429
+Feb,Europe,Data Platform,Forecast,Partner,503,194,2656
+Feb,Europe,Data Platform,Forecast,Marketplace,522,204,2580
+Feb,APAC,Cloud Suite,Actual,Direct,422,146,2797
+Feb,APAC,Cloud Suite,Actual,Partner,400,132,3059
+Feb,APAC,Cloud Suite,Actual,Marketplace,416,140,2971
+Feb,APAC,Cloud Suite,Plan,Direct,451,161,2880
+Feb,APAC,Cloud Suite,Plan,Partner,428,146,3150
+Feb,APAC,Cloud Suite,Plan,Marketplace,445,154,3060
+Feb,APAC,Cloud Suite,Forecast,Direct,442,160,2824
+Feb,APAC,Cloud Suite,Forecast,Partner,420,145,3089
+Feb,APAC,Cloud Suite,Forecast,Marketplace,436,153,3001
+Feb,APAC,Retail Analytics,Actual,Direct,363,118,3085
+Feb,APAC,Retail Analytics,Actual,Partner,345,107,3374
+Feb,APAC,Retail Analytics,Actual,Marketplace,358,113,3278
+Feb,APAC,Retail Analytics,Plan,Direct,389,131,3177
+Feb,APAC,Retail Analytics,Plan,Partner,369,118,3475
+Feb,APAC,Retail Analytics,Plan,Marketplace,383,125,3376
+Feb,APAC,Retail Analytics,Forecast,Direct,381,130,3116
+Feb,APAC,Retail Analytics,Forecast,Partner,362,118,3408
+Feb,APAC,Retail Analytics,Forecast,Marketplace,376,124,3310
+Feb,APAC,Supply Chain,Actual,Direct,339,107,3380
+Feb,APAC,Supply Chain,Actual,Partner,322,97,3697
+Feb,APAC,Supply Chain,Actual,Marketplace,334,102,3592
+Feb,APAC,Supply Chain,Plan,Direct,363,118,3482
+Feb,APAC,Supply Chain,Plan,Partner,344,107,3808
+Feb,APAC,Supply Chain,Plan,Marketplace,358,113,3699
+Feb,APAC,Supply Chain,Forecast,Direct,356,118,3414
+Feb,APAC,Supply Chain,Forecast,Partner,338,106,3734
+Feb,APAC,Supply Chain,Forecast,Marketplace,351,113,3628
+Feb,APAC,Data Platform,Actual,Direct,479,175,2794
+Feb,APAC,Data Platform,Actual,Partner,454,159,3056
+Feb,APAC,Data Platform,Actual,Marketplace,472,168,2969
+Feb,APAC,Data Platform,Plan,Direct,512,193,2878
+Feb,APAC,Data Platform,Plan,Partner,486,175,3148
+Feb,APAC,Data Platform,Plan,Marketplace,505,185,3058
+Feb,APAC,Data Platform,Forecast,Direct,502,191,2822
+Feb,APAC,Data Platform,Forecast,Partner,477,174,3087
+Feb,APAC,Data Platform,Forecast,Marketplace,495,184,2998
+Feb,Latin America,Cloud Suite,Actual,Direct,327,97,1830
+Feb,Latin America,Cloud Suite,Actual,Partner,310,87,2002
+Feb,Latin America,Cloud Suite,Actual,Marketplace,322,92,1945
+Feb,Latin America,Cloud Suite,Plan,Direct,350,107,1885
+Feb,Latin America,Cloud Suite,Plan,Partner,332,96,2062
+Feb,Latin America,Cloud Suite,Plan,Marketplace,345,102,2003
+Feb,Latin America,Cloud Suite,Forecast,Direct,343,107,1849
+Feb,Latin America,Cloud Suite,Forecast,Partner,326,96,2022
+Feb,Latin America,Cloud Suite,Forecast,Marketplace,338,102,1964
+Feb,Latin America,Retail Analytics,Actual,Direct,282,78,2019
+Feb,Latin America,Retail Analytics,Actual,Partner,268,70,2208
+Feb,Latin America,Retail Analytics,Actual,Marketplace,278,74,2145
+Feb,Latin America,Retail Analytics,Plan,Direct,301,86,2080
+Feb,Latin America,Retail Analytics,Plan,Partner,286,77,2275
+Feb,Latin America,Retail Analytics,Plan,Marketplace,297,82,2210
+Feb,Latin America,Retail Analytics,Forecast,Direct,296,86,2039
+Feb,Latin America,Retail Analytics,Forecast,Partner,281,77,2231
+Feb,Latin America,Retail Analytics,Forecast,Marketplace,291,82,2167
+Feb,Latin America,Supply Chain,Actual,Direct,263,70,2213
+Feb,Latin America,Supply Chain,Actual,Partner,250,63,2420
+Feb,Latin America,Supply Chain,Actual,Marketplace,259,66,2351
+Feb,Latin America,Supply Chain,Plan,Direct,281,78,2279
+Feb,Latin America,Supply Chain,Plan,Partner,267,69,2493
+Feb,Latin America,Supply Chain,Plan,Marketplace,277,74,2421
+Feb,Latin America,Supply Chain,Forecast,Direct,276,78,2235
+Feb,Latin America,Supply Chain,Forecast,Partner,262,69,2444
+Feb,Latin America,Supply Chain,Forecast,Marketplace,272,74,2374
+Feb,Latin America,Data Platform,Actual,Direct,371,117,1829
+Feb,Latin America,Data Platform,Actual,Partner,352,106,2000
+Feb,Latin America,Data Platform,Actual,Marketplace,366,112,1943
+Feb,Latin America,Data Platform,Plan,Direct,397,129,1884
+Feb,Latin America,Data Platform,Plan,Partner,377,117,2060
+Feb,Latin America,Data Platform,Plan,Marketplace,391,124,2001
+Feb,Latin America,Data Platform,Forecast,Direct,389,129,1847
+Feb,Latin America,Data Platform,Forecast,Partner,369,116,2020
+Feb,Latin America,Data Platform,Forecast,Marketplace,383,123,1963
+Mar,North America,Cloud Suite,Actual,Direct,556,222,2765
+Mar,North America,Cloud Suite,Actual,Partner,528,203,3024
+Mar,North America,Cloud Suite,Actual,Marketplace,549,214,2938
+Mar,North America,Cloud Suite,Plan,Direct,595,244,2848
+Mar,North America,Cloud Suite,Plan,Partner,565,223,3115
+Mar,North America,Cloud Suite,Plan,Marketplace,587,235,3026
+Mar,North America,Cloud Suite,Forecast,Direct,584,242,2792
+Mar,North America,Cloud Suite,Forecast,Partner,555,221,3054
+Mar,North America,Cloud Suite,Forecast,Marketplace,576,233,2967
+Mar,North America,Retail Analytics,Actual,Direct,480,182,3049
+Mar,North America,Retail Analytics,Actual,Partner,456,166,3335
+Mar,North America,Retail Analytics,Actual,Marketplace,473,175,3240
+Mar,North America,Retail Analytics,Plan,Direct,513,200,3141
+Mar,North America,Retail Analytics,Plan,Partner,488,183,3435
+Mar,North America,Retail Analytics,Plan,Marketplace,506,192,3337
+Mar,North America,Retail Analytics,Forecast,Direct,504,199,3080
+Mar,North America,Retail Analytics,Forecast,Partner,478,181,3369
+Mar,North America,Retail Analytics,Forecast,Marketplace,496,191,3272
+Mar,North America,Supply Chain,Actual,Direct,448,166,3341
+Mar,North America,Supply Chain,Actual,Partner,425,150,3654
+Mar,North America,Supply Chain,Actual,Marketplace,442,159,3550
+Mar,North America,Supply Chain,Plan,Direct,479,182,3441
+Mar,North America,Supply Chain,Plan,Partner,455,166,3764
+Mar,North America,Supply Chain,Plan,Marketplace,473,175,3656
+Mar,North America,Supply Chain,Forecast,Direct,470,181,3374
+Mar,North America,Supply Chain,Forecast,Partner,446,165,3691
+Mar,North America,Supply Chain,Forecast,Marketplace,463,174,3585
+Mar,North America,Data Platform,Actual,Direct,632,265,2761
+Mar,North America,Data Platform,Actual,Partner,600,242,3020
+Mar,North America,Data Platform,Actual,Marketplace,623,255,2934
+Mar,North America,Data Platform,Plan,Direct,677,291,2844
+Mar,North America,Data Platform,Plan,Partner,642,266,3111
+Mar,North America,Data Platform,Plan,Marketplace,667,280,3022
+Mar,North America,Data Platform,Forecast,Direct,664,289,2789
+Mar,North America,Data Platform,Forecast,Partner,630,264,3050
+Mar,North America,Data Platform,Forecast,Marketplace,654,278,2963
+Mar,Europe,Cloud Suite,Actual,Direct,475,176,2533
+Mar,Europe,Cloud Suite,Actual,Partner,451,160,2770
+Mar,Europe,Cloud Suite,Actual,Marketplace,468,168,2691
+Mar,Europe,Cloud Suite,Plan,Direct,508,193,2609
+Mar,Europe,Cloud Suite,Plan,Partner,482,175,2853
+Mar,Europe,Cloud Suite,Plan,Marketplace,501,185,2772
+Mar,Europe,Cloud Suite,Forecast,Direct,498,192,2558
+Mar,Europe,Cloud Suite,Forecast,Partner,473,175,2798
+Mar,Europe,Cloud Suite,Forecast,Marketplace,491,184,2718
+Mar,Europe,Retail Analytics,Actual,Direct,409,143,2794
+Mar,Europe,Retail Analytics,Actual,Partner,389,130,3056
+Mar,Europe,Retail Analytics,Actual,Marketplace,404,137,2968
+Mar,Europe,Retail Analytics,Plan,Direct,438,158,2877
+Mar,Europe,Retail Analytics,Plan,Partner,416,143,3147
+Mar,Europe,Retail Analytics,Plan,Marketplace,432,151,3057
+Mar,Europe,Retail Analytics,Forecast,Direct,430,157,2822
+Mar,Europe,Retail Analytics,Forecast,Partner,408,142,3086
+Mar,Europe,Retail Analytics,Forecast,Marketplace,423,150,2998
+Mar,Europe,Supply Chain,Actual,Direct,382,130,3061
+Mar,Europe,Supply Chain,Actual,Partner,363,118,3348
+Mar,Europe,Supply Chain,Actual,Marketplace,377,124,3252
+Mar,Europe,Supply Chain,Plan,Direct,409,143,3153
+Mar,Europe,Supply Chain,Plan,Partner,388,130,3448
+Mar,Europe,Supply Chain,Plan,Marketplace,403,137,3350
+Mar,Europe,Supply Chain,Forecast,Direct,401,142,3091
+Mar,Europe,Supply Chain,Forecast,Partner,381,129,3381
+Mar,Europe,Supply Chain,Forecast,Marketplace,395,136,3285
+Mar,Europe,Data Platform,Actual,Direct,539,210,2530
+Mar,Europe,Data Platform,Actual,Partner,512,191,2767
+Mar,Europe,Data Platform,Actual,Marketplace,532,202,2688
+Mar,Europe,Data Platform,Plan,Direct,577,231,2606
+Mar,Europe,Data Platform,Plan,Partner,548,210,2850
+Mar,Europe,Data Platform,Plan,Marketplace,569,222,2768
+Mar,Europe,Data Platform,Forecast,Direct,566,229,2555
+Mar,Europe,Data Platform,Forecast,Partner,537,209,2794
+Mar,Europe,Data Platform,Forecast,Marketplace,557,220,2715
+Mar,APAC,Cloud Suite,Actual,Direct,450,158,2943
+Mar,APAC,Cloud Suite,Actual,Partner,427,143,3219
+Mar,APAC,Cloud Suite,Actual,Marketplace,444,151,3127
+Mar,APAC,Cloud Suite,Plan,Direct,482,174,3031
+Mar,APAC,Cloud Suite,Plan,Partner,457,157,3316
+Mar,APAC,Cloud Suite,Plan,Marketplace,475,166,3221
+Mar,APAC,Cloud Suite,Forecast,Direct,472,172,2973
+Mar,APAC,Cloud Suite,Forecast,Partner,448,156,3251
+Mar,APAC,Cloud Suite,Forecast,Marketplace,466,165,3158
+Mar,APAC,Retail Analytics,Actual,Direct,388,128,3246
+Mar,APAC,Retail Analytics,Actual,Partner,368,116,3550
+Mar,APAC,Retail Analytics,Actual,Marketplace,383,123,3449
+Mar,APAC,Retail Analytics,Plan,Direct,415,141,3343
+Mar,APAC,Retail Analytics,Plan,Partner,394,128,3657
+Mar,APAC,Retail Analytics,Plan,Marketplace,409,135,3552
+Mar,APAC,Retail Analytics,Forecast,Direct,407,140,3279
+Mar,APAC,Retail Analytics,Forecast,Partner,386,127,3586
+Mar,APAC,Retail Analytics,Forecast,Marketplace,401,134,3483
+Mar,APAC,Supply Chain,Actual,Direct,362,116,3557
+Mar,APAC,Supply Chain,Actual,Partner,344,105,3890
+Mar,APAC,Supply Chain,Actual,Marketplace,357,111,3779
+Mar,APAC,Supply Chain,Plan,Direct,387,128,3663
+Mar,APAC,Supply Chain,Plan,Partner,368,116,4007
+Mar,APAC,Supply Chain,Plan,Marketplace,382,122,3892
+Mar,APAC,Supply Chain,Forecast,Direct,380,127,3592
+Mar,APAC,Supply Chain,Forecast,Partner,361,115,3929
+Mar,APAC,Supply Chain,Forecast,Marketplace,374,122,3817
+Mar,APAC,Data Platform,Actual,Direct,511,189,2939
+Mar,APAC,Data Platform,Actual,Partner,485,172,3215
+Mar,APAC,Data Platform,Actual,Marketplace,504,181,3123
+Mar,APAC,Data Platform,Plan,Direct,547,208,3028
+Mar,APAC,Data Platform,Plan,Partner,519,189,3311
+Mar,APAC,Data Platform,Plan,Marketplace,539,199,3217
+Mar,APAC,Data Platform,Forecast,Direct,536,206,2969
+Mar,APAC,Data Platform,Forecast,Partner,509,188,3247
+Mar,APAC,Data Platform,Forecast,Marketplace,528,198,3154
+Mar,Latin America,Cloud Suite,Actual,Direct,349,105,1926
+Mar,Latin America,Cloud Suite,Actual,Partner,331,94,2107
+Mar,Latin America,Cloud Suite,Actual,Marketplace,344,100,2047
+Mar,Latin America,Cloud Suite,Plan,Direct,373,116,1984
+Mar,Latin America,Cloud Suite,Plan,Partner,354,104,2170
+Mar,Latin America,Cloud Suite,Plan,Marketplace,368,110,2108
+Mar,Latin America,Cloud Suite,Forecast,Direct,366,115,1946
+Mar,Latin America,Cloud Suite,Forecast,Partner,348,104,2128
+Mar,Latin America,Cloud Suite,Forecast,Marketplace,361,110,2067
+Mar,Latin America,Retail Analytics,Actual,Direct,301,84,2125
+Mar,Latin America,Retail Analytics,Actual,Partner,286,76,2324
+Mar,Latin America,Retail Analytics,Actual,Marketplace,296,80,2258
+Mar,Latin America,Retail Analytics,Plan,Direct,322,93,2188
+Mar,Latin America,Retail Analytics,Plan,Partner,305,84,2394
+Mar,Latin America,Retail Analytics,Plan,Marketplace,317,89,2325
+Mar,Latin America,Retail Analytics,Forecast,Direct,316,93,2146
+Mar,Latin America,Retail Analytics,Forecast,Partner,299,83,2347
+Mar,Latin America,Retail Analytics,Forecast,Marketplace,311,89,2280
+Mar,Latin America,Supply Chain,Actual,Direct,281,76,2328
+Mar,Latin America,Supply Chain,Actual,Partner,266,68,2546
+Mar,Latin America,Supply Chain,Actual,Marketplace,277,72,2473
+Mar,Latin America,Supply Chain,Plan,Direct,300,84,2398
+Mar,Latin America,Supply Chain,Plan,Partner,285,75,2623
+Mar,Latin America,Supply Chain,Plan,Marketplace,296,80,2548
+Mar,Latin America,Supply Chain,Forecast,Direct,294,84,2351
+Mar,Latin America,Supply Chain,Forecast,Partner,279,75,2572
+Mar,Latin America,Supply Chain,Forecast,Marketplace,290,80,2498
+Mar,Latin America,Data Platform,Actual,Direct,396,127,1924
+Mar,Latin America,Data Platform,Actual,Partner,376,114,2104
+Mar,Latin America,Data Platform,Actual,Marketplace,390,121,2044
+Mar,Latin America,Data Platform,Plan,Direct,424,140,1982
+Mar,Latin America,Data Platform,Plan,Partner,402,126,2167
+Mar,Latin America,Data Platform,Plan,Marketplace,417,133,2106
+Mar,Latin America,Data Platform,Forecast,Direct,415,139,1943
+Mar,Latin America,Data Platform,Forecast,Partner,394,126,2125
+Mar,Latin America,Data Platform,Forecast,Marketplace,409,133,2065
+Apr,North America,Cloud Suite,Actual,Direct,587,237,2793
+Apr,North America,Cloud Suite,Actual,Partner,558,217,3054
+Apr,North America,Cloud Suite,Actual,Marketplace,579,228,2967
+Apr,North America,Cloud Suite,Plan,Direct,628,260,2876
+Apr,North America,Cloud Suite,Plan,Partner,597,238,3146
+Apr,North America,Cloud Suite,Plan,Marketplace,620,250,3056
+Apr,North America,Cloud Suite,Forecast,Direct,616,258,2821
+Apr,North America,Cloud Suite,Forecast,Partner,585,236,3085
+Apr,North America,Cloud Suite,Forecast,Marketplace,608,249,2997
+Apr,North America,Retail Analytics,Actual,Direct,506,194,3081
+Apr,North America,Retail Analytics,Actual,Partner,481,177,3370
+Apr,North America,Retail Analytics,Actual,Marketplace,499,187,3274
+Apr,North America,Retail Analytics,Plan,Direct,542,214,3173
+Apr,North America,Retail Analytics,Plan,Partner,514,194,3471
+Apr,North America,Retail Analytics,Plan,Marketplace,534,205,3372
+Apr,North America,Retail Analytics,Forecast,Direct,531,212,3112
+Apr,North America,Retail Analytics,Forecast,Partner,504,193,3404
+Apr,North America,Retail Analytics,Forecast,Marketplace,524,204,3306
+Apr,North America,Supply Chain,Actual,Direct,473,177,3377
+Apr,North America,Supply Chain,Actual,Partner,449,161,3693
+Apr,North America,Supply Chain,Actual,Marketplace,466,170,3588
+Apr,North America,Supply Chain,Plan,Direct,506,194,3478
+Apr,North America,Supply Chain,Plan,Partner,480,177,3804
+Apr,North America,Supply Chain,Plan,Marketplace,498,186,3695
+Apr,North America,Supply Chain,Forecast,Direct,496,193,3410
+Apr,North America,Supply Chain,Forecast,Partner,471,176,3730
+Apr,North America,Supply Chain,Forecast,Marketplace,489,185,3624
+Apr,North America,Data Platform,Actual,Direct,667,283,2791
+Apr,North America,Data Platform,Actual,Partner,633,258,3053
+Apr,North America,Data Platform,Actual,Marketplace,658,272,2966
+Apr,North America,Data Platform,Plan,Direct,714,310,2875
+Apr,North America,Data Platform,Plan,Partner,678,283,3145
+Apr,North America,Data Platform,Plan,Marketplace,703,298,3055
+Apr,North America,Data Platform,Forecast,Direct,700,307,2819
+Apr,North America,Data Platform,Forecast,Partner,664,281,3084
+Apr,North America,Data Platform,Forecast,Marketplace,690,296,2996
+Apr,Europe,Cloud Suite,Actual,Direct,501,187,2558
+Apr,Europe,Cloud Suite,Actual,Partner,476,170,2798
+Apr,Europe,Cloud Suite,Actual,Marketplace,494,180,2718
+Apr,Europe,Cloud Suite,Plan,Direct,536,206,2635
+Apr,Europe,Cloud Suite,Plan,Partner,509,187,2882
+Apr,Europe,Cloud Suite,Plan,Marketplace,528,197,2800
+Apr,Europe,Cloud Suite,Forecast,Direct,526,205,2584
+Apr,Europe,Cloud Suite,Forecast,Partner,499,186,2826
+Apr,Europe,Cloud Suite,Forecast,Marketplace,518,196,2746
+Apr,Europe,Retail Analytics,Actual,Direct,432,153,2823
+Apr,Europe,Retail Analytics,Actual,Partner,410,139,3087
+Apr,Europe,Retail Analytics,Actual,Marketplace,426,147,2999
+Apr,Europe,Retail Analytics,Plan,Direct,462,168,2907
+Apr,Europe,Retail Analytics,Plan,Partner,439,153,3180
+Apr,Europe,Retail Analytics,Plan,Marketplace,455,161,3089
+Apr,Europe,Retail Analytics,Forecast,Direct,453,167,2851
+Apr,Europe,Retail Analytics,Forecast,Partner,430,152,3118
+Apr,Europe,Retail Analytics,Forecast,Marketplace,447,160,3029
+Apr,Europe,Supply Chain,Actual,Direct,403,139,3094
+Apr,Europe,Supply Chain,Actual,Partner,383,126,3384
+Apr,Europe,Supply Chain,Actual,Marketplace,397,133,3287
+Apr,Europe,Supply Chain,Plan,Direct,431,153,3186
+Apr,Europe,Supply Chain,Plan,Partner,409,138,3485
+Apr,Europe,Supply Chain,Plan,Marketplace,425,146,3385
+Apr,Europe,Supply Chain,Forecast,Direct,423,152,3124
+Apr,Europe,Supply Chain,Forecast,Partner,401,138,3417
+Apr,Europe,Supply Chain,Forecast,Marketplace,417,146,3320
+Apr,Europe,Data Platform,Actual,Direct,569,224,2557
+Apr,Europe,Data Platform,Actual,Partner,540,204,2797
+Apr,Europe,Data Platform,Actual,Marketplace,561,215,2717
+Apr,Europe,Data Platform,Plan,Direct,609,246,2634
+Apr,Europe,Data Platform,Plan,Partner,578,224,2881
+Apr,Europe,Data Platform,Plan,Marketplace,600,236,2799
+Apr,Europe,Data Platform,Forecast,Direct,597,244,2583
+Apr,Europe,Data Platform,Forecast,Partner,566,222,2825
+Apr,Europe,Data Platform,Forecast,Marketplace,588,235,2744
+Apr,APAC,Cloud Suite,Actual,Direct,475,168,2973
+Apr,APAC,Cloud Suite,Actual,Partner,451,152,3252
+Apr,APAC,Cloud Suite,Actual,Marketplace,468,161,3159
+Apr,APAC,Cloud Suite,Plan,Direct,508,185,3062
+Apr,APAC,Cloud Suite,Plan,Partner,482,168,3349
+Apr,APAC,Cloud Suite,Plan,Marketplace,501,177,3253
+Apr,APAC,Cloud Suite,Forecast,Direct,498,184,3003
+Apr,APAC,Cloud Suite,Forecast,Partner,473,167,3284
+Apr,APAC,Cloud Suite,Forecast,Marketplace,491,176,3190
+Apr,APAC,Retail Analytics,Actual,Direct,409,137,3280
+Apr,APAC,Retail Analytics,Actual,Partner,389,124,3587
+Apr,APAC,Retail Analytics,Actual,Marketplace,403,131,3485
+Apr,APAC,Retail Analytics,Plan,Direct,438,151,3378
+Apr,APAC,Retail Analytics,Plan,Partner,416,136,3695
+Apr,APAC,Retail Analytics,Plan,Marketplace,431,144,3589
+Apr,APAC,Retail Analytics,Forecast,Direct,429,150,3313
+Apr,APAC,Retail Analytics,Forecast,Partner,408,136,3623
+Apr,APAC,Retail Analytics,Forecast,Marketplace,423,143,3520
+Apr,APAC,Supply Chain,Actual,Direct,382,124,3595
+Apr,APAC,Supply Chain,Actual,Partner,363,112,3932
+Apr,APAC,Supply Chain,Actual,Marketplace,376,118,3819
+Apr,APAC,Supply Chain,Plan,Direct,409,137,3702
+Apr,APAC,Supply Chain,Plan,Partner,388,123,4050
+Apr,APAC,Supply Chain,Plan,Marketplace,403,131,3934
+Apr,APAC,Supply Chain,Forecast,Direct,401,136,3631
+Apr,APAC,Supply Chain,Forecast,Partner,380,123,3971
+Apr,APAC,Supply Chain,Forecast,Marketplace,395,130,3857
+Apr,APAC,Data Platform,Actual,Direct,539,202,2972
+Apr,APAC,Data Platform,Actual,Partner,512,183,3250
+Apr,APAC,Data Platform,Actual,Marketplace,531,193,3157
+Apr,APAC,Data Platform,Plan,Direct,576,221,3061
+Apr,APAC,Data Platform,Plan,Partner,547,201,3348
+Apr,APAC,Data Platform,Plan,Marketplace,568,212,3252
+Apr,APAC,Data Platform,Forecast,Direct,565,220,3001
+Apr,APAC,Data Platform,Forecast,Partner,536,200,3283
+Apr,APAC,Data Platform,Forecast,Marketplace,557,211,3189
+Apr,Latin America,Cloud Suite,Actual,Direct,368,112,1946
+Apr,Latin America,Cloud Suite,Actual,Partner,350,101,2128
+Apr,Latin America,Cloud Suite,Actual,Marketplace,363,107,2067
+Apr,Latin America,Cloud Suite,Plan,Direct,394,124,2004
+Apr,Latin America,Cloud Suite,Plan,Partner,374,111,2192
+Apr,Latin America,Cloud Suite,Plan,Marketplace,388,118,2130
+Apr,Latin America,Cloud Suite,Forecast,Direct,386,123,1965
+Apr,Latin America,Cloud Suite,Forecast,Partner,366,111,2150
+Apr,Latin America,Cloud Suite,Forecast,Marketplace,380,117,2088
+Apr,Latin America,Retail Analytics,Actual,Direct,317,90,2147
+Apr,Latin America,Retail Analytics,Actual,Partner,301,81,2348
+Apr,Latin America,Retail Analytics,Actual,Marketplace,313,86,2281
+Apr,Latin America,Retail Analytics,Plan,Direct,339,100,2211
+Apr,Latin America,Retail Analytics,Plan,Partner,322,90,2419
+Apr,Latin America,Retail Analytics,Plan,Marketplace,334,95,2349
+Apr,Latin America,Retail Analytics,Forecast,Direct,333,100,2168
+Apr,Latin America,Retail Analytics,Forecast,Partner,316,89,2372
+Apr,Latin America,Retail Analytics,Forecast,Marketplace,328,95,2304
+Apr,Latin America,Supply Chain,Actual,Direct,296,81,2353
+Apr,Latin America,Supply Chain,Actual,Partner,281,72,2573
+Apr,Latin America,Supply Chain,Actual,Marketplace,292,77,2500
+Apr,Latin America,Supply Chain,Plan,Direct,317,90,2423
+Apr,Latin America,Supply Chain,Plan,Partner,300,80,2651
+Apr,Latin America,Supply Chain,Plan,Marketplace,312,85,2575
+Apr,Latin America,Supply Chain,Forecast,Direct,310,90,2376
+Apr,Latin America,Supply Chain,Forecast,Partner,294,80,2599
+Apr,Latin America,Supply Chain,Forecast,Marketplace,306,85,2525
+Apr,Latin America,Data Platform,Actual,Direct,418,135,1945
+Apr,Latin America,Data Platform,Actual,Partner,396,122,2127
+Apr,Latin America,Data Platform,Actual,Marketplace,411,129,2067
+Apr,Latin America,Data Platform,Plan,Direct,447,149,2003
+Apr,Latin America,Data Platform,Plan,Partner,424,135,2191
+Apr,Latin America,Data Platform,Plan,Marketplace,440,143,2129
+Apr,Latin America,Data Platform,Forecast,Direct,438,148,1964
+Apr,Latin America,Data Platform,Forecast,Partner,415,134,2149
+Apr,Latin America,Data Platform,Forecast,Marketplace,431,142,2087
+May,North America,Cloud Suite,Actual,Direct,584,238,2904
+May,North America,Cloud Suite,Actual,Partner,554,217,3176
+May,North America,Cloud Suite,Actual,Marketplace,576,229,3085
+May,North America,Cloud Suite,Plan,Direct,625,261,2991
+May,North America,Cloud Suite,Plan,Partner,594,239,3271
+May,North America,Cloud Suite,Plan,Marketplace,617,252,3178
+May,North America,Cloud Suite,Forecast,Direct,613,259,2933
+May,North America,Cloud Suite,Forecast,Partner,582,237,3208
+May,North America,Cloud Suite,Forecast,Marketplace,605,250,3116
+May,North America,Retail Analytics,Actual,Direct,504,196,3203
+May,North America,Retail Analytics,Actual,Partner,478,178,3503
+May,North America,Retail Analytics,Actual,Marketplace,497,188,3403
+May,North America,Retail Analytics,Plan,Direct,539,215,3299
+May,North America,Retail Analytics,Plan,Partner,512,196,3608
+May,North America,Retail Analytics,Plan,Marketplace,532,206,3505
+May,North America,Retail Analytics,Forecast,Direct,529,213,3235
+May,North America,Retail Analytics,Forecast,Partner,502,194,3538
+May,North America,Retail Analytics,Forecast,Marketplace,522,205,3437
+May,North America,Supply Chain,Actual,Direct,470,178,3510
+May,North America,Supply Chain,Actual,Partner,447,162,3839
+May,North America,Supply Chain,Actual,Marketplace,464,171,3729
+May,North America,Supply Chain,Plan,Direct,503,195,3615
+May,North America,Supply Chain,Plan,Partner,478,178,3954
+May,North America,Supply Chain,Plan,Marketplace,497,188,3841
+May,North America,Supply Chain,Forecast,Direct,494,194,3545
+May,North America,Supply Chain,Forecast,Partner,469,177,3877
+May,North America,Supply Chain,Forecast,Marketplace,487,187,3766
+May,North America,Data Platform,Actual,Direct,664,284,2901
+May,North America,Data Platform,Actual,Partner,631,260,3173
+May,North America,Data Platform,Actual,Marketplace,655,274,3082
+May,North America,Data Platform,Plan,Direct,711,311,2988
+May,North America,Data Platform,Plan,Partner,675,285,3268
+May,North America,Data Platform,Plan,Marketplace,701,300,3175
+May,North America,Data Platform,Forecast,Direct,697,307,2930
+May,North America,Data Platform,Forecast,Partner,662,283,3205
+May,North America,Data Platform,Forecast,Marketplace,688,298,3113
+May,Europe,Cloud Suite,Actual,Direct,499,189,2660
+May,Europe,Cloud Suite,Actual,Partner,473,171,2909
+May,Europe,Cloud Suite,Actual,Marketplace,492,181,2826
+May,Europe,Cloud Suite,Plan,Direct,534,207,2740
+May,Europe,Cloud Suite,Plan,Partner,507,189,2997
+May,Europe,Cloud Suite,Plan,Marketplace,526,199,2911
+May,Europe,Cloud Suite,Forecast,Direct,524,206,2687
+May,Europe,Cloud Suite,Forecast,Partner,497,187,2939
+May,Europe,Cloud Suite,Forecast,Marketplace,516,198,2855
+May,Europe,Retail Analytics,Actual,Direct,430,154,2934
+May,Europe,Retail Analytics,Actual,Partner,408,140,3209
+May,Europe,Retail Analytics,Actual,Marketplace,424,148,3118
+May,Europe,Retail Analytics,Plan,Direct,460,169,3022
+May,Europe,Retail Analytics,Plan,Partner,437,154,3306
+May,Europe,Retail Analytics,Plan,Marketplace,454,163,3211
+May,Europe,Retail Analytics,Forecast,Direct,451,168,2964
+May,Europe,Retail Analytics,Forecast,Partner,429,153,3241
+May,Europe,Retail Analytics,Forecast,Marketplace,445,162,3149
+May,Europe,Supply Chain,Actual,Direct,402,140,3215
+May,Europe,Supply Chain,Actual,Partner,381,126,3517
+May,Europe,Supply Chain,Actual,Marketplace,396,134,3416
+May,Europe,Supply Chain,Plan,Direct,430,154,3312
+May,Europe,Supply Chain,Plan,Partner,408,140,3622
+May,Europe,Supply Chain,Plan,Marketplace,424,148,3519
+May,Europe,Supply Chain,Forecast,Direct,421,153,3248
+May,Europe,Supply Chain,Forecast,Partner,400,139,3552
+May,Europe,Supply Chain,Forecast,Marketplace,415,146,3451
+May,Europe,Data Platform,Actual,Direct,567,226,2658
+May,Europe,Data Platform,Actual,Partner,538,206,2907
+May,Europe,Data Platform,Actual,Marketplace,559,217,2824
+May,Europe,Data Platform,Plan,Direct,607,248,2737
+May,Europe,Data Platform,Plan,Partner,576,226,2994
+May,Europe,Data Platform,Plan,Marketplace,598,238,2909
+May,Europe,Data Platform,Forecast,Direct,595,246,2684
+May,Europe,Data Platform,Forecast,Partner,565,224,2936
+May,Europe,Data Platform,Forecast,Marketplace,586,236,2852
+May,APAC,Cloud Suite,Actual,Direct,473,169,3091
+May,APAC,Cloud Suite,Actual,Partner,449,154,3381
+May,APAC,Cloud Suite,Actual,Marketplace,466,162,3284
+May,APAC,Cloud Suite,Plan,Direct,506,186,3184
+May,APAC,Cloud Suite,Plan,Partner,481,169,3482
+May,APAC,Cloud Suite,Plan,Marketplace,499,179,3383
+May,APAC,Cloud Suite,Forecast,Direct,497,185,3122
+May,APAC,Cloud Suite,Forecast,Partner,471,168,3414
+May,APAC,Cloud Suite,Forecast,Marketplace,490,178,3317
+May,APAC,Retail Analytics,Actual,Direct,408,138,3410
+May,APAC,Retail Analytics,Actual,Partner,387,125,3729
+May,APAC,Retail Analytics,Actual,Marketplace,402,132,3623
+May,APAC,Retail Analytics,Plan,Direct,436,152,3512
+May,APAC,Retail Analytics,Plan,Partner,414,137,3841
+May,APAC,Retail Analytics,Plan,Marketplace,430,145,3731
+May,APAC,Retail Analytics,Forecast,Direct,428,151,3444
+May,APAC,Retail Analytics,Forecast,Partner,406,137,3766
+May,APAC,Retail Analytics,Forecast,Marketplace,422,145,3659
+May,APAC,Supply Chain,Actual,Direct,381,125,3736
+May,APAC,Supply Chain,Actual,Partner,362,113,4086
+May,APAC,Supply Chain,Actual,Marketplace,375,119,3970
+May,APAC,Supply Chain,Plan,Direct,407,138,3848
+May,APAC,Supply Chain,Plan,Partner,387,125,4209
+May,APAC,Supply Chain,Plan,Marketplace,402,132,4089
+May,APAC,Supply Chain,Forecast,Direct,400,137,3774
+May,APAC,Supply Chain,Forecast,Partner,379,124,4127
+May,APAC,Supply Chain,Forecast,Marketplace,394,131,4009
+May,APAC,Data Platform,Actual,Direct,538,203,3088
+May,APAC,Data Platform,Actual,Partner,510,185,3378
+May,APAC,Data Platform,Actual,Marketplace,530,195,3281
+May,APAC,Data Platform,Plan,Direct,575,223,3181
+May,APAC,Data Platform,Plan,Partner,546,203,3479
+May,APAC,Data Platform,Plan,Marketplace,567,214,3380
+May,APAC,Data Platform,Forecast,Direct,564,222,3119
+May,APAC,Data Platform,Forecast,Partner,535,202,3412
+May,APAC,Data Platform,Forecast,Marketplace,556,213,3314
+May,Latin America,Cloud Suite,Actual,Direct,367,113,2023
+May,Latin America,Cloud Suite,Actual,Partner,348,102,2213
+May,Latin America,Cloud Suite,Actual,Marketplace,362,108,2150
+May,Latin America,Cloud Suite,Plan,Direct,393,125,2084
+May,Latin America,Cloud Suite,Plan,Partner,373,113,2279
+May,Latin America,Cloud Suite,Plan,Marketplace,387,119,2214
+May,Latin America,Cloud Suite,Forecast,Direct,385,124,2043
+May,Latin America,Cloud Suite,Forecast,Partner,366,112,2235
+May,Latin America,Cloud Suite,Forecast,Marketplace,380,119,2171
+May,Latin America,Retail Analytics,Actual,Direct,316,91,2232
+May,Latin America,Retail Analytics,Actual,Partner,300,82,2441
+May,Latin America,Retail Analytics,Actual,Marketplace,312,87,2371
+May,Latin America,Retail Analytics,Plan,Direct,338,101,2299
+May,Latin America,Retail Analytics,Plan,Partner,321,91,2514
+May,Latin America,Retail Analytics,Plan,Marketplace,334,96,2442
+May,Latin America,Retail Analytics,Forecast,Direct,332,101,2254
+May,Latin America,Retail Analytics,Forecast,Partner,315,90,2465
+May,Latin America,Retail Analytics,Forecast,Marketplace,327,96,2395
+May,Latin America,Supply Chain,Actual,Direct,295,82,2446
+May,Latin America,Supply Chain,Actual,Partner,280,73,2675
+May,Latin America,Supply Chain,Actual,Marketplace,291,78,2598
+May,Latin America,Supply Chain,Plan,Direct,316,91,2519
+May,Latin America,Supply Chain,Plan,Partner,300,82,2755
+May,Latin America,Supply Chain,Plan,Marketplace,311,86,2676
+May,Latin America,Supply Chain,Forecast,Direct,310,91,2470
+May,Latin America,Supply Chain,Forecast,Partner,294,81,2702
+May,Latin America,Supply Chain,Forecast,Marketplace,305,86,2624
+May,Latin America,Data Platform,Actual,Direct,417,137,2021
+May,Latin America,Data Platform,Actual,Partner,396,124,2211
+May,Latin America,Data Platform,Actual,Marketplace,411,131,2148
+May,Latin America,Data Platform,Plan,Direct,446,151,2082
+May,Latin America,Data Platform,Plan,Partner,423,136,2277
+May,Latin America,Data Platform,Plan,Marketplace,439,144,2212
+May,Latin America,Data Platform,Forecast,Direct,437,150,2042
+May,Latin America,Data Platform,Forecast,Partner,415,136,2233
+May,Latin America,Data Platform,Forecast,Marketplace,431,144,2169
+Jun,North America,Cloud Suite,Actual,Direct,615,241,3016
+Jun,North America,Cloud Suite,Actual,Partner,584,220,3299
+Jun,North America,Cloud Suite,Actual,Marketplace,606,231,3205
+Jun,North America,Cloud Suite,Plan,Direct,658,265,3107
+Jun,North America,Cloud Suite,Plan,Partner,625,241,3398
+Jun,North America,Cloud Suite,Plan,Marketplace,649,254,3301
+Jun,North America,Cloud Suite,Forecast,Direct,646,263,3046
+Jun,North America,Cloud Suite,Forecast,Partner,613,240,3332
+Jun,North America,Cloud Suite,Forecast,Marketplace,637,253,3237
+Jun,North America,Retail Analytics,Actual,Direct,530,197,3327
+Jun,North America,Retail Analytics,Actual,Partner,503,179,3638
+Jun,North America,Retail Analytics,Actual,Marketplace,523,189,3534
+Jun,North America,Retail Analytics,Plan,Direct,567,217,3426
+Jun,North America,Retail Analytics,Plan,Partner,539,197,3748
+Jun,North America,Retail Analytics,Plan,Marketplace,560,208,3641
+Jun,North America,Retail Analytics,Forecast,Direct,557,216,3360
+Jun,North America,Retail Analytics,Forecast,Partner,529,196,3675
+Jun,North America,Retail Analytics,Forecast,Marketplace,549,207,3570
+Jun,North America,Supply Chain,Actual,Direct,495,179,3645
+Jun,North America,Supply Chain,Actual,Partner,470,163,3986
+Jun,North America,Supply Chain,Actual,Marketplace,488,172,3873
+Jun,North America,Supply Chain,Plan,Direct,530,197,3754
+Jun,North America,Supply Chain,Plan,Partner,503,179,4106
+Jun,North America,Supply Chain,Plan,Marketplace,522,189,3989
+Jun,North America,Supply Chain,Forecast,Direct,520,196,3681
+Jun,North America,Supply Chain,Forecast,Partner,494,178,4026
+Jun,North America,Supply Chain,Forecast,Marketplace,512,188,3911
+Jun,North America,Data Platform,Actual,Direct,699,288,3012
+Jun,North America,Data Platform,Actual,Partner,664,263,3295
+Jun,North America,Data Platform,Actual,Marketplace,689,277,3201
+Jun,North America,Data Platform,Plan,Direct,748,316,3103
+Jun,North America,Data Platform,Plan,Partner,710,288,3393
+Jun,North America,Data Platform,Plan,Marketplace,737,304,3297
+Jun,North America,Data Platform,Forecast,Direct,734,313,3042
+Jun,North America,Data Platform,Forecast,Partner,697,286,3328
+Jun,North America,Data Platform,Forecast,Marketplace,723,301,3233
+Jun,Europe,Cloud Suite,Actual,Direct,525,190,2763
+Jun,Europe,Cloud Suite,Actual,Partner,498,172,3022
+Jun,Europe,Cloud Suite,Actual,Marketplace,517,182,2936
+Jun,Europe,Cloud Suite,Plan,Direct,562,209,2846
+Jun,Europe,Cloud Suite,Plan,Partner,533,190,3113
+Jun,Europe,Cloud Suite,Plan,Marketplace,554,201,3024
+Jun,Europe,Cloud Suite,Forecast,Direct,551,208,2791
+Jun,Europe,Cloud Suite,Forecast,Partner,523,189,3052
+Jun,Europe,Cloud Suite,Forecast,Marketplace,543,199,2965
+Jun,Europe,Retail Analytics,Actual,Direct,453,155,3048
+Jun,Europe,Retail Analytics,Actual,Partner,430,140,3333
+Jun,Europe,Retail Analytics,Actual,Marketplace,446,148,3238
+Jun,Europe,Retail Analytics,Plan,Direct,484,170,3139
+Jun,Europe,Retail Analytics,Plan,Partner,460,155,3433
+Jun,Europe,Retail Analytics,Plan,Marketplace,477,163,3335
+Jun,Europe,Retail Analytics,Forecast,Direct,475,170,3078
+Jun,Europe,Retail Analytics,Forecast,Partner,451,154,3367
+Jun,Europe,Retail Analytics,Forecast,Marketplace,468,162,3270
+Jun,Europe,Supply Chain,Actual,Direct,422,140,3339
+Jun,Europe,Supply Chain,Actual,Partner,401,127,3652
+Jun,Europe,Supply Chain,Actual,Marketplace,417,134,3548
+Jun,Europe,Supply Chain,Plan,Direct,452,155,3439
+Jun,Europe,Supply Chain,Plan,Partner,429,140,3762
+Jun,Europe,Supply Chain,Plan,Marketplace,446,148,3654
+Jun,Europe,Supply Chain,Forecast,Direct,443,154,3372
+Jun,Europe,Supply Chain,Forecast,Partner,421,139,3689
+Jun,Europe,Supply Chain,Forecast,Marketplace,437,147,3583
+Jun,Europe,Data Platform,Actual,Direct,596,228,2760
+Jun,Europe,Data Platform,Actual,Partner,566,207,3018
+Jun,Europe,Data Platform,Actual,Marketplace,588,219,2932
+Jun,Europe,Data Platform,Plan,Direct,638,250,2842
+Jun,Europe,Data Platform,Plan,Partner,606,228,3109
+Jun,Europe,Data Platform,Plan,Marketplace,629,240,3020
+Jun,Europe,Data Platform,Forecast,Direct,626,249,2787
+Jun,Europe,Data Platform,Forecast,Partner,594,226,3048
+Jun,Europe,Data Platform,Forecast,Marketplace,617,239,2961
+Jun,APAC,Cloud Suite,Actual,Direct,498,170,3211
+Jun,APAC,Cloud Suite,Actual,Partner,473,154,3512
+Jun,APAC,Cloud Suite,Actual,Marketplace,491,163,3411
+Jun,APAC,Cloud Suite,Plan,Direct,533,188,3307
+Jun,APAC,Cloud Suite,Plan,Partner,506,170,3617
+Jun,APAC,Cloud Suite,Plan,Marketplace,525,180,3514
+Jun,APAC,Cloud Suite,Forecast,Direct,522,186,3243
+Jun,APAC,Cloud Suite,Forecast,Partner,496,169,3547
+Jun,APAC,Cloud Suite,Forecast,Marketplace,515,179,3445
+Jun,APAC,Retail Analytics,Actual,Direct,429,138,3541
+Jun,APAC,Retail Analytics,Actual,Partner,407,125,3873
+Jun,APAC,Retail Analytics,Actual,Marketplace,423,132,3763
+Jun,APAC,Retail Analytics,Plan,Direct,459,152,3647
+Jun,APAC,Retail Analytics,Plan,Partner,436,138,3989
+Jun,APAC,Retail Analytics,Plan,Marketplace,453,146,3875
+Jun,APAC,Retail Analytics,Forecast,Direct,450,152,3577
+Jun,APAC,Retail Analytics,Forecast,Partner,427,137,3912
+Jun,APAC,Retail Analytics,Forecast,Marketplace,444,145,3800
+Jun,APAC,Supply Chain,Actual,Direct,401,125,3880
+Jun,APAC,Supply Chain,Actual,Partner,380,112,4244
+Jun,APAC,Supply Chain,Actual,Marketplace,395,119,4122
+Jun,APAC,Supply Chain,Plan,Direct,429,138,3996
+Jun,APAC,Supply Chain,Plan,Partner,407,125,4371
+Jun,APAC,Supply Chain,Plan,Marketplace,422,132,4246
+Jun,APAC,Supply Chain,Forecast,Direct,420,137,3919
+Jun,APAC,Supply Chain,Forecast,Partner,399,124,4286
+Jun,APAC,Supply Chain,Forecast,Marketplace,414,131,4164
+Jun,APAC,Data Platform,Actual,Direct,565,205,3207
+Jun,APAC,Data Platform,Actual,Partner,537,186,3507
+Jun,APAC,Data Platform,Actual,Marketplace,557,196,3407
+Jun,APAC,Data Platform,Plan,Direct,605,225,3303
+Jun,APAC,Data Platform,Plan,Partner,574,204,3612
+Jun,APAC,Data Platform,Plan,Marketplace,596,216,3509
+Jun,APAC,Data Platform,Forecast,Direct,593,224,3239
+Jun,APAC,Data Platform,Forecast,Partner,563,203,3542
+Jun,APAC,Data Platform,Forecast,Marketplace,584,214,3441
+Jun,Latin America,Cloud Suite,Actual,Direct,386,113,2102
+Jun,Latin America,Cloud Suite,Actual,Partner,367,101,2299
+Jun,Latin America,Cloud Suite,Actual,Marketplace,381,107,2233
+Jun,Latin America,Cloud Suite,Plan,Direct,413,125,2165
+Jun,Latin America,Cloud Suite,Plan,Partner,392,112,2368
+Jun,Latin America,Cloud Suite,Plan,Marketplace,407,119,2300
+Jun,Latin America,Cloud Suite,Forecast,Direct,405,124,2123
+Jun,Latin America,Cloud Suite,Forecast,Partner,384,112,2322
+Jun,Latin America,Cloud Suite,Forecast,Marketplace,399,119,2255
+Jun,Latin America,Retail Analytics,Actual,Direct,333,91,2318
+Jun,Latin America,Retail Analytics,Actual,Partner,316,81,2535
+Jun,Latin America,Retail Analytics,Actual,Marketplace,328,86,2463
+Jun,Latin America,Retail Analytics,Plan,Direct,356,100,2387
+Jun,Latin America,Retail Analytics,Plan,Partner,338,90,2611
+Jun,Latin America,Retail Analytics,Plan,Marketplace,351,95,2537
+Jun,Latin America,Retail Analytics,Forecast,Direct,349,100,2341
+Jun,Latin America,Retail Analytics,Forecast,Partner,331,90,2561
+Jun,Latin America,Retail Analytics,Forecast,Marketplace,344,95,2487
+Jun,Latin America,Supply Chain,Actual,Direct,311,81,2540
+Jun,Latin America,Supply Chain,Actual,Partner,295,73,2778
+Jun,Latin America,Supply Chain,Actual,Marketplace,306,77,2698
+Jun,Latin America,Supply Chain,Plan,Direct,332,90,2616
+Jun,Latin America,Supply Chain,Plan,Partner,315,81,2861
+Jun,Latin America,Supply Chain,Plan,Marketplace,327,86,2779
+Jun,Latin America,Supply Chain,Forecast,Direct,326,90,2565
+Jun,Latin America,Supply Chain,Forecast,Partner,309,81,2805
+Jun,Latin America,Supply Chain,Forecast,Marketplace,321,86,2725
+Jun,Latin America,Data Platform,Actual,Direct,438,137,2099
+Jun,Latin America,Data Platform,Actual,Partner,416,123,2296
+Jun,Latin America,Data Platform,Actual,Marketplace,432,130,2230
+Jun,Latin America,Data Platform,Plan,Direct,469,151,2162
+Jun,Latin America,Data Platform,Plan,Partner,445,136,2364
+Jun,Latin America,Data Platform,Plan,Marketplace,462,144,2297
+Jun,Latin America,Data Platform,Forecast,Direct,460,150,2120
+Jun,Latin America,Data Platform,Forecast,Partner,436,136,2319
+Jun,Latin America,Data Platform,Forecast,Marketplace,453,144,2252
+Jul,North America,Cloud Suite,Actual,Direct,646,256,3039
+Jul,North America,Cloud Suite,Actual,Partner,614,233,3324
+Jul,North America,Cloud Suite,Actual,Marketplace,637,246,3229
+Jul,North America,Cloud Suite,Plan,Direct,692,281,3130
+Jul,North America,Cloud Suite,Plan,Partner,657,256,3424
+Jul,North America,Cloud Suite,Plan,Marketplace,682,270,3326
+Jul,North America,Cloud Suite,Forecast,Direct,679,279,3069
+Jul,North America,Cloud Suite,Forecast,Partner,644,254,3357
+Jul,North America,Cloud Suite,Forecast,Marketplace,669,268,3261
+Jul,North America,Retail Analytics,Actual,Direct,557,209,3353
+Jul,North America,Retail Analytics,Actual,Partner,529,190,3667
+Jul,North America,Retail Analytics,Actual,Marketplace,550,201,3562
+Jul,North America,Retail Analytics,Plan,Direct,596,230,3453
+Jul,North America,Retail Analytics,Plan,Partner,566,209,3777
+Jul,North America,Retail Analytics,Plan,Marketplace,588,221,3669
+Jul,North America,Retail Analytics,Forecast,Direct,585,229,3386
+Jul,North America,Retail Analytics,Forecast,Partner,555,208,3704
+Jul,North America,Retail Analytics,Forecast,Marketplace,577,220,3598
+Jul,North America,Supply Chain,Actual,Direct,520,190,3675
+Jul,North America,Supply Chain,Actual,Partner,494,173,4019
+Jul,North America,Supply Chain,Actual,Marketplace,513,183,3904
+Jul,North America,Supply Chain,Plan,Direct,557,209,3785
+Jul,North America,Supply Chain,Plan,Partner,529,190,4140
+Jul,North America,Supply Chain,Plan,Marketplace,549,201,4021
+Jul,North America,Supply Chain,Forecast,Direct,546,208,3711
+Jul,North America,Supply Chain,Forecast,Partner,518,189,4059
+Jul,North America,Supply Chain,Forecast,Marketplace,538,200,3943
+Jul,North America,Data Platform,Actual,Direct,735,306,3038
+Jul,North America,Data Platform,Actual,Partner,697,279,3323
+Jul,North America,Data Platform,Actual,Marketplace,724,294,3228
+Jul,North America,Data Platform,Plan,Direct,786,335,3129
+Jul,North America,Data Platform,Plan,Partner,746,306,3422
+Jul,North America,Data Platform,Plan,Marketplace,775,322,3324
+Jul,North America,Data Platform,Forecast,Direct,771,332,3068
+Jul,North America,Data Platform,Forecast,Partner,732,304,3356
+Jul,North America,Data Platform,Forecast,Marketplace,760,320,3260
+Jul,Europe,Cloud Suite,Actual,Direct,552,202,2784
+Jul,Europe,Cloud Suite,Actual,Partner,524,183,3045
+Jul,Europe,Cloud Suite,Actual,Marketplace,544,194,2958
+Jul,Europe,Cloud Suite,Plan,Direct,590,222,2868
+Jul,Europe,Cloud Suite,Plan,Partner,560,202,3137
+Jul,Europe,Cloud Suite,Plan,Marketplace,582,213,3047
+Jul,Europe,Cloud Suite,Forecast,Direct,579,221,2812
+Jul,Europe,Cloud Suite,Forecast,Partner,550,201,3076
+Jul,Europe,Cloud Suite,Forecast,Marketplace,571,212,2988
+Jul,Europe,Retail Analytics,Actual,Direct,476,165,3072
+Jul,Europe,Retail Analytics,Actual,Partner,451,149,3360
+Jul,Europe,Retail Analytics,Actual,Marketplace,469,158,3264
+Jul,Europe,Retail Analytics,Plan,Direct,509,181,3164
+Jul,Europe,Retail Analytics,Plan,Partner,483,164,3460
+Jul,Europe,Retail Analytics,Plan,Marketplace,502,174,3362
+Jul,Europe,Retail Analytics,Forecast,Direct,499,180,3102
+Jul,Europe,Retail Analytics,Forecast,Partner,474,164,3393
+Jul,Europe,Retail Analytics,Forecast,Marketplace,492,173,3296
+Jul,Europe,Supply Chain,Actual,Direct,444,149,3366
+Jul,Europe,Supply Chain,Actual,Partner,421,135,3682
+Jul,Europe,Supply Chain,Actual,Marketplace,438,143,3577
+Jul,Europe,Supply Chain,Plan,Direct,475,164,3467
+Jul,Europe,Supply Chain,Plan,Partner,451,149,3793
+Jul,Europe,Supply Chain,Plan,Marketplace,468,157,3684
+Jul,Europe,Supply Chain,Forecast,Direct,466,164,3400
+Jul,Europe,Supply Chain,Forecast,Partner,442,148,3719
+Jul,Europe,Supply Chain,Forecast,Marketplace,459,157,3613
+Jul,Europe,Data Platform,Actual,Direct,627,242,2783
+Jul,Europe,Data Platform,Actual,Partner,595,220,3044
+Jul,Europe,Data Platform,Actual,Marketplace,617,232,2957
+Jul,Europe,Data Platform,Plan,Direct,670,265,2866
+Jul,Europe,Data Platform,Plan,Partner,636,242,3135
+Jul,Europe,Data Platform,Plan,Marketplace,660,255,3046
+Jul,Europe,Data Platform,Forecast,Direct,657,263,2811
+Jul,Europe,Data Platform,Forecast,Partner,624,240,3074
+Jul,Europe,Data Platform,Forecast,Marketplace,648,253,2986
+Jul,APAC,Cloud Suite,Actual,Direct,523,181,3235
+Jul,APAC,Cloud Suite,Actual,Partner,497,164,3538
+Jul,APAC,Cloud Suite,Actual,Marketplace,516,173,3437
+Jul,APAC,Cloud Suite,Plan,Direct,560,199,3332
+Jul,APAC,Cloud Suite,Plan,Partner,531,181,3645
+Jul,APAC,Cloud Suite,Plan,Marketplace,551,191,3540
+Jul,APAC,Cloud Suite,Forecast,Direct,549,198,3268
+Jul,APAC,Cloud Suite,Forecast,Partner,521,180,3574
+Jul,APAC,Cloud Suite,Forecast,Marketplace,541,190,3472
+Jul,APAC,Retail Analytics,Actual,Direct,451,147,3569
+Jul,APAC,Retail Analytics,Actual,Partner,428,133,3904
+Jul,APAC,Retail Analytics,Actual,Marketplace,444,140,3792
+Jul,APAC,Retail Analytics,Plan,Direct,482,162,3676
+Jul,APAC,Retail Analytics,Plan,Partner,458,147,4021
+Jul,APAC,Retail Analytics,Plan,Marketplace,475,155,3906
+Jul,APAC,Retail Analytics,Forecast,Direct,473,161,3605
+Jul,APAC,Retail Analytics,Forecast,Partner,449,146,3943
+Jul,APAC,Retail Analytics,Forecast,Marketplace,466,154,3830
+Jul,APAC,Supply Chain,Actual,Direct,421,133,3912
+Jul,APAC,Supply Chain,Actual,Partner,399,120,4278
+Jul,APAC,Supply Chain,Actual,Marketplace,415,127,4156
+Jul,APAC,Supply Chain,Plan,Direct,450,147,4029
+Jul,APAC,Supply Chain,Plan,Partner,427,132,4407
+Jul,APAC,Supply Chain,Plan,Marketplace,443,140,4281
+Jul,APAC,Supply Chain,Forecast,Direct,441,146,3951
+Jul,APAC,Supply Chain,Forecast,Partner,419,132,4321
+Jul,APAC,Supply Chain,Forecast,Marketplace,435,140,4198
+Jul,APAC,Data Platform,Actual,Direct,594,217,3234
+Jul,APAC,Data Platform,Actual,Partner,564,197,3537
+Jul,APAC,Data Platform,Actual,Marketplace,585,208,3436
+Jul,APAC,Data Platform,Plan,Direct,635,239,3331
+Jul,APAC,Data Platform,Plan,Partner,603,217,3643
+Jul,APAC,Data Platform,Plan,Marketplace,626,229,3539
+Jul,APAC,Data Platform,Forecast,Direct,623,237,3266
+Jul,APAC,Data Platform,Forecast,Partner,591,216,3572
+Jul,APAC,Data Platform,Forecast,Marketplace,613,227,3470
+Jul,Latin America,Cloud Suite,Actual,Direct,406,120,2118
+Jul,Latin America,Cloud Suite,Actual,Partner,385,108,2316
+Jul,Latin America,Cloud Suite,Actual,Marketplace,400,114,2250
+Jul,Latin America,Cloud Suite,Plan,Direct,434,133,2181
+Jul,Latin America,Cloud Suite,Plan,Partner,412,119,2386
+Jul,Latin America,Cloud Suite,Plan,Marketplace,427,126,2317
+Jul,Latin America,Cloud Suite,Forecast,Direct,425,132,2139
+Jul,Latin America,Cloud Suite,Forecast,Partner,404,119,2339
+Jul,Latin America,Cloud Suite,Forecast,Marketplace,419,126,2272
+Jul,Latin America,Retail Analytics,Actual,Direct,350,97,2336
+Jul,Latin America,Retail Analytics,Actual,Partner,332,86,2555
+Jul,Latin America,Retail Analytics,Actual,Marketplace,344,92,2482
+Jul,Latin America,Retail Analytics,Plan,Direct,374,107,2406
+Jul,Latin America,Retail Analytics,Plan,Partner,355,96,2632
+Jul,Latin America,Retail Analytics,Plan,Marketplace,368,102,2557
+Jul,Latin America,Retail Analytics,Forecast,Direct,367,107,2360
+Jul,Latin America,Retail Analytics,Forecast,Partner,348,96,2581
+Jul,Latin America,Retail Analytics,Forecast,Marketplace,361,101,2507
+Jul,Latin America,Supply Chain,Actual,Direct,326,87,2560
+Jul,Latin America,Supply Chain,Actual,Partner,310,78,2800
+Jul,Latin America,Supply Chain,Actual,Marketplace,321,82,2720
+Jul,Latin America,Supply Chain,Plan,Direct,349,96,2637
+Jul,Latin America,Supply Chain,Plan,Partner,331,86,2884
+Jul,Latin America,Supply Chain,Plan,Marketplace,344,92,2802
+Jul,Latin America,Supply Chain,Forecast,Direct,342,96,2586
+Jul,Latin America,Supply Chain,Forecast,Partner,325,86,2828
+Jul,Latin America,Supply Chain,Forecast,Marketplace,337,91,2748
+Jul,Latin America,Data Platform,Actual,Direct,460,145,2117
+Jul,Latin America,Data Platform,Actual,Partner,437,131,2315
+Jul,Latin America,Data Platform,Actual,Marketplace,453,139,2249
+Jul,Latin America,Data Platform,Plan,Direct,492,160,2180
+Jul,Latin America,Data Platform,Plan,Partner,467,145,2385
+Jul,Latin America,Data Platform,Plan,Marketplace,485,153,2316
+Jul,Latin America,Data Platform,Forecast,Direct,482,160,2138
+Jul,Latin America,Data Platform,Forecast,Partner,458,144,2338
+Jul,Latin America,Data Platform,Forecast,Marketplace,475,152,2271
+Aug,North America,Cloud Suite,Actual,Direct,621,248,2959
+Aug,North America,Cloud Suite,Actual,Partner,590,227,3236
+Aug,North America,Cloud Suite,Actual,Marketplace,613,239,3144
+Aug,North America,Cloud Suite,Plan,Direct,665,273,3048
+Aug,North America,Cloud Suite,Plan,Partner,631,249,3333
+Aug,North America,Cloud Suite,Plan,Marketplace,656,262,3238
+Aug,North America,Cloud Suite,Forecast,Direct,652,271,2988
+Aug,North America,Cloud Suite,Forecast,Partner,619,247,3269
+Aug,North America,Cloud Suite,Forecast,Marketplace,643,260,3175
+Aug,North America,Retail Analytics,Actual,Direct,536,204,3264
+Aug,North America,Retail Analytics,Actual,Partner,509,185,3570
+Aug,North America,Retail Analytics,Actual,Marketplace,528,195,3468
+Aug,North America,Retail Analytics,Plan,Direct,573,223,3362
+Aug,North America,Retail Analytics,Plan,Partner,544,203,3677
+Aug,North America,Retail Analytics,Plan,Marketplace,565,215,3572
+Aug,North America,Retail Analytics,Forecast,Direct,562,222,3297
+Aug,North America,Retail Analytics,Forecast,Partner,534,202,3606
+Aug,North America,Retail Analytics,Forecast,Marketplace,554,213,3503
+Aug,North America,Supply Chain,Actual,Direct,500,185,3577
+Aug,North America,Supply Chain,Actual,Partner,475,168,3912
+Aug,North America,Supply Chain,Actual,Marketplace,493,177,3800
+Aug,North America,Supply Chain,Plan,Direct,535,203,3684
+Aug,North America,Supply Chain,Plan,Partner,508,185,4029
+Aug,North America,Supply Chain,Plan,Marketplace,527,195,3914
+Aug,North America,Supply Chain,Forecast,Direct,525,202,3612
+Aug,North America,Supply Chain,Forecast,Partner,498,184,3951
+Aug,North America,Supply Chain,Forecast,Marketplace,517,194,3838
+Aug,North America,Data Platform,Actual,Direct,706,297,2956
+Aug,North America,Data Platform,Actual,Partner,670,271,3233
+Aug,North America,Data Platform,Actual,Marketplace,696,285,3141
+Aug,North America,Data Platform,Plan,Direct,755,325,3045
+Aug,North America,Data Platform,Plan,Partner,717,297,3330
+Aug,North America,Data Platform,Plan,Marketplace,744,312,3235
+Aug,North America,Data Platform,Forecast,Direct,741,322,2986
+Aug,North America,Data Platform,Forecast,Partner,703,295,3266
+Aug,North America,Data Platform,Forecast,Marketplace,730,310,3173
+Aug,Europe,Cloud Suite,Actual,Direct,530,196,2711
+Aug,Europe,Cloud Suite,Actual,Partner,503,178,2965
+Aug,Europe,Cloud Suite,Actual,Marketplace,523,188,2880
+Aug,Europe,Cloud Suite,Plan,Direct,567,215,2792
+Aug,Europe,Cloud Suite,Plan,Partner,539,196,3054
+Aug,Europe,Cloud Suite,Plan,Marketplace,559,207,2967
+Aug,Europe,Cloud Suite,Forecast,Direct,556,214,2738
+Aug,Europe,Cloud Suite,Forecast,Partner,528,195,2994
+Aug,Europe,Cloud Suite,Forecast,Marketplace,548,206,2909
+Aug,Europe,Retail Analytics,Actual,Direct,457,160,2990
+Aug,Europe,Retail Analytics,Actual,Partner,434,145,3271
+Aug,Europe,Retail Analytics,Actual,Marketplace,451,153,3177
+Aug,Europe,Retail Analytics,Plan,Direct,489,176,3080
+Aug,Europe,Retail Analytics,Plan,Partner,464,160,3369
+Aug,Europe,Retail Analytics,Plan,Marketplace,482,169,3272
+Aug,Europe,Retail Analytics,Forecast,Direct,480,175,3020
+Aug,Europe,Retail Analytics,Forecast,Partner,455,159,3303
+Aug,Europe,Retail Analytics,Forecast,Marketplace,473,168,3209
+Aug,Europe,Supply Chain,Actual,Direct,427,145,3277
+Aug,Europe,Supply Chain,Actual,Partner,405,131,3584
+Aug,Europe,Supply Chain,Actual,Marketplace,420,139,3481
+Aug,Europe,Supply Chain,Plan,Direct,456,160,3375
+Aug,Europe,Supply Chain,Plan,Partner,433,145,3691
+Aug,Europe,Supply Chain,Plan,Marketplace,450,153,3586
+Aug,Europe,Supply Chain,Forecast,Direct,448,159,3309
+Aug,Europe,Supply Chain,Forecast,Partner,425,144,3620
+Aug,Europe,Supply Chain,Forecast,Marketplace,441,152,3516
+Aug,Europe,Data Platform,Actual,Direct,602,235,2708
+Aug,Europe,Data Platform,Actual,Partner,571,214,2962
+Aug,Europe,Data Platform,Actual,Marketplace,593,225,2878
+Aug,Europe,Data Platform,Plan,Direct,644,258,2790
+Aug,Europe,Data Platform,Plan,Partner,611,235,3051
+Aug,Europe,Data Platform,Plan,Marketplace,634,247,2964
+Aug,Europe,Data Platform,Forecast,Direct,631,256,2735
+Aug,Europe,Data Platform,Forecast,Partner,599,233,2992
+Aug,Europe,Data Platform,Forecast,Marketplace,622,246,2906
+Aug,APAC,Cloud Suite,Actual,Direct,503,176,3150
+Aug,APAC,Cloud Suite,Actual,Partner,477,159,3445
+Aug,APAC,Cloud Suite,Actual,Marketplace,495,168,3347
+Aug,APAC,Cloud Suite,Plan,Direct,538,194,3244
+Aug,APAC,Cloud Suite,Plan,Partner,510,175,3548
+Aug,APAC,Cloud Suite,Plan,Marketplace,530,186,3447
+Aug,APAC,Cloud Suite,Forecast,Direct,527,192,3181
+Aug,APAC,Cloud Suite,Forecast,Partner,500,175,3480
+Aug,APAC,Cloud Suite,Forecast,Marketplace,520,185,3380
+Aug,APAC,Retail Analytics,Actual,Direct,433,143,3475
+Aug,APAC,Retail Analytics,Actual,Partner,411,129,3800
+Aug,APAC,Retail Analytics,Actual,Marketplace,427,137,3692
+Aug,APAC,Retail Analytics,Plan,Direct,463,157,3579
+Aug,APAC,Retail Analytics,Plan,Partner,440,143,3914
+Aug,APAC,Retail Analytics,Plan,Marketplace,457,151,3802
+Aug,APAC,Retail Analytics,Forecast,Direct,454,157,3509
+Aug,APAC,Retail Analytics,Forecast,Partner,431,142,3838
+Aug,APAC,Retail Analytics,Forecast,Marketplace,448,150,3729
+Aug,APAC,Supply Chain,Actual,Direct,404,129,3807
+Aug,APAC,Supply Chain,Actual,Partner,384,117,4164
+Aug,APAC,Supply Chain,Actual,Marketplace,398,123,4045
+Aug,APAC,Supply Chain,Plan,Direct,432,143,3922
+Aug,APAC,Supply Chain,Plan,Partner,410,129,4289
+Aug,APAC,Supply Chain,Plan,Marketplace,426,136,4167
+Aug,APAC,Supply Chain,Forecast,Direct,424,142,3845
+Aug,APAC,Supply Chain,Forecast,Partner,402,128,4206
+Aug,APAC,Supply Chain,Forecast,Marketplace,418,136,4086
+Aug,APAC,Data Platform,Actual,Direct,570,211,3147
+Aug,APAC,Data Platform,Actual,Partner,541,192,3442
+Aug,APAC,Data Platform,Actual,Marketplace,562,202,3344
+Aug,APAC,Data Platform,Plan,Direct,610,232,3241
+Aug,APAC,Data Platform,Plan,Partner,579,211,3545
+Aug,APAC,Data Platform,Plan,Marketplace,601,222,3444
+Aug,APAC,Data Platform,Forecast,Direct,598,230,3179
+Aug,APAC,Data Platform,Forecast,Partner,567,209,3477
+Aug,APAC,Data Platform,Forecast,Marketplace,589,221,3377
+Aug,Latin America,Cloud Suite,Actual,Direct,390,117,2062
+Aug,Latin America,Cloud Suite,Actual,Partner,370,105,2255
+Aug,Latin America,Cloud Suite,Actual,Marketplace,384,111,2191
+Aug,Latin America,Cloud Suite,Plan,Direct,417,129,2124
+Aug,Latin America,Cloud Suite,Plan,Partner,396,116,2323
+Aug,Latin America,Cloud Suite,Plan,Marketplace,411,123,2256
+Aug,Latin America,Cloud Suite,Forecast,Direct,409,129,2082
+Aug,Latin America,Cloud Suite,Forecast,Partner,388,116,2277
+Aug,Latin America,Cloud Suite,Forecast,Marketplace,403,123,2212
+Aug,Latin America,Retail Analytics,Actual,Direct,336,94,2274
+Aug,Latin America,Retail Analytics,Actual,Partner,319,84,2487
+Aug,Latin America,Retail Analytics,Actual,Marketplace,331,89,2416
+Aug,Latin America,Retail Analytics,Plan,Direct,359,104,2342
+Aug,Latin America,Retail Analytics,Plan,Partner,341,93,2562
+Aug,Latin America,Retail Analytics,Plan,Marketplace,354,99,2489
+Aug,Latin America,Retail Analytics,Forecast,Direct,352,104,2297
+Aug,Latin America,Retail Analytics,Forecast,Partner,334,93,2512
+Aug,Latin America,Retail Analytics,Forecast,Marketplace,347,99,2441
+Aug,Latin America,Supply Chain,Actual,Direct,313,85,2492
+Aug,Latin America,Supply Chain,Actual,Partner,297,75,2726
+Aug,Latin America,Supply Chain,Actual,Marketplace,309,80,2648
+Aug,Latin America,Supply Chain,Plan,Direct,335,94,2567
+Aug,Latin America,Supply Chain,Plan,Partner,318,84,2808
+Aug,Latin America,Supply Chain,Plan,Marketplace,330,89,2727
+Aug,Latin America,Supply Chain,Forecast,Direct,328,93,2517
+Aug,Latin America,Supply Chain,Forecast,Partner,312,84,2753
+Aug,Latin America,Supply Chain,Forecast,Marketplace,323,89,2674
+Aug,Latin America,Data Platform,Actual,Direct,442,141,2060
+Aug,Latin America,Data Platform,Actual,Partner,419,127,2253
+Aug,Latin America,Data Platform,Actual,Marketplace,435,135,2189
+Aug,Latin America,Data Platform,Plan,Direct,473,156,2122
+Aug,Latin America,Data Platform,Plan,Partner,448,141,2321
+Aug,Latin America,Data Platform,Plan,Marketplace,465,149,2254
+Aug,Latin America,Data Platform,Forecast,Direct,463,155,2080
+Aug,Latin America,Data Platform,Forecast,Partner,439,140,2276
+Aug,Latin America,Data Platform,Forecast,Marketplace,456,148,2211
+Sep,North America,Cloud Suite,Actual,Direct,567,229,2876
+Sep,North America,Cloud Suite,Actual,Partner,539,209,3146
+Sep,North America,Cloud Suite,Actual,Marketplace,560,221,3056
+Sep,North America,Cloud Suite,Plan,Direct,607,251,2963
+Sep,North America,Cloud Suite,Plan,Partner,577,230,3241
+Sep,North America,Cloud Suite,Plan,Marketplace,599,242,3148
+Sep,North America,Cloud Suite,Forecast,Direct,596,250,2905
+Sep,North America,Cloud Suite,Forecast,Partner,566,228,3178
+Sep,North America,Cloud Suite,Forecast,Marketplace,588,240,3087
+Sep,North America,Retail Analytics,Actual,Direct,489,188,3173
+Sep,North America,Retail Analytics,Actual,Partner,465,171,3470
+Sep,North America,Retail Analytics,Actual,Marketplace,483,181,3371
+Sep,North America,Retail Analytics,Plan,Direct,524,206,3268
+Sep,North America,Retail Analytics,Plan,Partner,498,188,3574
+Sep,North America,Retail Analytics,Plan,Marketplace,517,199,3472
+Sep,North America,Retail Analytics,Forecast,Direct,514,205,3204
+Sep,North America,Retail Analytics,Forecast,Partner,488,187,3505
+Sep,North America,Retail Analytics,Forecast,Marketplace,507,197,3405
+Sep,North America,Supply Chain,Actual,Direct,457,171,3476
+Sep,North America,Supply Chain,Actual,Partner,434,155,3802
+Sep,North America,Supply Chain,Actual,Marketplace,451,164,3693
+Sep,North America,Supply Chain,Plan,Direct,489,188,3580
+Sep,North America,Supply Chain,Plan,Partner,465,171,3916
+Sep,North America,Supply Chain,Plan,Marketplace,483,181,3804
+Sep,North America,Supply Chain,Forecast,Direct,480,187,3511
+Sep,North America,Supply Chain,Forecast,Partner,456,170,3840
+Sep,North America,Supply Chain,Forecast,Marketplace,473,179,3730
+Sep,North America,Data Platform,Actual,Direct,646,274,2873
+Sep,North America,Data Platform,Actual,Partner,613,250,3142
+Sep,North America,Data Platform,Actual,Marketplace,637,264,3052
+Sep,North America,Data Platform,Plan,Direct,691,300,2959
+Sep,North America,Data Platform,Plan,Partner,656,274,3236
+Sep,North America,Data Platform,Plan,Marketplace,681,289,3144
+Sep,North America,Data Platform,Forecast,Direct,678,298,2902
+Sep,North America,Data Platform,Forecast,Partner,644,272,3174
+Sep,North America,Data Platform,Forecast,Marketplace,668,287,3083
+Sep,Europe,Cloud Suite,Actual,Direct,485,181,2635
+Sep,Europe,Cloud Suite,Actual,Partner,460,165,2882
+Sep,Europe,Cloud Suite,Actual,Marketplace,478,174,2800
+Sep,Europe,Cloud Suite,Plan,Direct,519,199,2714
+Sep,Europe,Cloud Suite,Plan,Partner,493,181,2969
+Sep,Europe,Cloud Suite,Plan,Marketplace,512,191,2884
+Sep,Europe,Cloud Suite,Forecast,Direct,509,198,2662
+Sep,Europe,Cloud Suite,Forecast,Partner,483,180,2911
+Sep,Europe,Cloud Suite,Forecast,Marketplace,502,190,2828
+Sep,Europe,Retail Analytics,Actual,Direct,418,148,2906
+Sep,Europe,Retail Analytics,Actual,Partner,397,134,3179
+Sep,Europe,Retail Analytics,Actual,Marketplace,412,142,3088
+Sep,Europe,Retail Analytics,Plan,Direct,447,163,2994
+Sep,Europe,Retail Analytics,Plan,Partner,425,148,3274
+Sep,Europe,Retail Analytics,Plan,Marketplace,441,156,3181
+Sep,Europe,Retail Analytics,Forecast,Direct,439,162,2936
+Sep,Europe,Retail Analytics,Forecast,Partner,417,147,3211
+Sep,Europe,Retail Analytics,Forecast,Marketplace,433,155,3119
+Sep,Europe,Supply Chain,Actual,Direct,390,134,3184
+Sep,Europe,Supply Chain,Actual,Partner,371,122,3483
+Sep,Europe,Supply Chain,Actual,Marketplace,385,129,3384
+Sep,Europe,Supply Chain,Plan,Direct,418,148,3280
+Sep,Europe,Supply Chain,Plan,Partner,397,134,3588
+Sep,Europe,Supply Chain,Plan,Marketplace,412,142,3485
+Sep,Europe,Supply Chain,Forecast,Direct,410,147,3216
+Sep,Europe,Supply Chain,Forecast,Partner,389,133,3518
+Sep,Europe,Supply Chain,Forecast,Marketplace,404,141,3417
+Sep,Europe,Data Platform,Actual,Direct,551,217,2632
+Sep,Europe,Data Platform,Actual,Partner,523,198,2879
+Sep,Europe,Data Platform,Actual,Marketplace,543,209,2796
+Sep,Europe,Data Platform,Plan,Direct,590,238,2711
+Sep,Europe,Data Platform,Plan,Partner,560,217,2965
+Sep,Europe,Data Platform,Plan,Marketplace,581,229,2880
+Sep,Europe,Data Platform,Forecast,Direct,578,236,2658
+Sep,Europe,Data Platform,Forecast,Partner,549,216,2907
+Sep,Europe,Data Platform,Forecast,Marketplace,570,227,2824
+Sep,APAC,Cloud Suite,Actual,Direct,460,163,3062
+Sep,APAC,Cloud Suite,Actual,Partner,437,148,3349
+Sep,APAC,Cloud Suite,Actual,Marketplace,453,156,3253
+Sep,APAC,Cloud Suite,Plan,Direct,492,179,3154
+Sep,APAC,Cloud Suite,Plan,Partner,467,163,3450
+Sep,APAC,Cloud Suite,Plan,Marketplace,485,172,3351
+Sep,APAC,Cloud Suite,Forecast,Direct,483,178,3093
+Sep,APAC,Cloud Suite,Forecast,Partner,458,162,3383
+Sep,APAC,Cloud Suite,Forecast,Marketplace,476,171,3286
+Sep,APAC,Retail Analytics,Actual,Direct,396,132,3377
+Sep,APAC,Retail Analytics,Actual,Partner,376,120,3694
+Sep,APAC,Retail Analytics,Actual,Marketplace,391,127,3588
+Sep,APAC,Retail Analytics,Plan,Direct,424,146,3479
+Sep,APAC,Retail Analytics,Plan,Partner,403,132,3805
+Sep,APAC,Retail Analytics,Plan,Marketplace,418,140,3696
+Sep,APAC,Retail Analytics,Forecast,Direct,416,145,3411
+Sep,APAC,Retail Analytics,Forecast,Partner,395,132,3731
+Sep,APAC,Retail Analytics,Forecast,Marketplace,410,139,3624
+Sep,APAC,Supply Chain,Actual,Direct,370,120,3700
+Sep,APAC,Supply Chain,Actual,Partner,351,108,4047
+Sep,APAC,Supply Chain,Actual,Marketplace,365,115,3932
+Sep,APAC,Supply Chain,Plan,Direct,396,132,3811
+Sep,APAC,Supply Chain,Plan,Partner,376,120,4169
+Sep,APAC,Supply Chain,Plan,Marketplace,390,126,4050
+Sep,APAC,Supply Chain,Forecast,Direct,388,132,3737
+Sep,APAC,Supply Chain,Forecast,Partner,369,119,4088
+Sep,APAC,Supply Chain,Forecast,Marketplace,383,126,3971
+Sep,APAC,Data Platform,Actual,Direct,522,195,3058
+Sep,APAC,Data Platform,Actual,Partner,496,178,3345
+Sep,APAC,Data Platform,Actual,Marketplace,515,187,3249
+Sep,APAC,Data Platform,Plan,Direct,559,215,3150
+Sep,APAC,Data Platform,Plan,Partner,531,195,3445
+Sep,APAC,Data Platform,Plan,Marketplace,551,206,3347
+Sep,APAC,Data Platform,Forecast,Direct,548,213,3089
+Sep,APAC,Data Platform,Forecast,Partner,520,194,3378
+Sep,APAC,Data Platform,Forecast,Marketplace,540,205,3282
+Sep,Latin America,Cloud Suite,Actual,Direct,357,109,2004
+Sep,Latin America,Cloud Suite,Actual,Partner,339,98,2192
+Sep,Latin America,Cloud Suite,Actual,Marketplace,352,103,2130
+Sep,Latin America,Cloud Suite,Plan,Direct,382,120,2064
+Sep,Latin America,Cloud Suite,Plan,Partner,362,108,2258
+Sep,Latin America,Cloud Suite,Plan,Marketplace,376,114,2193
+Sep,Latin America,Cloud Suite,Forecast,Direct,374,119,2024
+Sep,Latin America,Cloud Suite,Forecast,Partner,355,108,2214
+Sep,Latin America,Cloud Suite,Forecast,Marketplace,369,114,2151
+Sep,Latin America,Retail Analytics,Actual,Direct,307,87,2211
+Sep,Latin America,Retail Analytics,Actual,Partner,292,78,2418
+Sep,Latin America,Retail Analytics,Actual,Marketplace,303,83,2349
+Sep,Latin America,Retail Analytics,Plan,Direct,329,97,2277
+Sep,Latin America,Retail Analytics,Plan,Partner,312,87,2490
+Sep,Latin America,Retail Analytics,Plan,Marketplace,324,92,2419
+Sep,Latin America,Retail Analytics,Forecast,Direct,323,97,2233
+Sep,Latin America,Retail Analytics,Forecast,Partner,306,87,2442
+Sep,Latin America,Retail Analytics,Forecast,Marketplace,318,92,2372
+Sep,Latin America,Supply Chain,Actual,Direct,287,79,2422
+Sep,Latin America,Supply Chain,Actual,Partner,272,70,2649
+Sep,Latin America,Supply Chain,Actual,Marketplace,283,75,2573
+Sep,Latin America,Supply Chain,Plan,Direct,307,87,2495
+Sep,Latin America,Supply Chain,Plan,Partner,291,78,2729
+Sep,Latin America,Supply Chain,Plan,Marketplace,303,83,2651
+Sep,Latin America,Supply Chain,Forecast,Direct,301,87,2446
+Sep,Latin America,Supply Chain,Forecast,Partner,286,78,2676
+Sep,Latin America,Supply Chain,Forecast,Marketplace,297,83,2599
+Sep,Latin America,Data Platform,Actual,Direct,405,131,2002
+Sep,Latin America,Data Platform,Actual,Partner,384,118,2189
+Sep,Latin America,Data Platform,Actual,Marketplace,399,125,2127
+Sep,Latin America,Data Platform,Plan,Direct,433,145,2062
+Sep,Latin America,Data Platform,Plan,Partner,411,131,2255
+Sep,Latin America,Data Platform,Plan,Marketplace,427,138,2191
+Sep,Latin America,Data Platform,Forecast,Direct,425,144,2022
+Sep,Latin America,Data Platform,Forecast,Partner,403,130,2211
+Sep,Latin America,Data Platform,Forecast,Marketplace,418,138,2148
+Oct,North America,Cloud Suite,Actual,Direct,609,248,2984
+Oct,North America,Cloud Suite,Actual,Partner,579,227,3264
+Oct,North America,Cloud Suite,Actual,Marketplace,601,239,3171
+Oct,North America,Cloud Suite,Plan,Direct,652,273,3074
+Oct,North America,Cloud Suite,Plan,Partner,619,249,3362
+Oct,North America,Cloud Suite,Plan,Marketplace,643,262,3266
+Oct,North America,Cloud Suite,Forecast,Direct,640,271,3014
+Oct,North America,Cloud Suite,Forecast,Partner,608,247,3297
+Oct,North America,Cloud Suite,Forecast,Marketplace,631,261,3203
+Oct,North America,Retail Analytics,Actual,Direct,525,204,3292
+Oct,North America,Retail Analytics,Actual,Partner,499,186,3601
+Oct,North America,Retail Analytics,Actual,Marketplace,518,196,3498
+Oct,North America,Retail Analytics,Plan,Direct,562,224,3391
+Oct,North America,Retail Analytics,Plan,Partner,534,204,3709
+Oct,North America,Retail Analytics,Plan,Marketplace,555,215,3603
+Oct,North America,Retail Analytics,Forecast,Direct,552,222,3325
+Oct,North America,Retail Analytics,Forecast,Partner,524,203,3637
+Oct,North America,Retail Analytics,Forecast,Marketplace,544,214,3533
+Oct,North America,Supply Chain,Actual,Direct,491,186,3608
+Oct,North America,Supply Chain,Actual,Partner,466,169,3947
+Oct,North America,Supply Chain,Actual,Marketplace,484,178,3834
+Oct,North America,Supply Chain,Plan,Direct,525,204,3717
+Oct,North America,Supply Chain,Plan,Partner,499,186,4065
+Oct,North America,Supply Chain,Plan,Marketplace,518,196,3949
+Oct,North America,Supply Chain,Forecast,Direct,515,202,3645
+Oct,North America,Supply Chain,Forecast,Partner,489,184,3986
+Oct,North America,Supply Chain,Forecast,Marketplace,508,195,3872
+Oct,North America,Data Platform,Actual,Direct,693,297,2983
+Oct,North America,Data Platform,Actual,Partner,658,271,3263
+Oct,North America,Data Platform,Actual,Marketplace,683,285,3169
+Oct,North America,Data Platform,Plan,Direct,741,325,3073
+Oct,North America,Data Platform,Plan,Partner,704,297,3361
+Oct,North America,Data Platform,Plan,Marketplace,731,313,3265
+Oct,North America,Data Platform,Forecast,Direct,727,320,3013
+Oct,North America,Data Platform,Forecast,Partner,690,295,3295
+Oct,North America,Data Platform,Forecast,Marketplace,717,310,3201
+Oct,Europe,Cloud Suite,Actual,Direct,520,197,2734
+Oct,Europe,Cloud Suite,Actual,Partner,494,179,2990
+Oct,Europe,Cloud Suite,Actual,Marketplace,513,189,2905
+Oct,Europe,Cloud Suite,Plan,Direct,557,216,2816
+Oct,Europe,Cloud Suite,Plan,Partner,528,196,3080
+Oct,Europe,Cloud Suite,Plan,Marketplace,549,208,2992
+Oct,Europe,Cloud Suite,Forecast,Direct,546,215,2761
+Oct,Europe,Cloud Suite,Forecast,Partner,518,195,3020
+Oct,Europe,Cloud Suite,Forecast,Marketplace,538,206,2934
+Oct,Europe,Retail Analytics,Actual,Direct,448,160,3016
+Oct,Europe,Retail Analytics,Actual,Partner,426,146,3299
+Oct,Europe,Retail Analytics,Actual,Marketplace,442,154,3205
+Oct,Europe,Retail Analytics,Plan,Direct,480,177,3107
+Oct,Europe,Retail Analytics,Plan,Partner,456,161,3398
+Oct,Europe,Retail Analytics,Plan,Marketplace,473,169,3301
+Oct,Europe,Retail Analytics,Forecast,Direct,471,176,3047
+Oct,Europe,Retail Analytics,Forecast,Partner,447,160,3332
+Oct,Europe,Retail Analytics,Forecast,Marketplace,464,168,3237
+Oct,Europe,Supply Chain,Actual,Direct,419,146,3306
+Oct,Europe,Supply Chain,Actual,Partner,398,132,3616
+Oct,Europe,Supply Chain,Actual,Marketplace,413,140,3512
+Oct,Europe,Supply Chain,Plan,Direct,448,160,3405
+Oct,Europe,Supply Chain,Plan,Partner,425,145,3724
+Oct,Europe,Supply Chain,Plan,Marketplace,442,154,3618
+Oct,Europe,Supply Chain,Forecast,Direct,439,159,3339
+Oct,Europe,Supply Chain,Forecast,Partner,417,145,3652
+Oct,Europe,Supply Chain,Forecast,Marketplace,433,153,3548
+Oct,Europe,Data Platform,Actual,Direct,591,235,2733
+Oct,Europe,Data Platform,Actual,Partner,561,214,2989
+Oct,Europe,Data Platform,Actual,Marketplace,583,226,2904
+Oct,Europe,Data Platform,Plan,Direct,632,258,2815
+Oct,Europe,Data Platform,Plan,Partner,600,235,3079
+Oct,Europe,Data Platform,Plan,Marketplace,623,248,2991
+Oct,Europe,Data Platform,Forecast,Direct,620,256,2760
+Oct,Europe,Data Platform,Forecast,Partner,589,234,3019
+Oct,Europe,Data Platform,Forecast,Marketplace,611,246,2933
+Oct,APAC,Cloud Suite,Actual,Direct,493,176,3177
+Oct,APAC,Cloud Suite,Actual,Partner,468,160,3475
+Oct,APAC,Cloud Suite,Actual,Marketplace,486,169,3375
+Oct,APAC,Cloud Suite,Plan,Direct,528,194,3272
+Oct,APAC,Cloud Suite,Plan,Partner,501,176,3579
+Oct,APAC,Cloud Suite,Plan,Marketplace,520,186,3477
+Oct,APAC,Cloud Suite,Forecast,Direct,518,193,3209
+Oct,APAC,Cloud Suite,Forecast,Partner,491,175,3509
+Oct,APAC,Cloud Suite,Forecast,Marketplace,510,185,3409
+Oct,APAC,Retail Analytics,Actual,Direct,425,144,3505
+Oct,APAC,Retail Analytics,Actual,Partner,404,130,3834
+Oct,APAC,Retail Analytics,Actual,Marketplace,419,137,3724
+Oct,APAC,Retail Analytics,Plan,Direct,455,158,3610
+Oct,APAC,Retail Analytics,Plan,Partner,432,143,3949
+Oct,APAC,Retail Analytics,Plan,Marketplace,448,151,3836
+Oct,APAC,Retail Analytics,Forecast,Direct,446,157,3540
+Oct,APAC,Retail Analytics,Forecast,Partner,424,143,3872
+Oct,APAC,Retail Analytics,Forecast,Marketplace,440,151,3761
+Oct,APAC,Supply Chain,Actual,Direct,397,130,3841
+Oct,APAC,Supply Chain,Actual,Partner,377,118,4201
+Oct,APAC,Supply Chain,Actual,Marketplace,391,124,4081
+Oct,APAC,Supply Chain,Plan,Direct,425,144,3956
+Oct,APAC,Supply Chain,Plan,Partner,403,130,4327
+Oct,APAC,Supply Chain,Plan,Marketplace,419,137,4204
+Oct,APAC,Supply Chain,Forecast,Direct,416,143,3880
+Oct,APAC,Supply Chain,Forecast,Partner,395,129,4243
+Oct,APAC,Supply Chain,Forecast,Marketplace,410,137,4122
+Oct,APAC,Data Platform,Actual,Direct,560,212,3175
+Oct,APAC,Data Platform,Actual,Partner,532,193,3473
+Oct,APAC,Data Platform,Actual,Marketplace,552,203,3374
+Oct,APAC,Data Platform,Plan,Direct,599,232,3271
+Oct,APAC,Data Platform,Plan,Partner,569,212,3577
+Oct,APAC,Data Platform,Plan,Marketplace,591,223,3475
+Oct,APAC,Data Platform,Forecast,Direct,588,231,3207
+Oct,APAC,Data Platform,Forecast,Partner,558,210,3508
+Oct,APAC,Data Platform,Forecast,Marketplace,579,222,3408
+Oct,Latin America,Cloud Suite,Actual,Direct,383,118,2079
+Oct,Latin America,Cloud Suite,Actual,Partner,363,106,2274
+Oct,Latin America,Cloud Suite,Actual,Marketplace,377,112,2209
+Oct,Latin America,Cloud Suite,Plan,Direct,409,130,2142
+Oct,Latin America,Cloud Suite,Plan,Partner,389,117,2343
+Oct,Latin America,Cloud Suite,Plan,Marketplace,403,124,2276
+Oct,Latin America,Cloud Suite,Forecast,Direct,401,130,2100
+Oct,Latin America,Cloud Suite,Forecast,Partner,381,117,2297
+Oct,Latin America,Cloud Suite,Forecast,Marketplace,396,124,2231
+Oct,Latin America,Retail Analytics,Actual,Direct,330,95,2294
+Oct,Latin America,Retail Analytics,Actual,Partner,313,85,2509
+Oct,Latin America,Retail Analytics,Actual,Marketplace,325,90,2438
+Oct,Latin America,Retail Analytics,Plan,Direct,353,105,2363
+Oct,Latin America,Retail Analytics,Plan,Partner,335,94,2584
+Oct,Latin America,Retail Analytics,Plan,Marketplace,348,100,2511
+Oct,Latin America,Retail Analytics,Forecast,Direct,346,105,2317
+Oct,Latin America,Retail Analytics,Forecast,Partner,328,94,2534
+Oct,Latin America,Retail Analytics,Forecast,Marketplace,341,100,2462
+Oct,Latin America,Supply Chain,Actual,Direct,308,86,2514
+Oct,Latin America,Supply Chain,Actual,Partner,292,77,2750
+Oct,Latin America,Supply Chain,Actual,Marketplace,303,81,2671
+Oct,Latin America,Supply Chain,Plan,Direct,329,95,2590
+Oct,Latin America,Supply Chain,Plan,Partner,312,85,2832
+Oct,Latin America,Supply Chain,Plan,Marketplace,324,90,2752
+Oct,Latin America,Supply Chain,Forecast,Direct,323,95,2539
+Oct,Latin America,Supply Chain,Forecast,Partner,306,85,2777
+Oct,Latin America,Supply Chain,Forecast,Marketplace,318,90,2698
+Oct,Latin America,Data Platform,Actual,Direct,434,142,2079
+Oct,Latin America,Data Platform,Actual,Partner,412,129,2273
+Oct,Latin America,Data Platform,Actual,Marketplace,428,136,2208
+Oct,Latin America,Data Platform,Plan,Direct,464,157,2141
+Oct,Latin America,Data Platform,Plan,Partner,441,142,2342
+Oct,Latin America,Data Platform,Plan,Marketplace,458,150,2275
+Oct,Latin America,Data Platform,Forecast,Direct,455,156,2099
+Oct,Latin America,Data Platform,Forecast,Partner,432,141,2296
+Oct,Latin America,Data Platform,Forecast,Marketplace,448,149,2230
+Nov,North America,Cloud Suite,Actual,Direct,663,260,3152
+Nov,North America,Cloud Suite,Actual,Partner,630,237,3448
+Nov,North America,Cloud Suite,Actual,Marketplace,654,250,3349
+Nov,North America,Cloud Suite,Plan,Direct,710,285,3247
+Nov,North America,Cloud Suite,Plan,Partner,674,260,3551
+Nov,North America,Cloud Suite,Plan,Marketplace,700,274,3450
+Nov,North America,Cloud Suite,Forecast,Direct,696,283,3184
+Nov,North America,Cloud Suite,Forecast,Partner,661,258,3482
+Nov,North America,Cloud Suite,Forecast,Marketplace,686,272,3383
+Nov,North America,Retail Analytics,Actual,Direct,572,213,3477
+Nov,North America,Retail Analytics,Actual,Partner,543,193,3803
+Nov,North America,Retail Analytics,Actual,Marketplace,564,204,3695
+Nov,North America,Retail Analytics,Plan,Direct,612,234,3582
+Nov,North America,Retail Analytics,Plan,Partner,581,213,3918
+Nov,North America,Retail Analytics,Plan,Marketplace,603,224,3806
+Nov,North America,Retail Analytics,Forecast,Direct,600,232,3512
+Nov,North America,Retail Analytics,Forecast,Partner,570,211,3842
+Nov,North America,Retail Analytics,Forecast,Marketplace,592,223,3732
+Nov,North America,Supply Chain,Actual,Direct,534,193,3811
+Nov,North America,Supply Chain,Actual,Partner,507,175,4168
+Nov,North America,Supply Chain,Actual,Marketplace,526,185,4049
+Nov,North America,Supply Chain,Plan,Direct,571,212,3925
+Nov,North America,Supply Chain,Plan,Partner,542,193,4293
+Nov,North America,Supply Chain,Plan,Marketplace,563,204,4170
+Nov,North America,Supply Chain,Forecast,Direct,560,211,3849
+Nov,North America,Supply Chain,Forecast,Partner,532,192,4210
+Nov,North America,Supply Chain,Forecast,Marketplace,552,203,4089
+Nov,North America,Data Platform,Actual,Direct,754,311,3150
+Nov,North America,Data Platform,Actual,Partner,716,284,3445
+Nov,North America,Data Platform,Actual,Marketplace,743,299,3347
+Nov,North America,Data Platform,Plan,Direct,807,341,3244
+Nov,North America,Data Platform,Plan,Partner,766,311,3548
+Nov,North America,Data Platform,Plan,Marketplace,795,328,3447
+Nov,North America,Data Platform,Forecast,Direct,791,338,3181
+Nov,North America,Data Platform,Forecast,Partner,751,309,3479
+Nov,North America,Data Platform,Forecast,Marketplace,779,325,3380
+Nov,Europe,Cloud Suite,Actual,Direct,566,205,2888
+Nov,Europe,Cloud Suite,Actual,Partner,537,186,3159
+Nov,Europe,Cloud Suite,Actual,Marketplace,558,196,3069
+Nov,Europe,Cloud Suite,Plan,Direct,606,225,2975
+Nov,Europe,Cloud Suite,Plan,Partner,575,205,3254
+Nov,Europe,Cloud Suite,Plan,Marketplace,597,216,3161
+Nov,Europe,Cloud Suite,Forecast,Direct,594,224,2917
+Nov,Europe,Cloud Suite,Forecast,Partner,564,204,3190
+Nov,Europe,Cloud Suite,Forecast,Marketplace,586,215,3099
+Nov,Europe,Retail Analytics,Actual,Direct,488,167,3186
+Nov,Europe,Retail Analytics,Actual,Partner,463,151,3484
+Nov,Europe,Retail Analytics,Actual,Marketplace,481,160,3385
+Nov,Europe,Retail Analytics,Plan,Direct,522,184,3281
+Nov,Europe,Retail Analytics,Plan,Partner,496,167,3589
+Nov,Europe,Retail Analytics,Plan,Marketplace,515,176,3486
+Nov,Europe,Retail Analytics,Forecast,Direct,512,183,3218
+Nov,Europe,Retail Analytics,Forecast,Partner,486,166,3519
+Nov,Europe,Retail Analytics,Forecast,Marketplace,505,175,3419
+Nov,Europe,Supply Chain,Actual,Direct,456,151,3491
+Nov,Europe,Supply Chain,Actual,Partner,432,137,3818
+Nov,Europe,Supply Chain,Actual,Marketplace,449,145,3709
+Nov,Europe,Supply Chain,Plan,Direct,487,167,3596
+Nov,Europe,Supply Chain,Plan,Partner,463,151,3933
+Nov,Europe,Supply Chain,Plan,Marketplace,480,159,3820
+Nov,Europe,Supply Chain,Forecast,Direct,478,166,3526
+Nov,Europe,Supply Chain,Forecast,Partner,454,150,3856
+Nov,Europe,Supply Chain,Forecast,Marketplace,471,159,3746
+Nov,Europe,Data Platform,Actual,Direct,643,246,2886
+Nov,Europe,Data Platform,Actual,Partner,610,223,3156
+Nov,Europe,Data Platform,Actual,Marketplace,634,236,3066
+Nov,Europe,Data Platform,Plan,Direct,688,270,2972
+Nov,Europe,Data Platform,Plan,Partner,653,246,3251
+Nov,Europe,Data Platform,Plan,Marketplace,678,259,3158
+Nov,Europe,Data Platform,Forecast,Direct,674,268,2914
+Nov,Europe,Data Platform,Forecast,Partner,640,244,3188
+Nov,Europe,Data Platform,Forecast,Marketplace,664,257,3097
+Nov,APAC,Cloud Suite,Actual,Direct,537,184,3356
+Nov,APAC,Cloud Suite,Actual,Partner,509,166,3670
+Nov,APAC,Cloud Suite,Actual,Marketplace,529,176,3566
+Nov,APAC,Cloud Suite,Plan,Direct,574,202,3456
+Nov,APAC,Cloud Suite,Plan,Partner,545,183,3781
+Nov,APAC,Cloud Suite,Plan,Marketplace,566,194,3673
+Nov,APAC,Cloud Suite,Forecast,Direct,563,201,3389
+Nov,APAC,Cloud Suite,Forecast,Partner,535,182,3707
+Nov,APAC,Cloud Suite,Forecast,Marketplace,555,193,3601
+Nov,APAC,Retail Analytics,Actual,Direct,463,149,3702
+Nov,APAC,Retail Analytics,Actual,Partner,439,134,4049
+Nov,APAC,Retail Analytics,Actual,Marketplace,456,142,3933
+Nov,APAC,Retail Analytics,Plan,Direct,495,164,3813
+Nov,APAC,Retail Analytics,Plan,Partner,470,149,4170
+Nov,APAC,Retail Analytics,Plan,Marketplace,488,157,4051
+Nov,APAC,Retail Analytics,Forecast,Direct,485,163,3739
+Nov,APAC,Retail Analytics,Forecast,Partner,461,148,4089
+Nov,APAC,Retail Analytics,Forecast,Marketplace,478,156,3973
+Nov,APAC,Supply Chain,Actual,Direct,432,135,4056
+Nov,APAC,Supply Chain,Actual,Partner,410,121,4437
+Nov,APAC,Supply Chain,Actual,Marketplace,425,128,4310
+Nov,APAC,Supply Chain,Plan,Direct,462,149,4178
+Nov,APAC,Supply Chain,Plan,Partner,438,134,4570
+Nov,APAC,Supply Chain,Plan,Marketplace,455,142,4439
+Nov,APAC,Supply Chain,Forecast,Direct,453,148,4097
+Nov,APAC,Supply Chain,Forecast,Partner,430,134,4481
+Nov,APAC,Supply Chain,Forecast,Marketplace,446,141,4353
+Nov,APAC,Data Platform,Actual,Direct,609,220,3353
+Nov,APAC,Data Platform,Actual,Partner,578,200,3667
+Nov,APAC,Data Platform,Actual,Marketplace,600,211,3562
+Nov,APAC,Data Platform,Plan,Direct,652,243,3454
+Nov,APAC,Data Platform,Plan,Partner,618,220,3777
+Nov,APAC,Data Platform,Plan,Marketplace,642,232,3669
+Nov,APAC,Data Platform,Forecast,Direct,639,241,3386
+Nov,APAC,Data Platform,Forecast,Partner,606,219,3704
+Nov,APAC,Data Platform,Forecast,Marketplace,629,231,3598
+Nov,Latin America,Cloud Suite,Actual,Direct,416,121,2197
+Nov,Latin America,Cloud Suite,Actual,Partner,395,109,2402
+Nov,Latin America,Cloud Suite,Actual,Marketplace,410,116,2334
+Nov,Latin America,Cloud Suite,Plan,Direct,445,134,2262
+Nov,Latin America,Cloud Suite,Plan,Partner,423,121,2475
+Nov,Latin America,Cloud Suite,Plan,Marketplace,439,128,2404
+Nov,Latin America,Cloud Suite,Forecast,Direct,436,134,2219
+Nov,Latin America,Cloud Suite,Forecast,Partner,414,120,2426
+Nov,Latin America,Cloud Suite,Forecast,Marketplace,430,128,2357
+Nov,Latin America,Retail Analytics,Actual,Direct,359,98,2423
+Nov,Latin America,Retail Analytics,Actual,Partner,340,87,2650
+Nov,Latin America,Retail Analytics,Actual,Marketplace,353,92,2574
+Nov,Latin America,Retail Analytics,Plan,Direct,384,108,2496
+Nov,Latin America,Retail Analytics,Plan,Partner,364,97,2730
+Nov,Latin America,Retail Analytics,Plan,Marketplace,378,103,2652
+Nov,Latin America,Retail Analytics,Forecast,Direct,376,108,2447
+Nov,Latin America,Retail Analytics,Forecast,Partner,357,97,2677
+Nov,Latin America,Retail Analytics,Forecast,Marketplace,370,102,2600
+Nov,Latin America,Supply Chain,Actual,Direct,335,88,2655
+Nov,Latin America,Supply Chain,Actual,Partner,318,78,2904
+Nov,Latin America,Supply Chain,Actual,Marketplace,330,83,2821
+Nov,Latin America,Supply Chain,Plan,Direct,358,97,2735
+Nov,Latin America,Supply Chain,Plan,Partner,340,87,2991
+Nov,Latin America,Supply Chain,Plan,Marketplace,353,92,2906
+Nov,Latin America,Supply Chain,Forecast,Direct,351,97,2682
+Nov,Latin America,Supply Chain,Forecast,Partner,333,87,2933
+Nov,Latin America,Supply Chain,Forecast,Marketplace,346,92,2849
+Nov,Latin America,Data Platform,Actual,Direct,472,147,2195
+Nov,Latin America,Data Platform,Actual,Partner,448,133,2400
+Nov,Latin America,Data Platform,Actual,Marketplace,465,140,2332
+Nov,Latin America,Data Platform,Plan,Direct,505,163,2260
+Nov,Latin America,Data Platform,Plan,Partner,479,147,2472
+Nov,Latin America,Data Platform,Plan,Marketplace,497,155,2402
+Nov,Latin America,Data Platform,Forecast,Direct,495,162,2217
+Nov,Latin America,Data Platform,Forecast,Partner,470,146,2424
+Nov,Latin America,Data Platform,Forecast,Marketplace,487,154,2355
+Dec,North America,Cloud Suite,Actual,Direct,707,280,3323
+Dec,North America,Cloud Suite,Actual,Partner,671,255,3635
+Dec,North America,Cloud Suite,Actual,Marketplace,697,269,3531
+Dec,North America,Cloud Suite,Plan,Direct,757,307,3423
+Dec,North America,Cloud Suite,Plan,Partner,718,280,3744
+Dec,North America,Cloud Suite,Plan,Marketplace,746,295,3637
+Dec,North America,Cloud Suite,Forecast,Direct,742,305,3357
+Dec,North America,Cloud Suite,Forecast,Partner,705,278,3671
+Dec,North America,Cloud Suite,Forecast,Marketplace,732,294,3566
+Dec,North America,Retail Analytics,Actual,Direct,610,229,3665
+Dec,North America,Retail Analytics,Actual,Partner,579,208,4009
+Dec,North America,Retail Analytics,Actual,Marketplace,601,220,3894
+Dec,North America,Retail Analytics,Plan,Direct,652,252,3775
+Dec,North America,Retail Analytics,Plan,Partner,619,229,4129
+Dec,North America,Retail Analytics,Plan,Marketplace,643,242,4011
+Dec,North America,Retail Analytics,Forecast,Direct,640,250,3702
+Dec,North America,Retail Analytics,Forecast,Partner,607,228,4049
+Dec,North America,Retail Analytics,Forecast,Marketplace,631,240,3933
+Dec,North America,Supply Chain,Actual,Direct,569,208,4016
+Dec,North America,Supply Chain,Actual,Partner,540,189,4392
+Dec,North America,Supply Chain,Actual,Marketplace,561,200,4267
+Dec,North America,Supply Chain,Plan,Direct,609,229,4136
+Dec,North America,Supply Chain,Plan,Partner,578,208,4524
+Dec,North America,Supply Chain,Plan,Marketplace,600,220,4395
+Dec,North America,Supply Chain,Forecast,Direct,597,227,4056
+Dec,North America,Supply Chain,Forecast,Partner,567,207,4436
+Dec,North America,Supply Chain,Forecast,Marketplace,588,218,4310
+Dec,North America,Data Platform,Actual,Direct,803,334,3319
+Dec,North America,Data Platform,Actual,Partner,763,305,3630
+Dec,North America,Data Platform,Actual,Marketplace,792,322,3526
+Dec,North America,Data Platform,Plan,Direct,859,366,3419
+Dec,North America,Data Platform,Plan,Partner,816,335,3739
+Dec,North America,Data Platform,Plan,Marketplace,847,352,3632
+Dec,North America,Data Platform,Forecast,Direct,843,363,3352
+Dec,North America,Data Platform,Forecast,Partner,800,332,3666
+Dec,North America,Data Platform,Forecast,Marketplace,830,349,3562
+Dec,Europe,Cloud Suite,Actual,Direct,603,221,3045
+Dec,Europe,Cloud Suite,Actual,Partner,573,201,3330
+Dec,Europe,Cloud Suite,Actual,Marketplace,595,212,3235
+Dec,Europe,Cloud Suite,Plan,Direct,645,243,3136
+Dec,Europe,Cloud Suite,Plan,Partner,613,221,3430
+Dec,Europe,Cloud Suite,Plan,Marketplace,636,233,3332
+Dec,Europe,Cloud Suite,Forecast,Direct,633,241,3075
+Dec,Europe,Cloud Suite,Forecast,Partner,601,219,3363
+Dec,Europe,Cloud Suite,Forecast,Marketplace,624,232,3267
+Dec,Europe,Retail Analytics,Actual,Direct,520,180,3358
+Dec,Europe,Retail Analytics,Actual,Partner,494,163,3673
+Dec,Europe,Retail Analytics,Actual,Marketplace,513,172,3568
+Dec,Europe,Retail Analytics,Plan,Direct,556,198,3459
+Dec,Europe,Retail Analytics,Plan,Partner,528,180,3783
+Dec,Europe,Retail Analytics,Plan,Marketplace,548,190,3675
+Dec,Europe,Retail Analytics,Forecast,Direct,546,197,3392
+Dec,Europe,Retail Analytics,Forecast,Partner,518,179,3710
+Dec,Europe,Retail Analytics,Forecast,Marketplace,538,189,3604
+Dec,Europe,Supply Chain,Actual,Direct,485,163,3679
+Dec,Europe,Supply Chain,Actual,Partner,461,148,4024
+Dec,Europe,Supply Chain,Actual,Marketplace,478,156,3909
+Dec,Europe,Supply Chain,Plan,Direct,519,180,3790
+Dec,Europe,Supply Chain,Plan,Partner,493,163,4145
+Dec,Europe,Supply Chain,Plan,Marketplace,512,172,4026
+Dec,Europe,Supply Chain,Forecast,Direct,509,179,3716
+Dec,Europe,Supply Chain,Forecast,Partner,483,162,4064
+Dec,Europe,Supply Chain,Forecast,Marketplace,502,171,3948
+Dec,Europe,Data Platform,Actual,Direct,685,264,3041
+Dec,Europe,Data Platform,Actual,Partner,650,241,3326
+Dec,Europe,Data Platform,Actual,Marketplace,675,254,3231
+Dec,Europe,Data Platform,Plan,Direct,733,290,3132
+Dec,Europe,Data Platform,Plan,Partner,695,264,3426
+Dec,Europe,Data Platform,Plan,Marketplace,722,279,3328
+Dec,Europe,Data Platform,Forecast,Direct,718,288,3071
+Dec,Europe,Data Platform,Forecast,Partner,682,263,3359
+Dec,Europe,Data Platform,Forecast,Marketplace,708,277,3263
+Dec,APAC,Cloud Suite,Actual,Direct,572,198,3538
+Dec,APAC,Cloud Suite,Actual,Partner,543,179,3869
+Dec,APAC,Cloud Suite,Actual,Marketplace,564,190,3759
+Dec,APAC,Cloud Suite,Plan,Direct,612,218,3644
+Dec,APAC,Cloud Suite,Plan,Partner,581,198,3985
+Dec,APAC,Cloud Suite,Plan,Marketplace,603,209,3872
+Dec,APAC,Cloud Suite,Forecast,Direct,600,217,3573
+Dec,APAC,Cloud Suite,Forecast,Partner,569,196,3908
+Dec,APAC,Cloud Suite,Forecast,Marketplace,591,207,3796
+Dec,APAC,Retail Analytics,Actual,Direct,493,161,3902
+Dec,APAC,Retail Analytics,Actual,Partner,468,145,4268
+Dec,APAC,Retail Analytics,Actual,Marketplace,486,154,4146
+Dec,APAC,Retail Analytics,Plan,Direct,527,177,4019
+Dec,APAC,Retail Analytics,Plan,Partner,500,160,4396
+Dec,APAC,Retail Analytics,Plan,Marketplace,519,169,4270
+Dec,APAC,Retail Analytics,Forecast,Direct,517,176,3941
+Dec,APAC,Retail Analytics,Forecast,Partner,491,160,4310
+Dec,APAC,Retail Analytics,Forecast,Marketplace,509,168,4187
+Dec,APAC,Supply Chain,Actual,Direct,460,145,4275
+Dec,APAC,Supply Chain,Actual,Partner,437,131,4676
+Dec,APAC,Supply Chain,Actual,Marketplace,453,139,4542
+Dec,APAC,Supply Chain,Plan,Direct,492,160,4403
+Dec,APAC,Supply Chain,Plan,Partner,467,145,4816
+Dec,APAC,Supply Chain,Plan,Marketplace,485,153,4679
+Dec,APAC,Supply Chain,Forecast,Direct,482,160,4318
+Dec,APAC,Supply Chain,Forecast,Partner,458,144,4723
+Dec,APAC,Supply Chain,Forecast,Marketplace,475,152,4588
+Dec,APAC,Data Platform,Actual,Direct,649,238,3533
+Dec,APAC,Data Platform,Actual,Partner,616,216,3864
+Dec,APAC,Data Platform,Actual,Marketplace,639,227,3754
+Dec,APAC,Data Platform,Plan,Direct,694,261,3639
+Dec,APAC,Data Platform,Plan,Partner,659,237,3980
+Dec,APAC,Data Platform,Plan,Marketplace,684,250,3867
+Dec,APAC,Data Platform,Forecast,Direct,680,259,3569
+Dec,APAC,Data Platform,Forecast,Partner,646,236,3903
+Dec,APAC,Data Platform,Forecast,Marketplace,670,249,3792
+Dec,Latin America,Cloud Suite,Actual,Direct,443,131,2316
+Dec,Latin America,Cloud Suite,Actual,Partner,421,118,2533
+Dec,Latin America,Cloud Suite,Actual,Marketplace,437,125,2460
+Dec,Latin America,Cloud Suite,Plan,Direct,474,145,2385
+Dec,Latin America,Cloud Suite,Plan,Partner,450,131,2609
+Dec,Latin America,Cloud Suite,Plan,Marketplace,467,138,2534
+Dec,Latin America,Cloud Suite,Forecast,Direct,465,145,2339
+Dec,Latin America,Cloud Suite,Forecast,Partner,441,130,2558
+Dec,Latin America,Cloud Suite,Forecast,Marketplace,458,138,2485
+Dec,Latin America,Retail Analytics,Actual,Direct,382,105,2554
+Dec,Latin America,Retail Analytics,Actual,Partner,363,94,2793
+Dec,Latin America,Retail Analytics,Actual,Marketplace,376,100,2714
+Dec,Latin America,Retail Analytics,Plan,Direct,409,117,2631
+Dec,Latin America,Retail Analytics,Plan,Partner,388,105,2877
+Dec,Latin America,Retail Analytics,Plan,Marketplace,402,111,2795
+Dec,Latin America,Retail Analytics,Forecast,Direct,401,117,2579
+Dec,Latin America,Retail Analytics,Forecast,Partner,380,105,2821
+Dec,Latin America,Retail Analytics,Forecast,Marketplace,394,111,2741
+Dec,Latin America,Supply Chain,Actual,Direct,356,95,2798
+Dec,Latin America,Supply Chain,Actual,Partner,338,85,3061
+Dec,Latin America,Supply Chain,Actual,Marketplace,351,90,2973
+Dec,Latin America,Supply Chain,Plan,Direct,381,105,2882
+Dec,Latin America,Supply Chain,Plan,Partner,362,94,3152
+Dec,Latin America,Supply Chain,Plan,Marketplace,375,100,3062
+Dec,Latin America,Supply Chain,Forecast,Direct,374,105,2826
+Dec,Latin America,Supply Chain,Forecast,Partner,355,94,3091
+Dec,Latin America,Supply Chain,Forecast,Marketplace,368,100,3003
+Dec,Latin America,Data Platform,Actual,Direct,503,159,2313
+Dec,Latin America,Data Platform,Actual,Partner,477,143,2529
+Dec,Latin America,Data Platform,Actual,Marketplace,495,151,2457
+Dec,Latin America,Data Platform,Plan,Direct,538,175,2382
+Dec,Latin America,Data Platform,Plan,Partner,510,158,2605
+Dec,Latin America,Data Platform,Plan,Marketplace,529,167,2531
+Dec,Latin America,Data Platform,Forecast,Direct,527,174,2336
+Dec,Latin America,Data Platform,Forecast,Partner,500,158,2555
+Dec,Latin America,Data Platform,Forecast,Marketplace,519,167,2482
