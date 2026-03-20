@@ -11,6 +11,9 @@ export type CubeFact = {
   units: number;
 };
 
+export type CubeFactField = keyof CubeFact;
+export type CsvColumnMapping = Record<CubeFactField, string>;
+
 export type MeasureTotals = Record<Measure, number>;
 
 export type PivotCell = {
@@ -30,6 +33,20 @@ export const dimensionOptions: Array<{ key: DimensionKey; label: string }> = [
   { key: "productLine", label: "Product Line" },
   { key: "scenario", label: "Scenario" },
   { key: "month", label: "Month" },
+];
+
+export const cubeFieldOptions: Array<{
+  key: CubeFactField;
+  label: string;
+  kind: "dimension" | "measure";
+}> = [
+  { key: "month", label: "Month", kind: "dimension" },
+  { key: "region", label: "Region", kind: "dimension" },
+  { key: "productLine", label: "Product Line", kind: "dimension" },
+  { key: "scenario", label: "Scenario", kind: "dimension" },
+  { key: "revenue", label: "Revenue", kind: "measure" },
+  { key: "margin", label: "Margin", kind: "measure" },
+  { key: "units", label: "Units", kind: "measure" },
 ];
 
 export const cubeFacts: CubeFact[] = [
@@ -129,19 +146,14 @@ const dimensionAccessor = {
   month: (fact: CubeFact) => fact.month,
 } satisfies Record<DimensionKey, (fact: CubeFact) => string>;
 
-const csvHeaderAliases: Record<string, keyof CubeFact> = {
-  month: "month",
-  period: "month",
-  region: "region",
-  geography: "region",
-  product: "productLine",
-  productline: "productLine",
-  scenario: "scenario",
-  revenue: "revenue",
-  sales: "revenue",
-  margin: "margin",
-  units: "units",
-  quantity: "units",
+const csvHeaderAliases: Record<CubeFactField, string[]> = {
+  month: ["month", "period", "date", "fiscalmonth"],
+  region: ["region", "geography", "market", "area"],
+  productLine: ["productline", "product line", "product", "category", "businessunit"],
+  scenario: ["scenario", "version", "plan type", "plan"],
+  revenue: ["revenue", "sales", "amount", "bookings"],
+  margin: ["margin", "profit", "grossmargin"],
+  units: ["units", "quantity", "volume"],
 };
 
 export function getMeasureValue(fact: CubeFact, measure: Measure) {
@@ -163,6 +175,56 @@ export function createEmptyFilters(): Record<DimensionKey, string | "All"> {
 
 export function formatMeasureValue(value: number, measure: Measure) {
   return measure === "Units" ? value.toLocaleString() : `$${value.toLocaleString()}M`;
+}
+
+export function getCubeFieldLabel(field: CubeFactField) {
+  return cubeFieldOptions.find((option) => option.key === field)?.label ?? field;
+}
+
+export function createEmptyCsvColumnMapping(): CsvColumnMapping {
+  return {
+    month: "",
+    region: "",
+    productLine: "",
+    scenario: "",
+    revenue: "",
+    margin: "",
+    units: "",
+  };
+}
+
+export function getMissingCsvMappings(mapping: CsvColumnMapping) {
+  return cubeFieldOptions
+    .map((field) => field.key)
+    .filter((field) => mapping[field].trim() === "");
+}
+
+export function hasCompleteCsvMapping(mapping: CsvColumnMapping) {
+  return getMissingCsvMappings(mapping).length === 0;
+}
+
+export function suggestCsvColumnMapping(headers: string[]) {
+  const mapping = createEmptyCsvColumnMapping();
+  const usedHeaders = new Set<string>();
+
+  for (const field of cubeFieldOptions) {
+    const aliases = new Set(
+      csvHeaderAliases[field.key].map((alias) => normalizeCsvHeader(alias)).concat(normalizeCsvHeader(field.label)),
+    );
+
+    const matchingHeader = headers.find((header) => {
+      const normalized = normalizeCsvHeader(header);
+
+      return aliases.has(normalized) && !usedHeaders.has(header);
+    });
+
+    if (matchingHeader) {
+      mapping[field.key] = matchingHeader;
+      usedHeaders.add(matchingHeader);
+    }
+  }
+
+  return mapping;
 }
 
 export function getUniqueDimensionValues(facts: CubeFact[]) {
@@ -254,50 +316,14 @@ export function buildPivotCells(
   return { cells, xValues, zValues };
 }
 
-export function parseCubeFactsCsv(csvText: string) {
-  const lines = csvText
-    .replace(/\r\n/g, "\n")
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean);
+export function parseMappedCubeFacts(rows: Array<Record<string, unknown>>, mapping: CsvColumnMapping) {
+  const missingMappings = getMissingCsvMappings(mapping);
 
-  if (lines.length < 2) {
-    return {
-      facts: [] as CubeFact[],
-      errors: ["CSV must include a header row and at least one data row."],
-    };
-  }
-
-  const rawHeaders = splitCsvLine(lines[0]);
-  const headerMap = new Map<keyof CubeFact, number>();
-
-  rawHeaders.forEach((header, index) => {
-    const normalized = header.toLowerCase().replace(/[^a-z0-9]+/g, "");
-    const key = csvHeaderAliases[normalized];
-
-    if (key && !headerMap.has(key)) {
-      headerMap.set(key, index);
-    }
-  });
-
-  const requiredColumns: Array<keyof CubeFact> = [
-    "month",
-    "region",
-    "productLine",
-    "scenario",
-    "revenue",
-    "margin",
-    "units",
-  ];
-
-  const missingColumns = requiredColumns.filter((column) => !headerMap.has(column));
-
-  if (missingColumns.length > 0) {
+  if (missingMappings.length > 0) {
     return {
       facts: [] as CubeFact[],
       errors: [
-        `Missing required columns: ${missingColumns.join(", ")}.`,
-        "Expected columns include month, region, productLine, scenario, revenue, margin, and units.",
+        `Unmapped required fields: ${missingMappings.map((field) => getCubeFieldLabel(field)).join(", ")}.`,
       ],
     };
   }
@@ -305,19 +331,44 @@ export function parseCubeFactsCsv(csvText: string) {
   const facts: CubeFact[] = [];
   const errors: string[] = [];
 
-  for (let lineIndex = 1; lineIndex < lines.length; lineIndex += 1) {
-    const values = splitCsvLine(lines[lineIndex] ?? "");
-    const lineNumber = lineIndex + 1;
-    const fact = buildFactFromCsvRow(values, headerMap, lineNumber);
+  for (let rowIndex = 0; rowIndex < rows.length; rowIndex += 1) {
+    const row = rows[rowIndex] ?? {};
+    const lineNumber = rowIndex + 2;
+    const month = readMappedCsvValue(row, mapping.month);
+    const region = readMappedCsvValue(row, mapping.region);
+    const productLine = readMappedCsvValue(row, mapping.productLine);
+    const scenario = readMappedCsvValue(row, mapping.scenario);
+    const revenueText = readMappedCsvValue(row, mapping.revenue);
+    const marginText = readMappedCsvValue(row, mapping.margin);
+    const unitsText = readMappedCsvValue(row, mapping.units);
 
-    if (fact.error) {
-      errors.push(fact.error);
+    if ([month, region, productLine, scenario, revenueText, marginText, unitsText].every((value) => value === "")) {
       continue;
     }
 
-    if (fact.fact) {
-      facts.push(fact.fact);
+    const revenue = parseNumericCsvValue(revenueText);
+    const margin = parseNumericCsvValue(marginText);
+    const units = parseNumericCsvValue(unitsText);
+
+    if (!month || !region || !productLine || !scenario) {
+      errors.push(`Row ${lineNumber} is missing one or more dimension values.`);
+      continue;
     }
+
+    if (revenue === null || margin === null || units === null) {
+      errors.push(`Row ${lineNumber} contains a non-numeric measure value.`);
+      continue;
+    }
+
+    facts.push({
+      month,
+      region,
+      productLine,
+      scenario,
+      revenue,
+      margin,
+      units,
+    });
   }
 
   if (facts.length === 0) {
@@ -327,91 +378,28 @@ export function parseCubeFactsCsv(csvText: string) {
   return { facts, errors };
 }
 
-function buildFactFromCsvRow(
-  values: string[],
-  headerMap: Map<keyof CubeFact, number>,
-  lineNumber: number,
-): { fact: CubeFact; error?: never } | { fact?: never; error: string } {
-  const month = getCsvValue(values, headerMap, "month");
-  const region = getCsvValue(values, headerMap, "region");
-  const productLine = getCsvValue(values, headerMap, "productLine");
-  const scenario = getCsvValue(values, headerMap, "scenario");
-  const revenue = parseNumericCsvValue(getCsvValue(values, headerMap, "revenue"));
-  const margin = parseNumericCsvValue(getCsvValue(values, headerMap, "margin"));
-  const units = parseNumericCsvValue(getCsvValue(values, headerMap, "units"));
-
-  if (!month || !region || !productLine || !scenario) {
-    return {
-      error: `Row ${lineNumber} is missing one or more dimension values.`,
-    };
-  }
-
-  if (revenue === null || margin === null || units === null) {
-    return {
-      error: `Row ${lineNumber} contains a non-numeric measure value.`,
-    };
-  }
-
-  return {
-    fact: {
-      month,
-      region,
-      productLine,
-      scenario,
-      revenue,
-      margin,
-      units,
-    },
-  };
-}
-
-function getCsvValue(values: string[], headerMap: Map<keyof CubeFact, number>, key: keyof CubeFact) {
-  const columnIndex = headerMap.get(key);
-
-  if (columnIndex === undefined) {
-    return "";
-  }
-
-  return (values[columnIndex] ?? "").trim();
-}
-
 function parseNumericCsvValue(value: string) {
   const normalized = value.replace(/[$,\s]/g, "");
+
+  if (normalized === "") {
+    return null;
+  }
+
   const parsed = Number(normalized);
 
   return Number.isFinite(parsed) ? parsed : null;
 }
 
-function splitCsvLine(line: string) {
-  const cells: string[] = [];
-  let current = "";
-  let inQuotes = false;
+export function readMappedCsvValue(row: Record<string, unknown>, header: string) {
+  const rawValue = row[header];
 
-  for (let index = 0; index < line.length; index += 1) {
-    const character = line[index];
-    const nextCharacter = line[index + 1];
-
-    if (character === '"') {
-      if (inQuotes && nextCharacter === '"') {
-        current += '"';
-        index += 1;
-      } else {
-        inQuotes = !inQuotes;
-      }
-
-      continue;
-    }
-
-    if (character === "," && !inQuotes) {
-      cells.push(current.trim());
-      current = "";
-      continue;
-    }
-
-    current += character;
+  if (Array.isArray(rawValue)) {
+    return rawValue.map((value) => String(value ?? "")).join(", ").trim();
   }
 
-  cells.push(current.trim());
+  return String(rawValue ?? "").trim();
+}
 
-  return cells;
+function normalizeCsvHeader(header: string) {
+  return header.toLowerCase().replace(/[^a-z0-9]+/g, "");
 }

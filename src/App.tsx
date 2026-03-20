@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Papa from "papaparse";
 import { Boxes, Layers3, Sparkles, TableProperties } from "lucide-react";
 
 import { CubeScene } from "@/components/olap/cube-scene";
@@ -10,21 +11,34 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   buildPivotCells,
+  cubeFieldOptions,
   createEmptyFilters,
+  type CsvColumnMapping,
   cubeFacts,
   dimensionOptions,
   type DimensionKey,
   formatMeasureValue,
   getDimensionValue,
   getUniqueDimensionValues,
+  hasCompleteCsvMapping,
   type Measure,
-  parseCubeFactsCsv,
+  parseMappedCubeFacts,
+  suggestCsvColumnMapping,
   type CubeFact,
 } from "@/data/mock-cube";
 
 function getDimensionLabel(dimension: DimensionKey) {
   return dimensionOptions.find((option) => option.key === dimension)?.label ?? dimension;
 }
+
+type PendingUpload = {
+  fileName: string;
+  headers: string[];
+  rows: Array<Record<string, unknown>>;
+  previewRows: Array<Record<string, unknown>>;
+  mapping: CsvColumnMapping;
+  parseErrors: string[];
+};
 
 function App() {
   const [facts, setFacts] = useState<CubeFact[]>(cubeFacts);
@@ -36,6 +50,7 @@ function App() {
   const [filters, setFilters] = useState<Record<DimensionKey, string | "All">>(createEmptyFilters());
   const [activeCellId, setActiveCellId] = useState<string | null>(null);
   const [hoveredCellId, setHoveredCellId] = useState<string | null>(null);
+  const [pendingUpload, setPendingUpload] = useState<PendingUpload | null>(null);
 
   const availableValues = getUniqueDimensionValues(facts);
   const filteredFacts = facts.filter((fact) =>
@@ -100,32 +115,111 @@ function App() {
 
     try {
       const csvText = await file.text();
-      const parsed = parseCubeFactsCsv(csvText);
+      const parsed = Papa.parse<Record<string, unknown>>(csvText, {
+        header: true,
+        skipEmptyLines: "greedy",
+        transformHeader: (header) => header.trim(),
+      });
+      const headers = Array.from(new Set((parsed.meta.fields ?? []).map((field) => field.trim()).filter(Boolean)));
+      const rows = parsed.data.filter((row) =>
+        Object.values(row).some((value) => String(value ?? "").trim() !== ""),
+      );
 
-      if (parsed.facts.length === 0) {
-        setUploadError(parsed.errors.join(" "));
+      if (headers.length === 0) {
+        setPendingUpload(null);
+        setUploadError("CSV must include a header row.");
         return;
       }
 
-      setFacts(parsed.facts);
-      setDatasetLabel(file.name);
-      setFilters(createEmptyFilters());
-      setActiveCellId(null);
-      setHoveredCellId(null);
-      setUploadError(
-        parsed.errors.length > 0
-          ? `Loaded ${parsed.facts.length} rows. ${parsed.errors.length} row(s) were skipped. ${parsed.errors[0]}`
-          : null,
-      );
+      if (rows.length === 0) {
+        setPendingUpload(null);
+        setUploadError("CSV must include at least one data row.");
+        return;
+      }
+
+      setPendingUpload({
+        fileName: file.name,
+        headers,
+        rows,
+        previewRows: rows.slice(0, 3),
+        mapping: suggestCsvColumnMapping(headers),
+        parseErrors: parsed.errors.map((error) => {
+          const rowLabel = typeof error.row === "number" ? `Row ${error.row + 2}` : "CSV";
+
+          return `${rowLabel}: ${error.message}`;
+        }),
+      });
+      setUploadError(null);
     } catch (error) {
+      setPendingUpload(null);
       setUploadError(error instanceof Error ? error.message : "CSV upload failed.");
     }
+  }
+
+  function handleMappingChange(field: keyof CubeFact, header: string) {
+    setPendingUpload((current) => {
+      if (!current) {
+        return current;
+      }
+
+      const nextMapping = {
+        ...current.mapping,
+        [field]: header,
+      };
+
+      if (header !== "") {
+        for (const cubeField of cubeFieldOptions.map((option) => option.key)) {
+          if (cubeField !== field && nextMapping[cubeField] === header) {
+            nextMapping[cubeField] = "";
+          }
+        }
+      }
+
+      return {
+        ...current,
+        mapping: nextMapping,
+      };
+    });
+  }
+
+  function handleApplyUpload() {
+    if (!pendingUpload || !hasCompleteCsvMapping(pendingUpload.mapping)) {
+      return;
+    }
+
+    const parsed = parseMappedCubeFacts(pendingUpload.rows, pendingUpload.mapping);
+
+    if (parsed.facts.length === 0) {
+      setUploadError(parsed.errors.join(" "));
+      return;
+    }
+
+    setFacts(parsed.facts);
+    setDatasetLabel(pendingUpload.fileName);
+    setFilters(createEmptyFilters());
+    setActiveCellId(null);
+    setHoveredCellId(null);
+    setPendingUpload(null);
+
+    const warnings = [...pendingUpload.parseErrors, ...parsed.errors];
+
+    setUploadError(
+      warnings.length > 0
+        ? `Loaded ${parsed.facts.length} rows with ${warnings.length} warning(s). ${warnings[0]}`
+        : null,
+    );
+  }
+
+  function handleCancelUpload() {
+    setPendingUpload(null);
+    setUploadError(null);
   }
 
   function handleResetDataset() {
     setFacts(cubeFacts);
     setDatasetLabel("Built-in demo cube");
     setUploadError(null);
+    setPendingUpload(null);
     setFilters(createEmptyFilters());
     setSelectedMeasure("Revenue");
     setXDimension("region");
@@ -260,6 +354,7 @@ function App() {
             datasetLabel={datasetLabel}
             recordCount={facts.length}
             uploadError={uploadError}
+            pendingUpload={pendingUpload}
             onMeasureChange={setSelectedMeasure}
             onAxisChange={handleAxisChange}
             onSwapAxes={handleSwapAxes}
@@ -270,6 +365,9 @@ function App() {
               }));
             }}
             onUpload={handleUpload}
+            onMappingChange={handleMappingChange}
+            onApplyUpload={handleApplyUpload}
+            onCancelUpload={handleCancelUpload}
             onResetDataset={handleResetDataset}
           />
 

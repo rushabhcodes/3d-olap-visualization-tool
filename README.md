@@ -5,10 +5,11 @@ Starter repository for an interactive 3D OLAP exploration app using Vite, React,
 ## Stack
 
 - Vite
-- React 18 + TypeScript
+- React 19 + TypeScript
 - Tailwind CSS
 - shadcn/ui-style components
 - Three.js with `@react-three/fiber` and `@react-three/drei`
+- Papa Parse for CSV ingestion
 
 ## Run
 
@@ -24,12 +25,13 @@ npm run dev
 - Pivotable 3D cube scene with selectable aggregated cells
 - Real pivot matrix heatmap with cross-highlighting
 - CSV dataset upload for local exploration
+- Parser-backed CSV schema mapping before import
 - Drill-down detail panel and aggregated pivot table
 - Tailwind theme tokens and shadcn component aliases
 
 ## CSV schema
 
-Uploads expect these columns:
+Uploads still map into these semantic fields:
 
 - `month`
 - `region`
@@ -38,3 +40,5 @@ Uploads expect these columns:
 - `revenue`
 - `margin`
 - `units`
+
+The uploader now parses CSV files with Papa Parse, suggests header mappings automatically, and lets you remap columns before applying the dataset.
