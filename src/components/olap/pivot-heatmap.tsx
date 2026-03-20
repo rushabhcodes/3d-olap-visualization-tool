@@ -50,7 +50,7 @@ export function PivotHeatmap({
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap gap-2 text-xs text-slate-400">
+      <div className="flex flex-wrap gap-2 text-xs text-slate-500">
         <span>X axis: {getDimensionLabel(xDimension)}</span>
         <span>Z axis: {getDimensionLabel(zDimension)}</span>
         <span>Intensity: {measure}</span>
@@ -62,20 +62,20 @@ export function PivotHeatmap({
             gridTemplateColumns: `180px repeat(${Math.max(xValues.length, 1)}, minmax(96px, 1fr))`,
           }}
         >
-          <div className="rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3 text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
+          <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
             {getDimensionLabel(zDimension)}
           </div>
           {xValues.map((xValue) => (
             <div
               key={`header-${xValue}`}
-              className="rounded-xl border border-slate-800 bg-slate-950/60 px-3 py-3 text-center text-xs font-medium uppercase tracking-[0.12em] text-slate-400"
+              className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-center text-xs font-medium uppercase tracking-[0.12em] text-slate-500"
             >
               {xValue}
             </div>
           ))}
           {zValues.map((zValue) => (
             <Fragment key={zValue}>
-              <div className="flex items-center rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3 text-sm text-slate-200">
+              <div className="flex items-center rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700">
                 {zValue}
               </div>
               {xValues.map((xValue) => {
@@ -90,15 +90,15 @@ export function PivotHeatmap({
                     type="button"
                     className={cn(
                       "group flex min-h-24 flex-col justify-between rounded-xl border px-3 py-3 text-left transition",
-                      cell ? "border-slate-800 hover:-translate-y-0.5" : "cursor-default border-slate-900 opacity-60",
-                      active && "border-amber-300/70 shadow-[0_0_0_1px_rgba(252,211,77,0.25)]",
-                      hovered && "border-cyan-300/70 shadow-[0_0_0_1px_rgba(34,211,238,0.3)]",
+                      cell ? "border-slate-200 hover:-translate-y-0.5" : "cursor-default border-slate-200 opacity-60",
+                      active && "border-amber-300/80 shadow-[0_0_0_1px_rgba(252,211,77,0.3)]",
+                      hovered && "border-cyan-300/80 shadow-[0_0_0_1px_rgba(34,211,238,0.28)]",
                     )}
                     disabled={!cell}
                     style={{
                       backgroundColor: cell
-                        ? `rgba(34, 211, 238, ${0.14 + intensity * 0.6})`
-                        : "rgba(15, 23, 42, 0.55)",
+                        ? `rgba(34, 211, 238, ${0.1 + intensity * 0.38})`
+                        : "rgba(241, 245, 249, 0.9)",
                     }}
                     onMouseEnter={() => {
                       if (cell) {
@@ -118,14 +118,14 @@ export function PivotHeatmap({
                       }
                     }}
                   >
-                    <span className="text-xs uppercase tracking-[0.12em] text-slate-900/80">
+                    <span className="text-xs uppercase tracking-[0.12em] text-slate-700">
                       {cell ? `${Math.round(intensity * 100)}%` : "Empty"}
                     </span>
                     <div className="space-y-1">
-                      <p className="text-sm font-semibold text-slate-950">
+                      <p className="text-sm font-semibold text-slate-900">
                         {cell ? formatMeasureValue(cell.value, measure) : "-"}
                       </p>
-                      <p className="text-xs text-slate-950/80">{cell ? `${cell.count} contributing row(s)` : ""}</p>
+                      <p className="text-xs text-slate-600">{cell ? `${cell.count} contributing row(s)` : ""}</p>
                     </div>
                   </button>
                 );

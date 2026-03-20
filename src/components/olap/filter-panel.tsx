@@ -79,7 +79,7 @@ function AxisSelect({
     <label className="grid gap-2">
       <span className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">{label}</span>
       <select
-        className="h-10 rounded-xl border border-slate-800 bg-slate-900 px-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400"
+        className="h-10 rounded-xl border border-slate-200 bg-white px-3 text-sm text-slate-900 outline-none transition focus:border-cyan-500"
         value={value}
         onChange={(event) => onChange(event.target.value as DimensionKey)}
       >
@@ -114,27 +114,27 @@ export function FilterPanel({
   onResetDataset,
 }: FilterPanelProps) {
   return (
-    <Card className="border-cyan-950/20 bg-slate-950/65">
+    <Card className="border-cyan-200/70 bg-white/85">
       <CardHeader>
         <div className="flex items-center justify-between gap-3">
           <div>
             <CardTitle>Cube Controls</CardTitle>
             <CardDescription>Drive pivots, slices, and dataset changes from one rail.</CardDescription>
           </div>
-          <Badge variant="secondary" className="bg-cyan-500/15 text-cyan-100">
+          <Badge variant="secondary" className="bg-cyan-100 text-cyan-800">
             OLAP
           </Badge>
         </div>
       </CardHeader>
       <CardContent className="space-y-6">
-        <section className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+        <section className="space-y-3 rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
           <div className="flex items-center gap-2">
-            <Database className="h-4 w-4 text-cyan-300" />
-            <p className="text-sm font-medium text-white">Dataset</p>
+            <Database className="h-4 w-4 text-cyan-700" />
+            <p className="text-sm font-medium text-slate-900">Dataset</p>
           </div>
-          <p className="text-xs text-slate-400">{datasetLabel}</p>
-          <p className="text-xs text-slate-400">{recordCount} fact rows loaded</p>
-          <label className="flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-slate-700 bg-slate-950/70 px-4 py-3 text-sm text-slate-200 transition hover:border-cyan-400 hover:text-white">
+          <p className="text-xs text-slate-600">{datasetLabel}</p>
+          <p className="text-xs text-slate-600">{recordCount} fact rows loaded</p>
+          <label className="flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-slate-300 bg-white px-4 py-3 text-sm text-slate-700 transition hover:border-cyan-500 hover:text-slate-950">
             <Upload className="h-4 w-4" />
             Upload CSV
             <input
@@ -150,17 +150,17 @@ export function FilterPanel({
           <p className="text-xs text-slate-500">
             Parser: Papa Parse with explicit field mapping for month, region, productLine, scenario, revenue, margin, and units.
           </p>
-          {uploadError ? <p className="text-xs text-rose-300">{uploadError}</p> : null}
+          {uploadError ? <p className="text-xs text-rose-600">{uploadError}</p> : null}
           {pendingUpload ? (
-            <div className="space-y-4 rounded-xl border border-cyan-500/20 bg-slate-950/70 p-4">
+            <div className="space-y-4 rounded-xl border border-cyan-200 bg-cyan-50/70 p-4">
               <div className="space-y-1">
-                <p className="text-sm font-medium text-white">Review CSV Mapping</p>
-                <p className="text-xs text-slate-400">
+                <p className="text-sm font-medium text-slate-900">Review CSV Mapping</p>
+                <p className="text-xs text-slate-600">
                   {pendingUpload.fileName} with {pendingUpload.rows.length} parsed row(s) and {pendingUpload.headers.length} detected column(s).
                 </p>
               </div>
               {pendingUpload.parseErrors.length > 0 ? (
-                <p className="text-xs text-amber-300">
+                <p className="text-xs text-amber-700">
                   Parser warnings: {pendingUpload.parseErrors[0]}
                 </p>
               ) : null}
@@ -174,11 +174,11 @@ export function FilterPanel({
 
                   return (
                     <label key={field.key} className="grid gap-2">
-                      <span className="text-xs font-medium uppercase tracking-[0.14em] text-slate-400">
+                      <span className="text-xs font-medium uppercase tracking-[0.14em] text-slate-500">
                         {getCubeFieldLabel(field.key)}
                       </span>
                       <select
-                        className="h-10 rounded-xl border border-slate-800 bg-slate-900 px-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400"
+                        className="h-10 rounded-xl border border-slate-200 bg-white px-3 text-sm text-slate-900 outline-none transition focus:border-cyan-500"
                         value={selectedHeader}
                         onChange={(event) => onMappingChange(field.key, event.target.value)}
                       >
@@ -197,16 +197,16 @@ export function FilterPanel({
                 })}
               </div>
               <div className="flex gap-2">
-                <Button className="flex-1 bg-cyan-500 text-slate-950 hover:bg-cyan-400" disabled={!hasCompleteCsvMapping(pendingUpload.mapping)} onClick={onApplyUpload}>
+                <Button className="flex-1 bg-cyan-600 text-white hover:bg-cyan-500" disabled={!hasCompleteCsvMapping(pendingUpload.mapping)} onClick={onApplyUpload}>
                   Apply Mapping
                 </Button>
-                <Button variant="outline" className="flex-1 border-slate-700 bg-slate-900/70" onClick={onCancelUpload}>
+                <Button variant="outline" className="flex-1 border-slate-200 bg-white" onClick={onCancelUpload}>
                   Cancel
                 </Button>
               </div>
             </div>
           ) : null}
-          <Button variant="outline" className="w-full border-slate-700 bg-slate-900/70" onClick={onResetDataset}>
+          <Button variant="outline" className="w-full border-slate-200 bg-white" onClick={onResetDataset}>
             Reset Demo Data
           </Button>
         </section>
@@ -234,7 +234,7 @@ export function FilterPanel({
               <p className="text-sm font-medium">Pivot Axes</p>
               <p className="text-xs text-muted-foreground">Re-map the cube surface without changing the facts.</p>
             </div>
-            <Button variant="outline" size="sm" className="border-slate-700 bg-slate-900/70" onClick={onSwapAxes}>
+            <Button variant="outline" size="sm" className="border-slate-200 bg-white" onClick={onSwapAxes}>
               <ArrowLeftRight className="mr-2 h-4 w-4" />
               Swap
             </Button>

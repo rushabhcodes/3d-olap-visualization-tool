@@ -48,13 +48,12 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        glow: "0 20px 50px -25px rgba(14, 116, 144, 0.55)",
+        glow: "0 24px 64px -36px rgba(14, 116, 144, 0.24)",
       },
       backgroundImage: {
-        grid: "linear-gradient(to right, rgba(148, 163, 184, 0.14) 1px, transparent 1px), linear-gradient(to bottom, rgba(148, 163, 184, 0.14) 1px, transparent 1px)",
+        grid: "linear-gradient(to right, rgba(148, 163, 184, 0.12) 1px, transparent 1px), linear-gradient(to bottom, rgba(148, 163, 184, 0.12) 1px, transparent 1px)",
       },
     },
   },
   plugins: [animate],
 } satisfies Config;
-

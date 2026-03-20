@@ -40,9 +40,9 @@ export function PivotTable({
   onSelectCell,
 }: PivotTableProps) {
   return (
-    <div className="overflow-hidden rounded-2xl border border-slate-800">
-      <table className="min-w-full divide-y divide-slate-800 text-left text-sm">
-        <thead className="bg-slate-900/90 text-slate-300">
+    <div className="overflow-hidden rounded-2xl border border-slate-200">
+      <table className="min-w-full divide-y divide-slate-200 text-left text-sm">
+        <thead className="bg-slate-100 text-slate-600">
           <tr>
             <th className="px-4 py-3 font-medium">{getDimensionLabel(xDimension)}</th>
             <th className="px-4 py-3 font-medium">{getDimensionLabel(zDimension)}</th>
@@ -50,28 +50,28 @@ export function PivotTable({
             <th className="px-4 py-3 font-medium">Rows</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-slate-800 bg-slate-950/80">
+        <tbody className="divide-y divide-slate-200 bg-white">
           {cells.map((cell) => (
             <tr
               key={cell.id}
               className={cn(
-                "cursor-pointer transition hover:bg-slate-900/80",
-                activeCellId === cell.id && "bg-cyan-500/10",
-                hoveredCellId === cell.id && "bg-cyan-400/15 ring-1 ring-inset ring-cyan-400/40",
+                "cursor-pointer transition hover:bg-sky-50",
+                activeCellId === cell.id && "bg-amber-50",
+                hoveredCellId === cell.id && "bg-cyan-50 ring-1 ring-inset ring-cyan-300/60",
               )}
               onMouseEnter={() => onHoverCell(cell.id)}
               onMouseLeave={onLeaveCell}
               onClick={() => onSelectCell(cell.id)}
             >
-              <td className="px-4 py-3 text-slate-100">{cell.xValue}</td>
-              <td className="px-4 py-3 text-slate-300">{cell.zValue}</td>
-              <td className="px-4 py-3 text-slate-100">{formatMeasureValue(cell.value, measure)}</td>
-              <td className="px-4 py-3 text-slate-300">{cell.count}</td>
+              <td className="px-4 py-3 text-slate-900">{cell.xValue}</td>
+              <td className="px-4 py-3 text-slate-600">{cell.zValue}</td>
+              <td className="px-4 py-3 text-slate-900">{formatMeasureValue(cell.value, measure)}</td>
+              <td className="px-4 py-3 text-slate-600">{cell.count}</td>
             </tr>
           ))}
           {cells.length === 0 ? (
             <tr>
-              <td className="px-4 py-8 text-center text-slate-400" colSpan={4}>
+              <td className="px-4 py-8 text-center text-slate-500" colSpan={4}>
                 No aggregated cells match the current slice.
               </td>
             </tr>

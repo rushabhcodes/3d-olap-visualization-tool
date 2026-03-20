@@ -128,13 +128,13 @@ export function CubeScene({
   const maxValue = Math.max(...points.map((point) => point.value), 1);
 
   return (
-    <div className="relative h-[420px] overflow-hidden rounded-[1.75rem] border border-cyan-400/20 bg-[radial-gradient(circle_at_top,rgba(6,182,212,0.16),transparent_35%),linear-gradient(180deg,rgba(2,6,23,0.95),rgba(15,23,42,0.9))]">
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex items-center justify-between px-5 py-4 text-xs text-slate-300">
+    <div className="relative h-[420px] overflow-hidden rounded-[1.75rem] border border-cyan-200 bg-[radial-gradient(circle_at_top,rgba(6,182,212,0.18),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(240,249,255,0.94))]">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex items-center justify-between px-5 py-4 text-xs text-slate-600">
         <span>{getDimensionLabel(xDimension)} by {getDimensionLabel(zDimension)}</span>
         <span>{measure} intensity</span>
       </div>
       {points.length === 0 ? (
-        <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-6 text-center text-sm text-slate-300">
+        <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-6 text-center text-sm text-slate-600">
           No facts match the current slice. Adjust a filter or upload a wider dataset.
         </div>
       ) : null}
@@ -147,18 +147,18 @@ export function CubeScene({
           }
         }}
       >
-        <color attach="background" args={["#020617"]} />
-        <fog attach="fog" args={["#020617", 8, 18]} />
-        <ambientLight intensity={1.25} />
+        <color attach="background" args={["#f8fafc"]} />
+        <fog attach="fog" args={["#f8fafc", 10, 20]} />
+        <ambientLight intensity={1.05} />
         <directionalLight
           castShadow
-          intensity={1.9}
+          intensity={1.45}
           position={[6, 8, 5]}
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
         />
-        <pointLight intensity={18} position={[-4, 3, -2]} color="#22d3ee" />
-        <gridHelper args={[12, 12, "#164e63", "#0f172a"]} position={[0, -0.4, 0]} />
+        <pointLight intensity={12} position={[-4, 3, -2]} color="#06b6d4" />
+        <gridHelper args={[12, 12, "#a5f3fc", "#cbd5e1"]} position={[0, -0.4, 0]} />
         <CubeBlocks
           points={points}
           maxValue={maxValue}
@@ -170,11 +170,11 @@ export function CubeScene({
         />
         <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.42, 0]}>
           <planeGeometry args={[14, 14]} />
-          <shadowMaterial opacity={0.22} />
+          <shadowMaterial opacity={0.12} />
         </mesh>
         <OrbitControls enablePan={false} minDistance={5} maxDistance={13} maxPolarAngle={Math.PI / 2.1} />
       </Canvas>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex items-center justify-between gap-3 px-5 py-4 text-xs text-slate-400">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex items-center justify-between gap-3 px-5 py-4 text-xs text-slate-500">
         <span>{xValues.length} x-axis buckets</span>
         <span>{zValues.length} z-axis buckets</span>
         <span>{points.length} visible cells</span>

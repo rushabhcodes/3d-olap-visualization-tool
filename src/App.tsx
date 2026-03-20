@@ -260,32 +260,32 @@ function App() {
   }
 
   return (
-    <main className="relative isolate min-h-screen overflow-hidden bg-slate-950 text-slate-50">
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top,rgba(6,182,212,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.12),transparent_22%)]" />
-      <div className="absolute inset-0 z-0 bg-grid bg-[size:42px_42px] opacity-30" />
+    <main className="relative isolate min-h-screen overflow-hidden bg-slate-50 text-slate-900">
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top,rgba(6,182,212,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.1),transparent_24%)]" />
+      <div className="absolute inset-0 z-0 bg-grid bg-[size:42px_42px] opacity-40" />
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8">
-        <header className="rounded-[2rem] border border-slate-800/80 bg-slate-950/75 p-6 shadow-glow backdrop-blur">
+        <header className="rounded-[2rem] border border-white/80 bg-white/85 p-6 shadow-glow backdrop-blur">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="space-y-4">
-              <Badge variant="secondary" className="bg-cyan-500/15 text-cyan-100">
+              <Badge variant="secondary" className="bg-cyan-100 text-cyan-800">
                 Interactive 3D OLAP Workspace
               </Badge>
               <div className="space-y-2">
-                <h1 className="max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+                <h1 className="max-w-3xl text-3xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
                   Pivot multidimensional data into a navigable 3D cube.
                 </h1>
-                <p className="max-w-2xl text-sm text-slate-300 sm:text-base">
+                <p className="max-w-2xl text-sm text-slate-600 sm:text-base">
                   Upload CSV data, remap the cube axes, slice dimensions independently, and
                   select any aggregated cell to inspect the underlying records.
                 </p>
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-3">
-              <Button className="bg-cyan-500 text-slate-950 hover:bg-cyan-400" onClick={handleResetView}>
+              <Button className="bg-cyan-600 text-white hover:bg-cyan-500" onClick={handleResetView}>
                 <Sparkles className="mr-2 h-4 w-4" />
                 Reset View
               </Button>
-              <Button variant="outline" className="border-slate-700 bg-slate-900/70" onClick={handleResetDataset}>
+              <Button variant="outline" className="border-slate-200 bg-white" onClick={handleResetDataset}>
                 <Boxes className="mr-2 h-4 w-4" />
                 Load Demo Cube
               </Button>
@@ -294,11 +294,11 @@ function App() {
         </header>
 
         <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          <Card className="bg-slate-950/65">
+          <Card className="bg-white/85">
             <CardHeader className="pb-3">
               <CardDescription>Active Measure</CardDescription>
               <CardTitle className="flex items-center gap-2 text-2xl">
-                <Layers3 className="h-5 w-5 text-cyan-300" />
+                <Layers3 className="h-5 w-5 text-cyan-700" />
                 {selectedMeasure}
               </CardTitle>
             </CardHeader>
@@ -307,7 +307,7 @@ function App() {
             </CardContent>
           </Card>
 
-          <Card className="bg-slate-950/65">
+          <Card className="bg-white/85">
             <CardHeader className="pb-3">
               <CardDescription>Visible Cube Cells</CardDescription>
               <CardTitle className="text-2xl">{pivot.cells.length}</CardTitle>
@@ -319,7 +319,7 @@ function App() {
             </CardContent>
           </Card>
 
-          <Card className="bg-slate-950/65">
+          <Card className="bg-white/85">
             <CardHeader className="pb-3">
               <CardDescription>Visible Fact Rows</CardDescription>
               <CardTitle className="text-2xl">{filteredFacts.length}</CardTitle>
@@ -329,7 +329,7 @@ function App() {
             </CardContent>
           </Card>
 
-          <Card className="bg-slate-950/65">
+          <Card className="bg-white/85">
             <CardHeader className="pb-3">
               <CardDescription>Focused Cell</CardDescription>
               <CardTitle className="text-2xl">
@@ -372,7 +372,7 @@ function App() {
           />
 
           <div className="grid gap-6">
-            <Card className="bg-slate-950/65">
+            <Card className="bg-white/85">
               <CardHeader className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                 <div>
                   <CardTitle>Pivoted Cube Surface</CardTitle>
@@ -381,19 +381,19 @@ function App() {
                   </CardDescription>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline" className="border-slate-700 text-slate-200">
+                  <Badge variant="outline" className="border-slate-200 text-slate-700">
                     X: {getDimensionLabel(xDimension)}
                   </Badge>
-                  <Badge variant="outline" className="border-slate-700 text-slate-200">
+                  <Badge variant="outline" className="border-slate-200 text-slate-700">
                     Z: {getDimensionLabel(zDimension)}
                   </Badge>
                   {appliedSlices.length === 0 ? (
-                    <Badge variant="outline" className="border-slate-700 text-slate-200">
+                    <Badge variant="outline" className="border-slate-200 text-slate-700">
                       No slices
                     </Badge>
                   ) : (
                     appliedSlices.map((slice) => (
-                      <Badge key={slice} variant="outline" className="border-slate-700 text-slate-200">
+                      <Badge key={slice} variant="outline" className="border-slate-200 text-slate-700">
                         {slice}
                       </Badge>
                     ))
@@ -415,21 +415,21 @@ function App() {
                   onSelectCell={setActiveCellId}
                 />
                 <div className="grid gap-3 md:grid-cols-3">
-                  <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-cyan-300">Drill Path</p>
-                    <p className="mt-2 text-sm text-slate-300">
+                  <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
+                    <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Drill Path</p>
+                    <p className="mt-2 text-sm text-slate-600">
                       Hover a cell anywhere to preview it, then click to lock the drill-down below.
                     </p>
                   </div>
-                  <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-cyan-300">Cross-Highlight</p>
-                    <p className="mt-2 text-sm text-slate-300">
+                  <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
+                    <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Cross-Highlight</p>
+                    <p className="mt-2 text-sm text-slate-600">
                       The cube, heatmap, and pivot table now share hover and selection state.
                     </p>
                   </div>
-                  <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-cyan-300">Upload Model</p>
-                    <p className="mt-2 text-sm text-slate-300">
+                  <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
+                    <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Upload Model</p>
+                    <p className="mt-2 text-sm text-slate-600">
                       Local CSV uploads replace the demo dataset and reuse the same OLAP controls.
                     </p>
                   </div>
@@ -437,10 +437,10 @@ function App() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-950/65">
+            <Card className="bg-white/85">
               <CardHeader>
                 <div className="flex items-center gap-2">
-                  <Layers3 className="h-5 w-5 text-cyan-300" />
+                  <Layers3 className="h-5 w-5 text-cyan-700" />
                   <CardTitle>Pivot Matrix Heatmap</CardTitle>
                 </div>
                 <CardDescription>
@@ -465,10 +465,10 @@ function App() {
             </Card>
 
             <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-              <Card className="bg-slate-950/65">
+              <Card className="bg-white/85">
                 <CardHeader>
                   <div className="flex items-center gap-2">
-                    <TableProperties className="h-5 w-5 text-cyan-300" />
+                    <TableProperties className="h-5 w-5 text-cyan-700" />
                     <CardTitle>Aggregated Pivot Cells</CardTitle>
                   </div>
                   <CardDescription>Tabular drill-down entry points for the current pivot surface.</CardDescription>
@@ -488,67 +488,67 @@ function App() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-slate-950/65">
+              <Card className="bg-white/85">
                 <CardHeader>
                   <div className="flex items-center gap-2">
-                    <Boxes className="h-5 w-5 text-cyan-300" />
+                    <Boxes className="h-5 w-5 text-cyan-700" />
                     <CardTitle>Cell Detail</CardTitle>
                   </div>
                   <CardDescription>Totals and member values for the current focused intersection.</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4 text-sm text-slate-300">
-                  <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                    <p className="font-medium text-white">Coordinates</p>
+                <CardContent className="space-y-4 text-sm text-slate-600">
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
+                    <p className="font-medium text-slate-900">Coordinates</p>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {activeDimensions.length > 0 ? (
                         activeDimensions.map((value) => (
-                          <Badge key={value} variant="outline" className="border-slate-700 text-slate-200">
+                          <Badge key={value} variant="outline" className="border-slate-200 text-slate-700">
                             {value}
                           </Badge>
                         ))
                       ) : (
-                        <p className="text-slate-400">Select a cube cell to see its coordinates.</p>
+                        <p className="text-slate-500">Select a cube cell to see its coordinates.</p>
                       )}
                     </div>
                     {hoveredCell && hoveredCell.id !== activeCell?.id ? (
-                      <p className="mt-3 text-xs text-cyan-300">
+                      <p className="mt-3 text-xs text-cyan-700">
                         Hover preview: {hoveredCell.xValue} / {hoveredCell.zValue}
                       </p>
                     ) : null}
                   </div>
                   <div className="grid gap-3 sm:grid-cols-3">
-                    <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-300">Revenue</p>
-                      <p className="mt-2 text-lg font-semibold text-white">
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
+                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-700">Revenue</p>
+                      <p className="mt-2 text-lg font-semibold text-slate-950">
                         {formatMeasureValue(activeCell?.totals.Revenue ?? 0, "Revenue")}
                       </p>
                     </div>
-                    <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-300">Margin</p>
-                      <p className="mt-2 text-lg font-semibold text-white">
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
+                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-700">Margin</p>
+                      <p className="mt-2 text-lg font-semibold text-slate-950">
                         {formatMeasureValue(activeCell?.totals.Margin ?? 0, "Margin")}
                       </p>
                     </div>
-                    <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-300">Units</p>
-                      <p className="mt-2 text-lg font-semibold text-white">
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
+                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-700">Units</p>
+                      <p className="mt-2 text-lg font-semibold text-slate-950">
                         {formatMeasureValue(activeCell?.totals.Units ?? 0, "Units")}
                       </p>
                     </div>
                   </div>
-                  <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                    <p className="font-medium text-white">Contributing Fact Rows</p>
-                    <p className="mt-2 text-slate-400">
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
+                    <p className="font-medium text-slate-900">Contributing Fact Rows</p>
+                    <p className="mt-2 text-slate-500">
                       {activeCell ? `${activeCell.count} row(s) contribute to this cell.` : "No active cell selected."}
                     </p>
                   </div>
-                  <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                    <p className="font-medium text-white">Dimension Inventory</p>
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
+                    <p className="font-medium text-slate-900">Dimension Inventory</p>
                     <div className="mt-3 grid gap-2 sm:grid-cols-2">
                       {dimensionOptions.map((dimension) => (
-                        <div key={dimension.key} className="rounded-xl border border-slate-800 bg-slate-950/70 px-3 py-2">
+                        <div key={dimension.key} className="rounded-xl border border-slate-200 bg-white px-3 py-2">
                           <p className="text-xs uppercase tracking-[0.16em] text-slate-500">{dimension.label}</p>
-                          <p className="mt-1 text-sm text-slate-200">{availableValues[dimension.key].length} members</p>
+                          <p className="mt-1 text-sm text-slate-700">{availableValues[dimension.key].length} members</p>
                         </div>
                       ))}
                     </div>
@@ -557,10 +557,10 @@ function App() {
               </Card>
             </section>
 
-            <Card className="bg-slate-950/65">
+            <Card className="bg-white/85">
               <CardHeader>
                 <div className="flex items-center gap-2">
-                  <TableProperties className="h-5 w-5 text-cyan-300" />
+                  <TableProperties className="h-5 w-5 text-cyan-700" />
                   <CardTitle>Drill-Down Rows</CardTitle>
                 </div>
                 <CardDescription>
@@ -570,9 +570,9 @@ function App() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="overflow-hidden rounded-2xl border border-slate-800">
-                  <table className="min-w-full divide-y divide-slate-800 text-left text-sm">
-                    <thead className="bg-slate-900/90 text-slate-300">
+                <div className="overflow-hidden rounded-2xl border border-slate-200">
+                  <table className="min-w-full divide-y divide-slate-200 text-left text-sm">
+                    <thead className="bg-slate-100 text-slate-600">
                       <tr>
                         <th className="px-4 py-3 font-medium">Month</th>
                         <th className="px-4 py-3 font-medium">Region</th>
@@ -583,21 +583,21 @@ function App() {
                         <th className="px-4 py-3 font-medium">Units</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-slate-800 bg-slate-950/80">
+                    <tbody className="divide-y divide-slate-200 bg-white">
                       {drillFacts.map((fact, index) => (
                         <tr key={`${fact.month}-${fact.region}-${fact.productLine}-${fact.scenario}-${index}`}>
-                          <td className="px-4 py-3 text-slate-200">{fact.month}</td>
-                          <td className="px-4 py-3 text-slate-300">{fact.region}</td>
-                          <td className="px-4 py-3 text-slate-300">{fact.productLine}</td>
-                          <td className="px-4 py-3 text-slate-300">{fact.scenario}</td>
-                          <td className="px-4 py-3 text-slate-100">{formatMeasureValue(fact.revenue, "Revenue")}</td>
-                          <td className="px-4 py-3 text-slate-100">{formatMeasureValue(fact.margin, "Margin")}</td>
-                          <td className="px-4 py-3 text-slate-100">{formatMeasureValue(fact.units, "Units")}</td>
+                          <td className="px-4 py-3 text-slate-700">{fact.month}</td>
+                          <td className="px-4 py-3 text-slate-600">{fact.region}</td>
+                          <td className="px-4 py-3 text-slate-600">{fact.productLine}</td>
+                          <td className="px-4 py-3 text-slate-600">{fact.scenario}</td>
+                          <td className="px-4 py-3 text-slate-900">{formatMeasureValue(fact.revenue, "Revenue")}</td>
+                          <td className="px-4 py-3 text-slate-900">{formatMeasureValue(fact.margin, "Margin")}</td>
+                          <td className="px-4 py-3 text-slate-900">{formatMeasureValue(fact.units, "Units")}</td>
                         </tr>
                       ))}
                       {drillFacts.length === 0 ? (
                         <tr>
-                          <td className="px-4 py-8 text-center text-slate-400" colSpan={7}>
+                          <td className="px-4 py-8 text-center text-slate-500" colSpan={7}>
                             No rows match the current slice.
                           </td>
                         </tr>
