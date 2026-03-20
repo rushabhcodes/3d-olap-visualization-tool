@@ -264,17 +264,17 @@ function App() {
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top,rgba(6,182,212,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.1),transparent_24%)]" />
       <div className="absolute inset-0 z-0 bg-grid bg-[size:42px_42px] opacity-40" />
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8">
-        <header className="rounded-[2rem] border border-white/80 bg-white/85 p-6 shadow-glow backdrop-blur">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div className="space-y-4">
-              <Badge variant="secondary" className="bg-cyan-100 text-cyan-800">
+        <header className="rounded-[1.75rem] border border-white/80 bg-white/85 p-4 shadow-glow backdrop-blur sm:p-5">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div className="space-y-2">
+              <Badge variant="secondary" className="w-fit bg-cyan-100 text-[11px] text-cyan-800">
                 Interactive 3D OLAP Workspace
               </Badge>
-              <div className="space-y-2">
-                <h1 className="max-w-3xl text-3xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
+              <div className="space-y-1">
+                <h1 className="max-w-3xl text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">
                   Pivot multidimensional data into a navigable 3D cube.
                 </h1>
-                <p className="max-w-2xl text-sm text-slate-600 sm:text-base">
+                <p className="max-w-2xl text-xs text-slate-600 sm:text-sm">
                   Upload CSV data, remap the cube axes, slice dimensions independently, and
                   select any aggregated cell to inspect the underlying records.
                 </p>
@@ -293,51 +293,45 @@ function App() {
           </div>
         </header>
 
-        <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <section className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           <Card className="bg-white/85">
-            <CardHeader className="pb-3">
-              <CardDescription>Active Measure</CardDescription>
-              <CardTitle className="flex items-center gap-2 text-2xl">
-                <Layers3 className="h-5 w-5 text-cyan-700" />
-                {selectedMeasure}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-3xl font-semibold">{formatMeasureValue(totals[selectedMeasure], selectedMeasure)}</p>
+            <CardContent className="flex items-start justify-between gap-3 p-4">
+              <div className="space-y-1">
+                <CardDescription className="text-[11px] uppercase tracking-[0.16em]">Active Measure</CardDescription>
+                <CardTitle className="text-base">{selectedMeasure}</CardTitle>
+                <p className="text-xl font-semibold">{formatMeasureValue(totals[selectedMeasure], selectedMeasure)}</p>
+              </div>
+              <Layers3 className="mt-1 h-5 w-5 shrink-0 text-cyan-700" />
             </CardContent>
           </Card>
 
           <Card className="bg-white/85">
-            <CardHeader className="pb-3">
-              <CardDescription>Visible Cube Cells</CardDescription>
-              <CardTitle className="text-2xl">{pivot.cells.length}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">
+            <CardContent className="space-y-1 p-4">
+              <CardDescription className="text-[11px] uppercase tracking-[0.16em]">Visible Cube Cells</CardDescription>
+              <CardTitle className="text-xl">{pivot.cells.length}</CardTitle>
+              <p className="text-xs text-muted-foreground">
                 {getDimensionLabel(xDimension)} by {getDimensionLabel(zDimension)}
               </p>
             </CardContent>
           </Card>
 
           <Card className="bg-white/85">
-            <CardHeader className="pb-3">
-              <CardDescription>Visible Fact Rows</CardDescription>
-              <CardTitle className="text-2xl">{filteredFacts.length}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">{datasetLabel}</p>
+            <CardContent className="space-y-1 p-4">
+              <CardDescription className="text-[11px] uppercase tracking-[0.16em]">Visible Fact Rows</CardDescription>
+              <CardTitle className="text-xl">{filteredFacts.length}</CardTitle>
+              <p className="truncate text-xs text-muted-foreground" title={datasetLabel}>
+                {datasetLabel}
+              </p>
             </CardContent>
           </Card>
 
           <Card className="bg-white/85">
-            <CardHeader className="pb-3">
-              <CardDescription>Focused Cell</CardDescription>
-              <CardTitle className="text-2xl">
+            <CardContent className="space-y-1 p-4">
+              <CardDescription className="text-[11px] uppercase tracking-[0.16em]">Focused Cell</CardDescription>
+              <CardTitle className="text-xl">
                 {activeCell ? formatMeasureValue(activeCell.value, selectedMeasure) : "None"}
               </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs text-muted-foreground">
                 {activeCell ? `${activeCell.count} contributing row(s)` : "Select a pivot cell to inspect it."}
               </p>
             </CardContent>
