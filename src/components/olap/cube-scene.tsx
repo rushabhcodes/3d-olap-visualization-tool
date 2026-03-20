@@ -1,7 +1,7 @@
-import { useEffect, useRef, type MutableRefObject } from "react";
+import { useEffect, useRef, useState, type MutableRefObject } from "react";
 import { Edges, OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { ChevronRight, Undo2 } from "lucide-react";
+import { ChevronRight, Maximize2, Minimize2, Undo2 } from "lucide-react";
 import * as THREE from "three";
 
 import { Badge } from "@/components/ui/badge";
@@ -557,6 +557,7 @@ export function CubeScene({
   const sceneRef = useRef<HTMLDivElement>(null);
   const controlsRef = useRef<any>(null);
   const shouldAnimateRef = useRef(true);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const xOffset = (xValues.length - 1) / 2;
   const yLayerSpacing = 2.35;
   const zOffset = (zValues.length - 1) / 2;
@@ -600,6 +601,44 @@ export function CubeScene({
     sceneRef.current?.focus();
   }
 
+  useEffect(() => {
+    function handleFullscreenChange() {
+      setIsFullscreen(document.fullscreenElement === sceneRef.current);
+    }
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      window.dispatchEvent(new Event("resize"));
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+    };
+  }, [isFullscreen]);
+
+  async function handleToggleFullscreen() {
+    const element = sceneRef.current;
+
+    if (!element) {
+      return;
+    }
+
+    if (document.fullscreenElement === element) {
+      await document.exitFullscreen();
+      return;
+    }
+
+    await element.requestFullscreen();
+    focusScene();
+  }
+
   function handleStepSelection(direction: "left" | "right" | "up" | "down") {
     if (!drilledCell || drilledVoxels.length === 0) {
       return;
@@ -619,7 +658,8 @@ export function CubeScene({
   return (
     <div
       ref={sceneRef}
-      className="relative h-[760px] overflow-hidden rounded-[1.75rem] border border-cyan-200 bg-[radial-gradient(circle_at_top,rgba(6,182,212,0.18),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(240,249,255,0.94))] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+      className="relative h-[760px] w-full overflow-hidden rounded-[1.75rem] border border-cyan-200 bg-[radial-gradient(circle_at_top,rgba(6,182,212,0.18),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(240,249,255,0.94))] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 data-[fullscreen=true]:h-screen data-[fullscreen=true]:rounded-none"
+      data-fullscreen={isFullscreen}
       tabIndex={0}
       onKeyDown={(event) => {
         if (event.key === "Escape") {
@@ -735,8 +775,20 @@ export function CubeScene({
             </div>
           ) : null}
         </div>
-        <div className="pointer-events-none rounded-2xl border border-white/70 bg-white/80 px-4 py-3 text-xs text-slate-600 shadow-sm backdrop-blur">
-          {drilledCell ? `${drilledCell.count} contributing voxel(s)` : `${cells.length} visible cube cell(s)`}
+        <div className="flex items-start gap-3">
+          <button
+            type="button"
+            className="pointer-events-auto inline-flex h-10 items-center justify-center rounded-xl border border-white/70 bg-white/85 px-3 text-xs font-medium text-slate-700 shadow-sm backdrop-blur transition hover:bg-white"
+            onClick={() => {
+              void handleToggleFullscreen();
+            }}
+          >
+            {isFullscreen ? <Minimize2 className="mr-2 h-4 w-4" /> : <Maximize2 className="mr-2 h-4 w-4" />}
+            {isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
+          </button>
+          <div className="pointer-events-none rounded-2xl border border-white/70 bg-white/80 px-4 py-3 text-xs text-slate-600 shadow-sm backdrop-blur">
+            {drilledCell ? `${drilledCell.count} contributing voxel(s)` : `${cells.length} visible cube cell(s)`}
+          </div>
         </div>
       </div>
       {detailVoxel ? (
@@ -776,6 +828,7 @@ export function CubeScene({
         </div>
       ) : null}
       <Canvas
+        key={isFullscreen ? "fullscreen" : "inline"}
         camera={{ position: [overviewDistance, overviewHeight, overviewDistance * 1.08], fov: 40 }}
         shadows
         onPointerMissed={() => {
