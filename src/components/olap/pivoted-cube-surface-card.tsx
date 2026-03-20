@@ -17,9 +17,17 @@ type PivotedCubeSurfaceCardProps = {
   zValues: string[];
   activeCellId: string | null;
   hoveredCellId: string | null;
+  drilledCellId: string | null;
+  hoveredFactIndex: number | null;
+  selectedFactIndex: number | null;
   onHoverCell: (id: string) => void;
   onLeaveCell: () => void;
   onSelectCell: (id: string) => void;
+  onToggleDrillCell: (id: string) => void;
+  onBackToAggregate: () => void;
+  onHoverFact: (factIndex: number) => void;
+  onLeaveFact: () => void;
+  onSelectFact: (factIndex: number) => void;
 };
 
 export function PivotedCubeSurfaceCard({
@@ -32,9 +40,17 @@ export function PivotedCubeSurfaceCard({
   zValues,
   activeCellId,
   hoveredCellId,
+  drilledCellId,
+  hoveredFactIndex,
+  selectedFactIndex,
   onHoverCell,
   onLeaveCell,
   onSelectCell,
+  onToggleDrillCell,
+  onBackToAggregate,
+  onHoverFact,
+  onLeaveFact,
+  onSelectFact,
 }: PivotedCubeSurfaceCardProps) {
   return (
     <Card className="bg-white/85">
@@ -75,27 +91,35 @@ export function PivotedCubeSurfaceCard({
           zValues={zValues}
           activeCellId={activeCellId}
           hoveredCellId={hoveredCellId}
+          drilledCellId={drilledCellId}
+          hoveredFactIndex={hoveredFactIndex}
+          selectedFactIndex={selectedFactIndex}
           onHoverCell={onHoverCell}
           onLeaveCell={onLeaveCell}
           onSelectCell={onSelectCell}
+          onToggleDrillCell={onToggleDrillCell}
+          onBackToAggregate={onBackToAggregate}
+          onHoverFact={onHoverFact}
+          onLeaveFact={onLeaveFact}
+          onSelectFact={onSelectFact}
         />
         <div className="grid gap-3 md:grid-cols-3">
           <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
             <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Drill Path</p>
             <p className="mt-2 text-sm text-slate-600">
-              Click any block once to focus it and open the cube so its contributing fact rows appear as interior voxels.
+              Click any block once to focus it and open the cube so its contributing fact rows appear as interior voxels. Press Esc to return to the aggregate view.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
             <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Cross-Highlight</p>
             <p className="mt-2 text-sm text-slate-600">
-              The cube, heatmap, and pivot table still share hover and selection state while the 3D view adds a separate drill camera.
+              Aggregate highlights stay synchronized with the heatmap and pivot table while drilled fact rows stay synchronized with the row table.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
-            <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Interior Detail</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Pinned Fact</p>
             <p className="mt-2 text-sm text-slate-600">
-              Open cells expose the month and scenario mix that feeds the selected aggregate, then the drill-down table shows the exact rows.
+              Click an interior voxel to pin compact metadata, then use the arrow keys to move to spatial neighbors instead of stepping by raw row order.
             </p>
           </div>
         </div>

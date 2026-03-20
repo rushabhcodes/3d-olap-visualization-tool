@@ -52,6 +52,9 @@ function App() {
   const [filters, setFilters] = useState<Record<DimensionKey, string | "All">>(createEmptyFilters());
   const [activeCellId, setActiveCellId] = useState<string | null>(null);
   const [hoveredCellId, setHoveredCellId] = useState<string | null>(null);
+  const [drilledCellId, setDrilledCellId] = useState<string | null>(null);
+  const [hoveredFactIndex, setHoveredFactIndex] = useState<number | null>(null);
+  const [selectedFactIndex, setSelectedFactIndex] = useState<number | null>(null);
   const [pendingUpload, setPendingUpload] = useState<PendingUpload | null>(null);
 
   const availableValues = getUniqueDimensionValues(facts);
@@ -66,6 +69,7 @@ function App() {
   const pivot = buildPivotCells(filteredFacts, xDimension, zDimension, selectedMeasure);
   const activeCell = pivot.cells.find((cell) => cell.id === activeCellId) ?? pivot.cells[0] ?? null;
   const hoveredCell = pivot.cells.find((cell) => cell.id === hoveredCellId) ?? null;
+  const drilledCell = pivot.cells.find((cell) => cell.id === drilledCellId) ?? null;
 
   useEffect(() => {
     setActiveCellId((current) => {
@@ -86,6 +90,27 @@ function App() {
       return null;
     });
   }, [pivot.cells]);
+
+  useEffect(() => {
+    setDrilledCellId((current) => {
+      if (current && pivot.cells.some((cell) => cell.id === current)) {
+        return current;
+      }
+
+      return null;
+    });
+  }, [pivot.cells]);
+
+  useEffect(() => {
+    const factCount = drilledCell?.facts.length ?? 0;
+
+    setHoveredFactIndex((current) =>
+      current !== null && current >= 0 && current < factCount ? current : null,
+    );
+    setSelectedFactIndex((current) =>
+      current !== null && current >= 0 && current < factCount ? current : null,
+    );
+  }, [drilledCell?.id, drilledCell?.facts.length]);
 
   const totals = filteredFacts.reduce(
     (summary, fact) => ({
@@ -108,7 +133,30 @@ function App() {
     .filter((dimension) => filters[dimension.key] !== "All")
     .map((dimension) => `${dimension.label}: ${filters[dimension.key]}`);
 
-  const drillFacts = activeCell?.facts ?? filteredFacts.slice(0, 8);
+  const drillFacts = (drilledCell ?? activeCell)?.facts ?? filteredFacts.slice(0, 8);
+
+  function clearFactSelection() {
+    setHoveredFactIndex(null);
+    setSelectedFactIndex(null);
+  }
+
+  function handleSelectAggregateCell(id: string) {
+    setActiveCellId(id);
+    setDrilledCellId(null);
+    clearFactSelection();
+  }
+
+  function handleToggleDrillCell(id: string) {
+    setActiveCellId(id);
+    setHoveredCellId(id);
+    setDrilledCellId((current) => (current === id ? null : id));
+    clearFactSelection();
+  }
+
+  function handleBackToAggregate() {
+    setDrilledCellId(null);
+    clearFactSelection();
+  }
 
   async function handleUpload(file: File | null) {
     if (!file) {
@@ -201,6 +249,8 @@ function App() {
     setFilters(createEmptyFilters());
     setActiveCellId(null);
     setHoveredCellId(null);
+    setDrilledCellId(null);
+    clearFactSelection();
     setPendingUpload(null);
 
     const warnings = [...pendingUpload.parseErrors, ...parsed.errors];
@@ -228,6 +278,8 @@ function App() {
     setZDimension("productLine");
     setActiveCellId(null);
     setHoveredCellId(null);
+    setDrilledCellId(null);
+    clearFactSelection();
   }
 
   function handleAxisChange(axis: "x" | "z", value: DimensionKey) {
@@ -259,6 +311,8 @@ function App() {
     setZDimension("productLine");
     setActiveCellId(null);
     setHoveredCellId(null);
+    setDrilledCellId(null);
+    clearFactSelection();
   }
 
   return (
@@ -376,9 +430,17 @@ function App() {
               zValues={pivot.zValues}
               activeCellId={activeCell?.id ?? null}
               hoveredCellId={hoveredCell?.id ?? null}
+              drilledCellId={drilledCell?.id ?? null}
+              hoveredFactIndex={hoveredFactIndex}
+              selectedFactIndex={selectedFactIndex}
               onHoverCell={setHoveredCellId}
               onLeaveCell={() => setHoveredCellId(null)}
-              onSelectCell={setActiveCellId}
+              onSelectCell={handleSelectAggregateCell}
+              onToggleDrillCell={handleToggleDrillCell}
+              onBackToAggregate={handleBackToAggregate}
+              onHoverFact={setHoveredFactIndex}
+              onLeaveFact={() => setHoveredFactIndex(null)}
+              onSelectFact={setSelectedFactIndex}
             />
             <PivotMatrixHeatmapCard
               cells={pivot.cells}
@@ -391,7 +453,7 @@ function App() {
               hoveredCellId={hoveredCell?.id ?? null}
               onHoverCell={setHoveredCellId}
               onLeaveCell={() => setHoveredCellId(null)}
-              onSelectCell={setActiveCellId}
+              onSelectCell={handleSelectAggregateCell}
             />
             <AggregatedPivotCellsCard
               cells={pivot.cells}
@@ -402,7 +464,7 @@ function App() {
               hoveredCellId={hoveredCell?.id ?? null}
               onHoverCell={setHoveredCellId}
               onLeaveCell={() => setHoveredCellId(null)}
-              onSelectCell={setActiveCellId}
+              onSelectCell={handleSelectAggregateCell}
             />
           </div>
 
@@ -413,7 +475,16 @@ function App() {
               activeCell={activeCell}
               availableValues={availableValues}
             />
-            <DrillDownRowsCard activeCell={activeCell} drillFacts={drillFacts} />
+            <DrillDownRowsCard
+              activeCell={activeCell}
+              drilledCell={drilledCell}
+              drillFacts={drillFacts}
+              hoveredFactIndex={hoveredFactIndex}
+              selectedFactIndex={selectedFactIndex}
+              onHoverFact={setHoveredFactIndex}
+              onLeaveFact={() => setHoveredFactIndex(null)}
+              onSelectFact={setSelectedFactIndex}
+            />
           </div>
         </section>
       </div>

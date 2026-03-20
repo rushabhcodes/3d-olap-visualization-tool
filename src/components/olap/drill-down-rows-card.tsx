@@ -2,16 +2,31 @@ import { TableProperties } from "lucide-react";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatMeasureValue, type CubeFact, type PivotCell } from "@/data/mock-cube";
+import { cn } from "@/lib/utils";
 
 type DrillDownRowsCardProps = {
   activeCell: PivotCell | null;
+  drilledCell: PivotCell | null;
   drillFacts: CubeFact[];
+  hoveredFactIndex: number | null;
+  selectedFactIndex: number | null;
+  onHoverFact: (factIndex: number) => void;
+  onLeaveFact: () => void;
+  onSelectFact: (factIndex: number) => void;
 };
 
 export function DrillDownRowsCard({
   activeCell,
+  drilledCell,
   drillFacts,
+  hoveredFactIndex,
+  selectedFactIndex,
+  onHoverFact,
+  onLeaveFact,
+  onSelectFact,
 }: DrillDownRowsCardProps) {
+  const interactionEnabled = drilledCell !== null;
+
   return (
     <Card className="bg-white/85">
       <CardHeader>
@@ -20,8 +35,10 @@ export function DrillDownRowsCard({
           <CardTitle>Drill-Down Rows</CardTitle>
         </div>
         <CardDescription>
-          {activeCell
-            ? "Raw facts currently contributing to the focused cube cell."
+          {drilledCell
+            ? "Raw facts currently contributing to the drilled cube cell. Hover or click rows to stay synchronized with voxel selection."
+            : activeCell
+              ? "Raw facts currently contributing to the focused cube cell."
             : "Preview of the visible fact slice. Select a cell to narrow this table."}
         </CardDescription>
       </CardHeader>
@@ -40,8 +57,30 @@ export function DrillDownRowsCard({
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 bg-white">
-              {drillFacts.map((fact) => (
-                <tr key={`${fact.month}-${fact.region}-${fact.productLine}-${fact.scenario}`}>
+              {drillFacts.map((fact, index) => (
+                <tr
+                  key={`${fact.month}-${fact.region}-${fact.productLine}-${fact.scenario}-${index}`}
+                  className={cn(
+                    interactionEnabled && "cursor-pointer transition hover:bg-sky-50",
+                    selectedFactIndex === index && "bg-amber-50",
+                    hoveredFactIndex === index && "bg-cyan-50 ring-1 ring-inset ring-cyan-300/60",
+                  )}
+                  onMouseEnter={() => {
+                    if (interactionEnabled) {
+                      onHoverFact(index);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (interactionEnabled) {
+                      onLeaveFact();
+                    }
+                  }}
+                  onClick={() => {
+                    if (interactionEnabled) {
+                      onSelectFact(index);
+                    }
+                  }}
+                >
                   <td className="px-4 py-3 text-slate-700">{fact.month}</td>
                   <td className="px-4 py-3 text-slate-600">{fact.region}</td>
                   <td className="px-4 py-3 text-slate-600">{fact.productLine}</td>
