@@ -1,7 +1,14 @@
-import { CubeScene } from "@/components/olap/cube-scene";
+import { Suspense, lazy } from "react";
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { getDimensionLabel, type DatasetSchema, type DimensionKey, type Measure, type PivotCell } from "@/data/mock-cube";
+
+const LazyCubeScene = lazy(async () => {
+  const module = await import("@/components/olap/cube-scene");
+
+  return { default: module.CubeScene };
+});
 
 type PivotedCubeSurfaceCardProps = {
   schema: DatasetSchema;
@@ -87,30 +94,38 @@ export function PivotedCubeSurfaceCard({
         </div>
       </CardHeader>
       <CardContent className="space-y-4">
-        <CubeScene
-          schema={schema}
-          cells={cells}
-          measure={measure}
-          xDimension={xDimension}
-          yDimension={yDimension}
-          zDimension={zDimension}
-          xValues={xValues}
-          yValues={yValues}
-          zValues={zValues}
-          activeCellId={activeCellId}
-          hoveredCellId={hoveredCellId}
-          drilledCellId={drilledCellId}
-          hoveredFactIndex={hoveredFactIndex}
-          selectedFactIndex={selectedFactIndex}
-          onHoverCell={onHoverCell}
-          onLeaveCell={onLeaveCell}
-          onSelectCell={onSelectCell}
-          onToggleDrillCell={onToggleDrillCell}
-          onBackToAggregate={onBackToAggregate}
-          onHoverFact={onHoverFact}
-          onLeaveFact={onLeaveFact}
-          onSelectFact={onSelectFact}
-        />
+        <Suspense
+          fallback={
+            <div className="flex h-[760px] items-center justify-center rounded-[1.75rem] border border-cyan-200 bg-[radial-gradient(circle_at_top,rgba(6,182,212,0.18),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(240,249,255,0.94))] text-sm text-slate-600">
+              Loading 3D viewer...
+            </div>
+          }
+        >
+          <LazyCubeScene
+            schema={schema}
+            cells={cells}
+            measure={measure}
+            xDimension={xDimension}
+            yDimension={yDimension}
+            zDimension={zDimension}
+            xValues={xValues}
+            yValues={yValues}
+            zValues={zValues}
+            activeCellId={activeCellId}
+            hoveredCellId={hoveredCellId}
+            drilledCellId={drilledCellId}
+            hoveredFactIndex={hoveredFactIndex}
+            selectedFactIndex={selectedFactIndex}
+            onHoverCell={onHoverCell}
+            onLeaveCell={onLeaveCell}
+            onSelectCell={onSelectCell}
+            onToggleDrillCell={onToggleDrillCell}
+            onBackToAggregate={onBackToAggregate}
+            onHoverFact={onHoverFact}
+            onLeaveFact={onLeaveFact}
+            onSelectFact={onSelectFact}
+          />
+        </Suspense>
         <div className="grid gap-3 md:grid-cols-3">
           <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
             <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Drill Path</p>
