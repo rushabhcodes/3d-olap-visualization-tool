@@ -7,8 +7,10 @@ import type { DimensionKey, Measure, PivotCell } from "@/data/mock-cube";
 type PivotMatrixHeatmapCardProps = {
   cells: PivotCell[];
   xDimension: DimensionKey;
+  yDimension: DimensionKey;
   zDimension: DimensionKey;
   xValues: string[];
+  yValues: string[];
   zValues: string[];
   measure: Measure;
   activeCellId: string | null;
@@ -21,8 +23,10 @@ type PivotMatrixHeatmapCardProps = {
 export function PivotMatrixHeatmapCard({
   cells,
   xDimension,
+  yDimension,
   zDimension,
   xValues,
+  yValues,
   zValues,
   measure,
   activeCellId,
@@ -39,15 +43,17 @@ export function PivotMatrixHeatmapCard({
           <CardTitle>Pivot Matrix Heatmap</CardTitle>
         </div>
         <CardDescription>
-          A true matrix view of the same pivot surface. Hover and click behavior is synchronized with the 3D cube and pivot table.
+          A faceted matrix view of the same 3-axis cube. Hover and click behavior is synchronized with the 3D cube and pivot table.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <PivotHeatmap
           cells={cells}
           xDimension={xDimension}
+          yDimension={yDimension}
           zDimension={zDimension}
           xValues={xValues}
+          yValues={yValues}
           zValues={zValues}
           measure={measure}
           activeCellId={activeCellId}

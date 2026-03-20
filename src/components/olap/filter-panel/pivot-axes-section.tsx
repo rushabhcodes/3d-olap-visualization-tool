@@ -7,13 +7,15 @@ import { AxisSelect } from "./axis-select";
 
 type PivotAxesSectionProps = {
   xDimension: DimensionKey;
+  yDimension: DimensionKey;
   zDimension: DimensionKey;
-  onAxisChange: (axis: "x" | "z", value: DimensionKey) => void;
+  onAxisChange: (axis: "x" | "y" | "z", value: DimensionKey) => void;
   onSwapAxes: () => void;
 };
 
 export function PivotAxesSection({
   xDimension,
+  yDimension,
   zDimension,
   onAxisChange,
   onSwapAxes,
@@ -32,6 +34,7 @@ export function PivotAxesSection({
       </div>
       <div className="grid gap-3">
         <AxisSelect label="X Axis" value={xDimension} onChange={(value) => onAxisChange("x", value)} />
+        <AxisSelect label="Y Axis" value={yDimension} onChange={(value) => onAxisChange("y", value)} />
         <AxisSelect label="Z Axis" value={zDimension} onChange={(value) => onAxisChange("z", value)} />
       </div>
     </section>

@@ -5,11 +5,13 @@ import { getDimensionLabel, type DimensionKey, type Measure, type PivotCell } fr
 
 type PivotedCubeSurfaceCardProps = {
   xDimension: DimensionKey;
+  yDimension: DimensionKey;
   zDimension: DimensionKey;
   appliedSlices: string[];
   cells: PivotCell[];
   measure: Measure;
   xValues: string[];
+  yValues: string[];
   zValues: string[];
   activeCellId: string | null;
   hoveredCellId: string | null;
@@ -28,11 +30,13 @@ type PivotedCubeSurfaceCardProps = {
 
 export function PivotedCubeSurfaceCard({
   xDimension,
+  yDimension,
   zDimension,
   appliedSlices,
   cells,
   measure,
   xValues,
+  yValues,
   zValues,
   activeCellId,
   hoveredCellId,
@@ -62,6 +66,9 @@ export function PivotedCubeSurfaceCard({
             X: {getDimensionLabel(xDimension)}
           </Badge>
           <Badge variant="outline" className="border-slate-200 text-slate-700">
+            Y: {getDimensionLabel(yDimension)}
+          </Badge>
+          <Badge variant="outline" className="border-slate-200 text-slate-700">
             Z: {getDimensionLabel(zDimension)}
           </Badge>
           {appliedSlices.length === 0 ? (
@@ -82,8 +89,10 @@ export function PivotedCubeSurfaceCard({
           cells={cells}
           measure={measure}
           xDimension={xDimension}
+          yDimension={yDimension}
           zDimension={zDimension}
           xValues={xValues}
+          yValues={yValues}
           zValues={zValues}
           activeCellId={activeCellId}
           hoveredCellId={hoveredCellId}

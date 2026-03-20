@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 type PivotTableProps = {
   cells: PivotCell[];
   xDimension: DimensionKey;
+  yDimension: DimensionKey;
   zDimension: DimensionKey;
   measure: Measure;
   activeCellId: string | null;
@@ -22,6 +23,7 @@ type PivotTableProps = {
 export function PivotTable({
   cells,
   xDimension,
+  yDimension,
   zDimension,
   measure,
   activeCellId,
@@ -36,6 +38,7 @@ export function PivotTable({
         <thead className="bg-slate-100 text-slate-600">
           <tr>
             <th className="px-4 py-3 font-medium">{getDimensionLabel(xDimension)}</th>
+            <th className="px-4 py-3 font-medium">{getDimensionLabel(yDimension)}</th>
             <th className="px-4 py-3 font-medium">{getDimensionLabel(zDimension)}</th>
             <th className="px-4 py-3 font-medium">{measure}</th>
             <th className="px-4 py-3 font-medium">Rows</th>
@@ -55,6 +58,7 @@ export function PivotTable({
               onClick={() => onSelectCell(cell.id)}
             >
               <td className="px-4 py-3 text-slate-900">{cell.xValue}</td>
+              <td className="px-4 py-3 text-slate-600">{cell.yValue}</td>
               <td className="px-4 py-3 text-slate-600">{cell.zValue}</td>
               <td className="px-4 py-3 text-slate-900">{formatMeasureValue(cell.value, measure)}</td>
               <td className="px-4 py-3 text-slate-600">{cell.count}</td>
@@ -62,7 +66,7 @@ export function PivotTable({
           ))}
           {cells.length === 0 ? (
             <tr>
-              <td className="px-4 py-8 text-center text-slate-500" colSpan={4}>
+              <td className="px-4 py-8 text-center text-slate-500" colSpan={5}>
                 No aggregated cells match the current slice.
               </td>
             </tr>

@@ -45,6 +45,7 @@ function App() {
   const [uploadError, setUploadError] = useState<string | null>(null);
   const [selectedMeasure, setSelectedMeasure] = useState<Measure>("Revenue");
   const [xDimension, setXDimension] = useState<DimensionKey>("region");
+  const [yDimension, setYDimension] = useState<DimensionKey>("scenario");
   const [zDimension, setZDimension] = useState<DimensionKey>("productLine");
   const [filters, setFilters] = useState<Record<DimensionKey, string | "All">>(createEmptyFilters());
   const [activeCellId, setActiveCellId] = useState<string | null>(null);
@@ -63,7 +64,7 @@ function App() {
     }),
   );
 
-  const pivot = buildPivotCells(filteredFacts, xDimension, zDimension, selectedMeasure);
+  const pivot = buildPivotCells(filteredFacts, xDimension, yDimension, zDimension, selectedMeasure);
   const activeCell = pivot.cells.find((cell) => cell.id === activeCellId) ?? pivot.cells[0] ?? null;
   const hoveredCell = pivot.cells.find((cell) => cell.id === hoveredCellId) ?? null;
   const drilledCell = pivot.cells.find((cell) => cell.id === drilledCellId) ?? null;
@@ -123,6 +124,7 @@ function App() {
       ? []
       : [
           `${getDimensionLabel(xDimension)}: ${activeCell.xValue}`,
+          `${getDimensionLabel(yDimension)}: ${activeCell.yValue}`,
           `${getDimensionLabel(zDimension)}: ${activeCell.zValue}`,
         ];
 
@@ -148,6 +150,7 @@ function App() {
     setFilters(createEmptyFilters());
     setSelectedMeasure("Revenue");
     setXDimension("region");
+    setYDimension("scenario");
     setZDimension("productLine");
     resetInteractionState();
   }
@@ -284,21 +287,26 @@ function App() {
     resetViewState();
   }
 
-  function handleAxisChange(axis: "x" | "z", value: DimensionKey) {
-    if (axis === "x") {
-      if (value === zDimension) {
-        setZDimension(xDimension);
-      }
+  function handleAxisChange(axis: "x" | "y" | "z", value: DimensionKey) {
+    const nextAxes = {
+      x: xDimension,
+      y: yDimension,
+      z: zDimension,
+    };
 
-      setXDimension(value);
-      return;
+    const conflictingAxis = (Object.entries(nextAxes) as Array<[keyof typeof nextAxes, DimensionKey]>).find(
+      ([key, currentValue]) => key !== axis && currentValue === value,
+    )?.[0];
+
+    if (conflictingAxis) {
+      nextAxes[conflictingAxis] = nextAxes[axis];
     }
 
-    if (value === xDimension) {
-      setXDimension(zDimension);
-    }
+    nextAxes[axis] = value;
 
-    setZDimension(value);
+    setXDimension(nextAxes.x);
+    setYDimension(nextAxes.y);
+    setZDimension(nextAxes.z);
   }
 
   function handleSwapAxes() {
@@ -391,6 +399,7 @@ function App() {
           <FilterPanel
             selectedMeasure={selectedMeasure}
             xDimension={xDimension}
+            yDimension={yDimension}
             zDimension={zDimension}
             filters={filters}
             availableValues={availableValues}
@@ -417,11 +426,13 @@ function App() {
           <div className="grid min-w-0 gap-6 xl:col-span-2">
             <PivotedCubeSurfaceCard
               xDimension={xDimension}
+              yDimension={yDimension}
               zDimension={zDimension}
               appliedSlices={appliedSlices}
               cells={pivot.cells}
               measure={selectedMeasure}
               xValues={pivot.xValues}
+              yValues={pivot.yValues}
               zValues={pivot.zValues}
               activeCellId={activeCell?.id ?? null}
               hoveredCellId={hoveredCell?.id ?? null}
@@ -440,8 +451,10 @@ function App() {
             <PivotMatrixHeatmapCard
               cells={pivot.cells}
               xDimension={xDimension}
+              yDimension={yDimension}
               zDimension={zDimension}
               xValues={pivot.xValues}
+              yValues={pivot.yValues}
               zValues={pivot.zValues}
               measure={selectedMeasure}
               activeCellId={activeCell?.id ?? null}
@@ -453,6 +466,7 @@ function App() {
             <AggregatedPivotCellsCard
               cells={pivot.cells}
               xDimension={xDimension}
+              yDimension={yDimension}
               zDimension={zDimension}
               measure={selectedMeasure}
               activeCellId={activeCell?.id ?? null}

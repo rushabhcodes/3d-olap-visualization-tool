@@ -7,6 +7,7 @@ import type { DimensionKey, Measure, PivotCell } from "@/data/mock-cube";
 type AggregatedPivotCellsCardProps = {
   cells: PivotCell[];
   xDimension: DimensionKey;
+  yDimension: DimensionKey;
   zDimension: DimensionKey;
   measure: Measure;
   activeCellId: string | null;
@@ -19,6 +20,7 @@ type AggregatedPivotCellsCardProps = {
 export function AggregatedPivotCellsCard({
   cells,
   xDimension,
+  yDimension,
   zDimension,
   measure,
   activeCellId,
@@ -34,12 +36,13 @@ export function AggregatedPivotCellsCard({
           <TableProperties className="h-5 w-5 text-cyan-700" />
           <CardTitle>Aggregated Pivot Cells</CardTitle>
         </div>
-        <CardDescription>Tabular drill-down entry points for the current pivot surface.</CardDescription>
+        <CardDescription>Tabular drill-down entry points for the current 3-axis pivot cube.</CardDescription>
       </CardHeader>
       <CardContent>
         <PivotTable
           cells={cells}
           xDimension={xDimension}
+          yDimension={yDimension}
           zDimension={zDimension}
           measure={measure}
           activeCellId={activeCellId}

@@ -20,6 +20,7 @@ export type MeasureFactKey = "revenue" | "margin" | "units";
 export type PivotCell = {
   id: string;
   xValue: string;
+  yValue: string;
   zValue: string;
   value: number;
   totals: MeasureTotals;
@@ -260,20 +261,27 @@ export function getUniqueDimensionValues(facts: CubeFact[]) {
 export function buildPivotCells(
   facts: CubeFact[],
   xDimension: DimensionKey,
+  yDimension: DimensionKey,
   zDimension: DimensionKey,
   measure: Measure,
 ) {
   const cellMap = new Map<string, PivotCell>();
   const xValues: string[] = [];
+  const yValues: string[] = [];
   const zValues: string[] = [];
 
   for (const fact of facts) {
     const xValue = getDimensionValue(fact, xDimension);
+    const yValue = getDimensionValue(fact, yDimension);
     const zValue = getDimensionValue(fact, zDimension);
-    const id = `${xValue}:::${zValue}`;
+    const id = `${xValue}:::${yValue}:::${zValue}`;
 
     if (!xValues.includes(xValue)) {
       xValues.push(xValue);
+    }
+
+    if (!yValues.includes(yValue)) {
+      yValues.push(yValue);
     }
 
     if (!zValues.includes(zValue)) {
@@ -295,6 +303,7 @@ export function buildPivotCells(
     cellMap.set(id, {
       id,
       xValue,
+      yValue,
       zValue,
       count: 1,
       facts: [fact],
@@ -309,20 +318,22 @@ export function buildPivotCells(
 
   const cells: PivotCell[] = [];
 
-  for (const zValue of zValues) {
-    for (const xValue of xValues) {
-      const cell = cellMap.get(`${xValue}:::${zValue}`);
+  for (const yValue of yValues) {
+    for (const zValue of zValues) {
+      for (const xValue of xValues) {
+        const cell = cellMap.get(`${xValue}:::${yValue}:::${zValue}`);
 
-      if (cell) {
-        cells.push({
-          ...cell,
-          value: cell.totals[measure],
-        });
+        if (cell) {
+          cells.push({
+            ...cell,
+            value: cell.totals[measure],
+          });
+        }
       }
     }
   }
 
-  return { cells, xValues, zValues };
+  return { cells, xValues, yValues, zValues };
 }
 
 export function parseMappedCubeFacts(rows: Array<Record<string, unknown>>, mapping: CsvColumnMapping) {

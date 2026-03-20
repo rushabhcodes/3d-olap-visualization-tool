@@ -10,6 +10,7 @@ import type { PendingUpload } from "@/components/olap/filter-panel/types";
 type FilterPanelProps = {
   selectedMeasure: Measure;
   xDimension: DimensionKey;
+  yDimension: DimensionKey;
   zDimension: DimensionKey;
   filters: Record<DimensionKey, string | "All">;
   availableValues: Record<DimensionKey, string[]>;
@@ -18,7 +19,7 @@ type FilterPanelProps = {
   uploadError: string | null;
   pendingUpload: PendingUpload | null;
   onMeasureChange: (value: Measure) => void;
-  onAxisChange: (axis: "x" | "z", value: DimensionKey) => void;
+  onAxisChange: (axis: "x" | "y" | "z", value: DimensionKey) => void;
   onSwapAxes: () => void;
   onFilterChange: (dimension: DimensionKey, value: string | "All") => void;
   onUpload: (file: File | null) => void;
@@ -31,6 +32,7 @@ type FilterPanelProps = {
 export function FilterPanel({
   selectedMeasure,
   xDimension,
+  yDimension,
   zDimension,
   filters,
   availableValues,
@@ -78,6 +80,7 @@ export function FilterPanel({
 
         <PivotAxesSection
           xDimension={xDimension}
+          yDimension={yDimension}
           zDimension={zDimension}
           onAxisChange={onAxisChange}
           onSwapAxes={onSwapAxes}

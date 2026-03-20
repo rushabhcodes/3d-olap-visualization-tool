@@ -21,8 +21,10 @@ type CubeSceneProps = {
   cells: PivotCell[];
   measure: Measure;
   xDimension: DimensionKey;
+  yDimension: DimensionKey;
   zDimension: DimensionKey;
   xValues: string[];
+  yValues: string[];
   zValues: string[];
   activeCellId: string | null;
   hoveredCellId: string | null;
@@ -41,6 +43,7 @@ type CubeSceneProps = {
 
 type SceneCell = PivotCell & {
   x: number;
+  y: number;
   z: number;
   width: number;
   depth: number;
@@ -247,6 +250,7 @@ function SceneRig({
   activeCell,
   drilledCell,
   maxHeight,
+  sceneHeight,
   controlsRef,
   shouldAnimateRef,
   overviewDistance,
@@ -256,6 +260,7 @@ function SceneRig({
   activeCell: SceneCell | null;
   drilledCell: SceneCell | null;
   maxHeight: number;
+  sceneHeight: number;
   controlsRef: MutableRefObject<any>;
   shouldAnimateRef: MutableRefObject<boolean>;
   overviewDistance: number;
@@ -270,16 +275,16 @@ function SceneRig({
     const focusCell = drilledCell ?? activeCell;
     const focusY = drilledCell ? Math.max(0.9, (focusCell?.height ?? 1) * 0.58) : maxHeight * 0.36;
 
-    desiredTarget.current.set(focusCell?.x ?? 0, focusY, focusCell?.z ?? 0);
+    desiredTarget.current.set(focusCell?.x ?? 0, (focusCell?.y ?? 0) + focusY, focusCell?.z ?? 0);
 
     if (drilledCell) {
       desiredPosition.current.set(
         drilledCell.x + drillOffset,
-        Math.max(3.6, drilledCell.height + 1.4),
+        Math.max(3.6, drilledCell.y + drilledCell.height + 1.4),
         drilledCell.z + drillOffset * 1.12,
       );
     } else {
-      desiredPosition.current.set(overviewDistance, overviewHeight, overviewDistance * 1.08);
+      desiredPosition.current.set(overviewDistance, Math.max(overviewHeight, sceneHeight + 3.2), overviewDistance * 1.08);
     }
     shouldAnimateRef.current = true;
   }, [
@@ -291,7 +296,9 @@ function SceneRig({
     drilledCell?.x,
     drilledCell?.z,
     drilledCell?.height,
+    drilledCell?.y,
     maxHeight,
+    sceneHeight,
     shouldAnimateRef,
     overviewDistance,
     overviewHeight,
@@ -455,7 +462,7 @@ function CubeCells({
               : getAggregateColor(Math.max(cell.normalizedValue - 0.2, 0), false, false);
 
         return (
-          <group key={cell.id} position={[cell.x, 0, cell.z]}>
+          <group key={cell.id} position={[cell.x, cell.y, cell.z]}>
             <mesh
               position={[0, cell.height / 2, 0]}
               castShadow
@@ -528,8 +535,10 @@ export function CubeScene({
   cells,
   measure,
   xDimension,
+  yDimension,
   zDimension,
   xValues,
+  yValues,
   zValues,
   activeCellId,
   hoveredCellId,
@@ -549,6 +558,7 @@ export function CubeScene({
   const controlsRef = useRef<any>(null);
   const shouldAnimateRef = useRef(true);
   const xOffset = (xValues.length - 1) / 2;
+  const yLayerSpacing = 2.35;
   const zOffset = (zValues.length - 1) / 2;
   const maxValue = Math.max(...cells.map((cell) => cell.value), 1);
   const sceneCells: SceneCell[] = cells.map((cell) => {
@@ -557,10 +567,11 @@ export function CubeScene({
     return {
       ...cell,
       x: (xValues.indexOf(cell.xValue) - xOffset) * 1.85,
+      y: yValues.indexOf(cell.yValue) * yLayerSpacing,
       z: (zValues.indexOf(cell.zValue) - zOffset) * 1.85,
       width: 0.72 + normalizedValue * 0.56,
       depth: 0.72 + normalizedValue * 0.56,
-      height: 0.85 + normalizedValue * 3.4,
+      height: 0.72 + normalizedValue * 1.32,
       normalizedValue,
     };
   });
@@ -576,11 +587,12 @@ export function CubeScene({
   const detailVoxel = selectedVoxel ?? hoveredVoxel;
   const scenarioLabels = collectScenarioLabels(cells);
   const maxHeight = Math.max(...sceneCells.map((cell) => cell.height), 2.2);
+  const sceneHeight = Math.max(2.8, (yValues.length - 1) * yLayerSpacing + maxHeight);
   const sceneWidth = Math.max(7.2, xValues.length * 2 + 1.8);
   const sceneDepth = Math.max(7.2, zValues.length * 2 + 1.8);
   const sceneSpan = Math.max(sceneWidth, sceneDepth);
   const overviewDistance = Math.max(7.2, sceneSpan * 0.78);
-  const overviewHeight = Math.max(5.6, maxHeight + sceneSpan * 0.16);
+  const overviewHeight = Math.max(6.8, sceneHeight + sceneSpan * 0.16);
   const drillOffset = Math.max(2.6, sceneSpan * 0.2);
   const orbitMaxDistance = Math.max(16, sceneSpan * 1.95);
 
@@ -642,7 +654,13 @@ export function CubeScene({
         <div className="pointer-events-auto space-y-2 rounded-2xl border border-white/70 bg-white/85 px-4 py-3 shadow-sm backdrop-blur">
           <div className="flex flex-wrap items-center gap-2 text-xs text-slate-600">
             <Badge variant="outline" className="border-slate-200 text-slate-700">
-              {getDimensionLabel(xDimension)} by {getDimensionLabel(zDimension)}
+              X: {getDimensionLabel(xDimension)}
+            </Badge>
+            <Badge variant="outline" className="border-slate-200 text-slate-700">
+              Y: {getDimensionLabel(yDimension)}
+            </Badge>
+            <Badge variant="outline" className="border-slate-200 text-slate-700">
+              Z: {getDimensionLabel(zDimension)}
             </Badge>
             <Badge variant="outline" className="border-slate-200 text-slate-700">
               {measure} intensity
@@ -683,6 +701,10 @@ export function CubeScene({
                 <ChevronRight className="h-3.5 w-3.5 text-slate-400" />
                 <Badge variant="outline" className="border-cyan-200 bg-cyan-50 text-cyan-900">
                   {getDimensionLabel(xDimension)}: {drilledCell.xValue}
+                </Badge>
+                <ChevronRight className="h-3.5 w-3.5 text-slate-400" />
+                <Badge variant="outline" className="border-cyan-200 bg-cyan-50 text-cyan-900">
+                  {getDimensionLabel(yDimension)}: {drilledCell.yValue}
                 </Badge>
                 <ChevronRight className="h-3.5 w-3.5 text-slate-400" />
                 <Badge variant="outline" className="border-cyan-200 bg-cyan-50 text-cyan-900">
@@ -777,6 +799,7 @@ export function CubeScene({
           activeCell={activeCell}
           drilledCell={drilledCell}
           maxHeight={maxHeight}
+          sceneHeight={sceneHeight}
           controlsRef={controlsRef}
           shouldAnimateRef={shouldAnimateRef}
           overviewDistance={overviewDistance}
@@ -823,6 +846,7 @@ export function CubeScene({
       </Canvas>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex items-center justify-between gap-3 px-5 py-4 text-xs text-slate-500">
         <span>{xValues.length} x-axis buckets</span>
+        <span>{yValues.length} y-axis buckets</span>
         <span>{zValues.length} z-axis buckets</span>
         <span>{drilledCell ? `${drilledCell.count} detail voxels open` : `${sceneCells.length} visible cells`}</span>
       </div>
