@@ -1,0 +1,67 @@
+import { TableProperties } from "lucide-react";
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { formatMeasureValue, type CubeFact, type PivotCell } from "@/data/mock-cube";
+
+type DrillDownRowsCardProps = {
+  activeCell: PivotCell | null;
+  drillFacts: CubeFact[];
+};
+
+export function DrillDownRowsCard({
+  activeCell,
+  drillFacts,
+}: DrillDownRowsCardProps) {
+  return (
+    <Card className="bg-white/85">
+      <CardHeader>
+        <div className="flex items-center gap-2">
+          <TableProperties className="h-5 w-5 text-cyan-700" />
+          <CardTitle>Drill-Down Rows</CardTitle>
+        </div>
+        <CardDescription>
+          {activeCell
+            ? "Raw facts currently contributing to the focused cube cell."
+            : "Preview of the visible fact slice. Select a cell to narrow this table."}
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="overflow-x-auto rounded-2xl border border-slate-200">
+          <table className="min-w-full divide-y divide-slate-200 text-left text-sm">
+            <thead className="bg-slate-100 text-slate-600">
+              <tr>
+                <th className="px-4 py-3 font-medium">Month</th>
+                <th className="px-4 py-3 font-medium">Region</th>
+                <th className="px-4 py-3 font-medium">Product</th>
+                <th className="px-4 py-3 font-medium">Scenario</th>
+                <th className="px-4 py-3 font-medium">Revenue</th>
+                <th className="px-4 py-3 font-medium">Margin</th>
+                <th className="px-4 py-3 font-medium">Units</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-200 bg-white">
+              {drillFacts.map((fact) => (
+                <tr key={`${fact.month}-${fact.region}-${fact.productLine}-${fact.scenario}`}>
+                  <td className="px-4 py-3 text-slate-700">{fact.month}</td>
+                  <td className="px-4 py-3 text-slate-600">{fact.region}</td>
+                  <td className="px-4 py-3 text-slate-600">{fact.productLine}</td>
+                  <td className="px-4 py-3 text-slate-600">{fact.scenario}</td>
+                  <td className="px-4 py-3 text-slate-900">{formatMeasureValue(fact.revenue, "Revenue")}</td>
+                  <td className="px-4 py-3 text-slate-900">{formatMeasureValue(fact.margin, "Margin")}</td>
+                  <td className="px-4 py-3 text-slate-900">{formatMeasureValue(fact.units, "Units")}</td>
+                </tr>
+              ))}
+              {drillFacts.length === 0 ? (
+                <tr>
+                  <td className="px-4 py-8 text-center text-slate-500" colSpan={7}>
+                    No rows match the current slice.
+                  </td>
+                </tr>
+              ) : null}
+            </tbody>
+          </table>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}

@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import Papa from "papaparse";
-import { Boxes, Layers3, Sparkles, TableProperties } from "lucide-react";
+import { Boxes, Layers3, Sparkles } from "lucide-react";
 
-import { CubeScene } from "@/components/olap/cube-scene";
+import { AggregatedPivotCellsCard } from "@/components/olap/aggregated-pivot-cells-card";
+import { CellDetailCard } from "@/components/olap/cell-detail-card";
+import { DrillDownRowsCard } from "@/components/olap/drill-down-rows-card";
 import { FilterPanel } from "@/components/olap/filter-panel";
-import { PivotHeatmap } from "@/components/olap/pivot-heatmap";
-import { PivotTable } from "@/components/olap/pivot-table";
+import { PivotMatrixHeatmapCard } from "@/components/olap/pivot-matrix-heatmap-card";
+import { PivotedCubeSurfaceCard } from "@/components/olap/pivoted-cube-surface-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import {
   buildPivotCells,
   cubeFieldOptions,
@@ -263,7 +265,7 @@ function App() {
     <main className="relative isolate min-h-screen overflow-hidden bg-slate-50 text-slate-900">
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top,rgba(6,182,212,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.1),transparent_24%)]" />
       <div className="absolute inset-0 z-0 bg-grid bg-[size:42px_42px] opacity-40" />
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto flex max-w-[1800px] flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8">
         <header className="rounded-[1.75rem] border border-white/80 bg-white/85 p-4 shadow-glow backdrop-blur sm:p-5">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div className="space-y-2">
@@ -336,9 +338,7 @@ function App() {
               </p>
             </CardContent>
           </Card>
-        </section>
 
-        <section className="grid gap-6 xl:grid-cols-[360px_minmax(0,1fr)]">
           <FilterPanel
             selectedMeasure={selectedMeasure}
             xDimension={xDimension}
@@ -365,242 +365,55 @@ function App() {
             onResetDataset={handleResetDataset}
           />
 
-          <div className="grid gap-6">
-            <Card className="bg-white/85">
-              <CardHeader className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                <div>
-                  <CardTitle>Pivoted Cube Surface</CardTitle>
-                  <CardDescription>
-                    Hover or click in any view to highlight the same pivot cell across the workspace.
-                  </CardDescription>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline" className="border-slate-200 text-slate-700">
-                    X: {getDimensionLabel(xDimension)}
-                  </Badge>
-                  <Badge variant="outline" className="border-slate-200 text-slate-700">
-                    Z: {getDimensionLabel(zDimension)}
-                  </Badge>
-                  {appliedSlices.length === 0 ? (
-                    <Badge variant="outline" className="border-slate-200 text-slate-700">
-                      No slices
-                    </Badge>
-                  ) : (
-                    appliedSlices.map((slice) => (
-                      <Badge key={slice} variant="outline" className="border-slate-200 text-slate-700">
-                        {slice}
-                      </Badge>
-                    ))
-                  )}
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <CubeScene
-                  cells={pivot.cells}
-                  measure={selectedMeasure}
-                  xDimension={xDimension}
-                  zDimension={zDimension}
-                  xValues={pivot.xValues}
-                  zValues={pivot.zValues}
-                  activeCellId={activeCell?.id ?? null}
-                  hoveredCellId={hoveredCell?.id ?? null}
-                  onHoverCell={setHoveredCellId}
-                  onLeaveCell={() => setHoveredCellId(null)}
-                  onSelectCell={setActiveCellId}
-                />
-                <div className="grid gap-3 md:grid-cols-3">
-                  <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Drill Path</p>
-                    <p className="mt-2 text-sm text-slate-600">
-                      Hover a cell anywhere to preview it, then click to lock the drill-down below.
-                    </p>
-                  </div>
-                  <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Cross-Highlight</p>
-                    <p className="mt-2 text-sm text-slate-600">
-                      The cube, heatmap, and pivot table now share hover and selection state.
-                    </p>
-                  </div>
-                  <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Upload Model</p>
-                    <p className="mt-2 text-sm text-slate-600">
-                      Local CSV uploads replace the demo dataset and reuse the same OLAP controls.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="grid min-w-0 gap-6 xl:col-span-2">
+            <PivotedCubeSurfaceCard
+              xDimension={xDimension}
+              zDimension={zDimension}
+              appliedSlices={appliedSlices}
+              cells={pivot.cells}
+              measure={selectedMeasure}
+              xValues={pivot.xValues}
+              zValues={pivot.zValues}
+              activeCellId={activeCell?.id ?? null}
+              hoveredCellId={hoveredCell?.id ?? null}
+              onHoverCell={setHoveredCellId}
+              onLeaveCell={() => setHoveredCellId(null)}
+              onSelectCell={setActiveCellId}
+            />
+            <PivotMatrixHeatmapCard
+              cells={pivot.cells}
+              xDimension={xDimension}
+              zDimension={zDimension}
+              xValues={pivot.xValues}
+              zValues={pivot.zValues}
+              measure={selectedMeasure}
+              activeCellId={activeCell?.id ?? null}
+              hoveredCellId={hoveredCell?.id ?? null}
+              onHoverCell={setHoveredCellId}
+              onLeaveCell={() => setHoveredCellId(null)}
+              onSelectCell={setActiveCellId}
+            />
+            <AggregatedPivotCellsCard
+              cells={pivot.cells}
+              xDimension={xDimension}
+              zDimension={zDimension}
+              measure={selectedMeasure}
+              activeCellId={activeCell?.id ?? null}
+              hoveredCellId={hoveredCell?.id ?? null}
+              onHoverCell={setHoveredCellId}
+              onLeaveCell={() => setHoveredCellId(null)}
+              onSelectCell={setActiveCellId}
+            />
+          </div>
 
-            <Card className="bg-white/85">
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <Layers3 className="h-5 w-5 text-cyan-700" />
-                  <CardTitle>Pivot Matrix Heatmap</CardTitle>
-                </div>
-                <CardDescription>
-                  A true matrix view of the same pivot surface. Hover and click behavior is synchronized with the 3D cube and pivot table.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <PivotHeatmap
-                  cells={pivot.cells}
-                  xDimension={xDimension}
-                  zDimension={zDimension}
-                  xValues={pivot.xValues}
-                  zValues={pivot.zValues}
-                  measure={selectedMeasure}
-                  activeCellId={activeCell?.id ?? null}
-                  hoveredCellId={hoveredCell?.id ?? null}
-                  onHoverCell={setHoveredCellId}
-                  onLeaveCell={() => setHoveredCellId(null)}
-                  onSelectCell={setActiveCellId}
-                />
-              </CardContent>
-            </Card>
-
-            <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-              <Card className="bg-white/85">
-                <CardHeader>
-                  <div className="flex items-center gap-2">
-                    <TableProperties className="h-5 w-5 text-cyan-700" />
-                    <CardTitle>Aggregated Pivot Cells</CardTitle>
-                  </div>
-                  <CardDescription>Tabular drill-down entry points for the current pivot surface.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <PivotTable
-                    cells={pivot.cells}
-                    xDimension={xDimension}
-                    zDimension={zDimension}
-                    measure={selectedMeasure}
-                    activeCellId={activeCell?.id ?? null}
-                    hoveredCellId={hoveredCell?.id ?? null}
-                    onHoverCell={setHoveredCellId}
-                    onLeaveCell={() => setHoveredCellId(null)}
-                    onSelectCell={setActiveCellId}
-                  />
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/85">
-                <CardHeader>
-                  <div className="flex items-center gap-2">
-                    <Boxes className="h-5 w-5 text-cyan-700" />
-                    <CardTitle>Cell Detail</CardTitle>
-                  </div>
-                  <CardDescription>Totals and member values for the current focused intersection.</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4 text-sm text-slate-600">
-                  <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
-                    <p className="font-medium text-slate-900">Coordinates</p>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {activeDimensions.length > 0 ? (
-                        activeDimensions.map((value) => (
-                          <Badge key={value} variant="outline" className="border-slate-200 text-slate-700">
-                            {value}
-                          </Badge>
-                        ))
-                      ) : (
-                        <p className="text-slate-500">Select a cube cell to see its coordinates.</p>
-                      )}
-                    </div>
-                    {hoveredCell && hoveredCell.id !== activeCell?.id ? (
-                      <p className="mt-3 text-xs text-cyan-700">
-                        Hover preview: {hoveredCell.xValue} / {hoveredCell.zValue}
-                      </p>
-                    ) : null}
-                  </div>
-                  <div className="grid gap-3 sm:grid-cols-3">
-                    <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
-                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-700">Revenue</p>
-                      <p className="mt-2 text-lg font-semibold text-slate-950">
-                        {formatMeasureValue(activeCell?.totals.Revenue ?? 0, "Revenue")}
-                      </p>
-                    </div>
-                    <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
-                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-700">Margin</p>
-                      <p className="mt-2 text-lg font-semibold text-slate-950">
-                        {formatMeasureValue(activeCell?.totals.Margin ?? 0, "Margin")}
-                      </p>
-                    </div>
-                    <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
-                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-700">Units</p>
-                      <p className="mt-2 text-lg font-semibold text-slate-950">
-                        {formatMeasureValue(activeCell?.totals.Units ?? 0, "Units")}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
-                    <p className="font-medium text-slate-900">Contributing Fact Rows</p>
-                    <p className="mt-2 text-slate-500">
-                      {activeCell ? `${activeCell.count} row(s) contribute to this cell.` : "No active cell selected."}
-                    </p>
-                  </div>
-                  <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
-                    <p className="font-medium text-slate-900">Dimension Inventory</p>
-                    <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                      {dimensionOptions.map((dimension) => (
-                        <div key={dimension.key} className="rounded-xl border border-slate-200 bg-white px-3 py-2">
-                          <p className="text-xs uppercase tracking-[0.16em] text-slate-500">{dimension.label}</p>
-                          <p className="mt-1 text-sm text-slate-700">{availableValues[dimension.key].length} members</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </section>
-
-            <Card className="bg-white/85">
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <TableProperties className="h-5 w-5 text-cyan-700" />
-                  <CardTitle>Drill-Down Rows</CardTitle>
-                </div>
-                <CardDescription>
-                  {activeCell
-                    ? "Raw facts currently contributing to the focused cube cell."
-                    : "Preview of the visible fact slice. Select a cell to narrow this table."}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="overflow-hidden rounded-2xl border border-slate-200">
-                  <table className="min-w-full divide-y divide-slate-200 text-left text-sm">
-                    <thead className="bg-slate-100 text-slate-600">
-                      <tr>
-                        <th className="px-4 py-3 font-medium">Month</th>
-                        <th className="px-4 py-3 font-medium">Region</th>
-                        <th className="px-4 py-3 font-medium">Product</th>
-                        <th className="px-4 py-3 font-medium">Scenario</th>
-                        <th className="px-4 py-3 font-medium">Revenue</th>
-                        <th className="px-4 py-3 font-medium">Margin</th>
-                        <th className="px-4 py-3 font-medium">Units</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-200 bg-white">
-                      {drillFacts.map((fact, index) => (
-                        <tr key={`${fact.month}-${fact.region}-${fact.productLine}-${fact.scenario}-${index}`}>
-                          <td className="px-4 py-3 text-slate-700">{fact.month}</td>
-                          <td className="px-4 py-3 text-slate-600">{fact.region}</td>
-                          <td className="px-4 py-3 text-slate-600">{fact.productLine}</td>
-                          <td className="px-4 py-3 text-slate-600">{fact.scenario}</td>
-                          <td className="px-4 py-3 text-slate-900">{formatMeasureValue(fact.revenue, "Revenue")}</td>
-                          <td className="px-4 py-3 text-slate-900">{formatMeasureValue(fact.margin, "Margin")}</td>
-                          <td className="px-4 py-3 text-slate-900">{formatMeasureValue(fact.units, "Units")}</td>
-                        </tr>
-                      ))}
-                      {drillFacts.length === 0 ? (
-                        <tr>
-                          <td className="px-4 py-8 text-center text-slate-500" colSpan={7}>
-                            No rows match the current slice.
-                          </td>
-                        </tr>
-                      ) : null}
-                    </tbody>
-                  </table>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="min-w-0 gap-6 xl:col-span-1">
+            <CellDetailCard
+              activeDimensions={activeDimensions}
+              hoveredCell={hoveredCell}
+              activeCell={activeCell}
+              availableValues={availableValues}
+            />
+            <DrillDownRowsCard activeCell={activeCell} drillFacts={drillFacts} />
           </div>
         </section>
       </div>
