@@ -1,35 +1,76 @@
-import { useEffect, useRef, useState } from "react";
+import { startTransition, useEffect, useMemo, useRef, useState } from "react";
 import Papa from "papaparse";
 
 import type { PendingUpload } from "@/components/olap/filter-panel/types";
 import {
   buildPivotCells,
+  builtInDatasets,
   createEmptyFilters,
   defaultBuiltInDatasetId,
   type DatasetSchema,
   type DimensionKey,
-  getBuiltInDataset,
+  getBuiltInDatasetDefinition,
   getCubeFieldOptions,
   getDimensionLabel,
   getDimensionValue,
   getUniqueDimensionValues,
   hasCompleteCsvMapping,
+  loadBuiltInDataset,
   type Measure,
   parseMappedCubeFacts,
   suggestCsvColumnMapping,
   type CubeFact,
 } from "@/data/mock-cube";
 
+function parseCsvUploadFile(file: File) {
+  return new Promise<{
+    headers: string[];
+    rows: Array<Record<string, unknown>>;
+    parseErrors: string[];
+  }>((resolve, reject) => {
+    Papa.parse<Record<string, unknown>>(file, {
+      worker: true,
+      header: true,
+      skipEmptyLines: "greedy",
+      transformHeader: (header) => header.trim(),
+      complete: (parsed) => {
+        const headers = Array.from(
+          new Set((parsed.meta.fields ?? []).map((field) => field.trim()).filter(Boolean)),
+        );
+        const rows = parsed.data.filter((row) =>
+          Object.values(row).some((value) => String(value ?? "").trim() !== ""),
+        );
+
+        resolve({
+          headers,
+          rows,
+          parseErrors: parsed.errors.map((error) => {
+            const rowLabel = typeof error.row === "number" ? `Row ${error.row + 2}` : "CSV";
+
+            return `${rowLabel}: ${error.message}`;
+          }),
+        });
+      },
+      error: (error) => {
+        reject(error);
+      },
+    });
+  });
+}
+
 export function useCubeWorkspace() {
-  const defaultBuiltInDataset = getBuiltInDataset(defaultBuiltInDatasetId);
+  const defaultBuiltInDataset = getBuiltInDatasetDefinition(defaultBuiltInDatasetId);
   const cubeSurfaceRef = useRef<HTMLDivElement>(null);
+  const builtInDatasetLoadIdRef = useRef(0);
   const [schema, setSchema] = useState<DatasetSchema>(defaultBuiltInDataset.schema);
-  const [facts, setFacts] = useState<CubeFact[]>(defaultBuiltInDataset.facts);
+  const [facts, setFacts] = useState<CubeFact[]>([]);
   const [datasetLabel, setDatasetLabel] = useState(defaultBuiltInDataset.label);
   const [selectedBuiltInDatasetId, setSelectedBuiltInDatasetId] = useState<string | null>(
     defaultBuiltInDatasetId,
   );
   const [uploadError, setUploadError] = useState<string | null>(null);
+  const [isDatasetLoading, setIsDatasetLoading] = useState(true);
+  const [isUploadParsing, setIsUploadParsing] = useState(false);
   const [selectedMeasure, setSelectedMeasure] = useState<Measure>(defaultBuiltInDataset.schema.defaultMeasure);
   const [xDimension, setXDimension] = useState<DimensionKey>(defaultBuiltInDataset.schema.defaultAxes.x);
   const [yDimension, setYDimension] = useState<DimensionKey>(defaultBuiltInDataset.schema.defaultAxes.y);
@@ -44,49 +85,63 @@ export function useCubeWorkspace() {
   const [selectedFactIndex, setSelectedFactIndex] = useState<number | null>(null);
   const [pendingUpload, setPendingUpload] = useState<PendingUpload | null>(null);
 
-  const availableValues = getUniqueDimensionValues(facts, schema);
-  const filteredFacts = facts.filter((fact) =>
-    schema.dimensions.every((dimension) => {
-      const filterValue = filters[dimension.key];
+  const availableValues = useMemo(() => getUniqueDimensionValues(facts, schema), [facts, schema]);
 
-      return filterValue === "All" || getDimensionValue(fact, dimension.key) === filterValue;
-    }),
+  const filteredFacts = useMemo(
+    () =>
+      facts.filter((fact) =>
+        schema.dimensions.every((dimension) => {
+          const filterValue = filters[dimension.key];
+
+          return filterValue === "All" || getDimensionValue(fact, dimension.key) === filterValue;
+        }),
+      ),
+    [facts, filters, schema],
   );
 
-  const pivot = buildPivotCells(filteredFacts, schema, xDimension, yDimension, zDimension, selectedMeasure);
-  const activeCell = pivot.cells.find((cell) => cell.id === activeCellId) ?? pivot.cells[0] ?? null;
-  const hoveredCell = pivot.cells.find((cell) => cell.id === hoveredCellId) ?? null;
-  const drilledCell = pivot.cells.find((cell) => cell.id === drilledCellId) ?? null;
+  const pivot = useMemo(
+    () => buildPivotCells(filteredFacts, schema, xDimension, yDimension, zDimension, selectedMeasure),
+    [filteredFacts, schema, selectedMeasure, xDimension, yDimension, zDimension],
+  );
+
+  const pivotCellMap = useMemo(() => new Map(pivot.cells.map((cell) => [cell.id, cell])), [pivot.cells]);
+  const activeCell = (activeCellId ? pivotCellMap.get(activeCellId) : null) ?? pivot.cells[0] ?? null;
+  const hoveredCell = (hoveredCellId ? pivotCellMap.get(hoveredCellId) : null) ?? null;
+  const drilledCell = (drilledCellId ? pivotCellMap.get(drilledCellId) : null) ?? null;
+
+  useEffect(() => {
+    void handleLoadBuiltInDataset(defaultBuiltInDatasetId);
+  }, []);
 
   useEffect(() => {
     setActiveCellId((current) => {
-      if (current && pivot.cells.some((cell) => cell.id === current)) {
+      if (current && pivotCellMap.has(current)) {
         return current;
       }
 
       return pivot.cells[0]?.id ?? null;
     });
-  }, [pivot.cells]);
+  }, [pivot.cells, pivotCellMap]);
 
   useEffect(() => {
     setHoveredCellId((current) => {
-      if (current && pivot.cells.some((cell) => cell.id === current)) {
+      if (current && pivotCellMap.has(current)) {
         return current;
       }
 
       return null;
     });
-  }, [pivot.cells]);
+  }, [pivotCellMap]);
 
   useEffect(() => {
     setDrilledCellId((current) => {
-      if (current && pivot.cells.some((cell) => cell.id === current)) {
+      if (current && pivotCellMap.has(current)) {
         return current;
       }
 
       return null;
     });
-  }, [pivot.cells]);
+  }, [pivotCellMap]);
 
   useEffect(() => {
     const factCount = drilledCell?.facts.length ?? 0;
@@ -99,26 +154,44 @@ export function useCubeWorkspace() {
     );
   }, [drilledCell?.id, drilledCell?.facts.length]);
 
-  const totals = filteredFacts.reduce<Record<string, number>>((summary, fact) => {
-    for (const measureOption of schema.measures) {
-      summary[measureOption.key] = (summary[measureOption.key] ?? 0) + Number(fact[measureOption.key] ?? 0);
-    }
+  const totals = useMemo(
+    () =>
+      filteredFacts.reduce<Record<string, number>>(
+        (summary, fact) => {
+          for (const measureOption of schema.measures) {
+            summary[measureOption.key] =
+              (summary[measureOption.key] ?? 0) + Number(fact[measureOption.key] ?? 0);
+          }
 
-    return summary;
-  }, Object.fromEntries(schema.measures.map((measureOption) => [measureOption.key, 0])) as Record<string, number>);
+          return summary;
+        },
+        Object.fromEntries(schema.measures.map((measureOption) => [measureOption.key, 0])) as Record<
+          string,
+          number
+        >,
+      ),
+    [filteredFacts, schema],
+  );
 
-  const activeDimensions =
-    activeCell === null
-      ? []
-      : [
-          `${getDimensionLabel(schema, xDimension)}: ${activeCell.xValue}`,
-          `${getDimensionLabel(schema, yDimension)}: ${activeCell.yValue}`,
-          `${getDimensionLabel(schema, zDimension)}: ${activeCell.zValue}`,
-        ];
+  const activeDimensions = useMemo(
+    () =>
+      activeCell === null
+        ? []
+        : [
+            `${getDimensionLabel(schema, xDimension)}: ${activeCell.xValue}`,
+            `${getDimensionLabel(schema, yDimension)}: ${activeCell.yValue}`,
+            `${getDimensionLabel(schema, zDimension)}: ${activeCell.zValue}`,
+          ],
+    [activeCell, schema, xDimension, yDimension, zDimension],
+  );
 
-  const appliedSlices = schema.dimensions
-    .filter((dimension) => filters[dimension.key] !== "All")
-    .map((dimension) => `${dimension.label}: ${filters[dimension.key]}`);
+  const appliedSlices = useMemo(
+    () =>
+      schema.dimensions
+        .filter((dimension) => filters[dimension.key] !== "All")
+        .map((dimension) => `${dimension.label}: ${filters[dimension.key]}`),
+    [filters, schema],
+  );
 
   function clearFactSelection() {
     setHoveredFactIndex(null);
@@ -141,16 +214,43 @@ export function useCubeWorkspace() {
     resetInteractionState();
   }
 
-  function handleLoadBuiltInDataset(datasetId: string) {
-    const dataset = getBuiltInDataset(datasetId);
+  async function handleLoadBuiltInDataset(datasetId: string) {
+    const nextDataset = getBuiltInDatasetDefinition(datasetId);
+    const loadId = builtInDatasetLoadIdRef.current + 1;
 
-    setSchema(dataset.schema);
-    setFacts(dataset.facts);
-    setDatasetLabel(dataset.label);
-    setSelectedBuiltInDatasetId(dataset.id);
-    setUploadError(null);
+    builtInDatasetLoadIdRef.current = loadId;
+    setSchema(nextDataset.schema);
+    setDatasetLabel(nextDataset.label);
+    setSelectedBuiltInDatasetId(nextDataset.id);
     setPendingUpload(null);
-    resetViewState(dataset.schema);
+    setUploadError(null);
+    setIsDatasetLoading(true);
+    startTransition(() => {
+      setFacts([]);
+    });
+    resetViewState(nextDataset.schema);
+
+    try {
+      const loadedDataset = await loadBuiltInDataset(nextDataset.id);
+
+      if (builtInDatasetLoadIdRef.current !== loadId) {
+        return;
+      }
+
+      startTransition(() => {
+        setFacts(loadedDataset.facts);
+      });
+    } catch (error) {
+      if (builtInDatasetLoadIdRef.current !== loadId) {
+        return;
+      }
+
+      setUploadError(error instanceof Error ? error.message : "Dataset failed to load.");
+    } finally {
+      if (builtInDatasetLoadIdRef.current === loadId) {
+        setIsDatasetLoading(false);
+      }
+    }
   }
 
   function handleSelectAggregateCell(id: string) {
@@ -191,25 +291,18 @@ export function useCubeWorkspace() {
       return;
     }
 
-    try {
-      const csvText = await file.text();
-      const parsed = Papa.parse<Record<string, unknown>>(csvText, {
-        header: true,
-        skipEmptyLines: "greedy",
-        transformHeader: (header) => header.trim(),
-      });
-      const headers = Array.from(new Set((parsed.meta.fields ?? []).map((field) => field.trim()).filter(Boolean)));
-      const rows = parsed.data.filter((row) =>
-        Object.values(row).some((value) => String(value ?? "").trim() !== ""),
-      );
+    setIsUploadParsing(true);
 
-      if (headers.length === 0) {
+    try {
+      const parsed = await parseCsvUploadFile(file);
+
+      if (parsed.headers.length === 0) {
         setPendingUpload(null);
         setUploadError("CSV must include a header row.");
         return;
       }
 
-      if (rows.length === 0) {
+      if (parsed.rows.length === 0) {
         setPendingUpload(null);
         setUploadError("CSV must include at least one data row.");
         return;
@@ -217,20 +310,18 @@ export function useCubeWorkspace() {
 
       setPendingUpload({
         fileName: file.name,
-        headers,
-        rows,
-        previewRows: rows.slice(0, 3),
-        mapping: suggestCsvColumnMapping(headers, schema),
-        parseErrors: parsed.errors.map((error) => {
-          const rowLabel = typeof error.row === "number" ? `Row ${error.row + 2}` : "CSV";
-
-          return `${rowLabel}: ${error.message}`;
-        }),
+        headers: parsed.headers,
+        rows: parsed.rows,
+        previewRows: parsed.rows.slice(0, 3),
+        mapping: suggestCsvColumnMapping(parsed.headers, schema),
+        parseErrors: parsed.parseErrors,
       });
       setUploadError(null);
     } catch (error) {
       setPendingUpload(null);
       setUploadError(error instanceof Error ? error.message : "CSV upload failed.");
+    } finally {
+      setIsUploadParsing(false);
     }
   }
 
@@ -272,9 +363,12 @@ export function useCubeWorkspace() {
       return;
     }
 
-    setFacts(parsed.facts);
+    startTransition(() => {
+      setFacts(parsed.facts);
+    });
     setDatasetLabel(pendingUpload.fileName);
     setSelectedBuiltInDatasetId(null);
+    setIsDatasetLoading(false);
     resetViewState(schema);
     setPendingUpload(null);
 
@@ -293,7 +387,7 @@ export function useCubeWorkspace() {
   }
 
   function handleResetDataset() {
-    handleLoadBuiltInDataset(defaultBuiltInDatasetId);
+    void handleLoadBuiltInDataset(defaultBuiltInDatasetId);
   }
 
   function handleAxisChange(axis: "x" | "y" | "z", value: DimensionKey) {
@@ -328,12 +422,15 @@ export function useCubeWorkspace() {
   }
 
   return {
+    builtInDatasets,
     cubeSurfaceRef,
     schema,
     facts,
     datasetLabel,
     selectedBuiltInDatasetId,
     uploadError,
+    isDatasetLoading,
+    isUploadParsing,
     selectedMeasure,
     xDimension,
     yDimension,

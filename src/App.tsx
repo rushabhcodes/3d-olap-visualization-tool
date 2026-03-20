@@ -9,7 +9,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import {
-  builtInDatasets,
   formatMeasureValue,
   getMeasureLabel,
   getDimensionLabel,
@@ -18,12 +17,15 @@ import { useCubeWorkspace } from "@/hooks/use-cube-workspace";
 
 function App() {
   const {
+    builtInDatasets,
     cubeSurfaceRef,
     schema,
     facts,
     datasetLabel,
     selectedBuiltInDatasetId,
     uploadError,
+    isDatasetLoading,
+    isUploadParsing,
     selectedMeasure,
     xDimension,
     yDimension,
@@ -104,7 +106,9 @@ function App() {
                 <CardDescription className="text-[11px] uppercase tracking-[0.16em]">Active Measure</CardDescription>
                 <CardTitle className="text-base">{getMeasureLabel(schema, selectedMeasure)}</CardTitle>
                 <p className="text-xl font-semibold">
-                  {formatMeasureValue(Number(totals[selectedMeasure] ?? 0), selectedMeasure, schema)}
+                  {isDatasetLoading
+                    ? "Loading..."
+                    : formatMeasureValue(Number(totals[selectedMeasure] ?? 0), selectedMeasure, schema)}
                 </p>
               </div>
               <Layers3 className="mt-1 h-5 w-5 shrink-0 text-cyan-700" />
@@ -114,7 +118,7 @@ function App() {
           <Card className="bg-white/85">
             <CardContent className="space-y-1 p-4">
               <CardDescription className="text-[11px] uppercase tracking-[0.16em]">Visible Cube Cells</CardDescription>
-              <CardTitle className="text-xl">{pivot.cells.length}</CardTitle>
+              <CardTitle className="text-xl">{isDatasetLoading ? "..." : pivot.cells.length}</CardTitle>
               <p className="text-xs text-muted-foreground">
                 {getDimensionLabel(schema, xDimension)} by {getDimensionLabel(schema, yDimension)} by {getDimensionLabel(schema, zDimension)}
               </p>
@@ -124,7 +128,7 @@ function App() {
           <Card className="bg-white/85">
             <CardContent className="space-y-1 p-4">
               <CardDescription className="text-[11px] uppercase tracking-[0.16em]">Visible Fact Rows</CardDescription>
-              <CardTitle className="text-xl">{filteredFacts.length}</CardTitle>
+              <CardTitle className="text-xl">{isDatasetLoading ? "..." : filteredFacts.length}</CardTitle>
               <p className="truncate text-xs text-muted-foreground" title={datasetLabel}>
                 {datasetLabel}
               </p>
@@ -135,10 +139,18 @@ function App() {
             <CardContent className="space-y-1 p-4">
               <CardDescription className="text-[11px] uppercase tracking-[0.16em]">Focused Cell</CardDescription>
               <CardTitle className="text-xl">
-                {activeCell ? formatMeasureValue(activeCell.value, selectedMeasure, schema) : "None"}
+                {isDatasetLoading
+                  ? "Loading..."
+                  : activeCell
+                    ? formatMeasureValue(activeCell.value, selectedMeasure, schema)
+                    : "None"}
               </CardTitle>
               <p className="text-xs text-muted-foreground">
-                {activeCell ? `${activeCell.count} contributing row(s)` : "Select a pivot cell to inspect it."}
+                {isDatasetLoading
+                  ? "Loading dataset."
+                  : activeCell
+                    ? `${activeCell.count} contributing row(s)`
+                    : "Select a pivot cell to inspect it."}
               </p>
             </CardContent>
           </Card>
@@ -156,6 +168,8 @@ function App() {
             datasetLabel={datasetLabel}
             recordCount={facts.length}
             uploadError={uploadError}
+            isDatasetLoading={isDatasetLoading}
+            isUploadParsing={isUploadParsing}
             pendingUpload={pendingUpload}
             onMeasureChange={setSelectedMeasure}
             onAxisChange={handleAxisChange}

@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import type { BuiltInDataset, CsvColumnMapping, DatasetSchema, DimensionKey, Measure } from "@/data/mock-cube";
+import type { BuiltInDataset, DatasetSchema, DimensionKey, Measure } from "@/data/mock-cube";
 import { DatasetSection } from "@/components/olap/filter-panel/dataset-section";
 import { DimensionFiltersSection } from "@/components/olap/filter-panel/dimension-filters-section";
 import { MeasureSection } from "@/components/olap/filter-panel/measure-section";
@@ -20,6 +20,8 @@ type FilterPanelProps = {
   datasetLabel: string;
   recordCount: number;
   uploadError: string | null;
+  isDatasetLoading: boolean;
+  isUploadParsing: boolean;
   pendingUpload: PendingUpload | null;
   onMeasureChange: (value: Measure) => void;
   onAxisChange: (axis: "x" | "y" | "z", value: DimensionKey) => void;
@@ -46,6 +48,8 @@ export function FilterPanel({
   datasetLabel,
   recordCount,
   uploadError,
+  isDatasetLoading,
+  isUploadParsing,
   pendingUpload,
   onMeasureChange,
   onAxisChange,
@@ -79,6 +83,8 @@ export function FilterPanel({
           datasetLabel={datasetLabel}
           recordCount={recordCount}
           uploadError={uploadError}
+          isDatasetLoading={isDatasetLoading}
+          isUploadParsing={isUploadParsing}
           pendingUpload={pendingUpload}
           onUpload={onUpload}
           onMappingChange={onMappingChange}

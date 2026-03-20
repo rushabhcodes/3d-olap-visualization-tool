@@ -19,6 +19,8 @@ type DatasetSectionProps = {
   datasetLabel: string;
   recordCount: number;
   uploadError: string | null;
+  isDatasetLoading: boolean;
+  isUploadParsing: boolean;
   pendingUpload: PendingUpload | null;
   onUpload: (file: File | null) => void;
   onMappingChange: (field: string, header: string) => void;
@@ -35,6 +37,8 @@ export function DatasetSection({
   datasetLabel,
   recordCount,
   uploadError,
+  isDatasetLoading,
+  isUploadParsing,
   pendingUpload,
   onUpload,
   onMappingChange,
@@ -53,7 +57,9 @@ export function DatasetSection({
         <p className="text-sm font-medium text-slate-900">Dataset</p>
       </div>
       <p className="text-xs text-slate-600">{datasetLabel}</p>
-      <p className="text-xs text-slate-600">{recordCount} fact rows loaded</p>
+      <p className="text-xs text-slate-600">
+        {isDatasetLoading ? "Loading built-in dataset..." : `${recordCount} fact rows loaded`}
+      </p>
       <div className="space-y-2">
         <p className="text-xs font-medium uppercase tracking-[0.14em] text-slate-500">Built-in datasets</p>
         <div className="grid gap-2">
@@ -69,6 +75,7 @@ export function DatasetSection({
                     ? "border-cyan-500 bg-cyan-50 text-slate-950 shadow-sm"
                     : "border-slate-200 bg-white text-slate-700 hover:border-cyan-400 hover:text-slate-950"
                 }`}
+                disabled={isDatasetLoading}
                 onClick={() => onLoadBuiltInDataset(dataset.id)}
               >
                 <p className="text-sm font-medium">{dataset.label}</p>
@@ -80,11 +87,12 @@ export function DatasetSection({
       </div>
       <label className="flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-slate-300 bg-white px-4 py-3 text-sm text-slate-700 transition hover:border-cyan-500 hover:text-slate-950">
         <Upload className="h-4 w-4" />
-        Upload CSV
+        {isUploadParsing ? "Parsing CSV..." : "Upload CSV"}
         <input
           className="hidden"
           type="file"
           accept=".csv,text/csv"
+          disabled={isUploadParsing}
           onClick={(event) => {
             event.currentTarget.value = "";
           }}
@@ -150,7 +158,7 @@ export function DatasetSection({
           </div>
         </div>
       ) : null}
-      <Button variant="outline" className="w-full border-slate-200 bg-white" onClick={onResetDataset}>
+      <Button variant="outline" className="w-full border-slate-200 bg-white" disabled={isDatasetLoading} onClick={onResetDataset}>
         Load Default Dataset
       </Button>
     </section>

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type MutableRefObject } from "react";
+import { useEffect, useMemo, useRef, useState, type MutableRefObject } from "react";
 import { Edges, OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { ChevronRight, Maximize2, Minimize2, Undo2 } from "lucide-react";
@@ -7,11 +7,14 @@ import * as THREE from "three";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
+  createMeasureScale,
   type DatasetSchema,
   formatMeasureValue,
   getDimensionLabel,
   getDimensionValue,
   getMeasureLabel,
+  getMeasureMagnitudeRatio,
+  getMeasureSignedRatio,
   getMeasureValue,
   type CubeFact,
   type DimensionKey,
@@ -51,7 +54,8 @@ type SceneCell = PivotCell & {
   width: number;
   depth: number;
   height: number;
-  normalizedValue: number;
+  magnitudeRatio: number;
+  signedRatio: number;
 };
 
 type DetailVoxel = {
@@ -96,11 +100,24 @@ function getDetailColor(label: string) {
   }
 }
 
-function getAggregateColor(normalizedValue: number, active: boolean, hovered: boolean) {
-  const saturation = 54 + normalizedValue * 32 + (active ? 8 : hovered ? 4 : 0);
-  const lightness = 77 - normalizedValue * 28 - (active ? 9 : hovered ? 4 : 0);
+function getAggregateColor(signedRatio: number, magnitudeRatio: number, active: boolean, hovered: boolean) {
+  const emphasis = active ? 8 : hovered ? 4 : 0;
 
-  return `hsl(192 ${Math.round(saturation)}% ${Math.round(lightness)}%)`;
+  if (signedRatio < 0) {
+    const saturation = 52 + magnitudeRatio * 28 + emphasis;
+    const lightness = 82 - magnitudeRatio * 24 - emphasis;
+
+    return `hsl(8 ${Math.round(saturation)}% ${Math.round(lightness)}%)`;
+  }
+
+  if (signedRatio > 0) {
+    const saturation = 54 + magnitudeRatio * 32 + emphasis;
+    const lightness = 77 - magnitudeRatio * 28 - emphasis;
+
+    return `hsl(192 ${Math.round(saturation)}% ${Math.round(lightness)}%)`;
+  }
+
+  return `hsl(210 22% ${Math.round(84 - emphasis)}%)`;
 }
 
 function collectLegendLabels(cells: PivotCell[], dimension: DimensionKey | null) {
@@ -424,7 +441,6 @@ function DetailCloud({
 function CubeCells({
   cells,
   drilledVoxels,
-  measure,
   activeCellId,
   hoveredCellId,
   drilledCellId,
@@ -441,7 +457,6 @@ function CubeCells({
 }: {
   cells: SceneCell[];
   drilledVoxels: DetailVoxel[];
-  measure: Measure;
   activeCellId: string | null;
   hoveredCellId: string | null;
   drilledCellId: string | null;
@@ -462,13 +477,17 @@ function CubeCells({
         const active = cell.id === activeCellId;
         const hovered = cell.id === hoveredCellId;
         const drilled = cell.id === drilledCellId;
-        const aggregateColor = getAggregateColor(cell.normalizedValue, active || drilled, hovered);
+        const aggregateColor = getAggregateColor(cell.signedRatio, cell.magnitudeRatio, active || drilled, hovered);
         const emissiveColor =
           active || drilled
-            ? "#0f766e"
+            ? cell.signedRatio < 0
+              ? "#b91c1c"
+              : "#0f766e"
             : hovered
-              ? "#0891b2"
-              : getAggregateColor(Math.max(cell.normalizedValue - 0.2, 0), false, false);
+              ? cell.signedRatio < 0
+                ? "#dc2626"
+                : "#0891b2"
+              : getAggregateColor(cell.signedRatio, Math.max(cell.magnitudeRatio - 0.2, 0), false, false);
 
         return (
           <group key={cell.id} position={[cell.x, cell.y, cell.z]}>
@@ -571,35 +590,51 @@ export function CubeScene({
   const xOffset = (xValues.length - 1) / 2;
   const yLayerSpacing = 2.35;
   const zOffset = (zValues.length - 1) / 2;
-  const maxValue = Math.max(...cells.map((cell) => cell.value), 1);
-  const sceneCells: SceneCell[] = cells.map((cell) => {
-    const normalizedValue = cell.value / maxValue;
+  const measureScale = useMemo(() => createMeasureScale(cells.map((cell) => cell.value)), [cells]);
+  const xIndexMap = useMemo(() => new Map(xValues.map((value, index) => [value, index])), [xValues]);
+  const yIndexMap = useMemo(() => new Map(yValues.map((value, index) => [value, index])), [yValues]);
+  const zIndexMap = useMemo(() => new Map(zValues.map((value, index) => [value, index])), [zValues]);
+  const sceneCells: SceneCell[] = useMemo(
+    () =>
+      cells.map((cell) => {
+        const magnitudeRatio = getMeasureMagnitudeRatio(cell.value, measureScale);
+        const signedRatio = getMeasureSignedRatio(cell.value, measureScale);
 
-    return {
-      ...cell,
-      x: (xValues.indexOf(cell.xValue) - xOffset) * 1.85,
-      y: yValues.indexOf(cell.yValue) * yLayerSpacing,
-      z: (zValues.indexOf(cell.zValue) - zOffset) * 1.85,
-      width: 0.72 + normalizedValue * 0.56,
-      depth: 0.72 + normalizedValue * 0.56,
-      height: 0.72 + normalizedValue * 1.32,
-      normalizedValue,
-    };
-  });
+        return {
+          ...cell,
+          x: ((xIndexMap.get(cell.xValue) ?? 0) - xOffset) * 1.85,
+          y: (yIndexMap.get(cell.yValue) ?? 0) * yLayerSpacing,
+          z: ((zIndexMap.get(cell.zValue) ?? 0) - zOffset) * 1.85,
+          width: 0.72 + magnitudeRatio * 0.56,
+          depth: 0.72 + magnitudeRatio * 0.56,
+          height: 0.72 + magnitudeRatio * 1.32,
+          magnitudeRatio,
+          signedRatio,
+        };
+      }),
+    [cells, measureScale, xIndexMap, xOffset, yIndexMap, yLayerSpacing, zIndexMap, zOffset],
+  );
 
-  const activeCell = sceneCells.find((cell) => cell.id === activeCellId) ?? null;
-  const drilledCell = sceneCells.find((cell) => cell.id === drilledCellId) ?? null;
+  const sceneCellMap = useMemo(() => new Map(sceneCells.map((cell) => [cell.id, cell])), [sceneCells]);
+  const activeCell = (activeCellId ? sceneCellMap.get(activeCellId) : null) ?? null;
+  const drilledCell = (drilledCellId ? sceneCellMap.get(drilledCellId) : null) ?? null;
   const detailColorDimension = schema.dimensions.find((dimension) => ![xDimension, yDimension, zDimension].includes(dimension.key))?.key
     ?? schema.detailColorDimension
     ?? null;
-  const drilledVoxels = buildDetailVoxels(drilledCell, detailColorDimension);
+  const drilledVoxels = useMemo(
+    () => buildDetailVoxels(drilledCell, detailColorDimension),
+    [detailColorDimension, drilledCell],
+  );
   const selectedVoxel = drilledVoxels.find((voxel) => voxel.factIndex === selectedFactIndex) ?? null;
   const hoveredVoxel =
     selectedFactIndex === null
       ? drilledVoxels.find((voxel) => voxel.factIndex === hoveredFactIndex) ?? null
       : null;
   const detailVoxel = selectedVoxel ?? hoveredVoxel;
-  const detailColorLabels = collectLegendLabels(cells, detailColorDimension);
+  const detailColorLabels = useMemo(
+    () => collectLegendLabels(cells, detailColorDimension),
+    [cells, detailColorDimension],
+  );
   const maxHeight = Math.max(...sceneCells.map((cell) => cell.height), 2.2);
   const sceneHeight = Math.max(2.8, (yValues.length - 1) * yLayerSpacing + maxHeight);
   const sceneWidth = Math.max(7.2, xValues.length * 2 + 1.8);
@@ -716,15 +751,22 @@ export function CubeScene({
               Z: {getDimensionLabel(schema, zDimension)}
             </Badge>
             <Badge variant="outline" className="border-slate-200 text-slate-700">
-              {getMeasureLabel(schema, measure)} intensity
+              {getMeasureLabel(schema, measure)} {measureScale.hasNegative ? "signed scale" : "intensity"}
             </Badge>
           </div>
           <div className="flex flex-wrap items-center gap-3 text-[11px] text-slate-600">
             <div className="flex items-center gap-2">
               <span className="font-medium text-slate-900">Aggregate</span>
-              <div className="h-2 w-24 rounded-full bg-[linear-gradient(90deg,#d9f99d_0%,#67e8f9_45%,#0f766e_100%)]" />
-              <span>low</span>
-              <span>high</span>
+              <div
+                className="h-2 w-24 rounded-full"
+                style={{
+                  backgroundImage: measureScale.hasNegative
+                    ? "linear-gradient(90deg,#fca5a5 0%,#e2e8f0 50%,#67e8f9 100%)"
+                    : "linear-gradient(90deg,#d9f99d 0%,#67e8f9 45%,#0f766e 100%)",
+                }}
+              />
+              <span>{measureScale.hasNegative ? "negative" : "low"}</span>
+              <span>{measureScale.hasNegative ? "positive" : "high"}</span>
             </div>
             {detailColorLabels.length > 0 && detailColorDimension ? (
               <div className="flex flex-wrap items-center gap-2">
@@ -887,7 +929,6 @@ export function CubeScene({
         <CubeCells
           cells={sceneCells}
           drilledVoxels={drilledVoxels}
-          measure={measure}
           activeCellId={activeCellId}
           hoveredCellId={hoveredCellId}
           drilledCellId={drilledCellId}
