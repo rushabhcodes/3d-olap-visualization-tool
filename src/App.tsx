@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Papa from "papaparse";
 import { Boxes, Layers3, Sparkles } from "lucide-react";
 
 import { AggregatedPivotCellsCard } from "@/components/olap/aggregated-pivot-cells-card";
 import { CellDetailCard } from "@/components/olap/cell-detail-card";
-import { DrillDownRowsCard } from "@/components/olap/drill-down-rows-card";
 import { FilterPanel } from "@/components/olap/filter-panel";
 import { PivotMatrixHeatmapCard } from "@/components/olap/pivot-matrix-heatmap-card";
 import { PivotedCubeSurfaceCard } from "@/components/olap/pivoted-cube-surface-card";
@@ -44,6 +43,7 @@ type PendingUpload = {
 
 function App() {
   const defaultBuiltInDataset = getBuiltInDataset(defaultBuiltInDatasetId);
+  const cubeSurfaceRef = useRef<HTMLDivElement>(null);
   const [schema, setSchema] = useState<DatasetSchema>(defaultBuiltInDataset.schema);
   const [facts, setFacts] = useState<CubeFact[]>(defaultBuiltInDataset.facts);
   const [datasetLabel, setDatasetLabel] = useState(defaultBuiltInDataset.label);
@@ -141,8 +141,6 @@ function App() {
     .filter((dimension) => filters[dimension.key] !== "All")
     .map((dimension) => `${dimension.label}: ${filters[dimension.key]}`);
 
-  const drillFacts = (drilledCell ?? activeCell)?.facts ?? filteredFacts.slice(0, 8);
-
   function clearFactSelection() {
     setHoveredFactIndex(null);
     setSelectedFactIndex(null);
@@ -192,6 +190,21 @@ function App() {
   function handleBackToAggregate() {
     setDrilledCellId(null);
     clearFactSelection();
+  }
+
+  function handleActivatePivotFact(cellId: string, factIndex: number) {
+    setActiveCellId(cellId);
+    setHoveredCellId(cellId);
+    setDrilledCellId(cellId);
+    setHoveredFactIndex(null);
+    setSelectedFactIndex(factIndex);
+
+    window.requestAnimationFrame(() => {
+      cubeSurfaceRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    });
   }
 
   async function handleUpload(file: File | null) {
@@ -447,31 +460,33 @@ function App() {
           />
 
           <div className="grid min-w-0 gap-6 xl:col-span-2">
-            <PivotedCubeSurfaceCard
-              schema={schema}
-              xDimension={xDimension}
-              yDimension={yDimension}
-              zDimension={zDimension}
-              appliedSlices={appliedSlices}
-              cells={pivot.cells}
-              measure={selectedMeasure}
-              xValues={pivot.xValues}
-              yValues={pivot.yValues}
-              zValues={pivot.zValues}
-              activeCellId={activeCell?.id ?? null}
-              hoveredCellId={hoveredCell?.id ?? null}
-              drilledCellId={drilledCell?.id ?? null}
-              hoveredFactIndex={hoveredFactIndex}
-              selectedFactIndex={selectedFactIndex}
-              onHoverCell={setHoveredCellId}
-              onLeaveCell={() => setHoveredCellId(null)}
-              onSelectCell={handleSelectAggregateCell}
-              onToggleDrillCell={handleToggleDrillCell}
-              onBackToAggregate={handleBackToAggregate}
-              onHoverFact={setHoveredFactIndex}
-              onLeaveFact={() => setHoveredFactIndex(null)}
-              onSelectFact={setSelectedFactIndex}
-            />
+            <div ref={cubeSurfaceRef}>
+              <PivotedCubeSurfaceCard
+                schema={schema}
+                xDimension={xDimension}
+                yDimension={yDimension}
+                zDimension={zDimension}
+                appliedSlices={appliedSlices}
+                cells={pivot.cells}
+                measure={selectedMeasure}
+                xValues={pivot.xValues}
+                yValues={pivot.yValues}
+                zValues={pivot.zValues}
+                activeCellId={activeCell?.id ?? null}
+                hoveredCellId={hoveredCell?.id ?? null}
+                drilledCellId={drilledCell?.id ?? null}
+                hoveredFactIndex={hoveredFactIndex}
+                selectedFactIndex={selectedFactIndex}
+                onHoverCell={setHoveredCellId}
+                onLeaveCell={() => setHoveredCellId(null)}
+                onSelectCell={handleSelectAggregateCell}
+                onToggleDrillCell={handleToggleDrillCell}
+                onBackToAggregate={handleBackToAggregate}
+                onHoverFact={setHoveredFactIndex}
+                onLeaveFact={() => setHoveredFactIndex(null)}
+                onSelectFact={setSelectedFactIndex}
+              />
+            </div>
             <PivotMatrixHeatmapCard
               schema={schema}
               cells={pivot.cells}
@@ -497,20 +512,16 @@ function App() {
               measure={selectedMeasure}
               activeCellId={activeCell?.id ?? null}
               hoveredCellId={hoveredCell?.id ?? null}
+              drilledCellId={drilledCell?.id ?? null}
+              hoveredFactIndex={hoveredFactIndex}
+              selectedFactIndex={selectedFactIndex}
               onHoverCell={setHoveredCellId}
               onLeaveCell={() => setHoveredCellId(null)}
               onSelectCell={handleSelectAggregateCell}
-            />
-            <DrillDownRowsCard
-              schema={schema}
-              activeCell={activeCell}
-              drilledCell={drilledCell}
-              drillFacts={drillFacts}
-              hoveredFactIndex={hoveredFactIndex}
-              selectedFactIndex={selectedFactIndex}
               onHoverFact={setHoveredFactIndex}
               onLeaveFact={() => setHoveredFactIndex(null)}
               onSelectFact={setSelectedFactIndex}
+              onActivateFact={handleActivatePivotFact}
             />
           </div>
 

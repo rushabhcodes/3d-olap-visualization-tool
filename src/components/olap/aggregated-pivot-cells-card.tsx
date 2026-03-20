@@ -13,9 +13,16 @@ type AggregatedPivotCellsCardProps = {
   measure: Measure;
   activeCellId: string | null;
   hoveredCellId: string | null;
+  drilledCellId: string | null;
+  hoveredFactIndex: number | null;
+  selectedFactIndex: number | null;
   onHoverCell: (id: string) => void;
   onLeaveCell: () => void;
   onSelectCell: (id: string) => void;
+  onHoverFact: (factIndex: number) => void;
+  onLeaveFact: () => void;
+  onSelectFact: (factIndex: number) => void;
+  onActivateFact: (cellId: string, factIndex: number) => void;
 };
 
 export function AggregatedPivotCellsCard({
@@ -27,18 +34,25 @@ export function AggregatedPivotCellsCard({
   measure,
   activeCellId,
   hoveredCellId,
+  drilledCellId,
+  hoveredFactIndex,
+  selectedFactIndex,
   onHoverCell,
   onLeaveCell,
   onSelectCell,
+  onHoverFact,
+  onLeaveFact,
+  onSelectFact,
+  onActivateFact,
 }: AggregatedPivotCellsCardProps) {
   return (
     <Card className="bg-white/85">
       <CardHeader>
         <div className="flex items-center gap-2">
           <TableProperties className="h-5 w-5 text-cyan-700" />
-          <CardTitle>Aggregated Pivot Cells</CardTitle>
+          <CardTitle>Pivot Explorer</CardTitle>
         </div>
-        <CardDescription>Tabular drill-down entry points for the current 3-axis pivot cube.</CardDescription>
+        <CardDescription>Aggregate cells and their contributing fact rows in one expandable table.</CardDescription>
       </CardHeader>
       <CardContent>
         <PivotTable
@@ -50,9 +64,16 @@ export function AggregatedPivotCellsCard({
           measure={measure}
           activeCellId={activeCellId}
           hoveredCellId={hoveredCellId}
+          drilledCellId={drilledCellId}
+          hoveredFactIndex={hoveredFactIndex}
+          selectedFactIndex={selectedFactIndex}
           onHoverCell={onHoverCell}
           onLeaveCell={onLeaveCell}
           onSelectCell={onSelectCell}
+          onHoverFact={onHoverFact}
+          onLeaveFact={onLeaveFact}
+          onSelectFact={onSelectFact}
+          onActivateFact={onActivateFact}
         />
       </CardContent>
     </Card>
