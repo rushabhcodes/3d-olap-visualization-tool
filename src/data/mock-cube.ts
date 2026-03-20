@@ -15,6 +15,7 @@ export type CubeFactField = keyof CubeFact;
 export type CsvColumnMapping = Record<CubeFactField, string>;
 
 export type MeasureTotals = Record<Measure, number>;
+export type MeasureFactKey = "revenue" | "margin" | "units";
 
 export type PivotCell = {
   id: string;
@@ -33,6 +34,12 @@ export const dimensionOptions: Array<{ key: DimensionKey; label: string }> = [
   { key: "productLine", label: "Product Line" },
   { key: "scenario", label: "Scenario" },
   { key: "month", label: "Month" },
+];
+
+export const measureOptions: Array<{ key: Measure; label: string; factKey: MeasureFactKey }> = [
+  { key: "Revenue", label: "Revenue", factKey: "revenue" },
+  { key: "Margin", label: "Margin", factKey: "margin" },
+  { key: "Units", label: "Units", factKey: "units" },
 ];
 
 export const cubeFieldOptions: Array<{
@@ -156,6 +163,10 @@ const csvHeaderAliases: Record<CubeFactField, string[]> = {
 
 export function getMeasureValue(fact: CubeFact, measure: Measure) {
   return measureAccessor[measure](fact);
+}
+
+export function getDimensionLabel(dimension: DimensionKey) {
+  return dimensionOptions.find((option) => option.key === dimension)?.label ?? dimension;
 }
 
 export function getDimensionValue(fact: CubeFact, dimension: DimensionKey) {

@@ -20,6 +20,7 @@ import {
   dimensionOptions,
   type DimensionKey,
   formatMeasureValue,
+  getDimensionLabel,
   getDimensionValue,
   getUniqueDimensionValues,
   hasCompleteCsvMapping,
@@ -28,10 +29,6 @@ import {
   suggestCsvColumnMapping,
   type CubeFact,
 } from "@/data/mock-cube";
-
-function getDimensionLabel(dimension: DimensionKey) {
-  return dimensionOptions.find((option) => option.key === dimension)?.label ?? dimension;
-}
 
 type PendingUpload = {
   fileName: string;
@@ -138,6 +135,21 @@ function App() {
   function clearFactSelection() {
     setHoveredFactIndex(null);
     setSelectedFactIndex(null);
+  }
+
+  function resetInteractionState() {
+    setActiveCellId(null);
+    setHoveredCellId(null);
+    setDrilledCellId(null);
+    clearFactSelection();
+  }
+
+  function resetViewState() {
+    setFilters(createEmptyFilters());
+    setSelectedMeasure("Revenue");
+    setXDimension("region");
+    setZDimension("productLine");
+    resetInteractionState();
   }
 
   function handleSelectAggregateCell(id: string) {
@@ -247,10 +259,7 @@ function App() {
     setFacts(parsed.facts);
     setDatasetLabel(pendingUpload.fileName);
     setFilters(createEmptyFilters());
-    setActiveCellId(null);
-    setHoveredCellId(null);
-    setDrilledCellId(null);
-    clearFactSelection();
+    resetInteractionState();
     setPendingUpload(null);
 
     const warnings = [...pendingUpload.parseErrors, ...parsed.errors];
@@ -272,14 +281,7 @@ function App() {
     setDatasetLabel("Built-in demo cube");
     setUploadError(null);
     setPendingUpload(null);
-    setFilters(createEmptyFilters());
-    setSelectedMeasure("Revenue");
-    setXDimension("region");
-    setZDimension("productLine");
-    setActiveCellId(null);
-    setHoveredCellId(null);
-    setDrilledCellId(null);
-    clearFactSelection();
+    resetViewState();
   }
 
   function handleAxisChange(axis: "x" | "z", value: DimensionKey) {
@@ -305,14 +307,7 @@ function App() {
   }
 
   function handleResetView() {
-    setFilters(createEmptyFilters());
-    setSelectedMeasure("Revenue");
-    setXDimension("region");
-    setZDimension("productLine");
-    setActiveCellId(null);
-    setHoveredCellId(null);
-    setDrilledCellId(null);
-    clearFactSelection();
+    resetViewState();
   }
 
   return (

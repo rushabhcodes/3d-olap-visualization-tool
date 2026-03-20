@@ -1,4 +1,10 @@
-import { type DimensionKey, type Measure, type PivotCell, formatMeasureValue } from "@/data/mock-cube";
+import {
+  formatMeasureValue,
+  getDimensionLabel,
+  type DimensionKey,
+  type Measure,
+  type PivotCell,
+} from "@/data/mock-cube";
 import { cn } from "@/lib/utils";
 
 type PivotTableProps = {
@@ -12,21 +18,6 @@ type PivotTableProps = {
   onLeaveCell: () => void;
   onSelectCell: (id: string) => void;
 };
-
-function getDimensionLabel(dimension: DimensionKey) {
-  switch (dimension) {
-    case "region":
-      return "Region";
-    case "productLine":
-      return "Product Line";
-    case "scenario":
-      return "Scenario";
-    case "month":
-      return "Month";
-    default:
-      return dimension;
-  }
-}
 
 export function PivotTable({
   cells,

@@ -1,7 +1,7 @@
 import { TableProperties } from "lucide-react";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { formatMeasureValue, type CubeFact, type PivotCell } from "@/data/mock-cube";
+import { formatMeasureValue, measureOptions, type CubeFact, type PivotCell } from "@/data/mock-cube";
 import { cn } from "@/lib/utils";
 
 type DrillDownRowsCardProps = {
@@ -51,9 +51,11 @@ export function DrillDownRowsCard({
                 <th className="px-4 py-3 font-medium">Region</th>
                 <th className="px-4 py-3 font-medium">Product</th>
                 <th className="px-4 py-3 font-medium">Scenario</th>
-                <th className="px-4 py-3 font-medium">Revenue</th>
-                <th className="px-4 py-3 font-medium">Margin</th>
-                <th className="px-4 py-3 font-medium">Units</th>
+                {measureOptions.map((measureOption) => (
+                  <th key={measureOption.key} className="px-4 py-3 font-medium">
+                    {measureOption.label}
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 bg-white">
@@ -85,9 +87,11 @@ export function DrillDownRowsCard({
                   <td className="px-4 py-3 text-slate-600">{fact.region}</td>
                   <td className="px-4 py-3 text-slate-600">{fact.productLine}</td>
                   <td className="px-4 py-3 text-slate-600">{fact.scenario}</td>
-                  <td className="px-4 py-3 text-slate-900">{formatMeasureValue(fact.revenue, "Revenue")}</td>
-                  <td className="px-4 py-3 text-slate-900">{formatMeasureValue(fact.margin, "Margin")}</td>
-                  <td className="px-4 py-3 text-slate-900">{formatMeasureValue(fact.units, "Units")}</td>
+                  {measureOptions.map((measureOption) => (
+                    <td key={measureOption.key} className="px-4 py-3 text-slate-900">
+                      {formatMeasureValue(fact[measureOption.factKey], measureOption.key)}
+                    </td>
+                  ))}
                 </tr>
               ))}
               {drillFacts.length === 0 ? (

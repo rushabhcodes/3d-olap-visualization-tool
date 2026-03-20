@@ -1,11 +1,7 @@
 import { CubeScene } from "@/components/olap/cube-scene";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { dimensionOptions, type DimensionKey, type Measure, type PivotCell } from "@/data/mock-cube";
-
-function getDimensionLabel(dimension: DimensionKey) {
-  return dimensionOptions.find((option) => option.key === dimension)?.label ?? dimension;
-}
+import { getDimensionLabel, type DimensionKey, type Measure, type PivotCell } from "@/data/mock-cube";
 
 type PivotedCubeSurfaceCardProps = {
   xDimension: DimensionKey;

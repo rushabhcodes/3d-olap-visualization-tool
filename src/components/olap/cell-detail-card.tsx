@@ -4,9 +4,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import {
   dimensionOptions,
   formatMeasureValue,
+  measureOptions,
   type DimensionKey,
   type PivotCell,
 } from "@/data/mock-cube";
+import { cn } from "@/lib/utils";
 
 type CellDetailCardProps = {
   activeDimensions: string[];
@@ -55,25 +57,21 @@ export function CellDetailCard({
             </p>
           ) : null}
         </div>
-        <div className="grid gap-2 grid-cols-2">
-          <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-3">
-            <p className="text-xs uppercase tracking-[0.18em] text-cyan-700">Revenue</p>
-            <p className="mt-1 text-sm font-semibold text-slate-950 sm:text-base">
-              {formatMeasureValue(activeCell?.totals.Revenue ?? 0, "Revenue")}
-            </p>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-3">
-            <p className="text-xs uppercase tracking-[0.18em] text-cyan-700">Margin</p>
-            <p className="mt-1 text-sm font-semibold text-slate-950 sm:text-base">
-              {formatMeasureValue(activeCell?.totals.Margin ?? 0, "Margin")}
-            </p>
-          </div>
-          <div className="col-span-2 rounded-2xl border border-slate-200 bg-slate-50/90 p-3">
-            <p className="text-xs uppercase tracking-[0.18em] text-cyan-700">Units</p>
-            <p className="mt-1 text-sm font-semibold text-slate-950 sm:text-base">
-              {formatMeasureValue(activeCell?.totals.Units ?? 0, "Units")}
-            </p>
-          </div>
+        <div className="grid grid-cols-2 gap-2">
+          {measureOptions.map((measureOption) => (
+            <div
+              key={measureOption.key}
+              className={cn(
+                "rounded-2xl border border-slate-200 bg-slate-50/90 p-3",
+                measureOption.key === "Units" && "col-span-2",
+              )}
+            >
+              <p className="text-xs uppercase tracking-[0.18em] text-cyan-700">{measureOption.label}</p>
+              <p className="mt-1 text-sm font-semibold text-slate-950 sm:text-base">
+                {formatMeasureValue(activeCell?.totals[measureOption.key] ?? 0, measureOption.key)}
+              </p>
+            </div>
+          ))}
         </div>
         <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-3">
           <p className="font-medium text-slate-900">Contributing Fact Rows</p>

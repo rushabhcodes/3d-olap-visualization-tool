@@ -1,5 +1,5 @@
 import { useEffect, useRef, type MutableRefObject } from "react";
-import { Edges, Html, OrbitControls } from "@react-three/drei";
+import { Edges, OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { ChevronRight, Undo2 } from "lucide-react";
 import * as THREE from "three";
@@ -8,7 +8,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   formatMeasureValue,
+  getDimensionLabel,
   getMeasureValue,
+  measureOptions,
   type CubeFact,
   type DimensionKey,
   type Measure,
@@ -59,21 +61,6 @@ type DetailVoxel = {
   color: string;
   fact: CubeFact;
 };
-
-function getDimensionLabel(dimension: DimensionKey) {
-  switch (dimension) {
-    case "region":
-      return "Region";
-    case "productLine":
-      return "Product Line";
-    case "scenario":
-      return "Scenario";
-    case "month":
-      return "Month";
-    default:
-      return dimension;
-  }
-}
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), max);
@@ -238,19 +225,19 @@ function buildDetailVoxels(cell: SceneCell | null): DetailVoxel[] {
     const yBand = usableHeight / layers;
     const y = -cell.height / 2 + 0.26 + yBand * (layer + 0.5);
 
-      voxels.push({
-        id: `${cell.id}-${fact.month}-${fact.scenario}-${index}`,
-        factIndex: index,
-        column,
-        row,
-        layer,
-        x,
-        y,
-        z,
-        size,
-        color: getScenarioColor(fact.scenario),
-        fact,
-      });
+    voxels.push({
+      id: `${cell.id}-${fact.month}-${fact.scenario}-${index}`,
+      factIndex: index,
+      column,
+      row,
+      layer,
+      x,
+      y,
+      z,
+      size,
+      color: getScenarioColor(fact.scenario),
+      fact,
+    });
   }
 
   return voxels;
@@ -347,7 +334,6 @@ function SceneRig({
 function DetailCloud({
   cell,
   voxels,
-  measure,
   hoveredFactIndex,
   selectedFactIndex,
   onHoverFact,
@@ -357,7 +343,6 @@ function DetailCloud({
 }: {
   cell: SceneCell;
   voxels: DetailVoxel[];
-  measure: Measure;
   hoveredFactIndex: number | null;
   selectedFactIndex: number | null;
   onHoverFact: (factIndex: number) => void;
@@ -365,14 +350,9 @@ function DetailCloud({
   onSelectFact: (factIndex: number) => void;
   onFocusScene: () => void;
 }) {
-  const tooltipVoxel =
-    voxels.find((voxel) => voxel.factIndex === selectedFactIndex) ??
-    voxels.find((voxel) => voxel.factIndex === hoveredFactIndex) ??
-    null;
-
   return (
     <group position={[0, cell.height / 2, 0]}>
-      <mesh position={[0, 0, 0]}>
+      <mesh position={[0, 0, 0]} raycast={() => null}>
         <boxGeometry args={[cell.width + 0.16, cell.height + 0.04, cell.depth + 0.16]} />
         <meshPhysicalMaterial
           color="#67e8f9"
@@ -421,51 +401,6 @@ function DetailCloud({
           </mesh>
         );
       })}
-      {tooltipVoxel ? (
-        <Html
-          position={[tooltipVoxel.x, tooltipVoxel.y + tooltipVoxel.size * 1.5, tooltipVoxel.z]}
-          center
-          distanceFactor={7}
-        >
-          <div className="min-w-[220px] rounded-xl border border-cyan-200 bg-white/95 px-3 py-2 text-[11px] text-slate-700 shadow-lg backdrop-blur">
-            <div className="flex items-center justify-between gap-3">
-              <p className="font-semibold text-slate-900">
-                {tooltipVoxel.fact.month} • {tooltipVoxel.fact.scenario}
-              </p>
-              <span className="rounded-full bg-cyan-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-cyan-800">
-                {selectedFactIndex === tooltipVoxel.factIndex ? "Pinned" : "Preview"}
-              </span>
-            </div>
-            <p className="mt-1 text-slate-600">
-              {tooltipVoxel.fact.region} / {tooltipVoxel.fact.productLine}
-            </p>
-            <div className="mt-2 grid grid-cols-3 gap-2 text-[10px]">
-              <div className="rounded-lg bg-slate-100 px-2 py-1">
-                <p className="uppercase tracking-[0.12em] text-slate-500">Revenue</p>
-                <p className="mt-0.5 font-semibold text-slate-900">
-                  {formatMeasureValue(tooltipVoxel.fact.revenue, "Revenue")}
-                </p>
-              </div>
-              <div className="rounded-lg bg-slate-100 px-2 py-1">
-                <p className="uppercase tracking-[0.12em] text-slate-500">Margin</p>
-                <p className="mt-0.5 font-semibold text-slate-900">
-                  {formatMeasureValue(tooltipVoxel.fact.margin, "Margin")}
-                </p>
-              </div>
-              <div className="rounded-lg bg-slate-100 px-2 py-1">
-                <p className="uppercase tracking-[0.12em] text-slate-500">Units</p>
-                <p className="mt-0.5 font-semibold text-slate-900">
-                  {formatMeasureValue(tooltipVoxel.fact.units, "Units")}
-                </p>
-              </div>
-            </div>
-            <p className="mt-2 text-[10px] text-cyan-700">
-              {measure} contributes {formatMeasureValue(getMeasureValue(tooltipVoxel.fact, measure), measure)}.
-            </p>
-            <p className="mt-1 text-[10px] text-slate-500">Use arrow keys to move across neighboring voxels.</p>
-          </div>
-        </Html>
-      ) : null}
     </group>
   );
 }
@@ -525,20 +460,33 @@ function CubeCells({
               position={[0, cell.height / 2, 0]}
               castShadow
               receiveShadow
-              onPointerOver={(event) => {
-                event.stopPropagation();
-                onHoverCell(cell.id);
-              }}
-              onPointerOut={(event) => {
-                event.stopPropagation();
-                onLeaveCell();
-              }}
-              onClick={(event) => {
-                event.stopPropagation();
-                onFocusScene();
-                onSelectCell(cell.id);
-                onToggleDrill(cell.id);
-              }}
+              raycast={drilled ? () => null : undefined}
+              onPointerOver={
+                drilled
+                  ? undefined
+                  : (event) => {
+                      event.stopPropagation();
+                      onHoverCell(cell.id);
+                    }
+              }
+              onPointerOut={
+                drilled
+                  ? undefined
+                  : (event) => {
+                      event.stopPropagation();
+                      onLeaveCell();
+                    }
+              }
+              onClick={
+                drilled
+                  ? undefined
+                  : (event) => {
+                      event.stopPropagation();
+                      onFocusScene();
+                      onSelectCell(cell.id);
+                      onToggleDrill(cell.id);
+                    }
+              }
             >
               <boxGeometry args={[cell.width, cell.height, cell.depth]} />
               <meshStandardMaterial
@@ -548,7 +496,7 @@ function CubeCells({
                 metalness={0.2}
                 roughness={0.22}
                 transparent
-                opacity={active || drilled ? 0.96 : hovered ? 0.9 : 0.8}
+                opacity={drilled ? 0.12 : active ? 0.96 : hovered ? 0.9 : 0.8}
               />
               {(active || hovered || drilled) ? (
                 <Edges color={active || drilled ? "#ecfeff" : "#a5f3fc"} linewidth={1.2} />
@@ -558,7 +506,6 @@ function CubeCells({
               <DetailCloud
                 cell={cell}
                 voxels={drilledVoxels}
-                measure={measure}
                 hoveredFactIndex={hoveredFactIndex}
                 selectedFactIndex={selectedFactIndex}
                 onHoverFact={(factIndex) => {
@@ -621,6 +568,12 @@ export function CubeScene({
   const activeCell = sceneCells.find((cell) => cell.id === activeCellId) ?? null;
   const drilledCell = sceneCells.find((cell) => cell.id === drilledCellId) ?? null;
   const drilledVoxels = buildDetailVoxels(drilledCell);
+  const selectedVoxel = drilledVoxels.find((voxel) => voxel.factIndex === selectedFactIndex) ?? null;
+  const hoveredVoxel =
+    selectedFactIndex === null
+      ? drilledVoxels.find((voxel) => voxel.factIndex === hoveredFactIndex) ?? null
+      : null;
+  const detailVoxel = selectedVoxel ?? hoveredVoxel;
   const scenarioLabels = collectScenarioLabels(cells);
   const maxHeight = Math.max(...sceneCells.map((cell) => cell.height), 2.2);
   const sceneWidth = Math.max(7.2, xValues.length * 2 + 1.8);
@@ -764,6 +717,37 @@ export function CubeScene({
           {drilledCell ? `${drilledCell.count} contributing voxel(s)` : `${cells.length} visible cube cell(s)`}
         </div>
       </div>
+      {detailVoxel ? (
+        <div className="pointer-events-none absolute right-5 top-44 z-10 w-[240px] rounded-2xl border border-cyan-200 bg-white/95 px-4 py-3 text-[11px] text-slate-700 shadow-lg backdrop-blur">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <p className="font-semibold text-slate-900">
+                {detailVoxel.fact.month} • {detailVoxel.fact.scenario}
+              </p>
+              <p className="mt-1 text-slate-600">
+                {detailVoxel.fact.region} / {detailVoxel.fact.productLine}
+              </p>
+            </div>
+            <span className="rounded-full bg-cyan-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-cyan-800">
+              {selectedVoxel ? "Pinned" : "Preview"}
+            </span>
+          </div>
+          <div className="mt-3 grid gap-2">
+            {measureOptions.map((measureOption) => (
+              <div key={measureOption.key} className="rounded-xl bg-slate-100 px-3 py-2">
+                <p className="uppercase tracking-[0.12em] text-slate-500">{measureOption.label}</p>
+                <p className="mt-1 font-semibold text-slate-900">
+                  {formatMeasureValue(detailVoxel.fact[measureOption.factKey], measureOption.key)}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-3 text-[10px] text-cyan-700">
+            {measure} contributes {formatMeasureValue(getMeasureValue(detailVoxel.fact, measure), measure)}.
+          </p>
+          <p className="mt-1 text-[10px] text-slate-500">Use arrow keys to move across neighboring voxels.</p>
+        </div>
+      ) : null}
       {sceneCells.length === 0 ? (
         <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-6 text-center text-sm text-slate-600">
           No facts match the current slice. Adjust a filter or upload a wider dataset.
