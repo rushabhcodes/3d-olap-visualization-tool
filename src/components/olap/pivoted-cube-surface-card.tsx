@@ -42,7 +42,7 @@ export function PivotedCubeSurfaceCard({
         <div>
           <CardTitle>Pivoted Cube Surface</CardTitle>
           <CardDescription>
-            Hover or click in any view to highlight the same pivot cell across the workspace.
+            Click a cube block to drill it open, inspect the contributing voxels, and keep the same pivot cell in sync across the workspace.
           </CardDescription>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -83,19 +83,19 @@ export function PivotedCubeSurfaceCard({
           <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
             <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Drill Path</p>
             <p className="mt-2 text-sm text-slate-600">
-              Hover a cell anywhere to preview it, then click to lock the drill-down below.
+              Click any block once to focus it and open the cube so its contributing fact rows appear as interior voxels.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
             <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Cross-Highlight</p>
             <p className="mt-2 text-sm text-slate-600">
-              The cube, heatmap, and pivot table now share hover and selection state.
+              The cube, heatmap, and pivot table still share hover and selection state while the 3D view adds a separate drill camera.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-sky-50/70 p-4">
-            <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Upload Model</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-cyan-700">Interior Detail</p>
             <p className="mt-2 text-sm text-slate-600">
-              Local CSV uploads replace the demo dataset and reuse the same OLAP controls.
+              Open cells expose the month and scenario mix that feeds the selected aggregate, then the drill-down table shows the exact rows.
             </p>
           </div>
         </div>

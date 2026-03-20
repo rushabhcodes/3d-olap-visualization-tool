@@ -49,89 +49,87 @@ export const cubeFieldOptions: Array<{
   { key: "units", label: "Units", kind: "measure" },
 ];
 
-export const cubeFacts: CubeFact[] = [
-  {
-    month: "Jan",
-    region: "North America",
-    productLine: "Cloud Suite",
-    scenario: "Actual",
-    revenue: 420,
-    margin: 146,
-    units: 3200,
-  },
-  {
-    month: "Jan",
-    region: "Europe",
-    productLine: "Retail Analytics",
-    scenario: "Actual",
-    revenue: 310,
-    margin: 112,
-    units: 2400,
-  },
-  {
-    month: "Jan",
-    region: "APAC",
-    productLine: "Supply Chain",
-    scenario: "Actual",
-    revenue: 260,
-    margin: 88,
-    units: 2800,
-  },
-  {
-    month: "Feb",
-    region: "North America",
-    productLine: "Retail Analytics",
-    scenario: "Plan",
-    revenue: 390,
-    margin: 135,
-    units: 2900,
-  },
-  {
-    month: "Feb",
-    region: "Europe",
-    productLine: "Supply Chain",
-    scenario: "Plan",
-    revenue: 295,
-    margin: 106,
-    units: 2350,
-  },
-  {
-    month: "Feb",
-    region: "APAC",
-    productLine: "Cloud Suite",
-    scenario: "Plan",
-    revenue: 335,
-    margin: 122,
-    units: 3010,
-  },
-  {
-    month: "Mar",
-    region: "North America",
-    productLine: "Supply Chain",
-    scenario: "Forecast",
-    revenue: 448,
-    margin: 162,
-    units: 3320,
-  },
-  {
-    month: "Mar",
-    region: "Europe",
-    productLine: "Cloud Suite",
-    scenario: "Forecast",
-    revenue: 328,
-    margin: 118,
-    units: 2560,
-  },
-  {
-    month: "Mar",
-    region: "APAC",
-    productLine: "Retail Analytics",
-    scenario: "Forecast",
-    revenue: 352,
-    margin: 124,
-    units: 3190,
-  },
-];
+const monthProfiles = [
+  { label: "Jan", seasonalFactor: 0.9, unitFactor: 0.94 },
+  { label: "Feb", seasonalFactor: 0.93, unitFactor: 0.96 },
+  { label: "Mar", seasonalFactor: 1.01, unitFactor: 1.0 },
+  { label: "Apr", seasonalFactor: 1.04, unitFactor: 1.02 },
+  { label: "May", seasonalFactor: 1.08, unitFactor: 1.05 },
+  { label: "Jun", seasonalFactor: 1.12, unitFactor: 1.08 },
+  { label: "Jul", seasonalFactor: 1.15, unitFactor: 1.1 },
+  { label: "Aug", seasonalFactor: 1.11, unitFactor: 1.07 },
+  { label: "Sep", seasonalFactor: 1.06, unitFactor: 1.03 },
+  { label: "Oct", seasonalFactor: 1.13, unitFactor: 1.09 },
+  { label: "Nov", seasonalFactor: 1.2, unitFactor: 1.14 },
+  { label: "Dec", seasonalFactor: 1.28, unitFactor: 1.2 },
+] as const;
+
+const regionProfiles = [
+  { label: "North America", revenueBase: 430, marginRate: 0.34, unitsBase: 3100 },
+  { label: "Europe", revenueBase: 360, marginRate: 0.31, unitsBase: 2840 },
+  { label: "APAC", revenueBase: 335, marginRate: 0.29, unitsBase: 3300 },
+  { label: "Latin America", revenueBase: 255, marginRate: 0.24, unitsBase: 2160 },
+] as const;
+
+const productProfiles = [
+  { label: "Cloud Suite", revenueFactor: 1.22, marginLift: 0.04, unitsFactor: 0.92 },
+  { label: "Retail Analytics", revenueFactor: 1.04, marginLift: 0.02, unitsFactor: 1.0 },
+  { label: "Supply Chain", revenueFactor: 0.96, marginLift: 0.01, unitsFactor: 1.08 },
+  { label: "Data Platform", revenueFactor: 1.34, marginLift: 0.06, unitsFactor: 0.88 },
+] as const;
+
+const scenarioProfiles = [
+  { label: "Actual", revenueFactor: 1, marginDelta: 0, unitsFactor: 1 },
+  { label: "Plan", revenueFactor: 1.06, marginDelta: 0.01, unitsFactor: 1.03 },
+  { label: "Forecast", revenueFactor: 1.03, marginDelta: 0.015, unitsFactor: 1.01 },
+] as const;
+
+export const cubeFacts: CubeFact[] = monthProfiles.flatMap((month, monthIndex) =>
+  regionProfiles.flatMap((region, regionIndex) =>
+    productProfiles.flatMap((product, productIndex) =>
+      scenarioProfiles.map((scenario, scenarioIndex) => {
+        const interactionFactor =
+          1 +
+          (monthIndex % 4) * 0.015 +
+          regionIndex * 0.02 +
+          productIndex * 0.012 +
+          scenarioIndex * 0.01;
+        const revenue = Math.round(
+          region.revenueBase *
+            product.revenueFactor *
+            month.seasonalFactor *
+            scenario.revenueFactor *
+            interactionFactor,
+        );
+        const units = Math.round(
+          region.unitsBase *
+            product.unitsFactor *
+            month.unitFactor *
+            scenario.unitsFactor *
+            (1 + (monthIndex % 3) * 0.01 + productIndex * 0.015),
+        );
+        const marginRate = Math.min(
+          0.44,
+          region.marginRate +
+            product.marginLift +
+            scenario.marginDelta +
+            (monthIndex % 5) * 0.004,
+        );
+        const margin = Math.round(revenue * marginRate);
+
+        return {
+          month: month.label,
+          region: region.label,
+          productLine: product.label,
+          scenario: scenario.label,
+          revenue,
+          margin,
+          units,
+        };
+      }),
+    ),
+  ),
+);
 
 const measureAccessor = {
   Revenue: (fact: CubeFact) => fact.revenue,
