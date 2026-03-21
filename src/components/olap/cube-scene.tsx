@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type MutableRefObject } from "react";
+import { useEffect, useMemo, useRef, useState, type ComponentProps, type MutableRefObject } from "react";
 import { Edges, OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { ChevronRight, Maximize2, Minimize2, Undo2 } from "lucide-react";
@@ -21,6 +21,11 @@ import {
   type Measure,
   type PivotCell,
 } from "@/data/mock-cube";
+import { cn } from "@/lib/utils";
+
+type ViewPreset = "isometric" | "top" | "front" | "side";
+type CameraTargetMode = "selection" | "scene";
+type ProjectionMode = "perspective" | "orthographic";
 
 type CubeSceneProps = {
   schema: DatasetSchema;
@@ -73,8 +78,27 @@ type DetailVoxel = {
   fact: CubeFact;
 };
 
+type InteractiveMeshProps = ComponentProps<"mesh">;
+
+function InteractiveMesh(props: InteractiveMeshProps) {
+  return <mesh {...props} />;
+}
+
 function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), max);
+}
+
+function getPresetVector(viewPreset: ViewPreset) {
+  switch (viewPreset) {
+    case "top":
+      return new THREE.Vector3(0.001, 1.85, 0.001).normalize();
+    case "front":
+      return new THREE.Vector3(0.001, 0.5, 1.6).normalize();
+    case "side":
+      return new THREE.Vector3(1.6, 0.5, 0.001).normalize();
+    default:
+      return new THREE.Vector3(1, 0.72, 1.08).normalize();
+  }
 }
 
 function hashLabel(label: string) {
@@ -277,41 +301,65 @@ function SceneRig({
   drilledCell,
   maxHeight,
   sceneHeight,
+  sceneSpan,
   controlsRef,
   shouldAnimateRef,
   overviewDistance,
   overviewHeight,
   drillOffset,
+  orthoZoom,
+  projectionMode,
+  cameraTargetMode,
+  viewPreset,
 }: {
   activeCell: SceneCell | null;
   drilledCell: SceneCell | null;
   maxHeight: number;
   sceneHeight: number;
+  sceneSpan: number;
   controlsRef: MutableRefObject<any>;
   shouldAnimateRef: MutableRefObject<boolean>;
   overviewDistance: number;
   overviewHeight: number;
   drillOffset: number;
+  orthoZoom: number;
+  projectionMode: ProjectionMode;
+  cameraTargetMode: CameraTargetMode;
+  viewPreset: ViewPreset;
 }) {
   const { camera } = useThree();
   const desiredPosition = useRef(new THREE.Vector3());
   const desiredTarget = useRef(new THREE.Vector3());
+  const desiredZoom = useRef(orthoZoom);
 
   useEffect(() => {
-    const focusCell = drilledCell ?? activeCell;
-    const focusY = drilledCell ? Math.max(0.9, (focusCell?.height ?? 1) * 0.58) : maxHeight * 0.36;
+    const focusCell =
+      cameraTargetMode === "selection"
+        ? drilledCell ?? activeCell
+        : null;
+    const focusY = focusCell
+      ? drilledCell
+        ? Math.max(0.9, (focusCell.height ?? 1) * 0.58)
+        : maxHeight * 0.36
+      : maxHeight * 0.3;
+    const targetY = focusCell ? (focusCell.y ?? 0) + focusY : maxHeight * 0.3;
 
-    desiredTarget.current.set(focusCell?.x ?? 0, (focusCell?.y ?? 0) + focusY, focusCell?.z ?? 0);
+    desiredTarget.current.set(focusCell?.x ?? 0, targetY, focusCell?.z ?? 0);
 
-    if (drilledCell) {
-      desiredPosition.current.set(
-        drilledCell.x + drillOffset,
-        Math.max(3.6, drilledCell.y + drilledCell.height + 1.4),
-        drilledCell.z + drillOffset * 1.12,
-      );
-    } else {
-      desiredPosition.current.set(overviewDistance, Math.max(overviewHeight, sceneHeight + 3.2), overviewDistance * 1.08);
+    const baseDistance = focusCell
+      ? drilledCell
+        ? Math.max(drillOffset * 1.12, sceneSpan * 0.44, 4.8)
+        : Math.max(sceneSpan * 0.74, 6.2)
+      : Math.max(overviewDistance, sceneSpan * 0.92);
+    const direction = getPresetVector(viewPreset);
+    const nextPosition = desiredTarget.current.clone().add(direction.multiplyScalar(baseDistance));
+
+    if (!focusCell && viewPreset === "isometric") {
+      nextPosition.set(overviewDistance, Math.max(overviewHeight, sceneHeight + 3.2), overviewDistance * 1.08);
     }
+
+    desiredPosition.current.copy(nextPosition);
+    desiredZoom.current = focusCell ? orthoZoom * 1.18 : orthoZoom;
     shouldAnimateRef.current = true;
   }, [
     activeCell?.id,
@@ -325,10 +373,15 @@ function SceneRig({
     drilledCell?.y,
     maxHeight,
     sceneHeight,
+    sceneSpan,
     shouldAnimateRef,
     overviewDistance,
     overviewHeight,
     drillOffset,
+    orthoZoom,
+    projectionMode,
+    cameraTargetMode,
+    viewPreset,
   ]);
 
   useFrame(() => {
@@ -345,9 +398,19 @@ function SceneRig({
       camera.lookAt(desiredTarget.current);
     }
 
+    if ("isOrthographicCamera" in camera && camera.isOrthographicCamera) {
+      camera.zoom = THREE.MathUtils.lerp(camera.zoom, desiredZoom.current, 0.1);
+      camera.updateProjectionMatrix();
+    }
+
     const targetDistance = controlsRef.current?.target.distanceToSquared(desiredTarget.current) ?? 0;
 
-    if (camera.position.distanceToSquared(desiredPosition.current) < 0.0025 && targetDistance < 0.0025) {
+    const zoomSettled =
+      "isOrthographicCamera" in camera && camera.isOrthographicCamera
+        ? Math.abs(camera.zoom - desiredZoom.current) < 0.01
+        : true;
+
+    if (camera.position.distanceToSquared(desiredPosition.current) < 0.0025 && targetDistance < 0.0025 && zoomSettled) {
       camera.position.copy(desiredPosition.current);
 
       if (controlsRef.current) {
@@ -355,6 +418,11 @@ function SceneRig({
         controlsRef.current.update();
       } else {
         camera.lookAt(desiredTarget.current);
+      }
+
+      if ("isOrthographicCamera" in camera && camera.isOrthographicCamera) {
+        camera.zoom = desiredZoom.current;
+        camera.updateProjectionMatrix();
       }
 
       shouldAnimateRef.current = false;
@@ -373,6 +441,7 @@ function DetailCloud({
   onLeaveFact,
   onSelectFact,
   onFocusScene,
+  onFocusSelection,
 }: {
   cell: SceneCell;
   voxels: DetailVoxel[];
@@ -382,6 +451,7 @@ function DetailCloud({
   onLeaveFact: () => void;
   onSelectFact: (factIndex: number) => void;
   onFocusScene: () => void;
+  onFocusSelection: () => void;
 }) {
   return (
     <group position={[0, cell.height / 2, 0]}>
@@ -402,7 +472,7 @@ function DetailCloud({
         const hovered = hoveredFactIndex === voxel.factIndex;
 
         return (
-          <mesh
+          <InteractiveMesh
             key={voxel.id}
             position={[voxel.x, voxel.y, voxel.z]}
             castShadow
@@ -414,11 +484,12 @@ function DetailCloud({
               event.stopPropagation();
               onLeaveFact();
             }}
-            onClick={(event) => {
-              event.stopPropagation();
-              onFocusScene();
-              onSelectFact(voxel.factIndex);
-            }}
+              onClick={(event) => {
+                event.stopPropagation();
+                onFocusSelection();
+                onFocusScene();
+                onSelectFact(voxel.factIndex);
+              }}
           >
             <boxGeometry args={[voxel.size, voxel.size, voxel.size]} />
             <meshStandardMaterial
@@ -431,7 +502,7 @@ function DetailCloud({
             {(selected || hovered) ? (
               <Edges color={selected ? "#fef3c7" : "#cffafe"} linewidth={1.2} />
             ) : null}
-          </mesh>
+          </InteractiveMesh>
         );
       })}
     </group>
@@ -454,6 +525,7 @@ function CubeCells({
   onLeaveFact,
   onSelectFact,
   onFocusScene,
+  onFocusSelection,
 }: {
   cells: SceneCell[];
   drilledVoxels: DetailVoxel[];
@@ -470,6 +542,7 @@ function CubeCells({
   onLeaveFact: () => void;
   onSelectFact: (factIndex: number) => void;
   onFocusScene: () => void;
+  onFocusSelection: () => void;
 }) {
   return (
     <>
@@ -491,7 +564,7 @@ function CubeCells({
 
         return (
           <group key={cell.id} position={[cell.x, cell.y, cell.z]}>
-            <mesh
+            <InteractiveMesh
               position={[0, cell.height / 2, 0]}
               castShadow
               receiveShadow
@@ -517,6 +590,7 @@ function CubeCells({
                   ? undefined
                   : (event) => {
                       event.stopPropagation();
+                      onFocusSelection();
                       onFocusScene();
                       onSelectCell(cell.id);
                       onToggleDrill(cell.id);
@@ -536,7 +610,7 @@ function CubeCells({
               {(active || hovered || drilled) ? (
                 <Edges color={active || drilled ? "#ecfeff" : "#a5f3fc"} linewidth={1.2} />
               ) : null}
-            </mesh>
+            </InteractiveMesh>
             {drilled ? (
               <DetailCloud
                 cell={cell}
@@ -550,6 +624,7 @@ function CubeCells({
                 onLeaveFact={onLeaveFact}
                 onSelectFact={onSelectFact}
                 onFocusScene={onFocusScene}
+                onFocusSelection={onFocusSelection}
               />
             ) : null}
           </group>
@@ -587,6 +662,9 @@ export function CubeScene({
   const controlsRef = useRef<any>(null);
   const shouldAnimateRef = useRef(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [viewPreset, setViewPreset] = useState<ViewPreset>("isometric");
+  const [cameraTargetMode, setCameraTargetMode] = useState<CameraTargetMode>("selection");
+  const [projectionMode, setProjectionMode] = useState<ProjectionMode>("perspective");
   const xOffset = (xValues.length - 1) / 2;
   const yLayerSpacing = 2.35;
   const zOffset = (zValues.length - 1) / 2;
@@ -644,9 +722,18 @@ export function CubeScene({
   const overviewHeight = Math.max(6.8, sceneHeight + sceneSpan * 0.16);
   const drillOffset = Math.max(2.6, sceneSpan * 0.2);
   const orbitMaxDistance = Math.max(16, sceneSpan * 1.95);
+  const orthoZoom = Math.max(24, 84 - sceneSpan * 3.4);
 
   function focusScene() {
     sceneRef.current?.focus();
+  }
+
+  function handleResetCamera() {
+    setViewPreset("isometric");
+    setCameraTargetMode("selection");
+    setProjectionMode("perspective");
+    shouldAnimateRef.current = true;
+    focusScene();
   }
 
   useEffect(() => {
@@ -708,6 +795,8 @@ export function CubeScene({
       ref={sceneRef}
       className="relative h-[760px] w-full overflow-hidden rounded-[1.75rem] border border-cyan-200 bg-[radial-gradient(circle_at_top,rgba(6,182,212,0.18),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(240,249,255,0.94))] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 data-[fullscreen=true]:h-screen data-[fullscreen=true]:rounded-none"
       data-fullscreen={isFullscreen}
+      role="application"
+      aria-label="3D cube scene"
       tabIndex={0}
       onKeyDown={(event) => {
         if (event.key === "Escape") {
@@ -740,6 +829,67 @@ export function CubeScene({
     >
       <div className="absolute inset-x-0 top-0 z-10 flex flex-col gap-3 px-5 py-4 md:flex-row md:items-start md:justify-between">
         <div className="pointer-events-auto space-y-2 rounded-2xl border border-white/70 bg-white/85 px-4 py-3 shadow-sm backdrop-blur">
+          <div className="flex flex-wrap gap-2">
+            {(["selection", "scene"] as const).map((mode) => (
+              <Button
+                key={mode}
+                variant="outline"
+                size="sm"
+                className={cn(
+                  "border-slate-200 bg-white text-slate-700",
+                  cameraTargetMode === mode && "border-cyan-400 bg-cyan-50 text-cyan-900",
+                )}
+                onClick={() => {
+                  setCameraTargetMode(mode);
+                  shouldAnimateRef.current = true;
+                  focusScene();
+                }}
+              >
+                {mode === "selection" ? "Selected" : "Scene"}
+              </Button>
+            ))}
+            {(["isometric", "top", "front", "side"] as const).map((preset) => (
+              <Button
+                key={preset}
+                variant="outline"
+                size="sm"
+                className={cn(
+                  "border-slate-200 bg-white text-slate-700",
+                  viewPreset === preset && "border-cyan-400 bg-cyan-50 text-cyan-900",
+                )}
+                onClick={() => {
+                  setViewPreset(preset);
+                  shouldAnimateRef.current = true;
+                  focusScene();
+                }}
+              >
+                {preset === "isometric"
+                  ? "Iso"
+                  : preset.charAt(0).toUpperCase() + preset.slice(1)}
+              </Button>
+            ))}
+            {(["perspective", "orthographic"] as const).map((mode) => (
+              <Button
+                key={mode}
+                variant="outline"
+                size="sm"
+                className={cn(
+                  "border-slate-200 bg-white text-slate-700",
+                  projectionMode === mode && "border-cyan-400 bg-cyan-50 text-cyan-900",
+                )}
+                onClick={() => {
+                  setProjectionMode(mode);
+                  shouldAnimateRef.current = true;
+                  focusScene();
+                }}
+              >
+                {mode === "perspective" ? "Perspective" : "Ortho"}
+              </Button>
+            ))}
+            <Button variant="outline" size="sm" className="border-slate-200 bg-white" onClick={handleResetCamera}>
+              Reset Camera
+            </Button>
+          </div>
           <div className="flex flex-wrap items-center gap-2 text-xs text-slate-600">
             <Badge variant="outline" className="border-slate-200 text-slate-700">
               X: {getDimensionLabel(schema, xDimension)}
@@ -752,6 +902,9 @@ export function CubeScene({
             </Badge>
             <Badge variant="outline" className="border-slate-200 text-slate-700">
               {getMeasureLabel(schema, measure)} {measureScale.hasNegative ? "signed scale" : "intensity"}
+            </Badge>
+            <Badge variant="outline" className="border-slate-200 text-slate-700">
+              {projectionMode === "perspective" ? "Perspective" : "Orthographic"}
             </Badge>
           </div>
           <div className="flex flex-wrap items-center gap-3 text-[11px] text-slate-600">
@@ -891,8 +1044,13 @@ export function CubeScene({
         </div>
       ) : null}
       <Canvas
-        key={isFullscreen ? "fullscreen" : "inline"}
-        camera={{ position: [overviewDistance, overviewHeight, overviewDistance * 1.08], fov: 40 }}
+        key={`${isFullscreen ? "fullscreen" : "inline"}-${projectionMode}`}
+        orthographic={projectionMode === "orthographic"}
+        camera={
+          projectionMode === "orthographic"
+            ? { position: [overviewDistance, overviewHeight, overviewDistance * 1.08], zoom: orthoZoom, near: 0.1, far: 200 }
+            : { position: [overviewDistance, overviewHeight, overviewDistance * 1.08], fov: 40, near: 0.1, far: 200 }
+        }
         shadows
         onPointerMissed={() => {
           onLeaveCell();
@@ -916,11 +1074,16 @@ export function CubeScene({
           drilledCell={drilledCell}
           maxHeight={maxHeight}
           sceneHeight={sceneHeight}
+          sceneSpan={sceneSpan}
           controlsRef={controlsRef}
           shouldAnimateRef={shouldAnimateRef}
           overviewDistance={overviewDistance}
           overviewHeight={overviewHeight}
           drillOffset={drillOffset}
+          orthoZoom={orthoZoom}
+          projectionMode={projectionMode}
+          cameraTargetMode={cameraTargetMode}
+          viewPreset={viewPreset}
         />
         <gridHelper
           args={[Math.max(sceneWidth, sceneDepth), 10, "#7dd3fc", "#cbd5e1"]}
@@ -942,6 +1105,7 @@ export function CubeScene({
           onLeaveFact={onLeaveFact}
           onSelectFact={onSelectFact}
           onFocusScene={focusScene}
+          onFocusSelection={() => setCameraTargetMode("selection")}
         />
         <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.04, 0]}>
           <planeGeometry args={[sceneWidth + 2, sceneDepth + 2]} />
